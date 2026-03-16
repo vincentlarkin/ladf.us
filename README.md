@@ -5,10 +5,12 @@
 ## What is included
 
 - Separate home page and dedicated full-size map page at `/map.html`
+- Dedicated service-routing lookup at `/services.html` for ZIP, city, or address searches
 - Statewide Louisiana outline, parishes, House, Senate, and congressional districts
 - Municipal boundary reference layer for Louisiana cities and towns
 - Local Caddo / Shreveport stack for city council, parish commission, and school board districts
 - Address search, geolocation, hover inspection, click-to-pin lookup, and city jump presets
+- Statewide municipality and parish service-directory data for routing water, public works, permits, and parish office questions
 
 ## Prerequisites
 
@@ -38,6 +40,7 @@ npm run dev
 
 4. Open the localhost URL printed by Vite.
    The map tool lives at `/map.html`.
+   The service-routing lookup lives at `/services.html`.
 
 ## Build for production
 
@@ -68,6 +71,8 @@ npm run sync:data
 ```
 
 The sync script is at `scripts/sync-district-data.mjs` and writes normalized GeoJSON plus a manifest into `public/data`.
+
+The statewide service-directory sync script is at `scripts/sync-service-directory.mjs` and writes municipality/parish service routing data to `public/data/service-directory.json`.
 
 ## Docker
 

@@ -22,6 +22,7 @@ document.querySelector('#app').innerHTML = `
           <ul class="nav__list">
             <li><a class="nav__link" href="/index.html">Home</a></li>
             <li><a class="nav__link is-active" href="/map.html">Find Your Districts</a></li>
+            <li><a class="nav__link" href="/services.html">Services by ZIP</a></li>
             <li><a class="nav__link" href="#map-tool">Map Tool</a></li>
             <li><a class="nav__link" href="#how-overlap-works">How It Works</a></li>
             <li><a class="nav__link" href="#directory">Contact Directory</a></li>
@@ -255,7 +256,7 @@ document.querySelector('#app').innerHTML = `
       <div class="site-footer__inner">
         <span class="flag-glyph">LA</span>
         <span>LADF is a private nonprofit civic education organization and is not affiliated with Louisiana state or local government.</span>
-        <span><a href="/index.html">Home</a> | <a href="/index.html#disclaimer">Disclaimer</a></span>
+        <span><a href="/services.html">Services by ZIP</a> | <a href="/index.html#disclaimer">Disclaimer</a></span>
       </div>
     </footer>
   </div>

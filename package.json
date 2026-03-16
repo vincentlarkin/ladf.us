@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "sync:data": "node ./scripts/sync-district-data.mjs",
+    "sync:data": "node ./scripts/sync-district-data.mjs && node ./scripts/sync-service-directory.mjs",
+    "sync:services": "node ./scripts/sync-service-directory.mjs",
     "dev": "vite",
     "build": "vite build",
     "build:refresh": "npm run sync:data && npm run build",

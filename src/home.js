@@ -27,6 +27,7 @@ document.querySelector('#app').innerHTML = `
           <ul class="nav__list">
             <li><a class="nav__link is-active" href="/index.html">Home</a></li>
             <li><a class="nav__link" href="/map.html">Find Your Districts</a></li>
+            <li><a class="nav__link" href="/services.html">Services by ZIP</a></li>
             <li><a class="nav__link" href="#overview">Overview</a></li>
             <li><a class="nav__link" href="#coverage">Coverage</a></li>
             <li><a class="nav__link" href="#workflow">Workflow</a></li>
@@ -110,6 +111,14 @@ document.querySelector('#app').innerHTML = `
               </article>
               <article class="info-card">
                 <div class="result-type">Launch feature</div>
+                <h4>Route local services</h4>
+                <p>
+                  Search by ZIP, city, or address to see who likely handles water,
+                  trash, permits, parish offices, and other local-service questions.
+                </p>
+              </article>
+              <article class="info-card">
+                <div class="result-type">Launch feature</div>
                 <h4>Route to the right office</h4>
                 <p>
                   Turn the map result into a practical contact stack with office
@@ -158,6 +167,7 @@ document.querySelector('#app').innerHTML = `
             </div>
             <div class="link-list">
               <a href="/map.html">Launch the full interactive map</a>
+              <a href="/services.html">Open the services-by-ZIP lookup</a>
               <a href="/map.html#sources">Review the synced layer sources</a>
               <a href="/map.html#how-overlap-works">Read the overlap explainer</a>
             </div>
@@ -286,7 +296,7 @@ document.querySelector('#app').innerHTML = `
       <div class="site-footer__inner">
         <span class="flag-glyph">LA</span>
         <span>LADF is a private nonprofit civic education organization and is not affiliated with Louisiana state or local government.</span>
-        <span><a href="/map.html">Find Your Districts</a> | <a href="/index.html#sources">Build Notes</a></span>
+        <span><a href="/map.html">Find Your Districts</a> | <a href="/services.html">Services by ZIP</a></span>
       </div>
     </footer>
   </div>
