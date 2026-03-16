@@ -1,0 +1,16 @@
+{
+  "name": "Louisiana Data & Defense Foundation",
+  "short_name": "LADF",
+  "description": "Plain-language Louisiana civics, district maps, and public data tools.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f5f8",
+  "theme_color": "#002147",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+services:
+  ladf_web:
+    container_name: ladf_web
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - "3911:3911"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:3911/healthz || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
