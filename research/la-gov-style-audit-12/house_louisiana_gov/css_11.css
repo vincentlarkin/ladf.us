@@ -1,0 +1,175 @@
+/* ==========================================================================
+		Slider core styles
+===========================================================================*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+
+  width: 9999px;
+}
+.slider:before,
+.slider:after {
+  display: table;
+  content: ' ';
+}
+.slider:after {
+  clear: both;
+}
+.slider .slide {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.slider .slide img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.act,
+#prev > span,
+#next > span,
+#slider-nav > a {
+  background: url(../images/arrows.png) no-repeat;
+}
+#next > span,
+#prev > span {
+  display: block;
+  width: 16px;
+  height: 24px;
+}
+/* Arrows */
+#next > span {
+  background-position: -20px 0;
+}
+#prev > span {
+  background-position: 0 0;
+}
+#next,
+#prev {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  padding: 5px 7px;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 5px;
+  /*background: rgba(0, 0, 0, .039);  Arrows Bkg Color*/
+   background: rgba(0, 0, 0, .000);  /*Arrows Bkg Color*/
+
+
+
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000', endColorstr='#99000000'); /* ie8 */
+       -o-user-select: none;
+}
+#prev {
+  left: 10px;
+}
+#next {
+  right: 10px;
+}
+.caption { /*DESKTOP*/
+  position: absolute;  
+  text-align: right;
+  bottom: 5%;
+  display: block;
+  width: 90%;
+  padding: 6px 16px 6px 15px;
+  background: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  background: rgba(1,38,63,.6);
+  /*overflow-y: scroll;*/  
+  /*background: rgba(51,51,51,.6);
+  background:rgba(70, 81, 92, 0.8);*/ /*This is a cool blue/gray tone color*/
+  color: #EDF0F6;
+ 	-moz-opacity: 0.7;
+	filter: alpha(opacity=70);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */;
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */;
+	box-sizing: border-box;      /* Opera/IE 8+ */
+}
+.caption a {
+  display: block;
+  color: #fff;
+
+}
+
+.slider-nav {
+  line-height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /*background: #323232;*/
+  /*opacity: .9;*/
+  filter: alpha(opacity=70); /* ie8 */
+}
+
+.slider-nav a {
+  display: inline-block;
+  width: 50px;
+  height: .15px;
+  margin: 0 3px;
+  -webkit-transition: background .5s ease;
+     -moz-transition: background .5s ease;
+       -o-transition: background .5s ease;
+          transition: background .5s ease;
+  border: solid rgba(225,225,225,.4);
+  border-radius: 0%;
+  background: transparent;
+}
+
+.slider-nav .active {
+  width: 50px;
+  height: .15px;
+  background: #fff;
+}
+@media (max-width: 580px) {
+  .caption {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 10px 10px 30px;
+  background: #000;
+  font-family:Montserrat, sans-serif;
+  font-size: .6em;
+  margin: 0;/*overflow-y: scroll;*/
+  background: rgba(51,51,51,.6);
+  /*  background:rgba(70, 81, 92, 0.8);*/ /*This is a cool blue/gray tone color*/
+  color: #EDF0F6;
+ 	-moz-opacity: 0.7;
+	filter: alpha(opacity=70);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */;
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */;
+	box-sizing: border-box;      /* Opera/IE 8+ */
+}
+.caption a {
+  display: block;
+  color: #fff;
+    
+  }

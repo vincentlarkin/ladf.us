@@ -1,0 +1,34 @@
+.hds-banner-countdown .countdown-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.hds-banner-countdown a {
+	text-decoration-style: dashed;
+}
+.hds-banner-countdown .countdown-item h3, .hds-banner-countdown .countdown-item p {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    font-family: "dm-mono", mono;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.hds-banner-countdown .countdown-item span {
+    color: #959599;
+}
+
+.hds-banner-countdown  .countdown-item:after {
+    font-size: 3rem;
+    content: ":";
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    top: 0;
+    margin: 0 15px;
+}
+
+.hds-banner-countdown .countdown-item:last-child:after {
+    display: none;
+}

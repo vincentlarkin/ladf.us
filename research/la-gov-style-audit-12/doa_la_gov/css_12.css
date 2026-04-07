@@ -1,0 +1,42 @@
+.translate-container {
+    position: relative;
+    float: right;
+}
+
+#google_translate_element {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    z-index: 1000;
+    border: none;
+    padding: 5px;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent!important;
+    border:none!important;
+    font-size: 10pt;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    /*text-transform:uppercase;*/
+    color:#fff;
+}
+
+.goog-te-gadget-icon {
+    display:none!important;
+}
+
+a.VIpgJd-ZVi9od-xl07Ob-lTBxed, a.VIpgJd-ZVi9od-xl07Ob-lTBxed>span {
+    color:#fff!important
+}
+
+select.goog-te-combo {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    line-height: 1em;
+}
+        

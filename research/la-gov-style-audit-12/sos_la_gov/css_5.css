@@ -1,0 +1,999 @@
+body {
+	background-color:#c5c6c6;
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	
+}
+
+#content {
+	width:1000px;
+    background-color:#e5e5e5;
+	height:100%;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	/*overflow:auto; sb - comm out to fix the scroll bar issue on bottom of homepage*/
+}
+
+.ms-WPBody
+{
+font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+/*overflow: hidden !important;*/
+overflow: visible !important; /* sb added to fix scroll bar issue on the right side for iframe*/
+}
+
+.printerfriendlybutton 
+{
+     background-color:#ffffff;
+     border:none;
+     border-width:0px;
+}
+
+.printerfriendlydepartmentname
+{
+        font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        font-size:25px;
+	font-weight:bold;
+	color:#597797;
+}
+
+
+.printerfriendlysecretaryname
+{
+        font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        font-size:20px;
+	font-weight:bold;
+	color:#597797;
+}
+
+#header 
+{
+	position: relative; /*sb added */
+	height:140px;
+	width:1000px;
+	background-image:url('/_layouts/Images/SOS.SP.WebSite.Web/int_header.png');
+}
+
+#header-link {  /*sb homepage header link */
+    position: absolute; 
+    left: 0px;
+    width: 1000px;
+    height:140px;
+	background-color: transparent; 
+}
+		
+#headernav {
+	width:1000px;
+	height:45px;  
+	background-color:#001c39 !important; 
+	position: relative;
+	padding:0px;
+	margin:0px;
+}
+
+#headernav:link
+{
+    color:#8c8d8e;
+    text-decoration: none;
+}
+#headernav:hover 
+{
+    color:#001c39;
+    /*text-decoration: underline !important;  sb- commented out to prevent safari from underlining links*/
+} 
+
+table {
+	padding:0px;
+	margin:0px;
+	border:0px
+}
+
+
+#splitter {
+	position:relative;
+	/*margin-left: 3px;  /* sb changed from 1px to align better with IE9 mode*/
+
+}
+.ui-quicklinkmenubar {
+	height:45px;
+	padding:0px;
+	margin:0px;
+}
+
+.ui-quicklinkmenubar .ui-button {
+	font-family:Garamond, "Times New Roman", Times, serif;
+	font-size:15px;
+	font-weight:bold;
+	color:#ffffff;
+	width: 100%;
+	border: none !important;
+} 
+
+.ui-quicklinkmenubar-item {
+	width:20% !important;
+	padding-top:auto;
+	padding-bottom:auto;
+	
+	
+}
+.ui-quicklinkmenubar-item a {
+	font-family:Garamond, "Times New Roman", Times, serif;
+	font-size:15px;
+	font-weight:900;
+}
+
+
+#quicklinkDIVid 
+{
+   position: absolute;
+   top: -5px;
+   left: 70px; /* changed from 77px to align better with IE9 mode*/
+   height: 28px;
+   width: 115px;
+    
+}
+#quicklinkDIVid a
+{
+    text-decoration: none;
+}
+/*
+#quicklinkDIVid  #quicklinksubmenu li a:hover /* sb - underline only dd items for quicklinks */
+/*{
+   text-decoration: underline !important;
+}
+*/
+/* #quicklinkDIVid  #quicklinksubmenu li:hover  sb - commented out to prevent Safari from underlining links
+{
+   text-decoration: underline !important;
+}
+
+ li:hover
+{
+   color: #001c39; 
+   text-decoration: underline !important;
+} safari */
+
+ul#quicklinkULid 
+{    
+	
+	float: right; 
+	height: 28px;  
+	width: 150px; 
+} 
+
+#nameid_quicklinks 
+{
+    position:absolute !important;
+    top:1px;
+    margin-left:32px;
+    width: 118px;
+    height: 27px;  
+    float:right;  
+    font-family:Garamond, "Times New Roman", Times, serif;
+    font-size:15px;
+    font-weight:900;
+    color: #001c39;  /* color of the word quicklinks  */
+    background-color: transparent !important; 
+   white-space:nowrap;
+    
+}  
+
+#qlTextId
+{
+ position: relative;
+ margin-left:-27px;
+ cursor:default;  
+ text-decoration:none !important;  
+
+}
+
+/*  sb adding for NO UNDERLINE quicklink hover  */
+#nameid_quicklinks, #nameid_quicklinks #qlTextId:hover
+{
+ text-decoration:none !important;  
+}
+
+#qlinksID:hover	 
+{
+     position: relative;
+     color:#ffffff;
+     width:100%;
+     background-color:#597797 !important;  
+     
+     
+}
+
+ul#quicklinksubmenu  /* sb created to align the quicklinks gray hovering color with the gray border on dropdown on the right side*/
+{
+    float: right;
+    position: absolute;
+    width: 200px !important;
+    margin-left:0px; 
+    background-color: #ffffff;
+   
+}
+
+.ui-menu 
+{
+    padding:0px;
+}
+.ui-menubar-item {
+	width:200px;
+	padding:0px;
+	margin:0px;
+	height:auto;
+
+}
+.ui-menubar-item a {
+	background-color:#001c39 !important;
+	width:200px;
+	padding:0px;
+	margin:0px;
+	height:45px;
+	font-family:Garamond, "Times New Roman", Times, serif;
+	font-size:15px;
+	font-weight:900;
+}
+.ui-menu .ui-menu-item {
+	width:auto ; /*sb changed from 100% !important to auto */
+	margin-left:0px;
+	padding-left:0px;
+}
+.ui-menu .ui-menu-item a {
+	color: #001c39/*#002e5f*/ !important;
+	background-color:#ffffff !important;
+	font-size:13px !important;
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif !important;
+	font-weight:900 !important;
+	border:none !important;
+	height:auto !important;
+	width: auto !important;
+	/*line-height:2em !important; comm out for left nav - also effects topnav menus*/
+	/*padding-left:20px !important; sb comm out to center menu items in the dd*/
+	margin: 0px !important;
+	white-space: nowrap;  /* sb added */
+}
+
+li ul {
+    list-style-type:none !important;  /*sb IE10 bug fix for submenu items */
+}    
+
+
+ul#HRsubmenuID /* sb new for Historical Resources dd shifting*/
+{
+    margin-right:200px;   
+   
+}
+ul#NCsubmenuID /* sb new for Notary & Cert dd shifting*/
+{
+    position:absolute;
+    left: 367px !important;  /* increase to move dd right, decrease to move dd left */
+}
+
+
+.ui-menubar .ui-button {
+	font-family:Garamond, "Times New Roman", Times, serif;
+	font-size:15px;
+	font-weight:bold;
+	color:#ffffff;
+	width: 200px;
+	height: 45px;
+}
+
+.ui-widget-content
+{
+    border: 2px solid #597797 !important;
+    width:auto !important; 
+    background-color:#ffffff !important; 
+}
+
+.ui-corner-all {
+	border-top:0px;
+	border-left:0px;
+	border-right:0px;
+	border-bottom:0px;
+}
+
+.internalnav {
+	width:255px; /*sb changed from 210px to widen left nav */
+	padding-top:5px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:0px;
+	/*clear: none;
+	height:auto; sb comm out for left nav*/
+	position: relative;
+	float:left;
+	
+}
+.internalnavheader {
+	background-color:#597797;
+	height:auto;
+	text-align:center;
+	padding-top:8px; /*sb changed from 5px */
+	padding-bottom:8px; /*sb changed from 5px  */
+	font-weight:900;
+	color:#ffffff;
+}
+#internalnavcontent {
+	background-color:#ffffff;
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+#contentbody 
+{
+   	position:relative;
+	clear:none;
+	background-color:#ffffff;
+}
+
+
+#bodycontent {
+	background:url('/_layouts/Images/SOS.SP.WebSite.Web/content_bg.png');
+	background-repeat:no-repeat;
+	background-color:#e5e5e5;
+	/*height:auto;
+	min-height:500px; sb comm out so that footer can adjust along with left nav & content*/
+	/*  clear: left;*/
+	float: left;
+	width: 100%;
+	position:relative;
+}
+
+#headerright {
+	position:relative;
+	float:right;
+	text-align:left;
+	top:75px;
+	height: 19px;
+}
+
+.contentsubtitle {
+	font-size:13px;
+	color:#002e5f;
+}
+.redtext {
+	font-size:12px;
+	color:#dc291e;
+}
+.copyright {
+	font-size:11px;
+}
+h3 {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#002e5f;
+}
+a {
+	color:#8c8d8e;
+}
+a:link
+{
+    color:#8c8d8e; /*sb chged from  #001c39 for news and events content */
+}
+a:hover {
+	color:#001c39;
+   text-decoration: underline !important;  
+}
+a:visited {
+	color:#8C8D8E;
+}
+
+@media screen and (max-device-width: 480px){/* sb prevent safari from underlining topnav buttons*/
+    #navbar .ui-menubar-item > a:hover {
+       text-decoration: none !important;  
+    }
+}
+
+.headertext {
+    font-family:Garamond, "Times New Roman", Times, serif;
+	font-size:15px;
+	color:#001c39;
+	font-weight:900;
+	text-decoration:none;
+}
+
+.tabtext {
+	font-family:Garamond, "Times New Roman", Times, serif;
+	font-size:15px;
+	color:#ffffff;
+	font-weight:bold;
+}
+.firstnavtext {
+	font-family:Garamond, "Times New Roman", Times, serif;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+}
+.secondnavtext {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#001c39;
+	font-weight:bold;
+}
+.thirdnavtext {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#001c39;
+	font-weight:normal;
+}
+
+.contenttitle {
+	font-family:Garamond, "Times New Roman", Times, serif;
+	font-size:15px;
+	font-weight:bold;
+	color:#001c39;
+}
+.contentsubtitle {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#002e5f;
+}
+
+#homeid:link 
+{
+   color:#001c39;
+   font-weight:900;
+   padding-left: 15px;  /* sb changed from 18px to align better with IE9 mode */
+}/*sb added for HOME  */
+
+#homeid:hover 
+{
+   	color:#001c39;
+   	text-decoration:underline;
+}/*sb added for HOME link underline */
+
+#homeid:visited
+{
+   color:#001c39 !important; 
+   text-decoration:none;
+}
+
+.ui-widget-header {
+	background:none;
+	/*border:1px solid #000000; sb comm out to get rid of tiny border*/
+}
+
+/*.ui-button-text:hover /* wd added to fix button text on internal pages  
+sb comm out per issues with quicklinks & internal top nav items - this markup is taken care of in SOSSingle.css 
+{  	
+ color:#ffffff;   
+ text-decoration:underline;   
+}   */
+
+.ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	background:none;
+	background-color:#597797 !important;
+    
+}
+
+.internalnavmenu .ui-state-active,  .internalmenu .ui-menu-item .ui-state-active {
+	background:none; 
+	background-color:#8c8d8e !important;
+	
+}
+
+
+.ui-menubar {
+	height:45px;
+	padding:0px;
+	margin:0px;
+}
+ul.quicklinks {
+	border: 1px solid #002e5f;
+}
+ul.quicklinks li a {
+	text-align:left;
+}
+.ui-accordion .ui-accordion-header {
+	background-color:#ffffff; /*!important sb*/
+	padding:0px;
+	margin-top:2px; /* sb left nav menu item spacing */
+	margin-bottom:0px;/* sb left nav menu item spacing */
+	margin-right:0px;/* sb left nav menu item spacing */
+	margin-left:0px;/* sb left nav menu item spacing */
+	text-decoration:none !important;
+	height:auto;
+	/*line-height:12px;  sb from 20px left nav menu item spacing, comm out for leftnav spacing */
+	border:none !important;
+}
+.ui-accordion .ui-accordion-header a {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif !important;
+	font-size: 13px !important;
+	font-weight: bold !important;
+	color:#001c39 /* #002e5f */ /*!important*/;
+}
+
+.ui-accordion .ui-accordion-content {
+	padding:0px;
+    overflow:hidden; 
+    border: none !important; /*	sb remove borders on 2nd level left nav menu items */
+    
+}
+
+
+.internalnavmenu .ui-menu .ui-widget-content {
+	border: none !important;	
+}
+
+.internalmenu  {
+    margin-left: 0px; 
+    border: none !important;
+}
+.internalmenu li  {
+    display: block !important; 
+    width: 255px !important; 
+    border-top:2px solid #e5e5e5 !important;
+} 
+.internalmenu li a {
+    white-space: normal !important; 
+    padding-left:40px !important;
+    padding-top:.5em !important;
+    padding-bottom:.5em !important;              
+}
+ 
+ .internalmenu .ui-menu-item a {
+    font-weight: normal !important;
+    line-height:1.0; 
+ }
+ 
+ 
+ .internalnavmenu .ui-accordion-header  a.ui-state-active, 
+ .internalmenu .ui-menu-item  a.ui-state-active {  /* sb - white letters on left nav w/ gray background - Headers & 2nd lvl*/
+  color: #ffffff !important;
+ }
+ 
+.ui-widget-content {
+	background: none;
+}
+
+.breadcrumbtext {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#8c8d8e;
+	font-weight:normal;
+}
+
+#printpreviewId{
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+
+.breadcrumbs{
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+
+.breadcrumbs > span{
+    position: absolute;
+    float: left;
+    width: 650px;
+}
+
+/*#breadcrumbs {  sb comm out - breadcrumbs markup above...
+	clear:none;
+	position:relative;
+	float:left;
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#597797;
+}
+
+#breadcrumbs a {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#597797;
+	text-decoration:none;
+}
+#breadcrumbs:link {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#597797;
+	text-decoration:none;
+}
+#breadcrumbs:visited {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#8c8d8e;
+	text-decoration:none;
+}
+
+#breadcrumbs:hover {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#597797;
+	text-decoration:underline;
+}*/
+#contentwrap {
+	width:730px; /*sb changed from 775px to widen left nav per comp */
+	/* height:100%;*/
+	margin-top:5px;
+	margin-right:5px;
+	background-color:#ffffff; 
+	background-repeat:repeat-y;
+	position:relative;
+	float:right;
+	display:inline;
+	 
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+	font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif !important;
+	font-size: 13px !important;
+	font-weight: bold !important;
+	/*  color:#002e5f !important; sb comm out to fix left nav header color*/
+	color:#001c39 !important;
+
+}
+#quicklinks li {
+	text-align:left;
+	
+}
+
+#search
+{
+    margin-top: 9px; /*sb added */
+    position:relative;
+}
+
+#searchicon 
+{
+    background-image:url("/_layouts/Images/SOS.SP.WebSite.Web/search_icon.png");
+    background-position:center center;
+    height:23px;  /*sb updated */
+    display:block;
+    position:relative;
+    float:right;
+    padding: 0px;
+    margin-left:-2px; 
+    margin-right:0px;  
+    width: 35px;
+}
+#txtInputKeywords 
+{
+    height:19px;
+    position:relative;
+    float:right;
+    font-family:Garamond, "Times New Roman", Times, serif;
+    font-size:1.1em;  /* sb chged from 15px; to fix search align */
+    color: #001c39;
+    border-color: #001c39 !important;  
+}
+
+#q 
+{
+    height:19px;
+    position:relative;
+    float:right;
+    font-family:Garamond, "Times New Roman", Times, serif;
+    font-size:15px;
+}
+
+.defaultText 
+{
+    float:right;
+    color:#8c8d8e;
+    height: 25px;
+    font-weight:bold;
+    padding: 0px;
+    margin: 0px;
+    text-align:center;  /*sb updated to work with js to align cursor left onclick */
+    
+}
+
+
+.ui-popup {
+	position: absolute;
+	z-index: 5000;
+	/*opacity: 0;*/
+}
+
+
+/* override styles for Editor (start) */
+
+
+.sos-customeditorstyleFontFace-1
+{
+-ms-name:"Tahoma";
+font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.sos-customeditorstyleFontFace-2
+{
+-ms-name:"Garamond";
+font-family:Garamond, "Times New Roman", Times, serif;
+}
+
+.sos-customeditorstyleFontSize-1
+{
+font-size:13pt;
+}
+
+.sos-customeditorstyleFontSize-2
+{
+font-size:14pt;
+}
+.sos-customeditorstyleFontSize-3
+{
+font-size:15pt;
+}
+.sos-customeditorstyleFontSize-4
+{
+font-size:18pt;
+}
+
+.sos-customeditorstyleStyle-Normal
+{
+-ms-name:"Normal";
+font-family:Tahoma, Trebuchet MS, Verdana, Arial, Helvetica, Sans-Serif;
+font-size:13px;
+color:#001c39;
+background-color:white;
+margin-top:13px;
+margin-bottom:13px;
+}
+
+.sos-customeditorstyleStyle-ContentTitle
+{
+-ms-name:"ContentTitle";
+font-family:Garamond, Times New Roman, Times, Serif;
+font-size:18px;
+color:#001c39;
+background-color:white;
+font-weight:bold;
+text-transform:uppercase;
+margin-top:18px;
+margin-bottom:18px;
+}
+
+.sos-customeditorstyleStyle-ContentSubTitle
+{
+-ms-name:"ContentSubTitle";
+font-family:Tahoma, Trebuchet MS, Verdana, Arial, Helvetica, Sans-Serif;
+font-size:14px;
+color:#001c39;  /* dr changed from #002e5f to match comp */
+background-color:white;
+font-weight:bold;
+margin-top:14px;
+margin-bottom:14px;
+}
+
+.sos-customeditorstyleStyle-ContentRedText
+{
+-ms-name:"ContentRedText";
+font-size:13px;
+font-weight:normal;
+font-family:Tahoma, Trebuchet MS, Verdana, Arial, Helvetica, Sans-Serif;
+color:#dc291e;
+background-color:white;
+font-weight:bold;
+}
+
+/*.sos-customeditorstyleStyle-Copyright
+{
+-ms-name:"Copyright";
+font-size:12px;
+font-weight:normal;
+font-family:Tahoma, Trebuchet MS, Verdana, Arial, Helvetica, Sans-Serif;
+color:#8c8d8e;
+background-color:white;
+font-style:italic;
+}
+*/
+a.sos-customeditorstyleElement-roundedbutton
+{
+-ms-name:"RoundedButton";
+}
+
+a.sos-customeditorstyleElement-roundedbutton
+{
+	padding: 20px; 
+	width: 210px; 
+	text-transform: uppercase; 
+	font-family: garamond, times new roman, times, serif; 
+	font-size: 18px; 
+	font-weight: bold; 
+	background-color: #001c39;
+	text-decoration: none;
+	color: White !important;
+}
+
+a.sos-customeditorstyleElement-roundedbutton:link
+{
+	padding: 20px; 
+	width: 210px; 
+	text-transform: uppercase; 
+	font-family: garamond, times new roman, times, serif; 
+	font-size: 18px; 
+	font-weight: bold; 
+	background-color: #001c39;
+	text-decoration: none;
+	color: White !important;
+}
+
+a.sos-customeditorstyleElement-roundedbutton:hover
+{
+    padding: 20px; 
+	width: 210px; 
+	text-transform: uppercase; 
+	font-family: garamond, times new roman, times, serif; 
+	font-size: 18px; 
+	font-weight: bold; 
+	background-color: #597797;
+	color: White !important;
+}
+
+.sos-customeditorstyle-richtext div.sos-customeditorstyleElement-roundedbutton
+{
+    padding: 20px; 
+	width: 510px; 
+	text-transform: uppercase; 
+	font-family: garamond, times new roman, times, serif; 
+	font-size: 18px; 
+	font-weight: bold; 
+	background-color: #e5e5e5;
+	color: #001c39;
+	border: 2px solid #001c39;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.sos-customeditorstyle-richtext div.sos-customeditorstyleElement-roundedbutton a
+{
+	font-family:Tahoma, Trebuchet MS, Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 12px; 
+	color: #001c39;
+    margin-left:auto;
+    margin-right:auto;
+    text-transform: none;
+	font-weight: normal;
+}
+
+.sos-customeditorstyle-richtext div.sos-customeditorstyleElement-roundedbutton a:hover
+{
+	color:#001c39;
+    text-decoration: underline !important;
+}
+
+.sos-customeditorstyle-richtext div.sos-customeditorstyleElement-roundedbutton li a
+{
+	font-family:Tahoma, Trebuchet MS, Verdana, Arial, Helvetica, Sans-Serif;
+	font-size: 12px; 
+	color: #001c39;
+	text-transform: none;
+	font-weight: normal;
+}
+
+.sos-customeditorstyle-richtext div.sos-customeditorstyleElement-roundedbutton li a:hover
+{
+	color:#001c39;
+    text-decoration: underline !important;
+}
+
+.sos-customeditorstyle-richtext
+{
+-ms-name:"Normal";
+padding-right:10px;
+padding-left:10px;
+font-family:Tahoma, Trebuchet MS, Verdana, Arial, Helvetica, Sans-Serif;
+font-size:13px;
+color:#001C39;
+background-color:white;
+margin-bottom:10px;
+}
+
+.sos-customeditorstyle-richtext A:link
+{
+    color:#0067d2;
+}
+
+.sos-customeditorstyle-richtext A:hover
+{
+    color:#0067d2;
+    text-decoration: underline;
+}
+
+.sos-customeditorstyle-richtext LI
+{
+    text-decoration: none !important;
+}
+
+.sos-customeditorstyle-richtext A:visited 
+{
+	color:#80AAD7;
+}
+.sos-customeditorstyle-richtext A:visited:hover 
+{
+	color:#0067d2;
+    text-decoration: underline;
+}
+/*overflow:hidden; Prevents duplicate browser scrollbars from showing also removes browser scrollbar upon admin logon wd 2/14/2013*/
+/* overflow-x:auto; overflow-y:auto;  not supported until CSS 3.0 using css 2.1 wd 2/14/2013 */
+/*added by DR to fix core4, prevent extra scrollbar ** wd changed from auto to overflow:visible no longer interferes with print functions*/
+body #s4-workspace
+{  
+    overflow:visible;
+    position:relative;
+    left:0px;
+}
+
+#PageViewerWebPartDIV{  /* sb added for iframe margins*/
+padding-right:10px;
+padding-left:10px;
+}
+
+.internalnavmenu .page-content-leftnav, .internalmenu .ui-menu-item .page-content-leftnav  /*sb markup for content links */
+{
+   /* background:none; */
+    border: 2px solid #8c8d8e !important;
+    background-color:#ffffff !important; 
+    color: #001c39 !important;
+}
+
+#NewHeaderItem{  /* sb for firefox - doesn't inherit it's color property */
+    background-color:#ffffff !important; 
+    cursor: default;
+}
+
+.fightfraud img
+{
+    margin-left: 35px !important;
+    border: 0 !important;
+}
+
+.skip, .sitemapDiv{
+    height:1px;
+    width: 1px;
+    overflow:hidden;
+} 
+
+
+.hover-item{
+    line-height: 40px;
+}
+
+.hover-item:hover{
+    background-color: #F5F709;
+    cursor: pointer;
+}
+
+a#gtgb{
+    margin-left: 212px;
+    color: #001c39;
+    font-weight:bolder;
+    }
+
+a#gtsos{
+    margin-left: 135px;
+    color: #001c39;
+    font-weight:bolder;
+    }    
+
+.sos-gt-roundedbutton:hover{
+    border-color: #adadad !important;
+    }
+    
+.sos-gt-roundedbutton{
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    width: 160px;
+    cursor: text;
+    border: 1px;
+    border-style: solid;
+    border-color: #adadad;
+    background-color: #D3D3D3;
+    line-height: 1.4285;
+        
+    }
+    
+.sos-gt-links a{
+    text-decoration: none !important;
+    }

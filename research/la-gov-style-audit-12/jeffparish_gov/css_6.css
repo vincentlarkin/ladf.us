@@ -1,0 +1,1055 @@
+/*  FIXES FOR IE7 */
+
+/*  Self-clearing floats  */
+
+.selfClear
+{
+	min-height: 1px !important;
+}
+
+/*  Alignment of form fields  */
+
+.cpForm li.whole,
+.cpForm ol.whole
+{
+	width: 98%;
+}
+
+.cpForm li.half,
+.cpForm ol.half
+{
+	width: 46.5%;
+}
+
+.cpForm li.fourth,
+.cpForm ol.fourth
+{
+	width: 21.8%;
+}
+
+.cpForm li.third,
+.cpForm ol.third
+{
+	width: 30.32%;
+}
+
+.cpForm li.twoThirds,
+.cpForm ol.twoThirds
+{
+	width: 64%;
+}
+
+.cpForm li.threeFourths,
+.cpForm ol.threeFourths
+{
+	width: 72.4%;
+}
+
+
+/* I wish this weren't necessary */
+.cpForm input[type="text"],
+.cpForm input[type="password"],
+.cpForm input[type="number"],
+.cpForm input[type="tel"],
+.cpForm input[type="email"],
+.cpForm input[type="url"],
+.cpForm input[type="search"],
+.cpForm textarea,
+.cpForm .ui-autocomplete
+{
+	width: 95%; /* used to be 98% */
+}
+
+.cpForm .fourth input[type="text"],
+.cpForm .fourth input[type="password"],
+.cpForm .fourth input[type="number"],
+.cpForm .fourth input[type="tel"],
+.cpForm .fourth input[type="email"],
+.cpForm .fourth input[type="url"],
+.cpForm .fourth input[type="search"],
+.cpForm .fourth textarea
+{
+	width: 91.85%;
+}
+
+.cpForm .third input[type="text"],
+.cpForm .third input[type="password"],
+.cpForm .third input[type="number"],
+.cpForm .third input[type="tel"],
+.cpForm .third input[type="email"],
+.cpForm .third input[type="url"],
+.cpForm .third input[type="search"],
+.cpForm .third textarea
+{
+	width: 94.5%;
+}
+
+.cpForm .half input[type="text"],
+.cpForm .half input[type="password"],
+.cpForm .half input[type="number"],
+.cpForm .half input[type="tel"],
+.cpForm .half input[type="email"],
+.cpForm .half input[type="url"],
+.cpForm .half input[type="search"],
+.cpForm .half textarea
+{
+	width: 96%;
+}
+
+.cpForm .twoThirds input[type="text"],
+.cpForm .twoThirds input[type="password"],
+.cpForm .twoThirds input[type="number"],
+.cpForm .twoThirds input[type="tel"],
+.cpForm .twoThirds input[type="email"],
+.cpForm .twoThirds input[type="url"],
+.cpForm .twoThirds input[type="search"],
+.cpForm .twoThirds textarea
+{
+	width: 97.4%;
+}
+
+.cpForm .threeFourths input[type="text"],
+.cpForm .threeFourths input[type="password"],
+.cpForm .threeFourths input[type="number"],
+.cpForm .threeFourths input[type="tel"],
+.cpForm .threeFourths input[type="email"],
+.cpForm .threeFourths input[type="url"],
+.cpForm .threeFourths input[type="search"],
+.cpForm .threeFourths textarea
+{
+	width: 97.75%;
+}
+
+.cpForm > li.error.threeFourths { width: 72%; }
+.cpForm > li.error.twoThirds    { width: 63.5%; }
+.cpForm > li.error.half         { width: 46.5%; }
+.cpForm > li.error.third        { width: 29.5%; }
+.cpForm > li.error.fourth       { width: 20.9%; }
+
+/*  Alignment of legends, checkboxes, & labels in forms  */
+
+.moduleContentNew legend
+{
+	left: -7px;
+	position: relative;
+}
+
+.moduleContentNew .listing
+{
+	zoom: 1;
+}
+
+.newCP .tags > li
+{
+	display: inline !important;
+}
+
+.newCP .tags a
+{
+	display: inline-block !important;
+}
+
+#ProfileContent.newCP .sidebar
+{
+/*	margin-left: -250px;*/
+}
+
+
+/*  Fixing layout of "Available Lists" module icons  */
+
+#notifyMeContent .header .sidebar ol li
+{
+	display: inline;
+}
+
+
+/*  Fixing layout of the featured properties and facilities for
+	Real Estate Locator and Facilities, respectively  */
+
+.newCP .featured .property,
+.newCP .featured .facility
+{
+	display: inline !important;
+	zoom: 1;
+}
+
+/* Fix for modal height in alert center */
+
+.modalContainer.alertCenterUpdate .modalContent iframe
+{
+	height: 205px !important;
+}
+
+/* This breaks the modals in IE. The original rule has been around for a long time, and for a reason. If this is a special case, it should have a special (unique) rule.
+.noIframe.modalContainerCP .modalContentRight, .noIframe.modalContainer .modalContentRight
+{
+	padding-right: 0px !important;
+}*/
+
+/*  Fix for promo codes in ePayment  */
+
+.newCP .sidebar .promo input
+{
+	margin-left: -15px;
+}
+
+.newCP .sidebar .promo .button
+{
+	margin-right: -15px;
+}
+
+/* Too generic. Breaks all sidebar's first sections, except for, likely, the one this rule was intended for.
+#container .newCP .sidebar:first-child, .moduleContentNew .sidebar :first-child.section
+{
+	padding-left: 10px !important;
+}
+*/
+
+/*  Fixes for Widgets  */
+
+.widget .content > li,
+.widget > div.content > ol > li
+{
+	zoom: 1;
+}
+
+
+/*  Fixes for My City Dashboard  */
+
+.newCP .column,
+.newCP .addWidget .item
+{
+	margin-left: 12px !important;
+	width: 23.4% !important;
+}
+
+.newCP.threeColumn .column,
+.newCP.threeColumn .addWidget .item
+{
+	width: 31.9% !important;
+}
+
+.newCP .addWidget .custom
+{
+	padding-right: 0% !important;
+	margin-right: 26% !important;
+}
+
+.newCP.threeColumn .addWidget .custom
+{
+	padding-right: 0% !important;
+	margin-right: 36% !important;
+}
+
+.newCP .addWidget .custom > .item,
+.newCP .addWidget .custom > .item.build
+{
+	width: 32% !important;
+}
+
+.newCP .addWidget .custom > .item.build
+{
+	right: -35% !important;
+}
+
+.newCP.threeColumn .addWidget .custom > .item,
+.newCP.threeColumn .addWidget .custom > .item.build
+{
+	width: 51% !important;
+}
+
+.newCP.threeColumn .addWidget .custom > .item.build
+{
+	right: -56% !important;
+}
+
+.newCP .addWidget .custom .more
+{
+	right: 0px !important;
+}
+
+.newCP .detail .also
+{
+	margin-top: 0em !important;
+}
+
+.newCP .detail .also > h3
+{
+	font-size: .95em !important;
+}
+
+.newCP .detail .also > .item
+{
+	width: auto !important;
+}
+
+.newCP .detail .meta
+{
+	margin-top: 5em;
+}
+
+.commonToolbar .favoritesList > ul > li > .edit
+{
+	left: 0em !important;
+}
+
+.cpToolbar .favoritesMenu li > .edit
+{
+	padding-right: 4px;
+}
+
+/*  Fixes for Agenda Center  */
+
+.newCP .header .search
+{
+	padding-right: 0;
+}
+
+.newCP .header .search .noWrap
+{
+	margin-bottom: 5px;
+}
+
+.newCP .header .search .noWrap + .noWrap
+{
+	width: 310px;
+}
+
+
+/*  Fixes for Community Voice  */
+
+.newCP .ideas .tabs
+{
+	top: 1.3em !important;
+}
+
+.newCP .idea .stats .votesUp > span
+{
+	bottom: -1px;
+}
+
+.newCP .idea .stats .votesDown > span
+{
+	top: 7px;
+}
+
+.newCP .ideas .stats .comments > span
+{
+	left: 3px;
+	margin-left: 9px;
+	top: 3px;
+}
+
+
+/*  Fixes for Live Edit Tab  */
+
+/*  Notebook  */
+
+.liveEditTab .notes,
+.liveEditTab .note
+{
+	margin-right: 12px !important;
+}
+
+.liveEditTab .note
+{
+	padding-right: 15px !important;
+	width: 59% !important;
+}
+
+.liveEditTab .note .nav
+{
+	right: 15px !important;
+}
+
+/* Fix for Form Center Wizards */
+
+.newCP .formWrap .wizard > li
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.newCP .formWrap .cpForm > li .tip
+{
+	clear: both;
+}
+
+.cpForm > li li > input[type="radio"],
+.cpForm > li li > input[type="checkbox"]
+{
+	top: 3px;
+}
+
+/* Doc Center */
+
+div#Grid div.t-grid-header table
+{
+	width: 100%;
+}
+
+div.t-grid-header table .t-header .t-link
+{
+	padding-right: 0;
+	width: 96.5%;
+}
+
+div#Grid div.t-grid-content table
+{
+	width: 96.5%;
+}
+
+/* C O N V E R S A T I O N */
+
+.newCP .conversation
+{
+	background: url('/Assets/Images/conversationbg.png');
+}
+
+.newCP .conversation > .conversation
+{
+	margin-left: 60px;
+}
+
+.newCP .conversation .post .postContent
+{
+	margin-left: 60px;
+}
+
+.newCP .conversation .post .postContent .words
+{
+	background-color: white;
+}
+
+.newCP .conversation .post .postContent > .voice
+{
+	border-color: white transparent transparent white;
+	left: 25%;
+	position: relative;
+}
+
+.newCP .conversation .icon,
+.newCP .conversation .info
+{
+	bottom: 15px;
+}
+.newCP .conversation .icon
+{
+	top: 15px!important;
+}
+
+.moduleContentLegacy #contentAllActivity .conversation .icon
+{
+	left: 70px!important;
+}
+
+.newCP .conversation .info
+{
+	left: 65px!important;
+	margin-left: 70px!important;
+}
+
+.moduleContentLegacy .conversation .info
+{
+	left: 0px!important;
+	margin-left: 0px!important;
+	position: relative!important;
+}
+/*Community Connection, 800x600 sites only */
+.moduleContentLegacy #contentAllActivity .conversation .info
+{
+	left: 75px!important;
+	margin-left: 30px!important;
+	position: absolute!important;
+}
+
+/*MyAccount, 800x600 sites only */
+.moduleContentLegacy .profilePage .conversation .info
+{
+	left: 55px!important;
+	margin-left: 0px!important;
+	position: absolute!important;
+}
+
+.newCP .conversation .status.post .info.dateTime
+{
+	display:none;
+}
+
+.newCP .conversation .info .dateTime
+{
+	color: #000!important;
+}
+
+.newCP .conversation .info  a.username
+{
+	color: #000!important;
+	visibility: visible!important;
+}
+/* S T A T U S E S */
+
+.newCP .conversation > .conversation .makePost > div textarea
+{
+	margin-left: 3%;
+	width: 96%;
+}
+
+.newCP .conversation > .conversation .makePost a.cancel
+{
+	margin-top: -32px;
+}
+
+.newCP .groupPage .listing .tabs
+{
+	margin-top: 18px;
+}
+
+.newCP a.return.viewAll
+{
+	top: 0;
+}
+
+.newCP .messages .message > .message .newMessage input
+{
+	vertical-align: top;
+}
+
+/*  Misc fixes for Groups  */
+
+.newCP .header.groupPage .text
+{
+	/*min-height: 5em;*/
+}
+
+.newCP .header.groupPage .groupInfo.owner
+{
+	margin-bottom: 5px;
+}
+
+.newCP .groupPage.header .return
+{
+	left: 0px;
+}
+
+.newCP .takeAction.noClose > .buttons
+{
+	position: relative;
+	top: 0;
+	left: 10px;
+}
+
+.newCP .cpForm ol.files
+{
+	margin-left: 4px;
+}
+
+.newCP .cpForm ol.files .selfClear
+{
+	min-height: 0px !important;
+	height: 0px;
+}
+
+.newCP .profilePage .composeMessage .composeInputs
+{
+	max-height: none !important;
+}
+
+.newCP .profilePage .composeMessage .button
+{
+	margin-left: 5px;
+}
+
+.newCP .profilePage .composeMessage .holder
+{
+	width: 95%;
+}
+
+.newCP .profilePage .facebook-auto > ul
+{
+	background-color: rgb(238,238,238);
+	width: 200px;
+}
+
+.newCP .groups .tabs,
+.newCP .groupPage .groups .tabbedArea .tabs
+{
+	top: -44px;
+}
+
+.newCP .groups .tabbedArea .tabs
+{
+	top: -26px;
+}
+
+.newCP .conversation .post
+{
+	padding: 0% 0 4%;
+}
+
+.newCP .conversation .post .postContent
+{
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.newCP .conversation .post.status .postContent
+{
+	margin-bottom: 0;
+}
+
+.newCP .conversation .post .postContent .voice
+{
+	left: 0;
+	position: absolute;
+}
+
+.newCP .conversation .post .postActions
+{
+	background-color: white;
+	display: none;
+}
+
+.newCP .conversation .post .postContent .words .postActions > a
+{
+	margin-left: 2px;
+}
+
+.newCP .conversation .cpForm > li textarea
+{
+	width: 97%;
+}
+
+.newCP .contentMain.profilePage .profiles.theWord
+{
+	overflow: visible;
+}
+
+.newCP .contentMain.profilePage .profiles.theWord > .profileFeed,
+.newCP .contentMain .tabbedArea
+{
+	border-color: #e1e1dc;
+}
+
+.newCP .conversation .post .postActions.flagged
+{
+	display: inline-block;
+}
+
+.newCP .conversation .post.status:hover .postActions
+{
+	display: inline-block;
+}
+
+.newCP .conversation .post .postContent .words:hover .postActions
+{
+	display: inline-block;
+}
+
+.newCP .conversation .post .postActions.flagged > .count
+{
+	margin: 0;
+}
+
+.newCP .subscriptions .item > a
+{
+	float: left;
+}
+
+.newCP .t-datepicker .t-picker-wrap,
+.newCP .t-timepicker .t-picker-wrap
+{
+	padding-right: 28px;
+}
+
+.moduleContentNew .t-datepicker, .moduleContentNew .t-timepicker, .moduleContentNew .t-datetimepicker
+{
+	display: inline;
+	zoom: 1;
+}
+
+.moduleContentNew #FacilitiesContent .sidebar .t-timepicker,
+.moduleContentNew #FacilitiesContent .sidebar .t-datepicker
+{
+	width: 8.5em;
+}
+
+.moduleContentNew .cpForm .date
+{
+	display: inline;
+}
+
+.moduleContentNew.detail .calendar .times
+{
+	width: 8.5%;
+}
+
+.moduleContentNew.detail .availability
+{
+	margin-top: 120px;
+}
+
+/* Fix for ie7 having odd bevhavior on the single post pages. */
+
+.newCP.moduleContentNew.ieFix
+{
+	position: relative;
+}
+
+.newCP.moduleContentNew.ieFix > .sidebar
+{
+	left: 0;
+}
+
+/* FIX FOR IE overflow when text is italic and absolutely positioned */
+
+.newCP .conversation .dateTime
+{
+	overflow: hidden;
+}
+
+/* Fixes for new Toolbar */
+
+.cpToolbars
+{
+	border-bottom: 1px solid #393939;
+}
+
+
+.cpToolbars *
+{
+	z-index: 100;
+}
+
+.cpToolbar.user .nav .notifications.dropdown a.openNotifications
+{
+	min-height: 20px;
+	margin-right: 1px;
+	padding-right: 11px;
+}
+
+.cpToolbar.user .menu
+{
+	border-bottom: 1px solid #393939;
+	border-right: 1px solid #393939;
+}
+
+.cpToolbar .dropdown .menu
+{
+	left: -1px;
+}
+
+.cpToolbar .dropdown .menu.flip
+{
+	left: auto;
+	right: -1px;
+}
+
+.cpToolbar.user .nav .notifications ol
+{
+	min-width: 300px;
+}
+
+.cpToolbar.user .openNotifications > span,
+.cpToolbar .nav .openNotifications > span
+{
+	/*border: 1px solid lightGray;*/
+	line-height: normal;
+	padding-right: 18px;
+	position: static;
+}
+
+.cpToolbar.user .open .openNotifications > span
+{
+	border-color: darkGray;
+}
+
+.cpToolbar .nav .dropdown a.openNotifications > .dropOut
+{
+	right: 18px;
+}
+
+.cpToolbar.user .nav .notifications li.main > a
+{
+	width: 95%;
+}
+
+.cpToolbar.user .nav .notifications li.main > a > span
+{
+	border: 1px solid darkGray;
+}
+
+.cpToolbar.user .moreInfo img
+{
+	border: none;
+}
+
+.cpToolbar.user .moreInfo > div.pitch > div:first-child
+{
+	float: left;
+}
+
+.cpToolbar.user .moreInfo > div.pitch > .leaderboard
+{
+	padding-left: 3%;
+}
+
+.cpToolbar.user .moreInfo > div.pitch .buttons
+{
+	margin-bottom: 10px;
+}
+
+.cpToolbar.user .moreInfo > div.generated
+{
+	clear: both;
+	padding-bottom: 5px;
+	padding-top: 0.25%;
+}
+
+.cpToolbar.user .moreInfo > div.generated > div
+{
+	float: left;
+	width: 38%;
+}
+
+.cpToolbar.user .moreInfo > div.generated > .moduleSpotlight > div > img
+{
+	margin-top: 10px;
+}
+
+.cpToolbar.user .moreInfo .selfClear
+{
+	height: 1px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+body.shiftAlertAndDashboard
+{
+    background-position: center 86px !important;
+}
+
+body.shiftDashboard
+{
+    background-position: center 32px !important;
+}
+
+body.shift .cpToolbars
+{
+	display: none;
+}
+
+/*.cpToolbar.user .nav li.dropdown a.openNotifications,
+.cpToolbar.user .nav li.dropdown a.openUserMenu
+{
+	padding-top: 7px;
+}*/
+
+.moduleContentNew .profiles.theWord .listing.members 
+{
+	width: 100%;
+}
+
+.modalContainer.modalLocations .addZip > div > .button.addZipCode
+{
+	float: right;
+	position: relative;
+	left: 5px;
+}
+
+.moduleContentNew .searchResults .map > div,
+.moduleContentNew .searchResults .map > img
+{
+	top: -20px;
+}
+
+.moduleContentNew .searchResults .map
+{
+	padding-bottom: 0;
+}
+
+.moduleContentNew.detail dd
+{
+	margin: 0px 0px 5px 21%;
+}
+
+.moduleContentNew.detail .calendar .day
+{
+	width: 12.9%;
+}
+
+.js .cpSlideshow .pager > li
+{
+	display: block;
+	float: left;
+}
+
+.moduleContentNew.detail .sidebar .map
+{
+	margin-left: 15px !important;
+}
+
+.moduleContentNew.detail .sidebar .map .map
+{
+	margin-left: 0px !important;
+}
+
+.moduleContentNew.detail .sidebar .map #map_canvas_layers
+{
+	left: 55px !important;
+}
+
+.moduleContentNew.detail .sidebar .map #map_canvas_graphics_layer,
+.moduleContentNew.detail .sidebar .map #map_canvas_gc,
+.moduleContentNew.detail .sidebar .map .mapInner #map_canvas_layers
+{
+	margin-left: -109px !important;
+}
+
+/* maybe #map_canvas_gc above */
+
+.moduleContentNew .searchResults .map .esriInDaHizzouse > .container
+{
+	margin-top: 20px;
+}
+
+.moduleContentNew.detail .details .reserve .share > a
+{
+	margin-left: 5px;
+}
+
+.moduleContentNew.detail .media .cpSlideshow .cpSlider
+{
+	height: auto;
+}
+
+.moduleContentNew.detail .details dl
+{
+	margin-left: 48.5%;
+}
+
+.moduleContentNew.detail .details dt
+{
+	min-height: 19px;
+}
+
+/* Fix for overwide IE7 */
+
+.moduleContentNew.detail .calendar .day
+{
+	width: 12.9%;
+}
+
+.js .cpSlideshow .pager > li
+{
+	display: block;
+	float: left;
+}
+
+.modalContainer.modalNewReservation ol li > div
+{
+	margin: 5px 0;
+}
+
+.moduleContentNew .listing.results > label + .item
+{
+	border-top: none;
+}
+
+.moduleContentNew .listing .searchResults > .tabs
+{
+	margin-top: -36px;
+	top: 0;
+}
+
+.moduleContentNew .searchResults .map
+{
+	margin-top: 20px;
+}
+
+.moduleContentNew .searchCriteria + .sidebar .megaMenu ol
+{
+	width: 29%;
+}
+
+.moduleContentNew .searchCriteria + .sidebar .megaMenu.facilityTypes ol
+{
+	width: 44%;
+}
+
+.modalContainer.modalNewReservation .cpForm li > div
+{
+	margin: 2px 0 10px;
+}
+
+.moduleContentLegacy.detail .details .editorContent
+{
+	margin-right: 0;
+}
+
+.moduleContentLegacy.detail h3.areas
+{
+	margin: 0 -44% 0 0;
+}
+
+.moduleContentLegacy.detail .rooms
+{
+	background: none;
+	margin: 0 -44% 0 0;
+}
+
+.moduleContentLegacy.detail #calendar.fc .fc-header-left
+{
+	width: 15%;
+}
+
+.moduleContentLegacy.detail #calendar.fc .fc-header-center
+{
+	width: 35%;
+}
+
+.moduleContentNew .sidebar .section.savedSearches li .close
+{
+	display: none;
+}
+
+.moduleContentNew .sidebar .section.savedSearches li:hover .close
+{
+	display: inline;
+}
+
+.moduleContentNew.detail .megaMenu .legendBox
+{
+	vertical-align: top;
+}
+
+.moduleContentNew.detail .details
+{
+	width: 100%;
+}
+
+.moduleContentNew.detail .details .infoTable td
+{
+	word-break: break-all;
+}
+
+.moduleContentNew.detail .details .infoTable .cost + .cost td
+{
+	word-break: normal;
+}
+
+.moduleContentNew.detail .details .infoTable .cost + .cost td > p
+{
+	display: inline;
+}
+
+.moduleContentNew.detail .sidebar dd
+{
+	max-width: 100%;
+	white-space: nowrap;
+}
+
+.moduleContentNew.detail .sidebar dd.other
+{
+	white-space: normal;
+}

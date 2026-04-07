@@ -1,0 +1,273 @@
+/*  A hopefully temporary hack for the alignment of numbers/Q & A's in FAQs  */
+
+.moduleContentNew .listing dl span
+{
+    top: -2px !important;
+}
+
+.move .controls div span.label
+{
+    top: 32px !important;
+}
+
+/*  Can't use the fancy box shadows instead of graphics for the
+	thumbs in Real Estate Locator's property detail page
+*/
+
+.newCP.detail .contentMain .media li a
+{
+	background: url(/Common/Images/RealEstateLocator/ThumbBkg.png) no-repeat left top;
+	padding: 3px 4px 5px;
+}
+
+/*  Enabling "opacity" for elements  */
+.newCP .opacity60
+{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	filter: alpha(opacity=60);
+	zoom: 1;
+}
+
+.newCP .listing > div > ol > li p.opacity60
+{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+	filter: alpha(opacity=95);
+}
+
+.moduleContentNew label.check
+{
+	overflow: hidden;
+}
+
+.moduleContentNew label.check > input
+{
+	padding: 0px;
+}
+
+/*
+.newCP .t-datepicker
+{
+	width: 8.6em !important;
+}
+
+.newCP .t-datepicker .t-picker-wrap
+{
+	padding-right: 40px !important;
+}
+*/
+
+/* Activity Feed */
+
+.newCP .conversation
+{
+	background: url('/Assets/Images/conversationbg.png');
+}
+
+.newCP .conversation > .conversation
+{
+	margin-left: 60px;
+}
+
+.newCP .conversation .post .postContent
+{
+	margin-left: 60px;
+}
+
+.newCP .conversation .post .postContent .words
+{
+	background-color: white;
+}
+
+.newCP .conversation .post .postContent > .voice
+{
+	border-color: white transparent transparent white;
+	left: 25%;
+	position: relative;
+}
+
+.newCP .conversation .icon
+{
+	top: 15px!important;
+}
+
+/*Community Connection, 800x600 sites only */
+.moduleContentLegacy #contentAllActivity .conversation .icon
+{
+	left: 70px!important;
+}
+
+.moduleContentLegacy .conversation .info
+{
+	left: 0px!important;
+	margin-left: 0px!important;
+	position: relative!important;
+}
+/*Community Connection, 800x600 sites only */
+.moduleContentLegacy #contentAllActivity .conversation .info
+{
+	left: 75px!important;
+	margin-left: 30px!important;
+	position: absolute!important;
+}
+
+/*MyAccount, 800x600 sites only */
+.moduleContentLegacy .profilePage .conversation .info
+{
+	left: 55px!important;
+	margin-left: 0px!important;
+	position: absolute!important;
+}
+
+.newCP .conversation .status.post .info.dateTime
+{
+	display:none;
+}
+
+.newCP .conversation .info .dateTime
+{
+	color: #000!important;
+}
+
+.newCP .conversation .info  a.username
+{
+	color: #000!important;
+	visibility: visible!important;
+}
+
+.newCP .conversation > .conversation .makePost > div textarea
+{
+	margin-left: 3%;
+	width: 96%;
+}
+
+.newCP .conversation > .conversation .makePost a.cancel
+{
+	margin-top: -32px;
+}
+
+.newCP .groupPage .listing .tabs
+{
+	margin-top: 18px;
+}
+
+.newCP .conversation .post
+{
+	padding: 0% 0 4%;
+}
+
+.newCP .conversation .post .postContent
+{
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.newCP .conversation .post.status .postContent
+{
+	margin-bottom: 0;
+}
+
+.newCP .conversation .post .postContent .voice
+{
+	left: 0;
+	position: absolute;
+}
+
+.newCP .conversation .post .postActions
+{
+	background-color: white;
+	display: none;
+}
+
+.newCP .conversation .post .postContent .words .postActions > a
+{
+	margin-left: 2px;
+}
+
+.newCP .conversation .cpForm > li textarea
+{
+	width: 97%;
+}
+
+.newCP .contentMain.profilePage .profiles.theWord
+{
+	overflow: visible;
+}
+
+.newCP .contentMain.profilePage .profiles.theWord > .profileFeed,
+.newCP .contentMain .tabbedArea
+{
+	border-color: #e1e1dc;
+}
+
+.newCP .conversation .post .postActions.flagged
+{
+	display: inline-block;
+}
+
+.newCP .conversation .post.status:hover .postActions
+{
+	display: inline-block;
+}
+
+.newCP .conversation .post .postContent .words:hover .postActions
+{
+	display: inline-block;
+}
+
+.newCP .conversation .post .postActions.flagged > .count
+{
+	margin: 0;
+}
+
+/* END Activity Feed */
+
+.newCP .member.item > DIV
+{
+    margin-left: 0px;
+}
+
+.newCP ol .member.item > DIV
+{
+    margin-left: 80px;   
+}
+
+.cpToolbar.public .openNotifications > span
+{
+	border: 1px solid darkGray;
+}
+
+.cpToolbar.user .openNotifications > span,
+.cpToolbar .nav .openNotifications > span
+{
+	position: static;
+}
+
+/* ported from ie7.css to fix alignment issue with maps in Facilities */
+
+#FacilitiesContent.moduleContentNew.detail .sidebar .map
+{
+	margin-left: 15px !important;
+}
+
+#FacilitiesContent.moduleContentNew.detail .sidebar .map .map
+{
+	margin-left: 0px !important;
+}
+
+.moduleContentNew.detail .sidebar .map #map_canvas_layers
+{
+	left: 55px !important;
+}
+
+.moduleContentNew.detail .sidebar .map #map_canvas_graphics_layer,
+.moduleContentNew.detail .sidebar .map #map_canvas_gc
+{
+	margin-left: -109px !important;
+}
+
+/* maybe #map_canvas_gc above */
+
+.moduleContentNew .searchResults .map .esriInDaHizzouse > .container
+{
+	margin-top: 20px;
+}

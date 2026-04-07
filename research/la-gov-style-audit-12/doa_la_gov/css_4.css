@@ -1,0 +1,148 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a:hover {
+	/*text-decoration: underline ;*/
+	font-weight: 600 ;
+/*	color: #004885 ;*/
+}
+
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100% !important;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.doa-button:hover {
+	background: #f9bd75;
+	color: #004885;
+	padding: .2rem .4rem;
+	border: solid 1px #004885;
+	border-radius: .1rem;
+	filter: drop-shadow(1px 1px 2px #50595e);
+	/*text-transform: uppercase;*/
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+/**umb_name:Office Mission*/
+.office-mission {
+	padding: .5rem;
+	font-size: 1.3rem;
+	font-family: Roboto;
+	color: #545353;
+}
+
+/**umb_name:Office Paragraph*/
+.office-paragraph {
+	padding: .5rem;
+	font-size: .9rem;
+	font-family: Roboto;
+	color: #545353;
+}
+
+/**umb_name:Office Mission Div*/
+.mission-div {
+	background: #EFF0F2 !important;
+	padding: 1rem !important;
+}
+
+/**umb_name:Paragraph*/
+p {
+	color: #464646;
+	font-size: 1rem;
+	line-height: 1.9rem;
+}
+
+/**umb_name:<h2> Main Head*/
+h2 {
+	font-family: 'Marcellus', serif;
+	margin-bottom: .5rem;
+	font-weight: 500;
+	font-size: 1.5rem !important;
+	/*text-transform: uppercase !important;*/
+	color: #004785;
+}
+
+/**umb_name:<h3> Sub-Head*/
+h3 {
+	font-family: 'Marcellus', serif;
+	margin-bottom: .5rem;
+	font-weight: 500;
+	font-size: 1.2rem !important;
+	color: #004785;
+}
+
+/**umb_name:<h4> Section Header*/
+h4 {
+	font-family: 'Marcellus', serif;
+	margin-bottom: .5rem;
+	font-weight: 500;
+	font-size: 1.2rem;
+	color: #004785;
+}
+
+/**umb_name:Link*/
+a {
+	/*	text-decoration: underline !important;
+	color: #004885 !important;
+	*/;
+}
+
+/**umb_name:Button*/
+.doa-button {
+	background: #fdd5a5;
+	color: #004885;
+	padding: .2rem .4rem;
+	border: solid 1px #004885;
+	border-radius: .1rem;
+	filter: drop-shadow(1px 1px 2px #50595e);
+	/*text-transform: uppercase;*/
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+/**umb_name:Table*/
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border: solid thin #bfbfbf;
+	border-radius: .1rem;
+}
+
+/**umb_name:Table Row*/
+tr {
+	background: whitesmoke;
+}
+
+/**umb_name:Table Cell*/
+td {
+	padding: .3rem;
+}

@@ -1,0 +1,66 @@
+/*  FIXES FOR IE6  */
+
+/*  Instead of using overflow:hidden to clear floats, we can use this:  */
+
+.clearboth
+{
+	clear: both;
+	visibility: hidden;
+}
+
+
+/* Fixing lots of various layout issues */
+
+.moduleContentNew .contentMain,
+.moduleContentNew li,
+.moduleContentNew .listing,
+.moduleContentNew .listing .item,
+.moduleContentNew .listing h2,
+.moduleContentNew .listing dt,
+.moduleContentNew .listing dd,
+.moduleContentNew .entry,
+.moduleContentNew .entry div.details,
+.mapModal li,
+.mapModal h2,
+.mapModal h3,
+.mapModal label.check
+{
+	zoom: 1;
+}
+
+.moduleContentNew .sidebar .search input
+{
+    width: 70%;
+}
+
+.moduleContentNew .footer
+{
+	height: 100%;
+	zoom: 1;
+}
+
+
+/* Fixing the expand/collapse controls on headings and checkboxes in Maps modal */
+
+.mapModal .fieldset
+{
+	background: none !important;
+}
+
+.mapModal ol li ol
+{
+	margin-bottom: 6px !important;
+}
+
+
+/*  Fixing layout issues for Photo Gallery  */
+
+.moduleContentNew .featured .section
+{
+	zoom: 1;
+}
+
+.moduleContentNew .photo img.full
+{
+	margin: 0px !important;
+}

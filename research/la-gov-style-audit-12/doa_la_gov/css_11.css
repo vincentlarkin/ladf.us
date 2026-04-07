@@ -1,0 +1,182 @@
+
+        /*===== BACK TO TOP =====*/
+.back-to-top {
+  font-size: 20px;
+  color: #121212;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: #EFA33F;
+  text-align: center;
+  z-index: 99;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  display: none; }
+  .back-to-top:hover {
+    color: #121212;
+    background-color:#EFA33F; }
+        
+    
+/*===== JS =====*/
+.darkLink {
+    color: #0051A8 !important;
+    text-decoration: underline;
+}
+
+.blueTableHeader {
+    color:#ffffff;
+    background-color:#004785;
+}
+
+.dataTables_wrapper .dataTables_info {
+    padding-bottom: 2em;
+}
+
+/*doa-RTE class is wrapped around all RTEs and can be used to apply blanket styles.*/
+.doa-RTE a {
+    text-decoration: underline!important;
+}
+
+.doa-button a {
+    text-decoration: none!important;
+}
+
+/*leftContainer was designed to fix issue with accordions on full width columns being center aligned.*/
+.leftContainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+    .leftContainer {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .leftContainer {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .leftContainer {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .leftContainer {
+        max-width: 1140px;
+    }
+}
+
+
+/*=====FORM STYLES=====*/
+
+.doaCustomForm input[type=checkbox] {
+    width:10%;
+    display:inline-block;
+}
+
+.doaCustomForm input.text, .doaCustomForm input.datepickerfield {
+    min-width:50%;
+}
+
+.doaCustomForm .form-control.radio {
+    width: 50%;
+}
+
+.doaCustomForm .umbraco-forms-caption {
+    font-size: 1.5rem !important;
+    line-height: 1.5rem !important;
+    /*text-transform: uppercase;*/
+}
+
+.doaCustomForm .form-control {
+    border:none;
+    height: auto;
+}
+
+.doaCustomForm select, .doaCustomForm textarea.form-control {
+    width: 50%;
+    border: 1px solid #767676!important;
+}
+
+.doaCustomForm input.btn-primary {
+    background: #fdd5a5;
+    color: #004885;
+    padding: .2rem .4rem;
+    border: solid 1px #004885;
+    border-radius: .1rem;
+    filter: drop-shadow(1px 1px 2px #50595e);
+    /*text-transform: uppercase;*/
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top:1rem;
+}
+
+.doaCustomForm input.btn-primary:hover {
+	background: #f9bd75;
+	color: #004885;
+	padding: .2rem .4rem;
+	border: solid 1px #004885;
+	border-radius: .1rem;
+	filter: drop-shadow(1px 1px 2px #50595e);
+	/*text-transform: uppercase;*/
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+.doaCustomForm {
+    margin-bottom: 7vh;
+}
+
+.doaCustomForm legend {
+    padding-top: 15px;
+}
+
+@media (max-width: 767.98px) {
+    .doaCustomForm input.text, .doaCustomForm input.datepickerfield, .doaCustomForm .form-control.radio, .doaCustomForm select, .doaCustomForm textarea.form-control {
+    width:100%;
+    }
+    .doaCustomForm .checkbox label {
+        float:left;
+        max-width:70%;
+    }
+    .doaCustomForm .umbraco-forms-caption {
+    padding-top: 1em;
+    }
+}
+
+/*======END FORM STYLES======*/
+/*Bulleted list style*/
+ol {
+list-style-type:decimal;
+}
+
+ol ol {
+list-style-type:lower-alpha;
+}
+
+ol ol ol {
+list-style-type:lower-roman;
+}
+
+ol ol ol ol {
+list-style-type:upper-alpha;
+}
+
+ol ol ol ol ol {
+list-style-type:upper-roman;
+}
+
+/*dataTables - eliminate weird heights on filter*/
+table.display, table.displayDesc, table.displayNoSort {
+    height:initial!important;
+}

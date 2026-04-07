@@ -1,0 +1,450 @@
+@media screen and (max-device-width: 480px){/* sb prevent safari auto-scaling of some text*/
+  body{
+    -webkit-text-size-adjust: none;
+  }
+}
+
+
+#secalert 
+{
+    border: 2px solid #001c39;
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #001c39;
+    margin: 3px;
+    padding: 3px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-align:center; /*sb added to center alert message */
+}
+#secalert span 
+{
+    color: Red;
+}
+
+#secalert A:link, #secalert A:visited   /*sb added for alert links to be blue */
+{
+    color:#0067d2 !important;
+}
+
+
+#homepage 
+{
+    background-color: #e5e5e5;
+    height: auto;
+    padding: 4px;
+    height: 580px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+#leftcolumn 
+{
+    width: 327px;
+    position: relative;
+    float: left;
+}
+#rightcolumn 
+{
+    position: relative;
+    float: left;
+    padding-left: 4px;
+}
+.geauxvote 
+{
+    display: block;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 327px;
+    height: 285px;/* sb chged from 287px*/
+    background-image: url("../images/geauxvote_default.png");
+    background-color: #7f96af;
+    /*background:transparent url('../images/geauxvote_default.png') center top no-repeat; sb comm out*/
+}
+
+.geauxvotefooter 
+{
+    position: absolute;
+    color: #ffffff;
+    margin-top: 250px; 
+    margin-left: 90px;  
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.geauxvotefooter:hover
+{
+    text-decoration: underline;
+}
+
+
+/*.geauxvote:hover 
+{
+    background-image: url("../images/geauxvote_active.png");
+}sb image has changed*/
+.geauxbiz 
+{
+    display: block;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 327px;
+    height: 285px; /* sb chged from 287px*/
+    background-image: url("../images/geauxbiz_default.png");
+    background-color: #7f96af;
+    margin-top: 6px; /* sb chged from 3px*/
+}
+
+.geauxbizfooter 
+{
+    position: absolute;
+    color: #ffffff;
+    margin-top: 252px; 
+    margin-left: 118px;  
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.geauxbizfooter:hover
+{
+    text-decoration: underline;
+}
+/*.geauxbiz:hover 
+{
+    background-image: url("../images/geauxbiz_active.png");
+}sb image has changed*/
+#bottomright 
+{
+    padding-top: 6px;
+}
+.social 
+{
+    display: block;
+    position: relative;
+    float: left;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 327px;
+    height: 285px;
+    margin-left: 5px;
+    background-color: #ffffff;
+}
+.social > .innerborder 
+{
+    /*border: 2px solid #001c39;
+    margin: 20px;
+    padding: 10px; sb comm out for honor vets logo*/
+    text-align: center;
+    /*height: 225px; */ 
+}
+
+.social > .innerborder > img 
+{
+    margin: 5px;
+    z-index:3;
+    cursor:pointer;
+    position: absolute;
+}
+/*.flipside
+{
+    opacity: 0;
+    z-index:-1;
+    cursor:pointer;
+    position: absolute;
+} sb comm out to stop flipping*/
+
+#fb 
+{
+    top:240px;
+    left:60px;
+    height: 43px;
+    position: absolute;
+}
+#twitter 
+{
+    top:240px; 
+    left: 113px; 
+    height: 43px; 
+    position: absolute;
+}
+#youtube 
+{
+    top: 240px; 
+    left: 165px; 
+    height: 43px; 
+    position: absolute;
+}
+
+#instagram
+{
+    top:240px; 
+    left: 217px; 
+    height: 43px; 
+    position: absolute;
+}
+
+#vets 
+{
+    top: 11px; 
+    left: 74px;
+    height: 185px;
+    position: absolute;
+}
+
+.sociallemonade /* sb lemonade day*/
+{
+    display: block;
+    position: relative;
+    float: left;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 238px;
+    margin-left: 159.5px;
+    background-color: #e5e5e5;
+}
+#lemonade /* ---sb lemonade day*/
+{
+    top: 90px; 
+    left: 10px;
+    position: absolute;
+}
+#lemonadevets /* ---sb lemonade day*/
+{
+    top: 35px; 
+    left: 2.5px; 
+    height: 155px;
+    position: absolute;
+}
+.social > .innerborder > .connectwithus
+{
+    position: absolute;
+    bottom: 55px;/*86px */
+    left: 0px;
+    width: 100%;
+}
+
+/*.social > .innerborder > .connectwithus a*/
+.social > .innerborder > .connectwithus #connectText
+{
+    font-size: 25px; /* sb changed from 20px to 25px to match News and Events */
+    text-align: center;
+    font-weight: bold;
+    color: #001c39;
+    text-decoration: none;
+}
+
+/* sb instagram & logo changes*/
+.logoborder  
+{
+    height: 33px;  
+    color: #ffffff;
+    margin-top:238px;
+    padding-top: 14px;  
+    font-weight: bold;
+    background-color: #7f96af;  
+    
+}
+
+#whatsnew 
+{
+    position: relative;
+    float: left;
+    display: block;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 327px;
+    height: 285px;
+    background-color: #ffffff;
+}
+#whatsnew ul 
+{
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #001c39;
+    font-size: 13px;
+    height: 177px;/*174px; sb changed for capatibilty with safari, ie, etc*/
+    overflow: hidden;
+   
+}
+ #whatsnew ul li 
+{
+    /* line-height:25px; */
+    margin-bottom: 10px;  /*sb-controls the space between lines */
+    line-height:18px;  /*sb-controls the line wrapping space  */
+} 
+#whatsnew ul li a
+{
+    text-decoration: none;
+    color: #001c39;
+}
+#whatsnew ul li a:hover 
+{
+    text-decoration: underline;
+}
+#whatsnewheader 
+{
+    padding-top: 5px;
+    text-align: center;
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    height: 30px;
+    color: #001c39;
+}
+#whatsnewfooter /*re-worked styles for compatability with IE, Safari, Chrome, FF */
+{
+    height: 33px;  
+    color: #ffffff;
+    padding-top: 14px; /*sb chged from 5px  */
+    font-weight: bold;
+    background-color: #7f96af; /*dr changed from #8197af */
+    
+}
+
+
+#whatsnewfooter a /*re-worked styles for compatability with IE, Safari, Chrome, FF */
+{
+    display: block;
+    margin-left: 73px; /*sb added  */
+    color: #ffffff;
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    width: 180px; /*sb chged from 327px  */
+    text-align: center;
+    background-color: #7f96af;
+}
+#whatsnewfooter a:hover 
+{
+    text-decoration: underline;
+}
+
+/* sb added for new contact us bar  */
+.sos_contact 
+{
+    width: 1000px;
+    height: 47px;
+    position: relative;
+    top: -1px;
+    background-image: url("../images/contact_us_default.png");
+}
+
+/* create the transparent box for Contact Us */
+
+#sos_contactlink 
+{
+    position: absolute;
+    left: 784px;
+    width: 216px;
+    height: 47px;
+    background-color: transparent;
+}   
+
+#sos_contactlink:hover 
+{
+    background-image: url("../images/contact_us_active.png");
+} 
+/* sb added for new contact us bar  */
+
+div#footer
+{
+    clear: both; /* sb left nav clearing*/
+    margin-top: 0px;  /*sb added. Space between contact bar and footer links */
+   
+    
+}
+
+.column 
+{
+    position: relative;
+    float: left;
+    padding-left: 100px;
+    margin-top:10px;
+    
+    
+}
+.contentlist 
+{
+ color: #4d4e53;
+  font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+.contentlist ul 
+{
+    list-style: none;
+}
+.contentlist ul li 
+{
+    margin-left: -40px;
+}
+
+.contentlist ul li:hover {color: #4d4e53 !important;}
+.contentlist h3 a
+{
+   color: #4d4e53;
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    font-weight: 900;
+    font-size: 14px;
+    text-decoration: none;
+}
+.contentlist h3 a:hover
+{
+    color: #4d4e53 !important;
+    text-decoration: underline;
+}
+
+.contentlist ul li a
+{
+    color: #4d4e53; 
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+    font-weight: normal;
+    font-size: 13px;
+    text-decoration: none;
+}
+.contentlist ul li a:hover
+{
+  color: #4d4e53 !important; 
+  text-decoration: underline;   
+}
+
+#freesoftware 
+{
+    clear: left;
+    text-align: center;
+    width: 100%;
+}
+#freesoftware p 
+{
+    color: #4d4e53;
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+}
+#freesoftware p a 
+{
+    color: #4d4e53;
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    text-decoration: none;
+}
+#freesoftware p a:hover 
+{
+    color: #4d4e53 !important;
+    text-decoration: underline;
+}
+
+#copyright p 
+{
+    color: #4d4e53;
+    font-family:Tahoma, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+}
+#copyright 
+{
+    clear: left;
+    text-align: center;
+    width: 100%;
+}
+

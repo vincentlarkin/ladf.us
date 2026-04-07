@@ -1,0 +1,334 @@
+{
+  "generated_at": "2026-04-07T14:56:19",
+  "sites": [
+    {
+      "site": "https://www.usa.gov/",
+      "ok": true,
+      "css_files_downloaded": 2,
+      "main_css": {
+        "url": "https://www.usa.gov/sites/default/files/css/css_RS0lu12kxAKVlYtiIn6qpAq__BevSHCXAmcrTugppls.css?delta=1&language=en&theme=usagov&include=eJwdyUsKwCAMRdEN2WZJEjGEQKKD5wd3X-zkDs7FwZCgwpA0wZlrWMsYxwUUx61c1r5IvRf25y5rmpbJBv19o9fp8gFn6R2f",
+        "path": "research\\gov-style-audit-12\\www_usa_gov\\css_2.css",
+        "bytes": 867820
+      },
+      "metrics": {
+        "border_radius_count": 15,
+        "border_radius_avg": 4.27,
+        "border_radius_median": 3.0,
+        "box_shadow_count": 85,
+        "max_width_count": 25,
+        "max_width_median": 1044.0,
+        "bg_decl_count": 947,
+        "border_decl_count": 604,
+        "color_count": 5574
+      }
+    },
+    {
+      "site": "https://www.whitehouse.gov/",
+      "ok": true,
+      "css_files_downloaded": 5,
+      "main_css": {
+        "url": "https://www.whitehouse.gov/wp-content/themes/whitehouse/blocks/header-v2/style-index.css?m=1773171595g",
+        "path": "research\\gov-style-audit-12\\www_whitehouse_gov\\css_2.css",
+        "bytes": 28991
+      },
+      "metrics": {
+        "border_radius_count": 1,
+        "border_radius_avg": 0.0,
+        "border_radius_median": 0.0,
+        "box_shadow_count": 3,
+        "max_width_count": 7,
+        "max_width_median": 600.0,
+        "bg_decl_count": 14,
+        "border_decl_count": 2,
+        "color_count": 4
+      }
+    },
+    {
+      "site": "https://www.irs.gov/",
+      "ok": true,
+      "css_files_downloaded": 4,
+      "main_css": {
+        "url": "https://www.irs.gov/pub/css/css_KrI8Zfe1iQpJiHfe5RVnBQWjfoKTSk8rjfLDq-3inA0.css?delta=1&language=en&theme=pup_irs&include=eJx1kGtuxDAIhC9kx0eyiE0TtMRYYO82t282j7ZbbX_BfIwGAaQkmklKXLB0C_Cq44PyhM1Bzk2grOFqhg-V0lyaxbCErL0CD4c6YWQaw9EOycxleRQWyBsvt8gwIqOGi_on9Sf1bcYFHX62J73ST-kqKEwKdbZr8kOGXmofmWzG7GqvMd0wUxONlftE5deB78fv4O6cWEbgaKh3SngY_7DdR7rvQDMaGb0xpZtPoNIN-duxf89Xpe2HFzvSvLV1O3PasdFSGbfScIEaXmWUO6pS3hYbgqY5QqUIvUmSp69h-Ic7W22LCCMYfgHThcvm",
+        "path": "research\\gov-style-audit-12\\www_irs_gov\\css_2.css",
+        "bytes": 427555
+      },
+      "metrics": {
+        "border_radius_count": 58,
+        "border_radius_avg": 4.6,
+        "border_radius_median": 4.0,
+        "box_shadow_count": 71,
+        "max_width_count": 213,
+        "max_width_median": 768.0,
+        "bg_decl_count": 345,
+        "border_decl_count": 235,
+        "color_count": 1018
+      }
+    },
+    {
+      "site": "https://www.nasa.gov/",
+      "ok": true,
+      "css_files_downloaded": 3,
+      "main_css": {
+        "url": "https://www.nasa.gov/_static/??-eJyFjMEOwiAQRH/Ida1JbTwYv2Wha0sKC2GBxr+3SS/eOE1m5uXhnsBGKSwFrXdHQKiQfF2cKFbdZ4VPpsB7zNvZ0VTnZ9Ty9axXq3rBP0lZObCikBIeHy4+GvIg1Loot2PtGynb1TUGQyKcu3iKqSYItJ3sO7yGaRqH8Xl73H/5UF4X",
+        "path": "research\\gov-style-audit-12\\www_nasa_gov\\css_1.css",
+        "bytes": 205984
+      },
+      "metrics": {
+        "border_radius_count": 5,
+        "border_radius_avg": 2.8,
+        "border_radius_median": 2.0,
+        "box_shadow_count": 25,
+        "max_width_count": 58,
+        "max_width_median": 800.0,
+        "bg_decl_count": 179,
+        "border_decl_count": 94,
+        "color_count": 484
+      }
+    },
+    {
+      "site": "https://www.cdc.gov/",
+      "ok": true,
+      "css_files_downloaded": 3,
+      "main_css": {
+        "url": "https://www.cdc.gov/TemplatePackage/5.0/css/homepage/hp-2024.min.css?_=04929",
+        "path": "research\\gov-style-audit-12\\www_cdc_gov\\css_1.css",
+        "bytes": 335772
+      },
+      "metrics": {
+        "border_radius_count": 10,
+        "border_radius_avg": 6.2,
+        "border_radius_median": 6.0,
+        "box_shadow_count": 49,
+        "max_width_count": 44,
+        "max_width_median": 991.98,
+        "bg_decl_count": 166,
+        "border_decl_count": 132,
+        "color_count": 483
+      }
+    },
+    {
+      "site": "https://www.weather.gov/",
+      "ok": true,
+      "css_files_downloaded": 7,
+      "main_css": {
+        "url": "https://www.weather.gov/css/jqueryui10_3_1custom/jquery-ui-1.10.3.custom.min.css",
+        "path": "research\\gov-style-audit-12\\www_weather_gov\\css_6.css",
+        "bytes": 27013
+      },
+      "metrics": {
+        "border_radius_count": 1,
+        "border_radius_avg": 8.0,
+        "border_radius_median": 8.0,
+        "box_shadow_count": 2,
+        "max_width_count": 1,
+        "max_width_median": 300.0,
+        "bg_decl_count": 13,
+        "border_decl_count": 23,
+        "color_count": 33
+      }
+    },
+    {
+      "site": "https://www.gsa.gov/",
+      "ok": true,
+      "css_files_downloaded": 4,
+      "main_css": {
+        "url": "https://www.gsa.gov/sites/gsa.gov/files/css/css_nU33pZ0_dpTMtsd_seB_fyrGMbVa53ZqOsWw2259USY.css?delta=3&language=en&theme=gsa&include=eJx9UdGOAiEM_CEiT_c9pEBlewIlFNS9r7-uuqcxF0MCZZjS6TRkEFltQRFIKCZwRxv7bJAP8A3XO1C5F8j0gyZSxzDojDZl9pCdjDVTTQYL9oQ1rM5DrdjtO2A0QYv01e6BSQK2dapjexVw4YSRBvcvt2Bu-scGRhi6fEZxQcQ06JA6tEV2mU_kMGubPpMsGI3mR8LiBnN2PnM42R3K5Dt00nbbwoMdZD-LC1MGF_qBQVzFvjwZAS1_5B7QhQWG9uYxRozu7tvWv6wysFgPgkblqjqSTbUWqyczvFITFKzzQXkBNgtVy-BGwTUdw7sUCDqFqKHDa4MaVVX-QH869oH0j7Uv5COzDsXej4dfqxlr49TpuNq_yEy5xH0Uj8ttN2fCi9jbfigcZ8ZfwcH2kA",
+        "path": "research\\gov-style-audit-12\\www_gsa_gov\\css_4.css",
+        "bytes": 1151339
+      },
+      "metrics": {
+        "border_radius_count": 18,
+        "border_radius_avg": 8.56,
+        "border_radius_median": 2.5,
+        "box_shadow_count": 87,
+        "max_width_count": 16,
+        "max_width_median": 831.0,
+        "bg_decl_count": 716,
+        "border_decl_count": 920,
+        "color_count": 1890
+      }
+    },
+    {
+      "site": "https://www.nps.gov/",
+      "ok": true,
+      "css_files_downloaded": 5,
+      "main_css": {
+        "url": "https://www.nps.gov/common/commonspot/templates/assets/css/main.min.css?v=20230112",
+        "path": "research\\gov-style-audit-12\\www_nps_gov\\css_2.css",
+        "bytes": 2436355
+      },
+      "metrics": {
+        "border_radius_count": 53,
+        "border_radius_avg": 62.82,
+        "border_radius_median": 4.0,
+        "box_shadow_count": 246,
+        "max_width_count": 169,
+        "max_width_median": 767.98,
+        "bg_decl_count": 1422,
+        "border_decl_count": 1574,
+        "color_count": 4504
+      }
+    },
+    {
+      "site": "https://gov.louisiana.gov/",
+      "ok": true,
+      "css_files_downloaded": 4,
+      "main_css": {
+        "url": "https://gov.louisiana.gov/build/css/02-ogov-wrapper-hp.css",
+        "path": "research\\gov-style-audit-12\\gov_louisiana_gov\\css_3.css",
+        "bytes": 70200
+      },
+      "metrics": {
+        "border_radius_count": 16,
+        "border_radius_avg": 27.0,
+        "border_radius_median": 10.0,
+        "box_shadow_count": 13,
+        "max_width_count": 206,
+        "max_width_median": 1060.0,
+        "bg_decl_count": 78,
+        "border_decl_count": 37,
+        "color_count": 50
+      }
+    },
+    {
+      "site": "https://www.state.gov/",
+      "ok": true,
+      "css_files_downloaded": 6,
+      "main_css": {
+        "url": "https://www.state.gov/wp-content/themes/state/css/state.min.css?ver=1771013962",
+        "path": "research\\gov-style-audit-12\\www_state_gov\\css_4.css",
+        "bytes": 1452941
+      },
+      "metrics": {
+        "border_radius_count": 33,
+        "border_radius_avg": 8.67,
+        "border_radius_median": 4.0,
+        "box_shadow_count": 91,
+        "max_width_count": 376,
+        "max_width_median": 776.5,
+        "bg_decl_count": 796,
+        "border_decl_count": 559,
+        "color_count": 3581
+      }
+    },
+    {
+      "site": "https://www.energy.gov/",
+      "ok": true,
+      "css_files_downloaded": 2,
+      "main_css": {
+        "url": "https://www.energy.gov/sites/default/files/css/css_2QGwRJJThAysFgLdejrqCDCZKNSWtMF-4ZoOB29wJeU.css?delta=1&language=en&theme=energy_gov&include=eJxNjWsOgzAMgy_U0SNVgRqIlj7UtDBuvw6NjT95-LPsKRVYX1omGTyTpMUgoiyHmz7kdl_6kjZLqqh6VzQL-58noGfZOU0kLieO1Wk9hGMPf9W-n1fl9zWZCi2F8qoX-StDi7mNwrrCG-WKvTc5EpRqOXI1emhFsCMpzNZZcggjvJsZ4m2B5hSVNzxO2C3Y1Z5zCMk3wRueumbd",
+        "path": "research\\gov-style-audit-12\\www_energy_gov\\css_2.css",
+        "bytes": 757526
+      },
+      "metrics": {
+        "border_radius_count": 23,
+        "border_radius_avg": 6.17,
+        "border_radius_median": 4.0,
+        "box_shadow_count": 107,
+        "max_width_count": 17,
+        "max_width_median": 1026.0,
+        "bg_decl_count": 623,
+        "border_decl_count": 692,
+        "color_count": 1774
+      }
+    },
+    {
+      "site": "https://www.justice.gov/",
+      "ok": true,
+      "css_files_downloaded": 4,
+      "main_css": {
+        "url": "https://www.justice.gov/d9/css/css_UFGmUIixkB6s3FQx7QRs6MGi2nz5hjbalX3jXf5knrE.css?delta=1&language=en&theme=usdoj_uswds&include=eJxlTtFuxDAI-yGUfFJEA1tZSYkCua5_v-7upp10LxgbYbtuTBI2iuzEeyxqdcsvO1RTxe7yuFQbDPwdKvuWacyOmp4UFE-bUUi82o3HmW3n6xvalYDZuC1M6cNGwwge0HHg58C--p_Rv5Lm3uei4isTuAQfQlxQecRVTgLcqqCWu3X5Tff8LqVYuTH46cEtL-gMYaYhPT8RppN9lekHeUZ3Doeb8OH5PlMzmso_HN9zcw",
+        "path": "research\\gov-style-audit-12\\www_justice_gov\\css_4.css",
+        "bytes": 1241720
+      },
+      "metrics": {
+        "border_radius_count": 48,
+        "border_radius_avg": 3.17,
+        "border_radius_median": 3.0,
+        "box_shadow_count": 91,
+        "max_width_count": 28,
+        "max_width_median": 337.5,
+        "bg_decl_count": 713,
+        "border_decl_count": 962,
+        "color_count": 2237
+      }
+    }
+  ],
+  "aggregate": {
+    "sites_requested": 12,
+    "sites_successful": 12,
+    "radius_avg_mean": 11.85,
+    "radius_median_mean": 4.21,
+    "box_shadow_avg": 72.5,
+    "max_width_median_px": 800.0,
+    "max_width_mean_px": 821.57,
+    "bg_decl_avg": 501.0,
+    "border_decl_avg": 486.17,
+    "top_colors": [
+      [
+        "#ffffff",
+        2996
+      ],
+      [
+        "#ffbbaa",
+        994
+      ],
+      [
+        "#1b1b1b",
+        720
+      ],
+      [
+        "#000000",
+        490
+      ],
+      [
+        "#0a314d",
+        459
+      ],
+      [
+        "#162e51",
+        362
+      ],
+      [
+        "#333333",
+        359
+      ],
+      [
+        "#005ea2",
+        333
+      ],
+      [
+        "#f0f0f0",
+        295
+      ],
+      [
+        "#ffbe2e",
+        272
+      ],
+      [
+        "#1a4480",
+        269
+      ],
+      [
+        "#454545",
+        266
+      ],
+      [
+        "#8d98aa",
+        262
+      ],
+      [
+        "#c9c9c9",
+        259
+      ],
+      [
+        "#757575",
+        247
+      ],
+      [
+        "#4574a1",
+        207
+      ]
+    ]
+  }
+}

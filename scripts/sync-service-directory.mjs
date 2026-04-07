@@ -145,34 +145,23 @@ async function fetchParishEntries() {
 async function fetchParishProfile(entry, index, total) {
   console.log(`Syncing parish ${index}/${total}: ${entry.name}`);
   const response = await fetchHtml(entry.pageUrl);
+  const normalizedHtml = normalizeSectionHtml(response.html);
   const seat = normalizeText(
-    response.html.match(
+    normalizedHtml.match(
       /<li><strong>Parish Seat<\/strong>:\s*(?:<span>.*?<\/span>)?\s*(?:<a[^>]*>)?([^<]+)/i,
     )?.[1],
   );
 
-  const localLinksBlock =
-    response.html.match(
-      /<h1>Local Contact Information<\/h1>\s*<ul>([\s\S]*?)<\/ul>/i,
-    )?.[1] ?? '';
-
-  const links = [...localLinksBlock.matchAll(/<li>([\s\S]*?)<\/li>/gi)]
-    .map((match) => {
-      const itemHtml = match[1];
-      const anchors = [...itemHtml.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)]
-        .map((anchorMatch) => ({
-          label: normalizeText(anchorMatch[2]),
-          href: normalizeUrl(anchorMatch[1], entry.pageUrl),
-        }))
-        .filter((anchor) => anchor.label && anchor.href);
-
-      const label = anchors[0]?.label ?? normalizeInlineHtml(itemHtml);
-      return {
-        label,
-        links: anchors,
-      };
-    })
-    .filter((item) => item.label && item.links.length);
+  const localLinksBlock = extractParishSection(
+    normalizedHtml,
+    'Local\\s+Contact\\s+Information',
+  );
+  const municipalitiesBlock = extractParishSection(
+    normalizedHtml,
+    'Municipalities\\s+and\\s+Communities',
+  );
+  const links = parseParishLinks(localLinksBlock, entry.pageUrl);
+  const municipalityNames = parseParishMunicipalityNames(municipalitiesBlock);
 
   return {
     ...entry,
@@ -180,7 +169,73 @@ async function fetchParishProfile(entry, index, total) {
     seat,
     links,
     linkMap: buildParishLinkMap(links),
+    municipalityNames,
   };
+}
+
+function parseParishLinks(sectionHtml, baseUrl) {
+  return [...sectionHtml.matchAll(/<li>([\s\S]*?)<\/li>/gi)]
+    .map((match) => {
+      const itemHtml = match[1];
+      const anchors = [...itemHtml.matchAll(/<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)]
+        .map((anchorMatch) => ({
+          label: normalizeText(anchorMatch[2]),
+          href: normalizeUrl(anchorMatch[1], baseUrl),
+        }))
+        .filter((anchor) => anchor.label && anchor.href);
+
+      const label =
+        normalizeText(
+          itemHtml.match(/<strong>([\s\S]*?)<\/strong>/i)?.[1],
+        ) ??
+        anchors[0]?.label ??
+        normalizeInlineHtml(itemHtml);
+
+      return {
+        label,
+        links: anchors,
+      };
+    })
+    .filter((item) => item.label && item.links.length);
+}
+
+function parseParishMunicipalityNames(sectionHtml) {
+  const items = [...sectionHtml.matchAll(/<li>([\s\S]*?)<\/li>/gi)]
+    .flatMap((match) => {
+      const itemHtml = match[1];
+      const typeLabel = normalizeText(
+        itemHtml.match(/<strong>([\s\S]*?)<\/strong>/i)?.[1],
+      );
+
+      if (
+        !typeLabel ||
+        !/(city|cities|town|towns|village|villages|municipality|municipalities)/i.test(
+          typeLabel,
+        )
+      ) {
+        return [];
+      }
+
+      const text = normalizeInlineHtml(
+        itemHtml
+          .replace(/<strong>[\s\S]*?<\/strong>\s*:?\s*/i, '')
+          .replace(/<\/li>/gi, '')
+          .replace(/<li>/gi, ''),
+      );
+
+      return text
+        .split('|')
+        .map((value) =>
+          normalizeText(
+            value
+              .replace(/^[:\-\u2022]+/, '')
+              .replace(/\s+/g, ' '),
+          ),
+        )
+        .filter(Boolean);
+    });
+
+  return [...new Set(items)];
 }
 
 function parseMunicipalityRoster(html) {
@@ -260,6 +315,17 @@ function buildParishLinkMap(links) {
     house: getHref(/state representatives/i),
     senate: getHref(/state senators/i),
   };
+}
+
+function extractParishSection(html, headingPattern) {
+  return (
+    html.match(
+      new RegExp(
+        `<h1[^>]*>[\\s\\S]*?${headingPattern}[\\s\\S]*?<\\/h1>([\\s\\S]*?)(?=<h1[^>]*>|$)`,
+        'i',
+      ),
+    )?.[1] ?? ''
+  );
 }
 
 function pickEntries(roster, pattern, excludePattern = null) {
@@ -374,6 +440,12 @@ function normalizeInlineHtml(value) {
     .map((line) => line.replace(/\s+/g, ' ').trim())
     .filter(Boolean)
     .join('\n');
+}
+
+function normalizeSectionHtml(value) {
+  return String(value)
+    .replace(/&nbsp;|&#160;|&#xa0;/gi, ' ')
+    .replace(/\u00a0/g, ' ');
 }
 
 function normalizeText(value) {

@@ -1,0 +1,27 @@
+    .modal-full {
+        float: right;
+        min-width: 80%;
+        margin: 0;
+    }
+    .modal-full .modal-content {
+        min-height: 80vh;
+    }
+    
+    .modal-header {
+        background-color: #00427C;
+        height: 74px;
+    }
+    
+    .modal-footer {
+        background-color: #DDD;
+    }
+    
+    .full-height {
+        height: 100%;
+    }
+    
+    .custom-divider {
+        border-right: 2px solid #999;
+        margin-top: 0;
+    }
+        

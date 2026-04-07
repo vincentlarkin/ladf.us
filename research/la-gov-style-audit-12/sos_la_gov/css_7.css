@@ -1,0 +1,101 @@
+#slideshow 
+{
+    background-color: #ffffff;
+    text-align: center;
+    width:659px;
+    height:285px;
+    overflow:hidden;
+    position:relative;
+}
+ul.slideshow 
+{
+    list-style:none;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+    margin:0;
+    padding:0;
+}   
+ 
+ul.slideshow li {
+    position:absolute;
+    left:0;
+    right:0;
+}
+ 
+ul.slideshow li.show {
+    z-index:500;
+}
+
+ul.slideshow li.show a {
+    
+   cursor:default; /*sb - chg cursor to default on images if clicked*/     
+}
+ 
+ul img {
+    border:none;
+    cursor:default;  /*sb - chg cursor to default on images when hovering */    
+}
+ 
+#slideshow-caption {
+    width:659px; /* sb chged from 559px */
+    height:48px; /* sb chged from 70px */
+    position:absolute;
+    bottom:10px;
+    left:0px; /* sb chged 19 from 50px */
+    color:#fff;
+    background:#7f96af;  /* sb chged from #000, changed from #8197af */
+    z-index:1000;  /* sb chged from 5000 */
+    opacity: 0;
+    display: block;  /* sb added */
+    top: 237px; /* sb added */
+    
+}
+ 
+#slideshow-caption .slideshow-caption-container {   /* sb updated/added for slideshow 2/3/13 */
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-right:50px;
+    padding-left: 50px;   
+    font-size: 14px;   
+    font-weight:bold;  
+    z-index:5000;   
+    
+}
+ 
+#slideshow-caption h3 {
+    margin:0;
+    padding:0;  
+  /*  font-size:14px; sb comm out because added above*/
+}
+ 
+#slideshow-caption p {   /* sb updated/added for slideshow 2/3/13 */
+ /*  padding-top:15px;   sb: 15px for 1 line center desc; 5px for 2 lines center desc; 0px for 3 lines in the desc (need js created) */
+   margin:0;
+    /*padding:0;  comm out sb  */
+}
+.ssnav 
+{
+    display:block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: transparent;
+    width:48px;  /*sb chged from 64px */
+    opacity: 0;
+    z-index: 5000;
+}
+.ssnav > img 
+{
+    margin-top:237px; /*sb chged from 80px */
+    opacity: 0.3;
+}
+#rightnav 
+{
+    right: 0;
+}
+#leftnav
+{   
+    left: 0;
+}

@@ -1,59 +1,54 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import { normalizeLookupName } from './locationLookup.js';
 import { loadParishIndex } from './parishData.js';
 import './style.css';
+import {
+  bindSiteChrome,
+  renderBreadcrumb,
+  renderSidebar,
+  renderSiteFooter,
+  renderSiteHeader,
+} from './siteChrome.js';
+
+document.title = 'LADF | Parish Map';
 
 document.querySelector('#app').innerHTML = `
   <div class="page">
-    <header class="site-header">
-      <div class="site-header__inner">
-        <a class="brand" href="/index.html">
-          <span class="brand__crest">LA</span>
-          <span class="brand__text">
-            <span class="brand__name">LADF</span>
-            <span class="brand__descriptor">Louisiana Data & Defense Foundation</span>
-          </span>
-        </a>
-      </div>
-    </header>
+    ${renderSiteHeader({ activePage: 'map' })}
 
     <div class="site-body">
-      <aside class="sidebar">
-        <nav class="nav" aria-label="Primary">
-          <div class="nav__title">Sections</div>
-          <ul class="nav__list">
-            <li><a class="nav__link" href="/index.html">Home</a></li>
-            <li><a class="nav__link is-active" href="/map.html">Parish Map</a></li>
-            <li><a class="nav__link" href="/services.html">Services by ZIP</a></li>
-            <li><a class="nav__link" href="#map-tool">Map</a></li>
-            <li><a class="nav__link" href="#directory-list">All Parishes</a></li>
-            <li><a class="nav__link" href="#why-this-flow">Why This Flow</a></li>
-            <li><a class="nav__link" href="#hosting">Static Hosting</a></li>
-          </ul>
-        </nav>
-      </aside>
+      ${renderSidebar({
+        sections: [
+          { href: '#overview', label: 'Overview' },
+          { href: '#map-tool', label: 'Interactive Map' },
+          { href: '#directory-list', label: 'All Parishes' },
+        ],
+      })}
 
       <main class="content content--wide">
         <div class="content__inner content__inner--wide">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="/index.html">Home</a>
-            <span class="breadcrumb__sep">/</span>
-            <span>Parish Map</span>
-          </nav>
+          ${renderBreadcrumb([
+            { label: 'Home', href: '/index.html' },
+            { label: 'Parish Map' },
+          ])}
 
-          <div class="page-intro">
-            <div class="eyebrow">Parish-first directory</div>
-            <h1>Pick a parish, then open its contact page.</h1>
-            <p class="lead">
-              The map is now intentionally simpler. It shows all 64 Louisiana parishes.
-              Click a parish or pick it from the list and we send you straight to that
-              parish's directory page. Caddo is the first parish with a fuller build-out.
-            </p>
-            <div class="cta-row">
-              <a class="button" href="/parish.html?parish=caddo">Open Caddo Parish</a>
-              <a class="button button--secondary" href="#directory-list">Browse all parishes</a>
+          <section class="page-intro page-intro--compact" id="overview">
+            <div class="page-intro__title-block">
+              <div class="eyebrow">Parish-first directory</div>
+              <h1>Pick a parish, then choose the parish page or one of its cities.</h1>
+              <p class="lead">
+                Click a parish on the map to open a small chooser with the parish page
+                and city links. If you already know the parish name, use the list on
+                the right for a direct jump.
+              </p>
             </div>
-          </div>
+
+            <div class="cta-row">
+              <a class="button" href="#directory-list">Browse all parishes</a>
+              <a class="button button--secondary" href="/services.html">Open services by ZIP</a>
+            </div>
+          </section>
 
           <section class="section section--map" id="map-tool">
             <h2>Interactive Parish Map</h2>
@@ -66,7 +61,7 @@ document.querySelector('#app').innerHTML = `
                   </div>
                 </div>
                 <p class="status-line" id="map-status">
-                  Hover a parish to preview it. Click to open its page.
+                  Hover a parish to preview it. Click to open the parish and city chooser.
                 </p>
               </div>
 
@@ -74,8 +69,8 @@ document.querySelector('#app').innerHTML = `
                 <div class="panel-heading">
                   <h3>All Parishes</h3>
                   <p>
-                    One click opens the parish directory. Caddo currently has the
-                    richest local directory in this build.
+                    Parish buttons open the parish page directly. Map clicks open the
+                    simpler chooser with parish and city links.
                   </p>
                 </div>
                 <label class="field-label" for="parish-filter">Filter parishes</label>
@@ -91,63 +86,15 @@ document.querySelector('#app').innerHTML = `
               </aside>
             </div>
           </section>
-
-          <section class="section" id="why-this-flow">
-            <h2>Why This Flow</h2>
-            <div class="card-grid card-grid--two">
-              <article class="info-card">
-                <div class="result-type">Simpler</div>
-                <h4>No inline directory clutter</h4>
-                <p>
-                  The map does one job now: pick a parish. The actual contacts live on a
-                  dedicated parish page where we can organize them cleanly.
-                </p>
-              </article>
-              <article class="info-card">
-                <div class="result-type">Expandable</div>
-                <h4>Parish pages can deepen over time</h4>
-                <p>
-                  We can enrich one parish at a time. Caddo is first, and the rest can
-                  follow the same structure without rebuilding the map every time.
-                </p>
-              </article>
-            </div>
-          </section>
-
-          <section class="section" id="hosting">
-            <h2>Static Hosting</h2>
-            <div class="card-grid card-grid--two">
-              <article class="info-card">
-                <div class="result-type">Yes</div>
-                <h4>This can be static</h4>
-                <p>
-                  The site builds to plain HTML, CSS, JS, and JSON files. It can be hosted
-                  from any normal static host or from the generated <code>dist</code> folder.
-                </p>
-              </article>
-              <article class="info-card">
-                <div class="result-type">Optional</div>
-                <h4>Docker is only a wrapper</h4>
-                <p>
-                  Docker is not the app. It is only an optional Nginx container for serving
-                  the already-static build when you want that deployment style.
-                </p>
-              </article>
-            </div>
-          </section>
         </div>
       </main>
     </div>
 
-    <footer class="site-footer">
-      <div class="site-footer__inner">
-        <span class="flag-glyph">LA</span>
-        <span>LADF is a private nonprofit civic education organization and is not affiliated with Louisiana state or local government.</span>
-        <span><a href="/parish.html?parish=caddo">Caddo Parish</a> | <a href="/services.html">Services by ZIP</a></span>
-      </div>
-    </footer>
+    ${renderSiteFooter()}
   </div>
 `;
+
+bindSiteChrome();
 
 const parishListNode = document.querySelector('#parish-list');
 const parishCountNode = document.querySelector('#parish-count');
@@ -155,9 +102,15 @@ const filterNode = document.querySelector('#parish-filter');
 const statusNode = document.querySelector('#map-status');
 const loadingNode = document.querySelector('#map-loading');
 
-const parishIndex = await loadParishIndex();
+const [parishIndex, parishDirectory] = await Promise.all([
+  loadParishIndex(),
+  fetchJson('/data/service-directory.json').catch(() => ({ parishes: [] })),
+]);
+
+const parishLookup = buildParishLookup(parishDirectory);
+
 renderParishList(parishIndex);
-initializeMap(parishIndex);
+initializeMap(parishIndex, parishLookup);
 
 filterNode.addEventListener('input', () => {
   const query = filterNode.value.trim().toLowerCase();
@@ -167,7 +120,7 @@ filterNode.addEventListener('input', () => {
   renderParishList(filtered);
 });
 
-function initializeMap(parishes) {
+function initializeMap(parishes, parishLookup) {
   const map = L.map('parish-map', {
     zoomControl: true,
     attributionControl: true,
@@ -183,7 +136,8 @@ function initializeMap(parishes) {
     },
   ).addTo(map);
 
-  let activeLayer = null;
+  let hoverLayer = null;
+  let selectedLayer = null;
 
   const geoJsonLayer = L.geoJSON(
     {
@@ -199,39 +153,79 @@ function initializeMap(parishes) {
       }),
       onEachFeature(feature, layer) {
         const parishLabel = feature.properties.__districtLabel ?? feature.properties.NAME;
-        const parishKey = parishLabel
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '')
-          .replace(/parish$/, '');
+        const parishKey = getParishKey(parishLabel);
 
         layer.on('mouseover', () => {
-          if (activeLayer && activeLayer !== layer) {
-            geoJsonLayer.resetStyle(activeLayer);
+          if (selectedLayer === layer) {
+            return;
           }
 
-          activeLayer = layer;
-          layer.setStyle({
-            weight: 2.2,
-            fillOpacity: 0.28,
-          });
-          statusNode.textContent = `${parishLabel} selected. Click to open its parish page.`;
+          if (hoverLayer && hoverLayer !== layer && hoverLayer !== selectedLayer) {
+            geoJsonLayer.resetStyle(hoverLayer);
+          }
+
+          hoverLayer = layer;
+          setActiveLayerStyle(layer, { selected: false });
+          statusNode.textContent = `${parishLabel} selected. Click to open the parish and city chooser.`;
         });
 
         layer.on('mouseout', () => {
-          if (activeLayer === layer) {
+          if (hoverLayer === layer && selectedLayer !== layer) {
             geoJsonLayer.resetStyle(layer);
-            activeLayer = null;
+            hoverLayer = null;
           }
 
-          statusNode.textContent = 'Hover a parish to preview it. Click to open its page.';
+          if (!selectedLayer) {
+            statusNode.textContent =
+              'Hover a parish to preview it. Click to open the parish and city chooser.';
+          }
         });
 
-        layer.on('click', () => {
-          openParish(parishKey);
+        layer.on('click', (event) => {
+          if (selectedLayer && selectedLayer !== layer) {
+            geoJsonLayer.resetStyle(selectedLayer);
+          }
+
+          selectedLayer = layer;
+          hoverLayer = layer;
+          setActiveLayerStyle(layer, { selected: true });
+          statusNode.textContent = `${parishLabel} selected. Choose the parish page or a city in the popup.`;
+
+          L.popup({
+            closeButton: true,
+            autoPan: true,
+            maxWidth: 420,
+          })
+            .setLatLng(event.latlng)
+            .setContent(
+              renderParishPopup(
+                parishLookup.get(parishKey) ?? {
+                  key: parishKey,
+                  label: parishLabel,
+                  cityNames: [],
+                },
+              ),
+            )
+            .openOn(map);
         });
       },
     },
   ).addTo(map);
+
+  map.on('popupclose', () => {
+    if (selectedLayer) {
+      geoJsonLayer.resetStyle(selectedLayer);
+      selectedLayer = null;
+    }
+
+    if (hoverLayer && hoverLayer !== selectedLayer) {
+      geoJsonLayer.resetStyle(hoverLayer);
+      hoverLayer = null;
+    }
+
+    statusNode.textContent =
+      'Hover a parish to preview it. Click to open the parish and city chooser.';
+  });
 
   map.fitBounds(geoJsonLayer.getBounds().pad(0.04));
   loadingNode.classList.add('is-hidden');
@@ -259,6 +253,89 @@ function renderParishList(parishes) {
 
 function openParish(parishKey) {
   window.location.href = `/parish.html?parish=${encodeURIComponent(parishKey)}`;
+}
+
+function buildParishLookup(serviceDirectory) {
+  return new Map(
+    (serviceDirectory.parishes ?? []).map((record) => [
+      getParishKey(record.name),
+      {
+        key: getParishKey(record.name),
+        label: record.name,
+        cityNames: getCityNames(record),
+      },
+    ]),
+  );
+}
+
+function getCityNames(record) {
+  return Array.from(
+    new Set(
+      (record?.municipalityNames ?? [])
+        .map((name) => String(name ?? '').trim())
+        .filter(Boolean),
+    ),
+  ).sort((left, right) => left.localeCompare(right));
+}
+
+function renderParishPopup(parish) {
+  const cityLinks = parish.cityNames.length
+    ? parish.cityNames
+        .map(
+          (cityName) => `
+            <a
+              class="quick-chip quick-chip--link"
+              href="/services.html?lookup=${encodeURIComponent(`${cityName}, LA`)}"
+            >
+              ${escapeHtml(cityName)}
+            </a>
+          `,
+        )
+        .join('')
+    : '<p class="parish-popup__empty">City links are still being added for this parish.</p>';
+
+  return `
+    <div class="parish-popup">
+      <div>
+        <div class="result-type">Parish</div>
+        <h4>${escapeHtml(parish.label)}</h4>
+        <p>Open the parish page or jump into a city lookup.</p>
+      </div>
+
+      <div class="parish-popup__actions">
+        <a class="button" href="/parish.html?parish=${encodeURIComponent(parish.key)}">
+          Go to ${escapeHtml(parish.label.replace(/\s+Parish$/i, ''))}
+        </a>
+      </div>
+
+      <div class="parish-popup__cities">
+        <div class="result-type">Cities</div>
+        <div class="popup-chip-list">
+          ${cityLinks}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function setActiveLayerStyle(layer, { selected }) {
+  layer.setStyle({
+    weight: selected ? 2.6 : 2.2,
+    fillOpacity: selected ? 0.36 : 0.28,
+  });
+}
+
+function getParishKey(label) {
+  return normalizeLookupName(label).replace(/parish$/, '');
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.status}`);
+  }
+
+  return response.json();
 }
 
 function escapeHtml(value) {

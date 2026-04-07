@@ -1,0 +1,38 @@
+@keyframes totalsurvey-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.totalsurvey-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 10;
+  height: 100px;
+  width: 100%;
+  font-size: 24px;
+}
+
+.totalsurvey-loading-spinner {
+  flex-shrink: 0;
+  width: 2em;
+  height: 2em;
+}
+
+.totalsurvey-loading-spinner:after {
+  content: " ";
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 6px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: totalsurvey-loading 1.2s linear infinite;
+}
+
+/*# sourceMappingURL=loading.css.map */

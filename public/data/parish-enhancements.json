@@ -1,0 +1,2784 @@
+{
+  "generatedAt": "2026-04-07T18:25:39.577Z",
+  "generator": "scripts/sync-parish-enhancements.mjs",
+  "sources": {
+    "serviceDirectory": "/public/data/service-directory.json",
+    "lagopRpec": "https://www.lagop.com/rpec"
+  },
+  "parishes": {
+    "allen": {
+      "officeNames": {
+        "parish": "ALLEN PARISH POLICE JURY",
+        "schools": "Allen Parish School Board",
+        "library": "Public Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/allen-parish-e6b257a90e.png",
+          "alt": "ALLEN PARISH POLICE JURY logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/allen-schools-dff8997edf.png",
+          "alt": "Allen Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/allen-library-b335a92be1.png",
+          "alt": "Public Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "acadia": {
+      "officeNames": {
+        "parish": "Acadia Parish Police Jury",
+        "clerk": "Acadia Parish Clerk of Court",
+        "assessor": "Acadia Parish Assessor",
+        "library": "Acadia Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/acadia-parish-69a6342579.png",
+          "alt": "Acadia Parish Police Jury logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/acadia-clerk-72f22c896e.png",
+          "alt": "Acadia Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/acadia-assessor-cca4c31035.png",
+          "alt": "Acadia Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/acadia-library-ea2ca4cb14.php",
+          "alt": "Acadia Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Acadia Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Official chapter page",
+              "http://acadiarpec.com/"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/acadia-gop-c60b45a3ef.avif",
+            "alt": "Acadia Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "ascension": {
+      "officeNames": {
+        "parish": "Ascension Parish Government",
+        "clerk": "Clerk of Court",
+        "assessor": "Ascension Parish Assessor's Office",
+        "schools": "Ascension Parish School Board",
+        "library": "Ascension Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/ascension-parish-36f18a9783.png",
+          "alt": "Ascension Parish Government logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/ascension-clerk-6658c9a80f.jpg",
+          "alt": "Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/ascension-assessor-7a69bbefc8.svg",
+          "alt": "Ascension Parish Assessor's Office logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/ascension-schools-f83565cac2.ico",
+          "alt": "Ascension Parish School Board logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/ascension-library-0ed233ab1f.png",
+          "alt": "Ascension Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Ascension Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Official chapter page",
+              "http://www.ascensionrpec.org/"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/ascension-gop-583c04145d.avif",
+            "alt": "Ascension Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "avoyelles": {
+      "officeNames": {
+        "clerk": "Avoyelles Parish Clerk of Court Services",
+        "assessor": "Avoyelles Parish Assessor",
+        "schools": "Avoyelles Parish Schools",
+        "library": "Avoyelles Parish Library"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/avoyelles-clerk-43650ee9b1.gif",
+          "alt": "Avoyelles Parish Clerk of Court Services logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/avoyelles-assessor-41268dbe8e.ico",
+          "alt": "Avoyelles Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/avoyelles-schools-c90a65e4e6.png",
+          "alt": "Avoyelles Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/avoyelles-library-395c82ed65.jpg",
+          "alt": "Avoyelles Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "assumption": {
+      "officeNames": {
+        "parish": "Assumption Parish Police Jury",
+        "clerk": "Assumption Parish Clerk of Court",
+        "assessor": "Assumption Parish Assessor",
+        "schools": "Assumption Parish Schools",
+        "library": "Assumption Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/assumption-parish-acd174478b.ico",
+          "alt": "Assumption Parish Police Jury logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/assumption-clerk-0c47388c8b.png",
+          "alt": "Assumption Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/assumption-assessor-efa408c87b.ico",
+          "alt": "Assumption Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/assumption-schools-723569718d.png",
+          "alt": "Assumption Parish Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/assumption-library-d3caa693e8.png",
+          "alt": "Assumption Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "beauregard": {
+      "officeNames": {
+        "parish": "Beauregard Parish Government",
+        "clerk": "Beauregard Parish Clerk of Court",
+        "schools": "Beauregard Parish School Board",
+        "library": "Beauregard Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/beauregard-parish-5fa4d4ddf9.png",
+          "alt": "Beauregard Parish Government logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/beauregard-schools-d8a7fa93a0.png",
+          "alt": "Beauregard Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/beauregard-library-e2e13f5e1e.png",
+          "alt": "Beauregard Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Beauregard Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-beauregard"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/beauregard-gop-5c2732a60b.avif",
+            "alt": "Beauregard Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "caldwell": {
+      "officeNames": {
+        "schools": "Caldwell Parish School District",
+        "library": "Caldwell Parish Library"
+      },
+      "officeBrands": {
+        "schools": {
+          "src": "/org-logos/generated/caldwell-schools-bb8844e8d9.png",
+          "alt": "Caldwell Parish School District logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Caldwell Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-caldwell"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/caldwell-gop-6da177093b.avif",
+            "alt": "Caldwell Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "bienville": {
+      "officeNames": {
+        "parish": "Bienville Parish Bienville Parish, Louisiana",
+        "clerk": "Bienville Parish Clerk of Court",
+        "schools": "Bienville Parish Schools",
+        "library": "Bienville Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/bienville-parish-2eecd9f3f8.png",
+          "alt": "Bienville Parish Bienville Parish, Louisiana logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/bienville-clerk-c08f4c34e4.png",
+          "alt": "Bienville Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/bienville-schools-aeca83becf.png",
+          "alt": "Bienville Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/bienville-library-019867d35a.jpg",
+          "alt": "Bienville Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "bossier": {
+      "officeNames": {
+        "parish": "Bossier Parish Police Jury",
+        "clerk": "Bossier Parish Clerk of Court",
+        "assessor": "Bossier Parish Tax Assessor",
+        "schools": "Bossier Parish Schools",
+        "library": "Bossier Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/bossier-parish-b067557b4e.png",
+          "alt": "Bossier Parish Police Jury logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/bossier-clerk-c7799eb2bb.jpg",
+          "alt": "Bossier Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/bossier-assessor-d443823b27.png",
+          "alt": "Bossier Parish Tax Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/bossier-schools-9db818f97d.png",
+          "alt": "Bossier Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/bossier-library-bd78dc28ea.svg",
+          "alt": "Bossier Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Bossier Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-bossier"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/bossier-gop-f2b886b711.avif",
+            "alt": "Bossier Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "calcasieu": {
+      "officeNames": {
+        "parish": "Calcasieu Parish Police Jury",
+        "clerk": "Calcasieu Clerk",
+        "assessor": "Calcasieu Parish Assessor",
+        "schools": "Calcasieu Parish School Board",
+        "library": "Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/calcasieu-parish-13f3834bf9.ico",
+          "alt": "Calcasieu Parish Police Jury logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/calcasieu-clerk-2574a9240f.png",
+          "alt": "Calcasieu Clerk logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/calcasieu-assessor-446fc61033.ico",
+          "alt": "Calcasieu Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/calcasieu-schools-77a20995b2.ico",
+          "alt": "Calcasieu Parish School Board logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/calcasieu-library-06c01765a0.png",
+          "alt": "Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Calcasieu Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Official chapter page",
+              "https://www.swlarepublicans.org/#/"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/calcasieu-gop-c806ceae6c.avif",
+            "alt": "Calcasieu Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "caddo": {
+      "officeNames": {
+        "parish": "Caddo Parish Government",
+        "clerk": "Caddo Parish Clerk of Court",
+        "assessor": "Caddo Parish Assessor's Office",
+        "schools": "Caddo Parish Public Schools",
+        "library": "Shreve Memorial Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/caddo-parish-a0d27dd4b2.png",
+          "alt": "Caddo Parish Government logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/caddo-clerk-5ba58cd5d9.ico",
+          "alt": "Caddo Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/caddo-assessor-d4d2599195.png",
+          "alt": "Caddo Parish Assessor's Office logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/caddo-schools-b5ddfe4121.png",
+          "alt": "Caddo Parish Public Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/caddo-library-40f07be605.ico",
+          "alt": "Shreve Memorial Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Caddo Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Official chapter page",
+              "https://www.caddogop.com/"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/caddo-gop-aeb82951f3.avif",
+            "alt": "Caddo Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "cameron": {
+      "officeNames": {
+        "parish": "parishofcameron.net",
+        "schools": "Cameron Parish School District",
+        "library": "Cameron Parish Library"
+      },
+      "officeBrands": {
+        "schools": {
+          "src": "/org-logos/generated/cameron-schools-1b5311fe38.ico",
+          "alt": "Cameron Parish School District logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/cameron-library-15089d061a.jpg",
+          "alt": "Cameron Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "catahoula": {
+      "officeNames": {
+        "clerk": "Catahoula Parish Clerk of Court",
+        "schools": "Catahoula Schools",
+        "library": "Catahoula Parish Library"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/catahoula-clerk-b3e39ea750.jpg",
+          "alt": "Catahoula Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/catahoula-schools-90b05f875e.png",
+          "alt": "Catahoula Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/catahoula-library-4566eec481.jpg",
+          "alt": "Catahoula Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "eastcarroll": {
+      "officeNames": {
+        "schools": "carrollschools.org"
+      },
+      "officeBrands": {
+        "schools": {
+          "src": "/org-logos/generated/eastcarroll-schools-fb546255c2.jpg",
+          "alt": "carrollschools.org logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "concordia": {
+      "officeNames": {
+        "parish": "Concordia Parish Louisiana Police Jury",
+        "schools": "Concordia Parish School Board",
+        "library": "Concordia Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/concordia-parish-48726f6357.png",
+          "alt": "Concordia Parish Louisiana Police Jury logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/concordia-schools-57d786418c.png",
+          "alt": "Concordia Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/concordia-library-d593f32cfa.jpg",
+          "alt": "Concordia Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "eastfeliciana": {
+      "officeNames": {
+        "assessor": "East Feliciana Parish Assessor",
+        "schools": "East Feliciana Public Schools",
+        "library": "Audubon Regional Library"
+      },
+      "officeBrands": {
+        "assessor": {
+          "src": "/org-logos/generated/eastfeliciana-assessor-35bc5ea857.gif",
+          "alt": "East Feliciana Parish Assessor logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/eastfeliciana-schools-d8f51efe7f.jpg",
+          "alt": "East Feliciana Public Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/eastfeliciana-library-442f5b6899.png",
+          "alt": "Audubon Regional Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "desoto": {
+      "officeNames": {
+        "clerk": "DeSoto Parish Clerk of Court",
+        "assessor": "DeSoto Parish Assessor",
+        "schools": "DeSoto Parish Schools",
+        "library": "DeSoto Parish Library"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/desoto-clerk-88b6667cad.png",
+          "alt": "DeSoto Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/desoto-assessor-bbd031e965.png",
+          "alt": "DeSoto Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/desoto-schools-27cfcb35de.png",
+          "alt": "DeSoto Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/desoto-library-bbaa7d17fb.png",
+          "alt": "DeSoto Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "DeSoto Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-desoto"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/desoto-gop-0ee71185b8.avif",
+            "alt": "DeSoto Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "evangeline": {
+      "officeNames": {
+        "parish": "Evangeline Parish Police Jury",
+        "clerk": "Evangeline Parish Clerk of Court",
+        "assessor": "Evangeline Assessor",
+        "schools": "Evangeline Parish School District",
+        "library": "Evangeline Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/evangeline-parish-c34f72f24c.jpg",
+          "alt": "Evangeline Parish Police Jury logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/evangeline-clerk-67dc1e2ac6.svg",
+          "alt": "Evangeline Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/evangeline-assessor-910f29022f.ico",
+          "alt": "Evangeline Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/evangeline-schools-77d4d530ae.png",
+          "alt": "Evangeline Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/evangeline-library-18807b0bbc.ico",
+          "alt": "Evangeline Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "claiborne": {
+      "officeNames": {
+        "parish": "Claiborne Parish Police Jury, Homer, Haynesville And All of Claiborne Parish Louisiana",
+        "assessor": "Claiborne Parish Assessor",
+        "schools": "Claiborne Parish School District",
+        "library": "Claiborne Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/claiborne-parish-5e0d84123a.jpg",
+          "alt": "Claiborne Parish Police Jury, Homer, Haynesville And All of Claiborne Parish Louisiana logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/claiborne-assessor-05ff66f10e.png",
+          "alt": "Claiborne Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/claiborne-schools-32b955aa85.ico",
+          "alt": "Claiborne Parish School District logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/claiborne-library-1e1af2cb2f.png",
+          "alt": "Claiborne Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "franklin": {
+      "officeNames": {
+        "clerk": "Franklin Parish Clerk of Court",
+        "schools": "Franklin Parish Schools",
+        "library": "Franklin Parish Library"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/franklin-clerk-6816cc3f19.png",
+          "alt": "Franklin Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/franklin-schools-02fac85808.png",
+          "alt": "Franklin Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/franklin-library-e94be43048.png",
+          "alt": "Franklin Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "grant": {
+      "officeNames": {
+        "parish": "Grant Parish Police Jury",
+        "clerk": "Grant Parish Clerk of Court",
+        "assessor": "Grant Parish Tax Assessor",
+        "schools": "Grant Parish Schools",
+        "library": "Grant Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/grant-parish-9667bddd52.jpg",
+          "alt": "Grant Parish Police Jury logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/grant-clerk-55e28c9b8f.ico",
+          "alt": "Grant Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/grant-assessor-9193c44972.jpg",
+          "alt": "Grant Parish Tax Assessor logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/grant-library-f1ccfb99a0.png",
+          "alt": "Grant Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Grant Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-grant"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/grant-gop-0ee71185b8.avif",
+            "alt": "Grant Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "eastbatonrouge": {
+      "officeNames": {
+        "parish": "East Baton Rouge Parish Government",
+        "clerk": "EBR Clerk of Court",
+        "assessor": "East Baton Rouge Parish Assessor's Office",
+        "schools": "EBR Schools",
+        "library": "East Baton Rouge Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/eastbatonrouge-parish-d3f7dc7952.png",
+          "alt": "East Baton Rouge Parish Government logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/eastbatonrouge-clerk-8bff8dcc35.png",
+          "alt": "EBR Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/eastbatonrouge-assessor-3a7b6a9441.png",
+          "alt": "East Baton Rouge Parish Assessor's Office logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/eastbatonrouge-schools-53f53f336b.png",
+          "alt": "EBR Schools logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/eastbatonrouge-library-c0e3d5a199.png",
+          "alt": "East Baton Rouge Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "East Baton Rouge Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-ebr"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/eastbatonrouge-gop-163c43c461.avif",
+            "alt": "East Baton Rouge Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "jefferson": {
+      "officeNames": {
+        "parish": "Jefferson Parish",
+        "assessor": "JP Assessor's Office",
+        "schools": "Jefferson Parish Schools",
+        "library": "Jefferson Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/jefferson-parish-42b3101da7.svg",
+          "alt": "Jefferson Parish logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/jefferson-assessor-59bff54cd1.png",
+          "alt": "JP Assessor's Office logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/jefferson-schools-fe0f15d781.ico",
+          "alt": "Jefferson Parish Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/jefferson-library-eedd65c506.png",
+          "alt": "Jefferson Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Jefferson Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-jefferson"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/jefferson-gop-2f5dada8e6.avif",
+            "alt": "Jefferson Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "jackson": {
+      "officeNames": {
+        "parish": "Jackson Parish Police Jury",
+        "clerk": "Jackson Parish Clerk of Court",
+        "assessor": "Jackson Parish Assessor",
+        "schools": "Jackson Parish School District",
+        "library": "Jackson Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/jackson-parish-de8bc3bdfd.png",
+          "alt": "Jackson Parish Police Jury logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/jackson-clerk-319589fd7c.png",
+          "alt": "Jackson Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/jackson-assessor-c36d0f6ae6.ico",
+          "alt": "Jackson Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/jackson-schools-d03ce35184.png",
+          "alt": "Jackson Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/jackson-library-482275d2cc.png",
+          "alt": "Jackson Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "iberia": {
+      "officeNames": {
+        "parish": "Iberia Parish Government",
+        "clerk": "Iberia Parish Clerk Of Court",
+        "assessor": "Iberia Parish Assessor",
+        "schools": "Iberia Parish School District",
+        "library": "Iberia Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/iberia-parish-64ae0637ec.png",
+          "alt": "Iberia Parish Government logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/iberia-clerk-5caf3a1bf5.png",
+          "alt": "Iberia Parish Clerk Of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/iberia-assessor-d3483635e2.png",
+          "alt": "Iberia Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/iberia-schools-b774d7f81d.png",
+          "alt": "Iberia Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/iberia-library-599212d6d1.png",
+          "alt": "Iberia Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Iberia Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-iberia"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/iberia-gop-1efc2bfd7e.avif",
+            "alt": "Iberia Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "lasalle": {
+      "officeNames": {
+        "assessor": "LaSalle Parish Assessor",
+        "schools": "LaSalle Parish Schools",
+        "library": "LaSalle Parish Library System"
+      },
+      "officeBrands": {
+        "assessor": {
+          "src": "/org-logos/generated/lasalle-assessor-b9a4064757.png",
+          "alt": "LaSalle Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/lasalle-schools-3592a789d1.png",
+          "alt": "LaSalle Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/lasalle-library-3735ff7ab4.ico",
+          "alt": "LaSalle Parish Library System logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "jeffersondavis": {
+      "officeNames": {
+        "parish": "Jeff Davis Parish Louisiana",
+        "clerk": "Jefferson Davis Parish Clerk of Court (LA)",
+        "assessor": "Jefferson Davis Parish Assessor",
+        "schools": "Jefferson Davis Parish Schools",
+        "library": "Jefferson Davis Parish Public Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/jeffersondavis-parish-b1b4bed1c2.png",
+          "alt": "Jeff Davis Parish Louisiana logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/jeffersondavis-clerk-182c5836df.png",
+          "alt": "Jefferson Davis Parish Clerk of Court (LA) logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/jeffersondavis-assessor-530261fb04.ico",
+          "alt": "Jefferson Davis Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/jeffersondavis-schools-dd8aa552f5.png",
+          "alt": "Jefferson Davis Parish Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/jeffersondavis-library-53cefac632.png",
+          "alt": "Jefferson Davis Parish Public Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "iberville": {
+      "officeNames": {
+        "parish": "Iberville Parish Government",
+        "clerk": "Iberville Parish Clerk of Court",
+        "assessor": "Iberville Parish Assessor",
+        "schools": "Iberville Parish School District",
+        "library": "Iberville Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/iberville-parish-26bc755496.png",
+          "alt": "Iberville Parish Government logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/iberville-clerk-36cc0cdadb.png",
+          "alt": "Iberville Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/iberville-assessor-b3ae53a5ad.png",
+          "alt": "Iberville Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/iberville-schools-c8ea6fca8a.png",
+          "alt": "Iberville Parish School District logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/iberville-library-27cb4ca03d.ico",
+          "alt": "Iberville Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Iberville Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-iberville"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/iberville-gop-04c4dfe228.avif",
+            "alt": "Iberville Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "lincoln": {
+      "officeNames": {
+        "parish": "Lincoln Parish Louisiana",
+        "assessor": "Lincoln Parish Assessor",
+        "schools": "Lincoln Parish Schools",
+        "library": "Lincoln Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/lincoln-parish-783940e605.png",
+          "alt": "Lincoln Parish Louisiana logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/lincoln-assessor-baae3138a4.png",
+          "alt": "Lincoln Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/lincoln-schools-70c08413e1.png",
+          "alt": "Lincoln Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/lincoln-library-70ac93a925.svg",
+          "alt": "Lincoln Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "lafourche": {
+      "officeNames": {
+        "parish": "Lafourche Parish Government",
+        "clerk": "Lafourche Clerk of Court",
+        "assessor": "Lafourche Parish Assessor's Office",
+        "schools": "Lafourche Parish School District",
+        "library": "Lafourche Public Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/lafourche-parish-5bef611e5b.png",
+          "alt": "Lafourche Parish Government logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/lafourche-clerk-78d1a89de4.png",
+          "alt": "Lafourche Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/lafourche-assessor-5eaceeea49.png",
+          "alt": "Lafourche Parish Assessor's Office logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/lafourche-schools-cde5525c78.png",
+          "alt": "Lafourche Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/lafourche-library-6b3bf5d31f.png",
+          "alt": "Lafourche Public Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Lafourche Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-lafourche"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/lafourche-gop-6ac22d09c1.avif",
+            "alt": "Lafourche Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "morehouse": {
+      "officeNames": {
+        "clerk": "Morehouse Parish Clerk of Court",
+        "schools": "Morehouse Parish School District",
+        "library": "MOREHOUSE PARISH LIBRARY"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/morehouse-clerk-e842ff77b9.jpg",
+          "alt": "Morehouse Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/morehouse-schools-96ba0dc35a.png",
+          "alt": "Morehouse Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/morehouse-library-c25ad9ef4e.ico",
+          "alt": "MOREHOUSE PARISH LIBRARY logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "livingston": {
+      "officeNames": {
+        "parish": "Livingston Parish Government (LA)",
+        "clerk": "Livingston Parish Clerk of Court",
+        "assessor": "Livingston Parish Assessor",
+        "schools": "Livingston Parish Schools",
+        "library": "Livingston Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/livingston-parish-70a63bb4b8.png",
+          "alt": "Livingston Parish Government (LA) logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/livingston-clerk-d7bf003e27.png",
+          "alt": "Livingston Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/livingston-assessor-58fc8ed4f7.png",
+          "alt": "Livingston Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/livingston-schools-4932d7b9b5.png",
+          "alt": "Livingston Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Livingston Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-livingston"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/livingston-gop-acd3c601f2.avif",
+            "alt": "Livingston Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "lafayette": {
+      "officeNames": {
+        "parish": "Lafayette Parish Government",
+        "clerk": "Lafayette Parish Clerk of Court",
+        "assessor": "Lafayette Parish Assessor",
+        "schools": "Lafayette Parish School System",
+        "library": "Lafayette Public Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/lafayette-parish-3a9cb45f50.png",
+          "alt": "Lafayette Parish Government logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/lafayette-clerk-70c324f5a6.png",
+          "alt": "Lafayette Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/lafayette-assessor-e71e6aa7ed.webp",
+          "alt": "Lafayette Parish Assessor logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/lafayette-schools-12e657cfc2.jpg",
+          "alt": "Lafayette Parish School System logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/lafayette-library-a9020c97e4.png",
+          "alt": "Lafayette Public Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Lafayette Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-lafayette"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/lafayette-gop-206e571b25.avif",
+            "alt": "Lafayette Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "madison": {
+      "officeNames": {
+        "parish": "Madison Parish",
+        "clerk": "Madison Parish Clerk of Court",
+        "schools": "Madison Parish School District",
+        "library": "mplibrary"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/madison-parish-fbdd25ef77.png",
+          "alt": "Madison Parish logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/madison-clerk-a8f300518b.jpg",
+          "alt": "Madison Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/madison-schools-50fe829a73.png",
+          "alt": "Madison Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/madison-library-c871b5830a.gif",
+          "alt": "mplibrary logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "ouachita": {
+      "officeNames": {
+        "parish": "Ouachita Parish Police Jury",
+        "clerk": "Ouachita Parish Clerk of Court",
+        "schools": "Ouachita Parish School System",
+        "library": "Ouachita Parish Public Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/ouachita-parish-66c317ee4e.png",
+          "alt": "Ouachita Parish Police Jury logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/ouachita-clerk-4766f176c2.jpg",
+          "alt": "Ouachita Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/ouachita-schools-0310dae03c.png",
+          "alt": "Ouachita Parish School System logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/ouachita-library-4b3af061e5.png",
+          "alt": "Ouachita Parish Public Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "orleans": {
+      "officeNames": {
+        "parish": "Orleans Parish Government",
+        "assessor": "Orleans Parish Assessor",
+        "schools": "NOLA Public Schools",
+        "library": "Orleans Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/orleans-parish-f6639a268f.png",
+          "alt": "Orleans Parish Government logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/orleans-assessor-5228adfb4d.ico",
+          "alt": "Orleans Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/orleans-schools-26fe6bfee8.png",
+          "alt": "NOLA Public Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/orleans-library-954030f727.png",
+          "alt": "Orleans Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Orleans Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Official chapter page",
+              "https://gop4nola.com/home"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/orleans-gop-f0ca8cbeb7.avif",
+            "alt": "Orleans Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "natchitoches": {
+      "officeNames": {
+        "parish": "Natchitoches Parish Government",
+        "clerk": "Natchitoches Parish Clerk of Court",
+        "assessor": "NATCHITOCHES ASSESSOR",
+        "schools": "Natchitoches Parish School Board",
+        "library": "Natchitoches Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/natchitoches-parish-34711ac3d2.png",
+          "alt": "Natchitoches Parish Government logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/natchitoches-clerk-4a382e8a48.webp",
+          "alt": "Natchitoches Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/natchitoches-assessor-431c26646b.ico",
+          "alt": "NATCHITOCHES ASSESSOR logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/natchitoches-schools-fef323c9ae.png",
+          "alt": "Natchitoches Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "pointecoupee": {
+      "officeNames": {
+        "parish": "Pointe Coupee Parish Government",
+        "assessor": "Pointe Coupee Parish Assessor",
+        "schools": "Pointe Coupee Parish School System",
+        "library": "Pointe Coupee Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/pointecoupee-parish-0278220d2e.webp",
+          "alt": "Pointe Coupee Parish Government logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/pointecoupee-assessor-51ac7f0834.png",
+          "alt": "Pointe Coupee Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/pointecoupee-schools-e7bfce0c9c.png",
+          "alt": "Pointe Coupee Parish School System logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/pointecoupee-library-36c5ce9c4c.png",
+          "alt": "Pointe Coupee Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Pointe Coupee Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-pointe-coupee"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/pointecoupee-gop-0ee71185b8.avif",
+            "alt": "Pointe Coupee Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "redriver": {
+      "officeNames": {
+        "parish": "Red River Parish Police Jury",
+        "clerk": "Red River Parish Clerk of Court",
+        "schools": "Red River Parish Public Schools",
+        "library": "Red River Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/redriver-parish-26edd58d0c.gif",
+          "alt": "Red River Parish Police Jury logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/redriver-clerk-910a0037fc.png",
+          "alt": "Red River Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/redriver-schools-e24b9bfac6.png",
+          "alt": "Red River Parish Public Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/redriver-library-91d21863db.png",
+          "alt": "Red River Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Red River Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-red-river"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/redriver-gop-0ee71185b8.avif",
+            "alt": "Red River Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "plaquemines": {
+      "officeNames": {
+        "parish": "Plaquemines Parish",
+        "clerk": "Plaquemines Parish Clerk Of Court",
+        "assessor": "Plaquemines Parish Assessor's Office",
+        "schools": "Plaquemines Parish School Board",
+        "library": "Plaquemines Parish Public Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/plaquemines-parish-e117390e55.ico",
+          "alt": "Plaquemines Parish logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/plaquemines-clerk-05ff4d6916.png",
+          "alt": "Plaquemines Parish Clerk Of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/plaquemines-assessor-109ee2fe8b.png",
+          "alt": "Plaquemines Parish Assessor's Office logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/plaquemines-schools-3b8483ffe1.png",
+          "alt": "Plaquemines Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/plaquemines-library-749e2cf0f4.png",
+          "alt": "Plaquemines Parish Public Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "sabine": {
+      "officeNames": {
+        "parish": "Sabine Parish Government",
+        "clerk": "Sabine Parish Clerk of Court",
+        "schools": "Sabine Parish School District",
+        "library": "Sabine Parish Library!!"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/sabine-clerk-bf660b908b.png",
+          "alt": "Sabine Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/sabine-schools-ecb6948ece.png",
+          "alt": "Sabine Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/sabine-library-e480f577c3.png",
+          "alt": "Sabine Parish Library!! logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "richland": {
+      "officeNames": {
+        "clerk": "Richland Parish Clerk of Court",
+        "schools": "Richland Parish School Board",
+        "library": "Richland Parish Library"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/richland-clerk-aabde918cd.png",
+          "alt": "Richland Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/richland-schools-222336caa8.png",
+          "alt": "Richland Parish School Board logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/richland-library-28b77a6bce.png",
+          "alt": "Richland Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Richland Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-richland"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/richland-gop-0ee71185b8.avif",
+            "alt": "Richland Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "stcharles": {
+      "officeNames": {
+        "parish": "St. Charles Parish",
+        "clerk": "St. Charles Parish Clerk of Court",
+        "assessor": "St. Charles Parish Assessor's Office",
+        "schools": "St. Charles Parish Public Schools",
+        "library": "St. Charles Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/stcharles-parish-7b4a8af703.ico",
+          "alt": "St. Charles Parish logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/stcharles-clerk-f8d6261c5c.png",
+          "alt": "St. Charles Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/stcharles-assessor-0aab329abb.png",
+          "alt": "St. Charles Parish Assessor's Office logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/stcharles-schools-17e9a2ba9c.png",
+          "alt": "St. Charles Parish Public Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/stcharles-library-2ee15b5afa.svg",
+          "alt": "St. Charles Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "St. Charles Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-st-charles"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/stcharles-gop-0ee71185b8.avif",
+            "alt": "St. Charles Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "sthelena": {
+      "officeNames": {
+        "parish": "St. Helena Parish Police Jury",
+        "schools": "St. Landry Parish School Board",
+        "library": "Audubon Regional Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/sthelena-parish-bf560c8aab.png",
+          "alt": "St. Helena Parish Police Jury logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/sthelena-schools-dfbb89e698.png",
+          "alt": "St. Landry Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/sthelena-library-442f5b6899.png",
+          "alt": "Audubon Regional Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "stlandry": {
+      "officeNames": {
+        "schools": "St. Landry Parish School Board",
+        "library": "Opelousas Public Library"
+      },
+      "officeBrands": {
+        "schools": {
+          "src": "/org-logos/generated/stlandry-schools-dfbb89e698.png",
+          "alt": "St. Landry Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/stlandry-library-cb5f262080.jpg",
+          "alt": "Opelousas Public Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "St. Landry Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-st-landry"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/stlandry-gop-c94c170e47.avif",
+            "alt": "St. Landry Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "stbernard": {
+      "officeNames": {
+        "parish": "St. Bernard Parish",
+        "assessor": "St. Bernard Parish Assessor",
+        "schools": "St. Bernard Parish School District",
+        "library": "St. Bernard Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/stbernard-parish-67320ff623.png",
+          "alt": "St. Bernard Parish logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/stbernard-assessor-7ef898ada5.png",
+          "alt": "St. Bernard Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/stbernard-schools-b7ec2465b9.png",
+          "alt": "St. Bernard Parish School District logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/stbernard-library-5d449fae43.png",
+          "alt": "St. Bernard Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "rapides": {
+      "officeNames": {
+        "parish": "Rapides Parish Police Jury",
+        "clerk": "Rapides Parish Clerk of Court",
+        "schools": "Rapides Parish School Board",
+        "library": "Rapides Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/rapides-parish-1ef54aef69.jpg",
+          "alt": "Rapides Parish Police Jury logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/rapides-clerk-8a0fe35932.png",
+          "alt": "Rapides Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/rapides-schools-7df7f8f347.png",
+          "alt": "Rapides Parish School Board logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/rapides-library-94d6c97e31.png",
+          "alt": "Rapides Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Rapides Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-rapides"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/rapides-gop-0ee71185b8.avif",
+            "alt": "Rapides Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "stjohnthebaptist": {
+      "officeNames": {
+        "parish": "St. John the Baptist Parish",
+        "clerk": "St. John The Baptist Parish Clerk of Court",
+        "assessor": "St. John the Baptist Parish Assessor",
+        "schools": "St. John The Baptist Parish Public Schools",
+        "library": "St. John The Baptist Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/stjohnthebaptist-parish-3255354033.png",
+          "alt": "St. John the Baptist Parish logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/stjohnthebaptist-assessor-ce27c183ef.svg",
+          "alt": "St. John the Baptist Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/stjohnthebaptist-schools-e790ce6481.png",
+          "alt": "St. John The Baptist Parish Public Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/stjohnthebaptist-library-9c46539461.jpg",
+          "alt": "St. John The Baptist Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "stjames": {
+      "officeNames": {
+        "parish": "St. James Parish",
+        "clerk": "St. James Parish Clerk of Court",
+        "assessor": "St. James Parish Assessor",
+        "schools": "St. James Parish Schools",
+        "library": "Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/stjames-parish-39c350454d.ico",
+          "alt": "St. James Parish logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/stjames-clerk-323423a536.png",
+          "alt": "St. James Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/stjames-assessor-f29321946c.png",
+          "alt": "St. James Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/stjames-schools-e624173954.png",
+          "alt": "St. James Parish Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/stjames-library-39c350454d.ico",
+          "alt": "Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "tensas": {
+      "officeNames": {
+        "clerk": "Tensas Parish Clerk of Court",
+        "schools": "Tensas Parish School District",
+        "library": "Tensas Parish Library"
+      },
+      "officeBrands": {
+        "schools": {
+          "src": "/org-logos/generated/tensas-schools-c9c62f22d2.png",
+          "alt": "Tensas Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/tensas-library-e3e527c354.ico",
+          "alt": "Tensas Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "stmartin": {
+      "officeNames": {
+        "parish": "St. Martin Parish Government",
+        "clerk": "St. Martin Parish Clerk of Court",
+        "assessor": "St. Martin Tax Assessor",
+        "schools": "St. Martin Parish School District",
+        "library": "St. Martin Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/stmartin-parish-217cb1d5d5.png",
+          "alt": "St. Martin Parish Government logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/stmartin-clerk-7d91d45fab.png",
+          "alt": "St. Martin Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/stmartin-assessor-4f68e70651.png",
+          "alt": "St. Martin Tax Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/stmartin-schools-8e76db2d41.ico",
+          "alt": "St. Martin Parish School District logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/stmartin-library-ae522163be.gif",
+          "alt": "St. Martin Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "St. Martin Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Official chapter page",
+              "http://stmartingop.org/"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/stmartin-gop-bbcdc24e5c.avif",
+            "alt": "St. Martin Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "tangipahoa": {
+      "officeNames": {
+        "parish": "Tangipahoa Parish Government",
+        "clerk": "Tangipahoa Parish Clerk of Court",
+        "assessor": "Tangi Assessor",
+        "schools": "Tangipahoa Parish School System",
+        "library": "Tangipahoa Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/tangipahoa-parish-19ff477747.png",
+          "alt": "Tangipahoa Parish Government logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/tangipahoa-clerk-302a21048c.png",
+          "alt": "Tangipahoa Parish Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/tangipahoa-assessor-07e68c9ca0.svg",
+          "alt": "Tangi Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/tangipahoa-schools-718898a426.png",
+          "alt": "Tangipahoa Parish School System logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/tangipahoa-library-1ba2691992.png",
+          "alt": "Tangipahoa Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Tangipahoa Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-tangipahoa"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/tangipahoa-gop-0ee71185b8.avif",
+            "alt": "Tangipahoa Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "sttammany": {
+      "officeNames": {
+        "parish": "St. Tammany Parish",
+        "clerk": "St. Tammany Clerk of Court",
+        "assessor": "The St. Tammany Assessor's Office",
+        "schools": "St. Tammany Parish Public Schools",
+        "library": "St. Tammany Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/sttammany-parish-c41516f152.png",
+          "alt": "St. Tammany Parish logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/sttammany-clerk-6dad612373.png",
+          "alt": "St. Tammany Clerk of Court logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/sttammany-assessor-0b2b8119af.png",
+          "alt": "The St. Tammany Assessor's Office logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/sttammany-schools-3d8b92d07b.ico",
+          "alt": "St. Tammany Parish Public Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/sttammany-library-64f171d014.png",
+          "alt": "St. Tammany Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "St. Tammany Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Official chapter page",
+              "https://sttammanyrepublicans.org/"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/sttammany-gop-0ee71185b8.avif",
+            "alt": "St. Tammany Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "stmary": {
+      "officeNames": {
+        "parish": "St. Mary Parish Government",
+        "clerk": "St. Mary Parish Clerk of Court",
+        "assessor": "St. Mary Parish Assessor",
+        "schools": "St. Mary Parish Schools",
+        "library": "St. Mary Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/stmary-parish-913249e9bf.png",
+          "alt": "St. Mary Parish Government logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/stmary-clerk-af8e6f55b4.jpg",
+          "alt": "St. Mary Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/stmary-assessor-e0d43ce87a.png",
+          "alt": "St. Mary Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/stmary-schools-deb273b79a.png",
+          "alt": "St. Mary Parish Schools logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/stmary-library-95fbf1aed1.png",
+          "alt": "St. Mary Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    },
+    "vernon": {
+      "officeNames": {
+        "parish": "Vernon Parish",
+        "clerk": "Vernon Parish Clerk of Court",
+        "schools": "Vernon Parish Schools",
+        "library": "Vernon Parish Library"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/vernon-clerk-ed5a18a7c6.png",
+          "alt": "Vernon Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/vernon-schools-337417217d.png",
+          "alt": "Vernon Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Vernon Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-vernon"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/vernon-gop-0ee71185b8.avif",
+            "alt": "Vernon Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "vermilion": {
+      "officeNames": {
+        "parish": "Vermilion Parish Government",
+        "clerk": "Vermilion Clerk of Court",
+        "schools": "Vermilion Parish School System",
+        "library": "Vermilion Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/vermilion-parish-7d429c1b76.webp",
+          "alt": "Vermilion Parish Government logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/vermilion-clerk-f2ee2b11e5.png",
+          "alt": "Vermilion Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/vermilion-schools-bd70b20b3f.png",
+          "alt": "Vermilion Parish School System logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/vermilion-library-67a88772b9.png",
+          "alt": "Vermilion Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Vermilion Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-vermillion"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/vermilion-gop-0ee71185b8.avif",
+            "alt": "Vermilion Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "terrebonne": {
+      "officeNames": {
+        "parish": "Terrebonne Parish Government",
+        "clerk": "Terrebonne Clerk",
+        "assessor": "Terrebonne Parish Assessor",
+        "schools": "Terrebonne Parish School District",
+        "library": "Terrebonne Parish Library System"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/terrebonne-clerk-35ee921063.png",
+          "alt": "Terrebonne Clerk logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/terrebonne-assessor-6f8ce12273.ico",
+          "alt": "Terrebonne Parish Assessor logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/terrebonne-schools-94d43e008a.png",
+          "alt": "Terrebonne Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/terrebonne-library-5979934d7e.png",
+          "alt": "Terrebonne Parish Library System logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Terrebonne Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-terrebonne"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/terrebonne-gop-0ee71185b8.avif",
+            "alt": "Terrebonne Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "union": {
+      "officeNames": {
+        "parish": "Union Parish Police Jury",
+        "clerk": "Union Parish Clerk of Court",
+        "assessor": "Union Parish Assessor's Office",
+        "schools": "Union Parish School District",
+        "library": "Union Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/union-parish-8d67f6cb0a.png",
+          "alt": "Union Parish Police Jury logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/union-clerk-25c8290418.png",
+          "alt": "Union Parish Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/union-assessor-29a9cef987.png",
+          "alt": "Union Parish Assessor's Office logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/union-schools-d09860a652.ico",
+          "alt": "Union Parish School District logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/union-library-8d67f6cb0a.png",
+          "alt": "Union Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "westcarroll": {
+      "officeNames": {
+        "schools": "West Carroll Parish School Board",
+        "library": "West Carroll Parish Library"
+      },
+      "officeBrands": {
+        "schools": {
+          "src": "/org-logos/generated/westcarroll-schools-cc72d75dea.png",
+          "alt": "West Carroll Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/westcarroll-library-f1c1cc2e4b.jpg",
+          "alt": "West Carroll Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      }
+    },
+    "westfeliciana": {
+      "officeNames": {
+        "parish": "Parish government",
+        "assessor": "West Feliciana Parish Assessor's Office",
+        "schools": "West Feliciana Parish Schools",
+        "library": "West Feliciana Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/westfeliciana-parish-2bec98b489.jpg",
+          "alt": "Parish government logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/westfeliciana-assessor-9c30bac40c.png",
+          "alt": "West Feliciana Parish Assessor's Office logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/westfeliciana-schools-1011b17b7a.png",
+          "alt": "West Feliciana Parish Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/westfeliciana-library-108f7e96e0.png",
+          "alt": "West Feliciana Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "westbatonrouge": {
+      "officeNames": {
+        "parish": "West Baton Rouge Parish",
+        "clerk": "West Baton Rouge Clerk of Court",
+        "assessor": "West Baton Rouge Parish Assessor",
+        "schools": "West Baton Rouge Schools",
+        "library": "West Baton Rouge Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/westbatonrouge-parish-224af446bf.png",
+          "alt": "West Baton Rouge Parish logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/westbatonrouge-clerk-53f3a99ed4.png",
+          "alt": "West Baton Rouge Clerk of Court logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/westbatonrouge-assessor-4865aca2ab.png",
+          "alt": "West Baton Rouge Parish Assessor logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/westbatonrouge-schools-22996b2dab.png",
+          "alt": "West Baton Rouge Schools logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/westbatonrouge-library-ed84156d8b.ico",
+          "alt": "West Baton Rouge Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "West Baton Rouge Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-wbr"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/westbatonrouge-gop-0ee71185b8.avif",
+            "alt": "West Baton Rouge Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "winn": {
+      "officeNames": {
+        "parish": "Winn Parish Police Jury",
+        "schools": "Winn Parish School District",
+        "library": "Winn Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/winn-parish-7ff663a241.png",
+          "alt": "Winn Parish Police Jury logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/winn-schools-2ce211e678.png",
+          "alt": "Winn Parish School District logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/winn-library-cab6c95039.jpg",
+          "alt": "Winn Parish Library logo",
+          "variant": "wide",
+          "frame": "white"
+        }
+      }
+    },
+    "washington": {
+      "officeNames": {
+        "parish": "Washington Parish Government",
+        "clerk": "Vernon Parish Clerk of Court",
+        "assessor": "Washington Parish Assessor",
+        "schools": "Washington Parish Schools",
+        "library": "Washington Parish Library"
+      },
+      "officeBrands": {
+        "parish": {
+          "src": "/org-logos/generated/washington-parish-aeebadf61b.webp",
+          "alt": "Washington Parish Government logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "clerk": {
+          "src": "/org-logos/generated/washington-clerk-ed5a18a7c6.png",
+          "alt": "Vernon Parish Clerk of Court logo",
+          "variant": "seal",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/washington-assessor-bbc47ab4dd.jpg",
+          "alt": "Washington Parish Assessor logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/washington-schools-6f4788b4b0.png",
+          "alt": "Washington Parish Schools logo",
+          "variant": "wide",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/washington-library-f90c0a6e33.png",
+          "alt": "Washington Parish Library logo",
+          "variant": "square",
+          "frame": "white"
+        }
+      },
+      "communityOrganizations": [
+        {
+          "label": "Parish GOP",
+          "name": "Washington Parish Republican Executive Committee",
+          "role": "Local parish Republican executive committee",
+          "links": [
+            [
+              "Louisiana GOP chapter listing",
+              "https://www.lagop.com/rpec#h-washington"
+            ]
+          ],
+          "brand": {
+            "src": "/org-logos/generated/washington-gop-0ee71185b8.avif",
+            "alt": "Washington Parish Republican Executive Committee logo",
+            "variant": "square",
+            "frame": "white"
+          },
+          "note": "Listed in the Republican Party of Louisiana parish chapter directory."
+        }
+      ]
+    },
+    "webster": {
+      "officeNames": {
+        "parish": "Webster Parish Government",
+        "clerk": "Webster Parish Clerk of Courts",
+        "assessor": "Webster Parish Assessor",
+        "schools": "Webster Parish School Board",
+        "library": "Webster Parish Library"
+      },
+      "officeBrands": {
+        "clerk": {
+          "src": "/org-logos/generated/webster-clerk-3862c40fae.png",
+          "alt": "Webster Parish Clerk of Courts logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "assessor": {
+          "src": "/org-logos/generated/webster-assessor-919e622be5.png",
+          "alt": "Webster Parish Assessor logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "schools": {
+          "src": "/org-logos/generated/webster-schools-20434fb66c.png",
+          "alt": "Webster Parish School Board logo",
+          "variant": "square",
+          "frame": "white"
+        },
+        "library": {
+          "src": "/org-logos/generated/webster-library-adf483a06b.jpg",
+          "alt": "Webster Parish Library logo",
+          "variant": "seal",
+          "frame": "white"
+        }
+      }
+    }
+  }
+}

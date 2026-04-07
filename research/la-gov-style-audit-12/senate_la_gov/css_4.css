@@ -1,0 +1,7111 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic");
+
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic");
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+@import url('https://fonts.googleapis.com/css?family=Heebo:700');
+
+<!--[if IE 8]>
+
+.site-navigation .nav-menu {
+	display: block;
+}
+
+<![endif]-->
+
+
+a.tooltip {
+	position: relative;
+	display: inline;
+}
+a.tooltip span {
+	position: absolute;
+	left: 50%;
+	width: 140px;
+	padding: 6px;
+	margin-left: -76px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	visibility: hidden;
+	border-radius: 5px;
+}
+a.tooltip span:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -8px;
+	width: 0;
+	height: 0;
+	border-top: 8px solid black;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+}
+a:hover.tooltip span {
+	visibility: visible;
+	opacity: 0.8;
+	bottom: 125px;
+	z-index: 999;
+}
+
+/*TOOLTIP END*/
+
+/* TOOLTIP */
+a.tooltipNew {
+		position: relative;
+		display: inline;
+	}
+	
+	a.tooltipNew span {
+		position: absolute;
+		left: 50%;
+		width:220px;
+		padding: 6px;
+		margin-left: -76px;
+		background: #3399ff;
+		color: #fff;
+		text-align: center;
+		visibility: hidden;
+		border-radius: 5px;
+	} 
+			
+	a.tooltipNew span:after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -8px;
+		width: 0; height: 0;
+		border-top: 8px solid blue;
+		border-right: 8px solid transparent;
+		border-left: 8px solid transparent;
+	}
+			
+	a:hover.tooltipNew span {
+		visibility: visible;
+		opacity: 0.8;
+		bottom: 25px; /*CAPTION POSITION*/
+		z-index: 999;
+	}
+
+
+div.exFooter {
+	background-size: 75px 70px;
+	background-position: 95% center;
+	padding: 15px;
+	line-height: 150%;
+	font-family: Montserrat, sans-serif;
+	font-size: .7em;
+	color: #fff;
+	text-decoration: none;
+	color: #CCCCCC;
+	left: -80px;
+	background-color: #555555;
+	background-repeat: no-repeat;
+	background-image: url('https://house.louisiana.gov/H_Reps/H_Reps/LAMAPFOOTER.png');
+}
+div.exFooter2 {
+	padding: 10px;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
+	color: #fff;
+	text-decoration: none;
+	color: #FFFFFF;
+	border: 5px none #333333;
+	background-color: #333333;
+	text-align: center;
+	height: 75px;
+}
+
+
+<!--ToolTip2 Code-->
+
+a.tooltip2 {
+	position: absolute;
+	display: inline;
+}
+a.tooltip2 span {
+	position: absolute;
+	left: 50%;
+	width: 140px;
+	padding: 6px;
+	margin-left: -76px;
+	background: #000;
+	color: #fff;
+	text-align: center;
+	visibility: hidden;
+	border-radius: 5px;
+}
+a.tooltip2 span:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 75%;
+	margin-left: -8px;
+	width: 0;
+	height: 0;
+	border-top: 8px solid black;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+}
+a:hover.tooltip2 span {
+	visibility: visible;
+	opacity: 0.8;
+	bottom: 20px;
+	z-index: 999;
+}
+
+/*TOOLTIP2 END*/
+
+
+.PICSLIDER {
+	border-bottom: 2px solid #ff3300;
+	background-position: center;
+	background-color: #25272B;
+	color: #FFFFFF;
+	background-image: url('https://house.louisiana.gov/H_Reps/H_Reps/HouseBKG1.jpg');
+	}
+
+/* ICON CIRCLE
+======================================================================*/
+/* Feature Icon */
+
+.feature-icon {
+	padding-bottom: 0;
+}
+.feature-icon:before, .feature-icon:after {
+	display: none;
+}
+.feature-icon .icon {
+	position: relative;
+	-ms-behavior: url("assets/js/ie/PIE.htc");
+	background: rgba(115, 138, 141, 0.15);
+}
+.feature-icon .icon:before {
+	font-size: 1em;
+	color: #738a8d;
+}
+.feature-icon .icon:hover {
+	font-size: 2.5em;
+	color: #000000;
+}
+/* Icon */
+.icon {
+	position: relative;
+	text-decoration: none;
+}
+.icon:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: none !important;
+}
+.icon > .label {
+	display: none;
+}
+.icon.majorPicture {
+	/* MAJOR ICONS BKG COLORS */
+
+	text-align: center;
+	cursor: hand; /*background-color: #738a8d;*/;
+	color: #FFFFFF;
+	border-radius: 100%;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	line-height: 1em;
+	box-shadow: 0 0 0 4px #b6a885, 0 0 0 2px #e0e0e0; /* CIRCLE AROUND CIRCLE :-) */;
+	margin: 0 0 .2em 0;
+}
+.Picture {
+	width: 296px;
+	height: 296px;
+	border-radius: 148px;
+	-webkit-border-radius: 148px;
+	-moz-border-radius: 96px;
+	background: no-repeat;
+	background-color: #666666;
+	/* A complete circle requires your border radius to be half of your picture's width/height*/
+}
+/* CIRCLE TEXT */
+.circle-text {
+	width: 50%;
+}
+.circle-text:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	background: rgba(102, 153, 153, 0.9);
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.circle-text div {
+	float: left;
+	width: 100%;
+	padding-top: 50%;
+	line-height: 1em;
+	margin-top: -0.5em;
+	text-align: center;
+	color: white;
+}
+
+/*.topnav {
+	background-position: 35% -3%;
+	background-size: 700px 127px;
+	height: 175px;
+	background-color: #353535;
+	background-image: url('https://house.louisiana.gov/H_Reps/H_Reps/TopLogoCSS.png');
+	background-repeat: no-repeat;
+	padding-top: 0px;
+	padding-right: 10px;
+	text-align: right;
+	font-family: Montserrat, sans-serif;
+}*/
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:active {
+	color: #FFFFFF;
+}
+a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a:visited {
+	color: #FFFFFF;
+}
+
+
+
+/*==CODE TO CHANGE LINK COLORS==*/
+.fa-lg2 a:link {
+	text-decoration: none; 
+	color: #000000;
+	background: transparent;
+	font-size: 1.1em;
+	
+}
+.fa-lg2 a:visited {
+	text-decoration: none; 
+	color: #000000; 
+	background: transparent;
+	font-size: 1.2em;
+	
+}
+.fa-lg2 a:hover {
+	text-decoration: none; 
+	color: #ff6633; 
+	background: transparent;
+	/*font-size: 1.2em;*/
+	
+}
+.fa-lg2 a:focus {
+	text-decoration: none; 
+	color: #000000; 
+	background: transparent;
+	font-size: 1.2em;
+
+}
+.fa-lg2 a:active {
+	text-decoration: none;
+	color: #000000;
+	background: transparent;
+	font-size: 1.2em;
+}
+/*==END CODE TO CHANGE LINKS==*/
+
+.ChopinScript1p4emFont {
+	font-family: Montserrat, sans-serif;
+	font-size: 1.1em;
+	color: #CC3300;
+}
+.ChopinScript-p7em {
+	font-family: Montserrat, sans-serif;
+	font-size: .7em;
+}
+
+
+/*=============THIS headerTOP_resp IS Currently in use==============*/
+
+/*.headerTOP {
+	background-position: 40% -3%;
+	background-size: 720px 135px;
+	background-color: #32383f;
+	background-image: url('https://house.louisiana.gov/TopLogoCSS.png');
+	background-repeat: no-repeat;
+	height: 155px;
+	font-family: Montserrat, sans-serif;
+	color: #FFFFFF;
+	text-align: right;
+	padding-top: 0px;
+	padding-right: 10px;
+	overflow: auto;
+}*/
+
+
+.headerTOP_Resp {
+	max-width: 100%;
+	height: auto;
+	background-position: 35% 0%;
+	background-color: #001224;
+	background-image: url('https://house.louisiana.gov/TopLogoCSS.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-family: Montserrat, sans-serif;
+	color: #FFFFFF;
+	text-align: right;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 10px;
+	overflow: auto;	
+	height: 135px;
+
+}
+
+.headerSEARCH {
+	background-color: #001224;
+	font-family: Montserrat, sans-serif;
+	color: #FFFFFF;
+	text-align: right;
+	padding-top: 4px;
+	padding-right: 10px;
+	overflow:auto;
+}
+
+.row_SmallFont1 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+.headerTOPrespORIGINAL {
+	/*background-size: 700px 127px;*/
+	max-width: 100%;
+	height: auto;
+	background-position: 30% center;
+	background-color: #001224;
+	background-image: url('https://house.louisiana.gov/H_Reps/TopLogoCSSmistral.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 95px; /*font-family: Montserrat, sans-serif;*/;
+	color: #FFFFFF;
+	text-align: right;
+	padding-top: 0px;
+	padding-right: 10px;
+	overflow: auto;
+	padding-bottom: 10px;
+}
+
+.rowSchedGreyHSR2 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;border-top: thin solid #DBDFDF;*/
+	padding: 1% 4% 2% 10%;
+	background-position: center;
+	background-size: cover;
+	background-color: #404348;
+	text-align: left;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	/* border-bottom-style: solid;
+	border-bottom-width: thick;
+	border-bottom-color: #b6a885; */
+}
+
+/* ERM COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2*/
+.spanERM_1_of_2 {
+	background-position: center;
+    background-size: cover;
+	border-radius: 0px;
+	padding: 0% 10% 0% 7%;
+	width: 50%;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	/*border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #b6a885;*/
+	
+}
+
+.spanERM_2_of_2 {
+	background-position: center;
+    background-size: cover;
+	border-radius: 0px;
+	padding: 0% 10% 0% 10%;
+	width: 50%;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	/* border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;*/
+	
+}
+
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.spanERM_1_of_2, .spanERM_2_of_2 {
+	width: 100%;
+	text-align: left;}
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+.DistNewsPics {
+	/*background-size: 700px 127px;*/
+	max-width: 100%;
+	height: auto;
+	background-position: center;
+	background-image: url('https://house.louisiana.gov/H_Reps/DIST_NEWS/Marino_CJ_2017.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 410px; /*font-family: Montserrat, sans-serif;*/;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 0px;
+	padding-right: 10px;
+	overflow: auto;
+	padding-bottom: 10px;
+}
+
+.TopLinks {
+	font-family: Montserrat, sans-serif;
+	font-size: 1.1em;
+	display: inline-block;
+	text-align: right;
+}
+.BottomLinks {
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
+	display: inline-block;
+	text-align: left;
+}
+
+.search100 {
+	height: 25px;
+	padding: 15px 15px 2px 2px;
+	text-align: right;
+}
+.heading1 {
+	margin-right: 15%;
+	margin-left: 23%;
+	font-weight: normal;
+	font-size: 1.5em;
+	font-family: Montserrat,san- serif;
+
+}
+.DBinfoMargin {
+	margin-right: 15%;
+	margin-left: 23%;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
+}
+
+#wrapperSLIDER {
+	text-align: center;
+	margin-right: 0%;
+	margin-left: 0%;
+}
+
+#wrapper {
+	text-align: center;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+#wrapperSUB {
+	text-align: center;
+}
+
+#wrapperEMPTY {
+	text-align: center;
+/*	background-color: #545963; */
+	background-color: #555555;
+	padding-bottom: 25px;
+	padding-top: 25px;
+
+}
+
+#wrapperHOUSE {
+	text-align: center;
+	background-color: #;
+}
+
+#wrapperCommon {
+	text-align: center;
+	background-color: #ffffff;
+}
+
+
+#footer {
+	padding: 25px 12px 5px 12px;
+	height: 150px;
+}
+
+#MAINsectionsBODY {
+	margin: 2% 15% 3% 15%;
+	padding: 5px 12px 15px 12px;
+	height: auto;
+}
+
+#footer4sectionsW {
+	padding: 10px 12px 15px 12px;
+	height: auto;
+	margin-bottom: 5%;
+	margin-top: 2%;
+}
+
+#footer_HOME1 {
+	padding: 15px;
+	margin: 0px;
+}
+
+
+.footerFloatCommon25HOME {
+	margin: 5px;
+	padding: 10px;
+	width: auto;
+	float: left;
+	font-family: Montserrat, sans-serif;
+	font-size: 1.1em;
+	background-color: #993333;
+}
+
+
+#footerBottom {
+	padding: 2% 1% 5% 1%;
+	background-color: #0d1f30;
+	height: auto;
+	color: #FFFFFF;
+	font-size: .9em; /*font-family: Montserrat, sans-serif;
+	background-color: #3F3F3F;*/;
+	font-family: Montserrat, sans-serif;
+	text-align: center;
+	border-top: 1.5px solid;
+	border-color: #b59954;
+}
+	
+	
+	
+	
+}
+.footerFloatBottom {
+	font-family: Montserrat, sans-serif;
+	font-size: .9em;
+	color: #FFFFFF;
+}
+
+.arrow_box {
+	position: relative;
+	background: #cccccc;
+	border: 8px solid #f5f4f0;
+	padding:5px 0px 5px 0px;
+}
+.arrow_box:after, .arrow_box:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.arrow_box:after {
+	border-color: rgba(5, 3, 115, 0);
+	border-left-color: #cccccc;
+	border-width: 40px;
+	margin-top: -40px;
+}
+.arrow_box:before {
+	border-color: rgba(245, 244, 240, 0);
+	border-left-color: #f5f4f0;
+	border-width: 51px;
+	margin-top: -51px;
+}
+
+
+/*--RIBBON 1--*/
+
+
+.box {
+	border-radius: 10px;
+	/*box-shadow: 3px 1px 10px 3px #DADADA;*/
+	width: 980px;
+	position: relative;
+	background: #FFFFFF;
+	float: left;
+}
+.ribbon {
+   position: absolute;
+   right: -5px; top: -5px;
+   z-index: 1;
+   overflow: hidden;
+   width: 75px; height: 75px; 
+   text-align: right;
+}
+.ribbon span {
+   font-size: 10px;
+   color: #fff; 
+   text-transform: uppercase; 
+   text-align: center;
+   font-weight: bold; line-height: 20px;
+   transform: rotate(45deg);
+   width: 100px; display: block;
+   background: #79A70A;
+   background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+   position: absolute;
+   top: 19px; right: -21px;
+}
+
+.ribbon span::before {
+   content: '';
+   position: absolute; 
+   left: 0px; top: 100%;
+   z-index: -1;
+   border-left: 3px solid #79A70A;/*GREEN*/
+   border-right: 3px solid transparent;
+   border-bottom: 3px solid transparent;
+   border-top: 3px solid #79A70A;
+}
+.ribbon span::after {
+   content: '';
+   position: absolute; 
+   right: 0%; top: 100%;
+   z-index: -1;
+   border-right: 3px solid #79A70A;
+   border-left: 3px solid transparent;
+   border-bottom: 3px solid transparent;
+   border-top: 3px solid #79A70A;
+}
+.red span {background: linear-gradient(#F70505 0%, #8F0808 100%);}
+.red span::before {border-left-color: #8F0808; border-top-color: #8F0808;}
+.red span::after {border-right-color: #8F0808; border-top-color: #8F0808;}
+
+.blue span {background: linear-gradient(#2989d8 0%, #1e5799 100%);}
+.blue span::before {border-left-color: #1e5799; border-top-color: #1e5799;}
+.blue span::after {border-right-color: #1e5799; border-top-color: #1e5799;}
+
+ul#menu li {
+	display: inline;
+	font-family: Montserrat, sans-serif;
+}
+
+
+/*--RIBBON 2--*/
+
+
+.box2 {
+	border-radius: 10px;
+	/*box-shadow: 3px 1px 10px 3px #DADADA;*/
+	width: 980px;
+	position: relative;
+	background: #FFFFFF;
+	float: left;
+}
+.ribbon2 {
+   position: absolute;
+   right: -5px; top: -5px;
+   z-index: 1;
+   overflow: hidden;
+   width: 75px; height: 75px; 
+   text-align: right;
+}
+.ribbon2 span {
+   font-size: 10px;
+   color: #fff; 
+   text-transform: uppercase; 
+   text-align: center;
+   font-weight: bold; line-height: 20px;
+   transform: rotate(45deg);
+   width: 100px; display: block;
+   background: #8F0808; /*RED*/
+   background: linear-gradient(#F70505 0%, #8F0808 100%);
+   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+   position: absolute;
+   top: 19px; right: -21px;
+}
+
+.ribbon2 span::before {
+   content: '';
+   position: absolute; 
+   left: 0px; top: 100%;
+   z-index: -1;
+   border-left: 3px solid #8F0808;
+   border-right: 3px solid transparent;
+   border-bottom: 3px solid transparent;
+   border-top: 3px solid #8F0808;
+}
+.ribbon2 span::after {
+   content: '';
+   position: absolute; 
+   right: 0%; top: 100%;
+   z-index: -1;
+   border-right: 3px solid #8F0808;
+   border-left: 3px solid transparent;
+   border-bottom: 3px solid transparent;
+   border-top: 3px solid #8F0808;
+}
+.red span {background: linear-gradient(#F70505 0%, #8F0808 100%);}
+.red span::before {border-left-color: #8F0808; border-top-color: #8F0808;}
+.red span::after {border-right-color: #8F0808; border-top-color: #8F0808;}
+
+.blue span {background: linear-gradient(#2989d8 0%, #1e5799 100%);}
+.blue span::before {border-left-color: #1e5799; border-top-color: #1e5799;}
+.blue span::after {border-right-color: #1e5799; border-top-color: #1e5799;}
+
+ul#menu li {
+	display: inline;
+	font-family: Montserrat, sans-serif;
+}
+
+
+
+      img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+    
+
+
+
+.copyright {
+			color: #999999;
+			display: inline-block;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+		
+.D_JOURNAL {
+	color: #000000;
+	font-family: Montserrat, sans-serif;
+	font-size: 1.2em;
+}
+		
+.Picture {
+	border-radius: 10px;
+	right: 50px;
+}
+#footerHOME {
+	padding: 15px 18px 15px 15px; /*TOP RIGHT BOTTOM LEFT*/
+	height: 25pc;
+	text-align: left;
+	font-family: Calibri;
+}
+#wrapperEMPTY_HOME {
+	height: 300px;
+	padding-bottom: 20px;
+}
+#wrapperEMPTY_HOME1 {
+	background-color: #FFFFFF;
+	height: 20pc;
+	padding-bottom: 20px;
+}
+#wrapperEMPTY_HOME2 {
+	background-size: auto auto;
+	background-position: center;
+	background-color: #A5B8A7;
+	height: 350px;
+	padding-bottom: 20px;
+	background-image: url('https://house.louisiana.gov/H_Reps/DownTownBR2000.jpg');
+}
+
+
+#wrapperHOME {
+	text-align: center;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+h1 {
+ color: #000000;
+ font-family: Montserrat, sans-serif;
+ font-size: 1.7em;
+ font-weight: bold;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ }
+
+#h1B {
+	color: #666666;
+	font-family: Montserrat, sans-serif;
+	font-size: 1.7em;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#h1C {
+	color: #000000;
+	font-family: Montserrat, sans-serif;
+	font-size: 1.7em;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#wrapperEMPTY_HOME2 {
+	background-size: auto auto;
+	background-position: center;
+	background-color: #91969b;
+	height: auto;
+	padding-bottom: 5%;
+	overflow: hidden;
+
+}
+#h1Acopy1 {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.4em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	text-transform: capitalize;
+}
+
+#h1HEadings {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.6em;
+	font-weight: normal;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-transform: capitalize;
+}
+
+#Heading1 {
+	font-size: .8em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	font-family: Montserrat,san- serif;
+}
+.row1Reports_WhiteCopy {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	padding: 5% 10% .3% 15%;
+	text-align: right;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	font-size: 1em;
+}
+
+
+#h1AcopySalmon {
+	color: #FF5050;
+	font-family: Montserrat,san- serif;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+
+#h1A {
+	color: #F2F2F2;
+	font-family: Montserrat, sans-serif;
+	font-size: 1.7em;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: italic;
+	text-transform: capitalize;
+}
+
+
+
+.row_SmallFont {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	font-size: 0.9em;
+	color: #CCCCCC
+}
+
+/* links NOTICE */
+
+	#linksNOTICE {
+		padding: 2em 0 1em 0;
+	}
+
+		#linksNOTICE a {
+			color: #ee5805;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+		}
+
+			#linksNOTICE a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksNOTICE .container {
+			margin-bottom: .5em;
+		}
+
+		#linksNOTICE .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksNOTICE .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+		#linksNOTICE .copyright {
+			color: #999999;
+			margin-top: 1em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+				
+		#linksNOTICE .copyright1 {
+			color: #999999;
+			margin-top: 1em;
+			text-align: center;
+			font-size: 0.7em;
+		}
+
+
+/* links NOTICE */
+
+	#linksNOTICE1 {
+		padding: 1em 0 1em 0;
+	}
+
+		#linksNOTICE a {
+			color: #ee5805;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+		}
+
+			#linksNOTICE a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksNOTICE .container {
+			margin-bottom: .5em;
+		}
+
+	
+
+
+/* links */
+
+	#links {
+		padding: 0.5em 0 2em 0;
+	}
+
+		#links a {
+			color: inherit;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+			
+		}
+
+			#links a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#links .container {
+			margin-bottom: 1em;
+		}
+
+		#links .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#links .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+
+
+/* linksBlue */
+
+	#linksBlue {
+		padding: 0.5em 0 2em 0;
+	}
+
+		#linksBlue a {
+			color: #b3a582;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+			
+		}
+
+			#linksBlue a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksBlue .container {
+			margin-bottom: 1em;
+		}
+
+		#linksBlue .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksBlue .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+
+
+/* linksTERMS */
+
+	#linksTERMS {
+		padding: 0.5em 0 2em 0;
+	}
+
+		#linksTERMS a {
+			color: #1e90c1;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+			
+		}
+
+			#linksTERMS a:hover {
+				color: #0033ff;
+				border-bottom-color: transparent;
+			}
+
+		#linksTERMS .container {
+			margin-bottom: 1em;
+		}
+
+		#linksTERMS .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksTERMS .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+
+
+
+
+
+
+/* linksJournalIndex */
+
+	#linksJournalIndex {
+		padding: .5em 0 2em 0;
+	}
+
+		#linksJournalIndex a {
+			color: inherit;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+			
+		}
+
+			#linksJournalIndex a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksJournalIndex .container {
+			margin-bottom: 1em;
+		}
+
+		#linksJournalIndex .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksJournalIndex .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+
+				
+
+/* linksHCRS */
+
+	#linksHCRS {
+		padding: 0 0 0 0;
+	}
+
+		#linksHCRS a {
+			color: inherit;
+			
+		}
+
+			#linksHCRS a:hover {
+				color: #92d8e4;
+				border-bottom-color: transparent;
+			
+			}
+
+		
+
+		
+/* linksSenHomeBox */
+
+	#linksSenHomeBox {
+		padding: 0 0 0 0;
+	}
+
+		#linksSenHomeBox a {
+			color: inherit;
+			
+		}
+
+			#linksSenHomeBox a:hover {
+				color: #000000;
+				border-bottom-color: transparent;
+			}
+
+		
+
+		
+
+
+/* linksDivisons */
+
+	#linksDivisons {
+		padding: 3em 0 .5em 0;
+	}
+
+		#linksDivisons a {
+			color: inherit;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+			
+		}
+
+			#linksDivisons a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksDivisons .container {
+			margin-bottom: 1em;
+		}
+
+		#linksDivisons .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksDivisons .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+				
+
+
+/* linksDivisons1 */
+
+	#linksDivisons1 {
+	padding: 0em;
+}
+
+		#linksDivisons1 a {
+			color: inherit;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+			
+		}
+
+			#linksDivisons1 a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksDivisons1 .container {
+			margin-bottom: 1em;
+		}
+
+		#linksDivisons1 .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksDivisons1 .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+				
+
+
+
+
+
+/* links VIDEO HD */
+
+	#linksVIDEOHD {
+		padding: 0em 0 1em 0;
+	}
+
+		#linksVIDEOHD a {
+			color: inherit;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+		}
+
+			#linksVIDEOHD a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksVIDEOHD .container {
+			margin-bottom: 1em;
+		}
+
+		#linksVIDEOHD .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksVIDEOHD .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+		#linksVIDEOHD .copyright {
+			color: #999999;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+				
+		#linksVIDEOHD .copyright1 {
+			color: #999999;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.7em;
+		}
+		
+
+
+
+		
+/* links */
+
+	#linksSCHED {
+	padding: 1.3% 0 1% 0;
+}
+
+		#linksSCHED a {
+			color: inherit;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+		}
+
+			#linksSCHED a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksSCHED .container {
+			margin-bottom: 1em;
+		}
+
+		#linksSCHED .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksSCHED .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+		#linksSCHED .copyright {
+			color: #999999;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+				
+		#linksSCHED .copyright1 {
+			color: #999999;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.7em;
+		}
+		
+		
+/* linksWHITE */
+
+	#linksWHITE {
+		padding: 2.5em 0 1em 0;
+	}
+
+		#linksWHITE a {
+			color: #FFFFFF;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+		}
+
+			#linksWHITE a:hover {
+				color: #37c0fb;
+				border-bottom-color: transparent;
+			}
+
+		#linksWHITE .container {
+			margin-bottom: .5em;
+		}
+
+		#linksWHITE .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksWHITE .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+		#linksWHITE .copyright {
+			color: #999999;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+				
+		#linksWHITE .copyright1 {
+			color: #999999;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.7em;
+		}
+
+
+
+/* linksWHITE2 */
+
+	#linksWHITE2 {
+	padding: 1em 0 1em 0;
+}
+
+		#linksWHITE2 a {
+			color: #FFFFFF;
+			border-bottom-color: rgba(71, 71, 71, 0.25);
+		}
+
+			#linksWHITE2 a:hover {
+				color: #FFFFFF;
+				border-bottom-color: transparent;
+			}
+
+		#linksWHITE2 .container {
+			margin-bottom: .5em;
+		}
+
+		#linksWHITE2 .icons {
+			text-align: center;
+			margin: 0;
+		}
+
+			#linksWHITE2 .icons a {
+				color: #999999;
+			}
+
+				#footer .icons a:hover {
+					color: #474747;
+				}
+
+		#linksWHITE2 .copyright {
+			color: #999999;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+				
+		#linksWHITE2 .copyright1 {
+			color: #999999;
+			margin-top: 1.5em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+
+
+
+
+.rowHCRSTABS {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 4% 1% 4%;
+	font-family: Montserrat, sans-serif;
+	text-align: center;
+	background: #42464E;
+/* BKG FOR DESKTOP MAIN MENU AREA */
+	color: #FFFFFF;
+	overflow: hidden;
+}
+
+/* TEXT SHADOW */
+
+.textShadow {
+	text-decoration: none;
+	text-shadow: black 0.02em 0.02em 0.05em;
+}
+
+#h1AcopyMontserrat {
+	color: #003366;
+	font-family: Montserrat;
+	font-size: 1em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+#h1Acopy {
+	color: #003366;
+	font-family: Montserrat,san- serif;
+	font-size: 1.3em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+.ArchiveTitle {
+	background-size: cover auto;
+	color: #003366;
+	padding: 1% 0% 2% 10%;
+	font-family: Montserrat,san- serif;
+	font-size: 1.1em;
+	font-style: normal;
+}
+
+#h1Atimer {
+	color: #336699;
+	font-family: Montserrat,san- serif;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+#h1HEADINGS {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.4em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	text-transform: capitalize;
+}
+/*=============rowSEARCHGoogle JAN 2018==============*/
+
+.rowSEARCHGoogle {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 15% 1% 15%;
+	text-align: left;
+	background-color: #;
+	overflow: hidden;
+}
+
+
+
+#h1AcopyBlackFont {
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Poppins', sans-serif;*/
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-style: normal;
+	text-transform: capitalize;
+
+}
+
+#h1AcopyBlackFontMedium {
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Poppins', sans-serif;*/
+	font-size: 1.4em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-style: normal;
+	text-transform: capitalize;
+
+}
+
+#h1AcopyBLUEFont {
+	color: #4267B2;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Poppins', sans-serif;*/;
+	font-size: 1.2em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-style: normal;
+}
+
+#h1AcopyJournalIndex {
+	color: #000000;
+	font-family: Montserrat,san- serif;
+	/*font-family: 'Poppins', sans-serif;*/
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 1px;
+	font-style: normal;
+	text-transform: capitalize;
+
+}
+
+
+#h1AcopyWHITEFont {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+#h1AcopyWHITEFont1 {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 2.5em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+
+#h1AcopyBlackFontSergeant {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+#h1AcopyBlackFontSergeant1 {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+	text-align: left;
+}
+
+#h1AcopyWhiteFontHCO {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+#h1AcopyBlackFontHCO {
+	color: #333333;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+
+#h1AcopyHLS_About {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+#h1AcopyHLS_About1 {
+	color: #FFFFFF;
+	font-family: Montserrat,san- serif;
+	font-size: 1.8em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+#h1AcopyHLS_About2 {
+	color: #FFFFFF;
+	font-size: 1em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+	text-align: left;
+}
+
+#h1AcopyHLS_About3 {
+	padding: 4px;
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-family: Montserrat, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
+}
+
+#h1AcopyHLS_About3 {
+	color: #000000;
+	font-size: 1.8em;
+	font-weight: bold;
+	font-family: Montserrat, sans-serif;
+	text-align: center;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+}
+#h1AcopyHLS_About3a {
+	color: #FFFFFF;
+	font-size: 1.5em;
+	font-family: Montserrat, sans-serif;
+	text-align: center;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+}
+#h1AcopyHLS_About4 {
+	color: #000000;
+	font-size: 1.5em;
+	font-family: Montserrat, sans-serif;
+	text-align: left;
+	padding-top: 6px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+}
+
+#h1AcopyHLS_About4a {
+	padding: 1% 1% 0% 0%;
+	color: #000000;
+	font-size: 1.5em;
+	font-family: Montserrat, sans-serif;
+	text-align: center;
+}
+
+
+
+#h1AcopyHLS_About3A {
+	padding: 12px;
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-align: justify;
+}
+
+#h1AcopyHLS_About3C {
+	padding: 4px;
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
+}
+
+#h1AcopyHLS_About3D {
+	padding: 4px;
+	color: #FFFFFF;
+	font-size: 1.3em;
+	font-family:"Trajan Pro";
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
+}
+
+#h1AcopyHLS_About3B {
+	padding: 4px;
+	color: #FFFFFF;
+	font-size: 1.1em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-align: center;
+}
+
+#h1AcopyHLS_About4 {
+	color: #000000;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	/*text-transform: capitalize;*/
+}
+
+#h1AcopyHLS_About4A {
+	color: #000000;
+	font-size: 1.1em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+
+#h1AcopyHLS {
+	color: #454545;
+	font-family: Montserrat,san- serif;
+	font-size: 1.9em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+#h1AcopyBlackFont1 {
+	color: #454545;
+	font-family: Montserrat,san- serif;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+	text-align:center;
+}
+
+#h1ADivisions {
+	color: #336699;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	font-weight: normal;
+	margin-top: 20px;
+	margin-bottom: 6px;
+	font-style: normal;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+
+#footer4sectionsZ {
+	padding: 5px 12px 15px 12px;
+	height: auto;
+	margin-bottom: 15%;
+	margin-top: 2%;
+}
+.footerFloat4sections1b {
+	width: 20%;
+	float: left;
+	font-family: Montserrat, sans-serif;
+	font-size: 2em;
+	color: #000000;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	vertical-align: middle;
+}
+.HOME_HEADERS {
+	color: #000000;
+	font-family: ChopinScriptRegular, Arial, Helvetica;
+	font-size: 1.4em;
+}
+
+/*=====CMTE ROOM HIGHLIGHT======*/
+.ROOMNumber {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-width: 2px;
+	border-color: #FF5050;
+	background-size: cover auto;
+	padding: 5px 10px 5px 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #555555;
+	border-top-style: solid;
+}
+
+.ROOMNumberA {
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+	font-size: 1em;
+	background-size: auto;
+	padding: 3% 4% 3% 4%;/* TOP RIGHT BOTTOM LEFT */
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #266BBD;
+	font-family: Montserrat;
+}
+
+.row1Landing {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-color: #F2F2F2;
+	padding: 2% 4% 2% 4%;
+	text-align: left;
+	overflow: hidden;
+	font-weight: normal;
+	font-family: Montserrat;
+	font-size: 1.12em;
+}
+
+.row1Search {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-color: #F2F2F2;
+	padding: 2% 8% 2% 8%;
+	text-align: left;
+	overflow: hidden;
+	font-weight: normal;
+	font-family: Montserrat;
+	font-size: 1.12em;
+}
+.row1Journals {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-color: #F2F2F2;
+	padding: 2%;
+	text-align: left;
+	overflow: hidden;
+	font-weight: normal;
+	font-family: Montserrat;
+	font-size: 1.12em;
+}
+.row1Proclamations {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-color: #F2F2F2;
+	padding: 2% 10% 2% 6%;
+	text-align: left;
+	overflow: hidden;
+	font-weight: normal;
+	font-family: Montserrat;
+	font-size: 1.12em;
+}
+
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+
+
+/*  GRID OF FOUR 1 */
+/*.span_Reps4 {
+	background-position: center;
+	padding: 20px 15px 35px 25px;
+ top, right, bottom, left 
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
+}*/
+/* .span_Reps3 {
+	background-position: center;
+	padding: 20px 15px 35px 25px;
+top, right, bottom, left
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em; 
+}*/
+.span_Reps2 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 20px 2% 35px 3%;
+	/* top, right, bottom, left */
+	width: 45%; /*background-color: #4d72a3;*/;
+	background: rgba(29, 40, 58, 0.65);
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.span_Reps1 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 20px 2% 35px 8%;
+	/* top, right, bottom, left */
+	width: 55%; /*background-color: #4d72a3;*/;
+	background: rgba(247, 248, 248, 0.85); /*LIGHT GRAY*/
+	text-align: left;
+	color: #000000;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+.col {
+	margin: 0% 0 0% 0%;
+}
+/*.col {  margin: 1% 0 1% 0%; }*/
+.span_Reps1, .span_Reps2, .span_Reps3, .span_Reps4 {
+	width: 100%;}
+}
+
+
+/* COLUMNS CODE BY SIDE DESIGN END */
+
+
+
+/*  COLUMN SETUP 6 COLUMN SEATING CHART*/
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 6 OF FOUR 6 */
+
+
+.SEATING_6_of_6{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	/*padding: 4% 1% 1% 1%;*/
+	width: 16.66%;
+	/*;background: rgba(105, 129, 161, 0.5);    
+	background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/Puente.png');*/
+	/*background-repeat: no-repeat;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;*/
+
+	
+}
+.SEATING_6_of_6:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.SEATING_5_of_6{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	/*padding: 4% 1% 1% 1%;*/
+	width: 16.66%;
+	/*;background: rgba(105, 129, 161, 0.5);    background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/Puente.png');*/
+	/*background-repeat: no-repeat;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;*/
+
+
+	
+}
+.SEATING_5_of_6:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.SEATING_4_of_6{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	/*padding: 4% 1% 1% 1%;*/
+	width: 16.66%;
+	/*;background: rgba(105, 129, 161, 0.5);    background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/Puente.png');*/
+	/*background-repeat: no-repeat;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;*/
+
+
+	
+}
+.SEATING_4_of_6:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.SEATING_3_of_6{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	/*padding: 4% 1% 1% 1%;*/
+	width: 16.66%;
+	/*background: rgba(66, 70, 78, 0.6);    background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/Capitol_DRONEbw1.png');*/
+	/*background-repeat: no-repeat;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;*/
+
+
+	
+}
+.SEATING_3_of_6:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.SEATING_2_of_6{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	/*padding: 4% 1% 1% 1%;*/
+	width: 16.66%;
+	/*;background: rgba(77, 114, 163, 0.6);background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/OldStateCapitol.png');*/
+	/*background-repeat: no-repeat;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;*/
+
+}	
+.SEATING_2_of_6:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.SEATING_1_of_6 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	/*padding: 4% 1% 1% 1%;*/
+	width: 16.66%;
+	/*;background: rgba(77, 114, 163, 0.6);background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/OldStateCapitol.png');*/
+	background-repeat: no-repeat;
+	/*border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;*/
+
+	
+	
+}	
+.SEATING_1_of_6:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.SEATING_1_of_6, .SEATING_2_of_6, .SEATING_3_of_6, .SEATING_4_of_6 , .SEATING_5_of_6, .SEATING_6_of_6{ width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+/*  COLUMN SETUP  SEATING CHART PRESS AREA*/
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 4 OF FOUR 1 */
+.spanPodium_4_of_4{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	width: 25%;
+	/*;background: rgba(105, 129, 161, 0.5);    background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/Puente.png');	padding: 4% 1% 1% 1%;*/
+	background-repeat: no-repeat;
+	
+		
+}
+
+
+.spanPodium_3_of_4{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	width: 25%; /*background: rgba(66, 70, 78, 0.6);    background-color: #FFFFFF;*/;
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('/images/Capitol_DRONEbw1.png');	padding: 4% 1% 1% 1%;*/;
+	padding: 2% 1% 2% 1%;
+	background-repeat: no-repeat;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;
+	/*border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;	
+	border-top-color: #CCCCCC;
+	border-top-width: thin;
+	border-top-style: solid;*/
+}
+.spanPodium_3_of_4:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.spanPodium_2_of_4{
+	background-size: cover;
+	background-position: left;
+	border-radius: 0px;
+	width: 25%; /*;background: rgba(77, 114, 163, 0.6);background-color: #FFFFFF;*/;
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('/images/OldStateCapitol.png');	padding: 4% 1% 1% 1%;*/;
+	padding: 2% 1% 2% 1%;
+	background-repeat: no-repeat;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;
+	/*border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;	
+	border-top-color: #CCCCCC;
+	border-top-width: thin;
+	border-top-style: solid;*/
+}
+.spanPodium_2_of_4:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.spanPodium_1_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	width: 25%; /*;background: rgba(77, 114, 163, 0.6);background-color: #FFFFFF;	padding: 4% 1% 1% 1%;*/;
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.spanPodium_1_of_4, .spanPodium_2_of_4, .spanPodium_3_of_4, .spanPodium_4_of_4 { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+
+
+/*  COLUMN SETUP  LANDING PAGES*/
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 4 OF FOUR 1 */
+.spanLand_4_of_4{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 2% 1% 1% 1%;
+	width: 25%;
+	background-color:#FFFFFF;
+	/*;background: rgba(105, 129, 161, 0.5);    background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/Puente.png');*/
+	background-repeat: no-repeat;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;
+	
+}
+.spanLand_4_of_4:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.spanLand_3_of_4{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 2% 1% 1% 1%;
+	width: 25%;
+	background-color:#FFFFFF;
+	/*background: rgba(66, 70, 78, 0.6);    background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/Capitol_DRONEbw1.png');*/
+	background-repeat: no-repeat;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;
+	
+}
+.spanLand_3_of_4:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.spanLand_2_of_4{
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 2% 1% 1% 1%;
+	width: 25%;
+	background-color:#FFFFFF;
+	/*;background: rgba(77, 114, 163, 0.6);background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/OldStateCapitol.png');*/
+	background-repeat: no-repeat;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;
+}	
+.spanLand_2_of_4:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+.spanLand_1_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 2% 1% 1% 1%;
+	width: 25%;
+	background-color:#FFFFFF;
+	/*;background: rgba(77, 114, 163, 0.6);background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/OldStateCapitol.png');*/
+	background-repeat: no-repeat;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;
+}	
+.spanLand_1_of_4:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.spanLand_1_of_4, .spanLand_2_of_4, .spanLand_3_of_4, .spanLand_4_of_4 { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+
+/*  ONLY 1*/
+
+
+.SenSpecialCmte {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 4% 1% 1% 1%;
+	width: 100%;
+	background-color:#FFFFFF;
+	/*;background: rgba(77, 114, 163, 0.6);background-color: #FFFFFF;*/
+	text-align: center;
+	color: #3a4652;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('/images/OldStateCapitol.png');*/
+	background-repeat: no-repeat;
+	/*border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;*/
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #CCCCCC;
+}	
+.SenSpecialCmte:hover {
+	
+background: rgba(208, 215, 218, 0.99);
+
+}
+
+
+.row1homeLanding {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-size: cover;
+	padding: 2% 4% 2% 4%;
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/* linksLand */
+
+	#linksLand {
+		padding: 0 0 0 0;
+	}
+
+		#linksLand a {
+			color: inherit;
+			
+		}
+
+			#linksLand a:hover {
+				color: #000000;
+				border-bottom-color: transparent;
+			}
+
+
+/* linksFootter */
+
+	#linksLandFootter {
+		padding: 0 0 0 0;
+	}
+
+		#linksLandFootter a {
+			color: inherit;
+			
+		}
+
+			#linksLandFootter a:hover {
+				color: #FFFFFF;
+				border-bottom-color: transparent;
+			}
+
+
+/* linksByParishSen */
+
+	#linksByParishSen {
+		padding: 0 0 0 0;
+	}
+
+		#linksByParishSen a {
+			color: inherit;
+			
+		}
+
+			#linksByParishSen a:hover {
+				color: #000000;
+				border-bottom-color: transparent;
+			}
+
+
+/* linksFootter */
+
+	#linksLandFootter {
+		padding: 0 0 0 0;
+	}
+
+		#linksLandFootter a {
+			color: inherit;
+			
+		}
+
+			#linksLandFootter a:hover {
+				color: #FFFFFF;
+				border-bottom-color: transparent;
+			}
+
+.SpaceLINE {
+	background-position: center;
+	background-color: #C0C0C0;
+	height: 1px;
+	width: 70%;
+	margin-top: 1%;
+
+}
+
+.row1Committees {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-size: .8em;
+	font-family: Montserrat, sans-serif;
+	background-color: #666666;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-left: 10%;
+	padding-right: 10%;
+	overflow: hidden;
+	color: #FFFFFF;
+}
+
+.rowSpecialCmtes {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #305670;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: .5%;
+	padding-top: .5%;
+	overflow: hidden;
+	color: #FFFFFF;
+}
+
+
+#h1AcopyWhiteFonts {
+	color: #FFFFFF;
+	font-family: Montserrat, sans-serif; /*font-family: 'Poppins', sans-serif;*/;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+
+.BookmarkHover {
+	color: #336699;
+	font-family: Montserrat,san- serif;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: capitalize;
+	}
+
+	.BookmarkHover a:visited {
+	color: #336699;
+    text-decoration: none;
+	}
+	
+	.BookmarkHover a:hover {
+	color: #336699;
+    text-decoration: underline;	
+	}
+	
+	.BookmarkHover a:active {
+	color: #336699;
+    text-decoration: none;	
+	}
+
+	hr.style4 {
+	border-top: 1px dotted #8c8b8b;
+}
+
+/*=============SCROLL CSS FOR ABOUT AND CMTES==============*/
+
+div.scroll {
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: left;
+  padding: 20px;
+}
+
+
+/* ----------------------------------COLUMNS SIDE BY SIDE DESIGN--------------------------------------- */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 4 OF FOUR 4 */
+.span_4_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 25%;
+	/*background-color: #6981a1;*/
+	background: rgba(72, 102, 132, 0.95);
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1.5em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('https://jlcb.legis.la.gov/images/Puente.png');*/
+	background-repeat: no-repeat;
+}
+
+.span_3_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 25%;
+	/*background-color: #6981a1;*/
+    background: rgba(63, 89, 115, 0.8); 
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1.5em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('https://jlcb.legis.la.gov/images/Puente.png');*/
+	background-repeat: no-repeat;
+}
+
+.span_2_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 25%;
+	/*background-color: #42474c;*/
+    background: rgba(54, 77, 99, 0.8); 
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1.5em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('https://jlcb.legis.la.gov/images/Capitol_DRONEbw1.png');*/
+	background-repeat: no-repeat;
+}
+.span_1_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 25%;
+	/*background-color: #4d72a3;*/
+    background: rgba(45, 64, 82, 0.8); 
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1.5em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/
+	background-repeat: no-repeat;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 3 OF FOUR 3 MENUS */
+
+.spanMenu_4_of_4 {
+	background-position: center;
+	border-radius: 0px;
+	padding: 10px 10px 2px 10px;
+	width: 40%; /*background-color: #6981a1;background: rgba(18, 49, 78, 0.95);*/;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/Puente.png');*/;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+}
+
+.spanMenu_3_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 10px 10px 2px 10px;
+	width: 5%;
+	/*background-color: #6981a1;background: rgba(18, 49, 78, 0.95);*/
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('https://jlcb.legis.la.gov/images/Puente.png');*/
+	background-repeat: no-repeat;
+}
+
+
+.spanMenu_2_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 10px 10px 2px 10px;
+	width: 50%;
+	/*background-color: #42474c;background: rgba(18, 49, 78, 0.95);*/
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('https://jlcb.legis.la.gov/images/Capitol_DRONEbw1.png');*/
+	background-repeat: no-repeat;
+}
+.spanMenu_1_of_4 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 10px 20px 2px 10px;
+	width: 5%;
+	/*background-color: #4d72a3;background: rgba(18, 49, 78, 0.95);*/
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; 
+	/*font-family: 'Lato', 'sans-serif';*/
+	/*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/
+	background-repeat: no-repeat;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.spanMenu_1_of_4, .spanMenu_2_of_4, .spanMenu_3_of_4, .spanMenu_4_of_4 { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+
+/*  SECTIONS   KEY CONTACTS*/
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 4 OF FOUR 4 */
+.span_4_of_4key {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 25%;
+	/*background-color: #FFFFFF;*/
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+/*.span_4_of_4key:hover {
+	
+background-color: rgba(66, 70, 78, 0.4);
+color: #FFFFFF;
+}*/
+
+
+.span_3_of_4key {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 25%;
+	/*background-color: #FFFFFF;*/
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+/*.span_4_of_4key:hover {
+	
+background-color: rgba(66, 70, 78, 0.4);
+color: #FFFFFF;
+}*/
+
+.span_2_of_4key {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 25%;
+	/*background-color: #FFFFFF;*/
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+/*.span_4_of_4key:hover {
+	
+background-color: rgba(66, 70, 78, 0.4);
+color: #FFFFFF;
+}*/
+
+.span_1_of_4key {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 25%;
+	/*background-color: #FFFFFF;*/
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+/*.span_4_of_4key:hover {
+	
+background-color: rgba(66, 70, 78, 0.4);
+color: #FFFFFF;
+}*/
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_4key , .span_2_of_4key , .span_3_of_4key, .span_4_of_4key { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+
+/* COLUMNS SIDE BY SIDE DESIGN TWO HOME */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_2_of_2HOME {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+.span_1_of_2HOME {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2, .span_2_of_2 { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+/* COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_2_of_2 {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.3em;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+
+}
+
+.span_2_of_2:hover {
+	
+background-color: rgba(66, 70, 78, 0.1);
+color: #000000;
+
+
+}
+
+.span_1_of_2 {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.3em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+
+}
+
+.span_1_of_2:hover {
+	
+background-color: rgba(66, 70, 78, 0.1);
+color: #000000;
+
+}
+
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2, .span_2_of_2 { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+.span_SenMemInfo {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 3% 0% 3% 0%;/* top, right, bottom, left background-color: #4d72a3;*/
+	width: 50%; ;
+	background: rgba(66, 73, 91, 0.80);/*SLATE BLUE*/
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1.7em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.span_SenMemPic {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px 0px 0px 55px;
+	padding: 0% 6% 2% 18%; /* top, right, bottom, left background-color: #4d72a3; background: rgba(247, 248, 248, 0.85); LIGHT GRAY*/
+	width: 50%;
+	text-align: center;
+	color: #000000;
+	font-size: 2em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+.col {
+	margin: 0% 0 0% 0%;
+}
+/*.col {  margin: 1% 0 1% 0%; }*/
+.span_SenMemPic, .span_SenMemInfo {
+	width: 100%;
+	text-align: center;
+}
+}
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+.span_SenDistInfo1 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding:2% 3% 0% 3%;
+	/* top, right, bottom, left */
+	width: 50%; /*background-color: #4d72a3;*/;
+	background: rgba(204, 204, 204, 0.65);/*SLATE BLUE*/
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.span_SenDistInfo2 {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding:2% 0% 1% 15%;
+	/* top, right, bottom, left */
+	width: 50%; /*background-color: #4d72a3;*/;
+	background: rgba(204, 204, 204, 0.85); /*LIGHT GRAY*/
+	text-align: left;
+	color: #000000;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+.col {
+	margin: 0% 0 0% 0%;
+}
+/*.col {  margin: 1% 0 1% 0%; }*/
+.span_SenDistInfo1, .span_SenDistInfo2 {
+	width: 100%;}
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+.span_SenMem2a {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 2% 6% 1% 4%;/* top, right, bottom, left */
+	width: 35%; /*background-color: #4d72a3;*/; /*background: rgba(29, 40, 58, 0.65); SLATE BLUE*/;
+	background-color: #7F7F7F;
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.span_SenMem1a {
+	background-size: cover;
+	background-position: center;
+	border-radius: 0px;
+	padding: 2% 4% 1% 16%;/* top, right, bottom, left */
+	width: 65%; /*background-color: #4d72a3;*/;
+	background: rgb(226, 231, 231);/*LIGHT GRAY*/
+	text-align: left;
+	color: #000000;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif; /*font-family: 'Lato', 'sans-serif';*/ /*background-image: url('https://jlcb.legis.la.gov/images/OldStateCapitol.png');*/;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+.col {
+	margin: 0% 0 0% 0%;
+}
+/*.col {  margin: 1% 0 1% 0%; }*/
+.span_SenMem1a, .span_SenMem2a {
+	width: 100%;}
+}
+
+
+
+
+
+
+/* SEN HR BENEFITS COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_1_of_2_HRBenefits {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 1% 0% 8%;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+}
+
+.span_2_of_2_HRBenefits {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 2% 0% 4%;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2_HRBenefits, .span_2_of_2_HRBenefits { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+
+
+/* SEN HR BENEFITS 2 COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_1_of_2_HRBenefits2 {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 1% 0% 8%;
+	width: 50%;
+	background-color: #ebebeb;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+}
+
+.span_2_of_2_HRBenefits2 {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 2% 0% 2%;
+	width: 50%;
+	background-color: #ebebeb;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2_HRBenefits2, .span_2_of_2_HRBenefits2 { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+/* SEN CMTES COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_1_of_2_Cmtes{
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 1% 0% 12%;
+	width: 65%;
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+}
+
+.span_2_of_2_Cmtes {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 2% 0% 2%;
+	width: 35%;
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2_Cmtes, .span_2_of_2_Cmtes { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+/* DEMOGRAPHICS COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_2_of_2DEMOGRAPHICS {
+	background-position: center;
+    padding: 2% 4% 4% 4%;
+    width: 35%;
+    background: rgb(42, 50, 69, 0.75);
+    text-align: left;
+    font-family: Montserrat, sans-serif;
+    color: #FFFFFF;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+
+}
+.span_1_of_2DEMOGRAPHICS {
+	background-position: center;
+	padding: 2% 2% 4% 4%;
+	width: 65%;
+	background: rgba(255,255,255,0.55);
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	color: #000000; /*background-image: url('FLAG_PelicanFABRIC5.png');*/;
+	background-repeat: no-repeat;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2DEMOGRAPHICS, .span_2_of_2DEMOGRAPHICS { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+/*---------------------start new party code for committees june 2022 ---------------------------------*/
+
+
+.card-D22 {
+	/*background-color: #1338be;
+	background-color: #2f3d5e;*/
+	background-color: transparent;
+	color: white;
+	padding: .5rem;
+	height: 4rem;
+	text-align:left;
+  }
+  
+  .card-R22 {
+	/*background-color: #82150d;*/
+	background-color: transparent;
+	color: white;
+	padding: .5rem;
+	height: 4rem;
+	text-align:left;
+  }
+  
+  .card-I22 {
+	/*background-color: #f0ad4e;*/
+	background-color: transparent;
+	color: white;
+	padding: .5rem;
+	height: 4rem;
+	text-align:left;
+  }
+  
+  .card-staff22 {
+	background-color: transparent;
+	color: black;
+	padding: 0;
+	height: 4rem;
+	text-align:left;
+  }
+  
+  .cards22 {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .cards-staff22 {
+	max-width: 600px;
+	margin: 0;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	padding-top: 1rem;
+  }
+
+
+
+.rowSenCMTE_1Grey1 {
+	background-size: cover;
+	padding: 1% 10% 2% 10%;
+	text-align: left;
+	background-color: #363847;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 1em;
+	color: #FFFFFF;
+	background-image: url('CapitolFACIA.png');
+}
+
+
+a.memlink22 {
+	color: #fff !important;
+	font-size: 1.1em;
+  }
+
+
+
+
+/* ------FOR SEN BY CMTE ONLY-------*/
+
+.cards22a {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+a.memlink22a {
+	color: #000 !important;
+	font-size: 1em;
+  }
+  
+/* ------END FOR SEN BY CMTE ONLY-------*/
+
+
+
+/*--------------------------end new party code for committees -----------------------------*/
+
+
+
+/* PRESIDENT COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_2_of_2PRESIDENT {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1%;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+
+}
+.span_1_of_2PRESIDENT {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 2% 1% 2%;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2PRESIDENT, .span_2_of_2PRESIDENT { width: 100%; }
+}
+
+
+/* COLUMNS 2 SIDE BY SIDE DESIGN END */
+
+
+
+/* 3 COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+.span_1_of_3COLUMS {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 2% 1% 2%;
+	width: 33.3%;
+	background-color: rgba(45, 63, 85, 0.09);
+	text-align: center;
+	font-size:1.2em;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+
+.span_1_of_3COLUMS:hover {
+	
+background: rgba(45, 63, 85, 0.29);
+}
+
+
+/*  GRID 2 OF 2 */
+
+.span_2_of_3COLUMS{
+	background-position: center;
+	border-radius: 0px;
+	padding: 1%;
+	width: 33.3%;
+	background-color: rgba(45, 63, 85, 0.19);
+	text-align: center;
+	font-size:1.2em;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+
+}
+
+.span_2_of_3COLUMS:hover {
+	
+background: rgba(45, 63, 85, 0.29);
+}
+
+
+/*  GRID 2 OF 2 */
+.span_3_of_3COLUMS{
+	background-position: center;
+	border-radius: 0px;
+	padding: 1%;
+	width: 33.3%;
+	background-color: rgba(45, 63, 85, 0.29);
+	text-align: center;
+	font-size:1.2em;	
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+
+}
+
+.span_3_of_3COLUMS:hover {
+	
+background: rgba(45, 63, 85, 0.19);
+}
+
+
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_3COLUMS, .span_2_of_3COLUMS, .span_3_of_3COLUMS{ width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+/* SEN STAFF COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_1_of_2SenStaff {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 1% 1% 7%;
+	width: 50%;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	/*border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;*/
+
+
+}
+.span_2_of_2SenStaff {
+	background-position: center;
+	border-radius: 0px;
+	padding: 1% 6% 1% 6%;
+	width: 50%;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2SenStaff, .span_2_of_2SenStaff { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+/*---------------------start new party code for committees june 2022 ---------------------------------*/
+
+
+.card-D22 {
+	/*background-color: #1338be;
+	background-color: #2f3d5e;
+	color: white;*/
+	background-color: transparent;
+	color: white;
+	padding: 1rem;
+	height: 4rem;
+	text-align:left;
+  }
+  
+  .card-R22 {
+	/*background-color: #82150d;*/
+	background-color: transparent;
+	color: white;
+	padding: 1rem;
+	height: 4rem;
+	text-align:left;
+  }
+  
+  .card-I22 {
+	/*background-color: #f0ad4e;*/
+	background-color: transparent;
+	color: white;
+	padding: 1rem;
+	height: 4rem;
+	text-align:left;
+  }
+  
+  .card-staff22 {
+	background-color: transparent;
+	padding: 1rem;
+	height: 4rem;
+	text-align:left;
+  }
+  
+  /*.cards22 {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }*/
+
+  .cards22 {
+    max-width: 90%;
+    margin: 0 auto;
+    color: white;
+    display: grid;
+   	color: white;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.cards22district {
+    max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+.cards22parish {
+	padding: 0%;
+	max-width: 1400px;
+	margin: 0 auto;
+	display: block;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+ 
+  .cards-staff22 {
+	max-width: 600px;
+	margin: 0;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	padding-top: 1rem;
+  }
+
+  a.memlink22 {
+	color: #FFF !important;
+	font-size: 1em;
+  }
+
+/*--------------------------end new party code for committees june 2022 -----------------------------*/
+
+
+
+/*--------------------------Three equal columns next to each other -----------------------------*/
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Three equal columns next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Float after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+
+
+/* OFFICERS COLUMNS SIDE BY SIDE DESIGN TWO SECRETARY */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_2_of_2SECRETARY {
+	background-position: center;
+	border-radius: 0px;
+	padding: 2%;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+.span_1_of_2SECRETARY {
+	background-position: center;
+	border-radius: 0px;
+	padding: 2%;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2SECRETARY , .span_2_of_2SECRETARY { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+.BubbleTAB1SMALL24 {
+	border: thin solid #FFFFFF;
+	margin: auto;
+	padding: 1% 0.1% 1% 0.1%;
+	border-radius: 0px;
+	font-family: Montserrat, sans-serif;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-weight: normal;
+	text-decoration: none;
+	width: 40%;
+	text-align: center;
+}
+.BubbleTAB1SMALL24:hover {
+	background-color: rgba(162,145,104,.85);
+	color: white;
+}
+
+
+
+/* OFFICERS COLUMNS SIDE BY SIDE DESIGN TWO */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_2_of_2OFFICERS {
+	background-position: center;
+	border-radius: 0px;
+	padding: 2%;
+	width: 50%;
+	background-color: #EBEBEB;
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+.span_1_of_2OFFICERS {
+	background-position: center;
+	border-radius: 0px;
+	padding: 2%;
+	width: 50%;
+	background-color: #EBEBEB;
+	text-align: center;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	border-right-style: solid;
+	border-right-width: thin;
+	border-right-color: #CCCCCC;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_1_of_2OFFICERS , .span_2_of_2OFFICERS { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+/*===================COLLAPSIBLE COLUMNS CSS=====================*/
+
+
+
+/* COLUMNS SIDE BY SIDE DESIGN THREE */
+
+/*  SECTIONS  */
+.section1 {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	background-color:#12314E;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	/* margin: 1% 0 1% 1.6%;*/
+	margin: 0% 0 0% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID 2 OF 2 */
+.span_Senate {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 50%;
+	/*background-color: #FFFFFF;*/
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+}
+.span_House {
+	background-position: center;
+	border-radius: 0px;
+	padding: 30px 10px 30px 10px;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	
+}
+
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 0% 0 0% 0%; }
+	/*.col {  margin: 1% 0 1% 0%; }*/
+	.span_House, .span_Senate { width: 100%; }
+}
+
+
+/* COLUMNS SIDE BY SIDE DESIGN END */
+
+
+.row1_SenMemberPic {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #F0F0F0;
+	overflow: hidden;
+	background-image: url('Capitol_Orig_DRONE2000apx.png');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
+
+
+/*===================COLLAPSIBLE COLUMNS CSS=====================*/
+
+
+
+/* imports */
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+/* resets */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* global */
+
+body {
+  /*background-color: rgb(40, 40, 40);*/
+  /*color: rgb(100, 100, 100);*/
+  font-family: "Lato", 'sans-serif';
+  font-size: 1em;
+  line-height: 1.3;
+}
+
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0px;
+  max-width: 100%;
+  background-color: #fff;
+}
+
+h1 {
+  font-family: "Lato", 'sans-serif';
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h2 {
+    font-family: Montserrat, sans-serif;
+	font-size: 1.6em;
+	color: #000000;
+}
+
+/* TIMER */
+
+.row1Timer {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 14% 3% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: contain;
+	overflow: hidden;
+	background-image: url('TIMER.jpg');
+	color: #FFFFFF;
+	font-size: 1.5em;
+	background-repeat: no-repeat;
+	background-color: #2D212A;
+}
+.row2Timer {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-position: right bottom;
+	padding: 1% 14% 1% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	color: #000000;
+	font-size: 1.5em;
+	background-image: url('Gov15PC600.png');
+	background-color: #EBEBEB;
+	background-repeat: no-repeat;
+}
+.rowTIMER1 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #EBEBEB;
+	padding-left: 7%;
+	padding-right: 7%;
+	padding-bottom: 5%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+.ButtonTIMER {
+	padding: 2px 16px 2px 16px;
+	border-color: #FFFFFF;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-size: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.ButtonPRINT {
+	margin: 8px 20px 8px 20px;
+	border-radius: 5px;
+	padding: 7px 12px 7px 12px;
+	background-color: #ff6666;
+	color: #FFFFFF;
+}
+
+/*=====THIS headerTOPresp IS FOR FULLY RESP SITE=====*/
+.headerTOPresp {
+	/*background-size: 700px 127px;*/
+	padding: 14% 8% 8% 8%;
+	max-width: 100%;
+	background-position: center;
+	background-image: url('RedistCapitolDroneB%26W.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.rowHEADER {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	background-size: auto auto;
+	background: #000000 url('Capitol_Orig_DRONE22021.png') no-repeat fixed center 1%;
+	padding: 3% 4% 3% 9%;
+	box-shadow: 3px 2px 2px #FFFFFF;
+	text-align: left;
+	font-family: "Century Gothic";
+	overflow: hidden;
+	height: auto;
+	color: #FFFFFF;
+	font-size: 5vw;
+	vertical-align: middle;
+	background-size: contain;
+}
+
+
+/* grid */
+
+.row {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 1% 3% 6%;
+	text-align: center;
+	font-size: .8em;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.rowMembersBKG {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;	
+	background-image: url('Baton_Rouge_Panorama.png');*/
+	background-size: contain;
+	background-position: bottom;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.rowSenStaffBKG {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;	
+	background-image: url('Baton_Rouge_Panorama.png');
+	overflow: hidden;*/
+	background-size: contain;
+	background-position: bottom;
+	font-family: Montserrat, sans-serif;
+	background-repeat: no-repeat;
+	background-color: #fcf8f7;
+
+}
+
+.rowHome {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-family: Montserrat, sans-serif;	background-color: #EBEBEB;
+	padding-left:0%;
+	padding-right:0%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowHomeBTS {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-family: Montserrat, sans-serif;	background-color: #747389;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-left: 10%;
+	padding-right: 10%;
+	overflow: hidden;
+	background-image: url('FLAG_PelicanFABRIC.png');
+}
+
+.rowLINKS2 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-size: .8em;
+	font-family: Montserrat, sans-serif;	background-color: #FFFFFF;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowBUDGET {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-family: Montserrat, sans-serif;	padding-left: 13%;
+	padding-right: 13%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	background-color: #FFFFFF;
+	background-image: url('FLAG_PelicanFABRIC5.png');
+	overflow: hidden;
+	color: #000000;
+	font-size: .8em;
+}
+
+.rowHCRS {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: .35% 1% .65% 1%; /*TOP RIGHT BOTTOM LEFT*/
+	text-align: center; /*background-color: #BEBEBE;*/;
+	margin-right: 12%;
+	margin-left: 12%;
+	background: #001224; /* BKG FOR DESKTOP MAIN MENU AREA */
+	overflow: hidden;
+}
+
+
+
+
+.rowHCRSbills {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: .65% 1% .65% 1%;
+	text-align: center; /*background-color: #BEBEBE;*/;
+	color: #FFFFFF;
+	background-color:#555555;
+	overflow: hidden;
+	
+}
+
+.rowDivisions {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-position: right bottom;
+	text-align: left;
+	background-color: #EBEBEB;
+	padding-left: 12%;
+	padding-right: 12%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	background-image: url('CAPITOL1a.png');
+	background-repeat: no-repeat;
+}
+
+.rowDivisionsResInfra {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-position: right bottom;
+	text-align: left;
+	background-color: #EBEBEB;
+	padding-left: 6%;
+	padding-right: 6%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	background-image: url('CAPITOL1a.png');
+	background-repeat: no-repeat;
+}
+
+.rowDivisionsCentralStaff {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 0% 12% 3% 12%;
+	background-color: #EBEBEB;
+	overflow: hidden;
+}
+
+.rowSCHED {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left:4%;
+	padding-right:4%;
+	padding-bottom: 5%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowSCHED_Home1 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-color: #CCCCCC;*/
+	overflow: hidden;
+}
+
+.rowFBCommentsRedist2020 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-color: #CCCCCC;*/
+	overflow: hidden;
+	padding-bottom: 3%;
+	padding-top: 3%;
+}
+
+.rowARCHIVEvideos {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #ebebeb;
+	padding-left:7%;
+	padding-right:7%;
+	padding-bottom: 5%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowHLS_DIV {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowC {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #ebebeb;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.row1Sergeant {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 14% 1% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-image: url('44a.jpg');
+}
+
+.row1SergeantForms {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 14% 1% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-color: #798086;
+}
+
+.row1SergeantFormsA {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 14% 1% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-color: #8F9598;
+}
+
+.row1Sergeant {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 14% 1% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-image: url('44a.jpg');
+}
+
+
+.rowBTScoord {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 14% 1% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-color: #f06862;
+}
+
+.row1DivisionsAddress {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FBFBFB;
+	background-size: auto;
+	overflow: hidden;
+	padding-right: 14%;
+	padding-left: 16%;
+}
+.row1DivisionsSecLegal {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 14% 1% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-image: url('HLS_LEGAL_BKG.jpg');
+}
+
+row1DivisionsSecComReg {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 14% 1% 16%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-image: url('HLS_COMREG_BKG.jpg');
+}
+
+
+.rowSergeantStaff {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 10% 3% 25%;
+	text-align: center;
+	background-color: #545a5f;
+	overflow: hidden;
+	background-image: url('file://///172.25.30.98/Census2020/H_Staff/badge1.png');
+}
+
+.rowSergeantStaff1 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 10% 1% 10%;
+	text-align: center;
+	background-color: #545a5f;
+	overflow: hidden;
+}
+
+.rowMembersByName {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	font-size: 1em;
+	text-align: left;
+	padding-left: 22%;
+	padding-right: 10%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	font-weight: normal;
+	
+}
+
+.rowPR {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	font-size: 1em;
+	text-align: left;
+	padding-left: 18%;
+	padding-right: 15%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	font-weight: normal;
+	
+}
+
+.rowHR{
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	font-size: 1em;
+	text-align: center;
+	padding-left: 12%;
+	padding-right: 15%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	font-weight: normal;
+	font-family: montserrat;
+}
+
+.rowStaffMembers {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	font-size: 1em;
+	padding-left: 22%;
+	padding-right: 10%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+	font-weight: normal;
+	
+	text-align: left;  
+    -moz-text-align-last: left; /* Code for Firefox */
+     text-align-last: left;
+
+	
+}
+
+.rowMembersByParty {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	font-size: 1em;
+	text-align: left;
+	padding-left: 22%;
+	padding-right: 10%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	font-weight: normal;
+}
+.rowMembersByEmail {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	font-size: 1em;
+	text-align: left;
+	padding-left: 22%;
+	padding-right: 10%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	font-weight: normal;
+}
+
+.rowCapitolDir {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left:0%;
+	padding-right:0%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+
+.rowHR {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left:8%;
+	padding-right:8%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowStaffOfficers {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left:8%;
+	padding-right:8%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowHLS {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #E0E0E0;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: .5%;
+	padding-top: .5%;
+	overflow: hidden;
+}
+
+.rowHLSDivs {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: .5% 10% 1% 10%;
+	text-align: center;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.rowHRclerk {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: left;
+	background-color: #ebebeb;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+.rowHRb {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 12% 1% 12%;
+	text-align: center;
+	background-color: #ebebeb;
+	overflow: hidden;
+	font-family: montserrat;
+	font-size: 1em;
+}
+
+.rowHRc {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #d4d2d2;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowHCO1 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #ebebeb;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowHCO {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #4d4f5a;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowDEMOGRAPHICS {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 15% 1% 15%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-image: url('44c.jpg');
+	background-repeat: no-repeat;
+	background-color: #77444d;
+}
+
+.rowHRa {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: left;
+	background-color: #798086;
+	height: auto;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowACCT {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+.rowSchedGrey {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #EBEBEB;
+	padding-left:4%;
+	padding-right:4%;
+	padding-bottom: 5%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowA {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #EBEBEB;
+	padding-left: 18%;
+	padding-right: 18%;
+	padding-bottom: 4%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.row1b2 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 12% 4% 12%;
+	text-align: center;
+	background-color: #EBEBEB;
+	overflow: hidden;
+}
+
+.row1bSenatorDistInfo {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 8% 1% 16%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	background: rgba(66, 73, 91, 0.80);
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+
+.row1bSenator {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 8% 1% 16%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	
+}
+
+
+.row1b {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 8% 1% 10%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.row1b_SenCmtes {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 8% 1% 10%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+
+.row_SenByCmtes {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 8% 1% 10%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	color: #000000
+}
+
+.row1b_SenStaffCmtes {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 10% 1% 12%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+
+.row1bStaffInfo {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 8% 1% 10%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	434e62 overflow: hidden;
+}
+
+.rowSenCmtesBKG {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-size: cover;
+	background-position: 50% bottom;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-color: rgba(7, 26, 35, 0.85);
+	background-image: url('state_seal_White_3Kx2K_15pct.png');
+	color: #FFFFFF;
+	padding-left: 16%;
+}
+
+.rowSenCMTE_1Grey {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;	background-color: #EFF1F1;*/
+	/*background-color: rgba(67, 78, 98, 0.99);*/
+	background-size: cover;
+	padding: 1% 14% 2% 12%;
+	text-align: left;
+	background-color: #434e62;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 1em;
+	color: #FFFFFF;
+	background-image: url('CapitolFACIA.png');
+}
+
+
+.rowSenBYCMTE {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;	background-color: #EFF1F1;*/
+	/*background-color: rgba(67, 78, 98, 0.99);
+	background-image: url('CapitolFACIA.png');*/
+	background-size: cover;
+	padding: 1% 14% 2% 12%;
+	text-align: left;
+	background-color: #ebebeb;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 1em;
+	color: #000000;
+	
+}
+
+
+div.BYPARISH {
+	padding: 1% 20% 2% 20%;
+	overflow: hidden;
+	height: auto;
+	text-align: left;
+	background-color: #f7f8f8;
+}
+.rowSenHR {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;	background-color: #EFF1F1;*/
+	background-size: cover;
+	padding: 1% 14% 0% 12%;
+	text-align: left;
+	background-color: rgba(0, 51, 102, 0.10);
+	overflow: hidden;
+	background-image: url('FLAG_PelicanFABRIC5.png');
+	background-attachment: fixed;
+	font-family: Montserrat;
+	background-repeat: no-repeat;
+	font-size: 1em;
+}
+
+
+.rowSenCMTE_1White {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 16% 2% 16%;
+	text-align: left;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	font-family: Montserrat;
+}
+
+.row1bCmtes {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 12% 4% 12%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #E6E6E6;
+	overflow: hidden;
+}
+.row1bReps2 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 12% 4% 12%;
+	text-align: center;
+	font-family: Montserrat, sans-serif;	background-color: #ffffff;
+	overflow: hidden;
+}
+.row1bReps {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 12% 4% 12%;
+	text-align: center;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.row1bRepsBKG {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 12% 4% 12%;
+	text-align: center;
+	font-family: Montserrat, sans-serif;	overflow: hidden;	
+	/*background-image: url('BookBKG35%25.jpg');*/
+	background-image: url('FLAG_PelicanFABRIC4.png');
+
+}
+
+
+.row1C {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #EBEBEB;
+	padding-bottom: 4%;
+	padding-top: 3%;
+	overflow: hidden;
+}
+
+.row1 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-size: .8em;
+	font-family: Montserrat, sans-serif;	
+	background-color: #EBEBEB;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-left: 10%;
+	padding-right: 10%;
+	overflow: hidden;
+}
+
+.row1CmteFLYERsection {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	margin: 0% 1% 0% 1%;
+	padding: 20% 3% 8% 3%;
+	text-align: center;
+	font-size: .8em;
+	font-family: Montserrat, sans-serif;
+	background-color: #EBEBEB;
+	overflow: hidden;
+	color: #c1aa81;
+}
+
+/*-------------------BUBBLE PSA--------------*/
+
+.BubbleSenFLYER_BLUE {
+	background-position: right;
+	margin: auto;
+	border: 8px solid #c1aa81;
+	padding: 2%;
+	border-radius: 60px;
+	font-family: Montserrat, sans-serif;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	font-weight: normal;
+	background-color: rgba(21,51,80,.99); /*background-image: url('/H_Reps/Capito15PCent150Pix.png');*/;
+	text-decoration: none;
+	width: 75%;
+	text-align: center;
+	background-repeat: no-repeat;
+}
+.BubbleSenFLYER_BLUE:hover {
+	background-color: rgba(10,32,54,.99);
+	color: white;
+}
+
+
+/*-------------------BUBBLE END--------------*/
+.SpaceLINEgold {
+	background-position: center;
+	background-color: #b6a885;
+	height: 1px;
+	width: 100%;
+	margin-top: 0%;
+}
+
+.row1FooterComments {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-size: .8em;
+	font-family: Montserrat, sans-serif;
+	background-color: #333333;
+	color: #FFFFFF;
+	padding-top: .5%;
+	padding-bottom: .5%;
+}
+
+
+.row1homeTopMenu {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	background-size: cover;
+	padding: 0% 0% 0% 0%;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	background-attachment: fixed; /*background-color: #12314e;*/;
+	background: rgba(18,49,78,0.99);
+	vertical-align: middle;
+	text-align: left;
+}
+
+.row1Reports_WhiteComments {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	background-size: cover;
+	padding: 2% 10% 2% 15%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	background-attachment: fixed;
+}
+
+.row1Reports_White {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.Button_Blue {
+	border-radius: 8px;
+	font-family: Montserrat, sans-serif;
+	color: #FFFFFF;
+	background-color: #336699;
+	padding: 12px;
+	font-size: 1.2em;
+	float: left;
+	width: auto;
+}
+
+.row1Reports_Redist {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	padding: 1% 10% 0.5% 9.5%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	font-weight: lighter;
+}
+
+.row1_SenatorsSubNav {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	padding: 1% 3% 0% 14%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.row_Demographics {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	background-size: cover;
+	padding: 0% 0% 0% 0%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	background-image: url('Capitol_Orig_DRONE2000px.png');
+	background-attachment: fixed;
+}
+
+
+.row2_SenatorsSubNav_Grey {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	padding: 1% 1% 0% 1%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #f7f8f8;
+	overflow: hidden;
+}
+
+.row2_SubNav_White {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	padding: 1% 1% 1% 6%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+
+.row1_OnDemand_White {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	background-size: cover;
+	padding: 1% 10% 0% 15%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	font-size: .8em;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: url('CpaitolCafe1a.png');
+}
+
+
+.row1Reports_GreyOLD {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	background-size: cover;
+	padding: 2% 4% 2% 8%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	background-color: #f7f8f8;
+	overflow: hidden;
+	font-weight: lighter;
+	background-repeat: no-repeat;
+}
+
+.row1Reports_Grey {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 0% 2% 10%;
+	text-align: left;
+	font-size: .9em;
+	font-family: Montserrat, sans-serif;
+	background-color: #f7f8f8;
+	overflow: hidden;
+	font-weight: lighter;
+}
+
+.row1Reports_White {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 0% 2% 8%;
+	text-align: left;
+	font-size: 1em;
+	font-family: Montserrat, sans-serif;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	background-color: #f7f8f8;
+	padding: 8px;
+	width: 85%;
+	font-weight: bold;
+}
+.grid-item {
+	border-style: none none solid none;
+	border-width: 0px;
+	padding: 1% 0% 1% 1%;	
+	text-align: left;
+}
+
+
+.rowPR {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	font-size: 1em;
+	text-align: left;
+	padding-left: 18%;
+	padding-right: 15%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: underline;
+}
+
+/* links */
+
+#linksSCHED {
+	padding: 1.5em 0 1em 0;
+	text-align: left;
+}
+#linksSCHED a {
+	color: inherit;
+	border-bottom-color: rgba(71, 71, 71, 0.25);
+}
+#linksSCHED a:hover {
+	color: #37c0fb;
+	border-bottom-color: transparent;
+}
+#linksSCHED .container {
+	margin-bottom: 1em;
+}
+#linksSCHED .icons {
+	text-align: center;
+	margin: 0;
+}
+#linksSCHED .icons a {
+	color: #999999;
+}
+#footer .icons a:hover {
+	color: #474747;
+}
+#linksSCHED .copyright {
+	color: #999999;
+	margin-top: 1.5em;
+	text-align: center;
+	font-size: 0.9em;
+}
+#linksSCHED .copyright1 {
+	color: #999999;
+	margin-top: 1.5em;
+	text-align: center;
+	font-size: 0.7em;
+}
+
+
+.ByDistrict1_Grey {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	background-size: cover;
+	padding: 2% 9% 2% 14%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	font-weight: lighter;
+	background-image: url('CapitolFACIA2.png');
+	background-repeat: no-repeat;
+}
+
+.ByDistrict_Grey {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	padding: 2% 9% 2% 14%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+	font-weight: lighter;
+	background-color: #EBEBEB;
+}
+
+
+.row1_FallenHeroes {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 6% 4% 6%;*/
+	background: #f7f8f8 url('US_FLAG_GREY.png') no-repeat fixed center;
+	background-size: cover;
+	padding: 2% 10% 0% 15%;
+	text-align: left;
+	font-family: Montserrat, sans-serif;
+	overflow: hidden;
+}
+
+
+
+.row2home {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-family: Montserrat, sans-serif;	background-color: #FFFFFF;
+	padding-left:0%;
+	padding-right:0%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+
+
+.rowGreyJournals {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-family: Montserrat, sans-serif;	background-color: #EBEBEB;
+	padding-left:3%;
+	padding-right:3%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.rowGreySenateFiscal {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: left;
+	font-family: Montserrat, sans-serif;	background-color: #EBEBEB;
+	padding-left:3%;
+	padding-right:3%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+
+.row1LINKS {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	font-size: .8em;
+	font-family: Montserrat, sans-serif;	background-color: #EBEBEB;
+	padding-left:0%;
+	padding-right:0%;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+	background-image: url('FLAG_PelicanFABRIC4.png');
+}
+
+
+.row11 {
+  	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #EBEBEB;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-left:10%;
+	padding-right:10%;
+	overflow: hidden;
+}
+
+.row1Cmtes {
+  	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-left:10%;
+	padding-right:10%;
+	overflow: hidden;
+}
+
+.rowsJournalIndex {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 15% 3% 15%;
+	text-align: left;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+.row2Cmtes {
+  	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #EBEBEB;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-left:10%;
+	padding-right:10%;
+	overflow: hidden;
+}
+
+.row1HLS {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 15% 1% 15%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-image: url('44b.jpg');
+}
+.row1HLS_SERV_CMTE {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-position: right bottom;
+	padding: 1% 15% 1% 15%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: 500px 500px;
+	overflow: hidden;
+	background-color: #4d4f5a;
+	background-image: url('Capito15PC.png');
+	background-repeat: no-repeat;
+}
+.row1HLS_OFINT_PHONE {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 15% 1% 15%;
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	overflow: hidden;
+	background-color: #686973;
+}
+
+.row1HLSA {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center; /*background-color: #EBEBEB;*/;
+	background-size: auto;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-left: 16%;
+	padding-right: 14%;
+	overflow: hidden;
+	background-image: url('HLS_HOME.jpg');
+}
+
+.rowSergeantMain {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: .5%;
+	padding-top: .5%;
+	overflow: hidden;
+}
+
+.rowCaucusesDel {
+  	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: left;
+	background-color: #EBEBEB;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	padding-left:18%;
+	padding-right:10%;
+	overflow: hidden;
+}
+
+.row1Clerk {
+  	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	color:black;
+	background-color: #798086;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	padding-left:10%;
+	padding-right:10%;
+	overflow: hidden;
+}
+.row1SCHED {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #D2D2D2;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.row1a {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-color: #EBEBEB;*/
+	text-align: center;
+	font-family: Montserrat, sans-serif;	padding-bottom: 2%;
+	padding-top: 2%;
+	overflow: hidden;
+	background-image: url('https://house.louisiana.gov/H_Reps/NewOrleansRIVER.jpg');
+	background-repeat: inherit;
+}
+.row2 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	background-size: cover;
+	text-align: center;
+	font-family: Montserrat, sans-serif;	background-color: #747d84;
+	padding-bottom: 2%;
+	padding-top: 2%;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.row2_Home {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: .5% 45px 2% 45px;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-image: url('JLCB_CHART2.jpg');
+	color: #FFFFFF;
+}
+
+.row2_HomeAbout1 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');
+	background-image: url('JLCB_CHART2.jpg');*/
+	background-color: #FFFFFF;
+	padding: 0% 2% 0% 2%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #ebebeb;
+}
+
+
+.row2_HomeAbout {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');
+	background-image: url('JLCB_CHART2.jpg');*/
+	background-color: #42464e;
+	padding: .5% 2% 0% 2%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+.row2_HomeAboutWhite {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');
+	background-image: url('JLCB_CHART2.jpg');	background-color: #FFFFFF; */
+	background-color: #FFFFFF;
+	padding: 2% 10% 1% 10%;
+	background-size: cover;
+	text-align: center;
+	font-size:1.2em;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #000000;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+
+
+.row2_HomeAboutEBEBEB {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');
+	background-image: url('JLCB_CHART2.jpg');	background-color: #FFFFFF; */
+	background-color: #ebebeb;
+	padding: 2% 10% 1% 10%;
+	background-size: cover;
+	text-align: center;
+	font-size:1.2em;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #000000;
+	border-top-style: solid;
+	border-top-width: thin;
+	border-top-color: #CCCCCC;
+}
+
+.row2_PR {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');
+	background-image: url('JLCB_CHART2.jpg');*/
+	padding: .5% 7% 2% 7%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	background-color: #42464e;
+}
+.row_Senate6Streams {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');
+	background-image: url('JLCB_CHART2.jpg');*/
+	background-color: #42464e;
+	padding: .5% 6% 2% 6%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+
+.row_Chambers {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');
+	background-image: url('JLCB_CHART2.jpg');*/
+	background-color: #42464e;
+	padding: 1% 4% 1% 4%;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+
+
+.row2_HomeWhite {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');
+	background-image: url('JLCB_CHART2.jpg');*/
+	background-color: #FFFFFF;
+	padding: .5% 9% 2% 9%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	color: #000000;
+}
+
+
+.row2_HomeCmte {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 5% 10% 2% 12%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #f7f8f8;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.row2_HomeMembers {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 2% 10% 2% 15%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #ffffff;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.row2_Home1 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 1% 9% 1% 12%;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.row2_Comments {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 1% 10% 2% 8%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.row2_SenateHome2021 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 3% 9% 1% 9%;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.row_SenateHSesionInfo {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 3% 10% 1% 10%;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-attachment: fixed;
+}
+.row2_Home2019 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 1% 9% 3% 5%;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.row2_Home1Conatcs {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 1% 10% 4% 8%;
+	background-size: cover;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-image: url('Capitol_DRONE_BW_2000PX.png');
+	background-attachment: fixed;
+}
+
+
+.row_SmallFont {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	font-size:0.6em;
+}
+
+
+.row_SenStaff {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	font-size:1em;
+}
+
+.Font_SenStaff {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	padding: 1% 10% 2% 16%;*/
+	font-size: 1em;
+	text-align: left;
+	overflow: hidden;
+	font-weight: normal;
+}
+.row2_Home2 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 2% 45px 2% 45px;
+	background-size: cover;
+	text-align: center;
+	font-family: Montserrat, sans-serif;	background-color: #FFFFFF;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.row3 {
+  	/*margin: 0 -10px;*/
+
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.row4 {
+  	/*margin: 0 -10px;*/
+
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+
+}
+
+.row5 {
+  	/*margin: 0 -10px;*/
+
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #FFFFFF;
+	padding-bottom: 3%;
+	padding-top: 1%;
+	overflow: hidden;
+
+}
+
+.rowFooterA {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 3% 5% 1% 5%;
+	text-align: center;
+	background-color: #434040;
+	overflow: hidden;
+}
+
+.rowFooterMODAL {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	overflow: hidden;
+	padding-top: 60px;
+	font-family: Montserrat;
+}
+
+.VIDEO_JUMP {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 3px 5px 2px 5px;
+	text-align: center;
+	background-color: #535D69; /*background-color: #001224;*/ /*DARK BLUE	background-image: url('OldStateCapitolCeleste.jpg');*/;
+	overflow: hidden;
+	color: #FFFFFF;
+	font-family: Montserrat, "Montserrat Alternates Light", "Montserrat Alternates Thin", "Montserrat Thin";
+}
+.VIDEO_BKG {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-size: cover;
+	padding: 2% 0% 0.5% 0%;
+	text-align: center;
+	background-color: #545D69;
+	overflow: hidden;
+	background-image: url('s_video/OldStateCapitolCeleste.jpg');
+}
+
+.VIDEO_BKG2 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	background-size: cover;
+	padding: 2% 12% 1.5% 12%;
+	text-align: center;
+	background-color: #42464e;
+	overflow: hidden;
+}
+
+.rowFooterB {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	text-align: center;
+	background-color: #555555;
+	padding-left: 7%;
+	padding-right: 7%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+[class*="col-"] {
+  padding: 3px;
+}
+
+@media all and ( min-width: 600px) {
+  .col-2-3 {
+    float: left;
+    width: 66.66%;
+    
+    
+  }
+  .col-1-1 {
+	float: left;
+	width: 100%;
+}
+  
+  .col-1-2 {
+    float: left;
+    width: 50%;
+  }
+
+  .col-1-2a {
+    float: left;
+    width: 50%;
+  }
+
+  .col-1-3 {
+    float: left;
+    width: 33.33%;
+  }
+  .col-1-4 {
+	float: left;
+	width: 25%;
+}
+   .col-1-5 {
+    float: left;
+    width: 20%;
+  }
+  
+ .col-1-6 {
+    float: left;
+    width: 16.66%;
+  }
+
+.col-1-7 {
+    float: left;
+    width: 14.285%;
+  }
+  
+ .col-1-8 {
+    float: left;
+    width: 12.5%;
+  }
+  
+
+  
+  
+/* SPACE */
+
+.SpaceTOP {
+	background-color: #001224;
+	height: 25px;
+}
+.Space {
+	background-color: #001224;
+	height: 25px;
+}
+
+.Space_White {
+	background-color: #FFFFFF;
+	height: 25px;
+}
+
+  
+#h1Acopy4 {
+	color: #666666;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+#h1Acopy2 {
+	color: #666666;
+	font-family: Montserrat,san- serif;
+	font-size: 1.7em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+div.StaffHR {
+	/*border: 10px solid #FFFFFF;
+	border-radius: 10px;
+	text-shadow: black 0.02em 0.02em 0.05em;
+	box-shadow: 3px 1px 10px 3px #DADADA;*/
+	padding: 20px 10px 30px 15px;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
+	color: #fff;
+	position: inherit;
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #798086;
+	background-repeat: no-repeat; /*background-image: url('hstaff3499.png');*/;
+	background-position: bottom;
+	height: auto;
+}
+    
+/* BODY */
+
+		body {
+			font-family:'Lato', sans-serif;
+			font-size: 1em;
+			margin: 0;
+			overflow-y: scroll;
+		}
+		.container
+		{
+			max-width: 980px;
+			margin: 0px auto;
+		}
+		p
+		{
+			margin: 0 0 15px;
+		}
+		
+		.PICSLIDER1outer {
+	border-bottom: 3px solid #ff3300;
+	background-size: cover auto;
+	background-position: center;
+	background-color: #716C70;
+	background-image: url('https://house.louisiana.gov/H_Reps/HouseBKG1.jpg');
+	}
+		
+	.ButtonA {
+	background-color: #FF5050;
+	color: #FFFFFF;
+}
+.ButtonB {
+	padding: 4px 2px 4px 2px;
+	background-color: #FF5050;
+	color: #FFFFFF;
+	width: 200px;
+	float: right;
+}
+
+.ButtonD {
+	margin: 4px;
+	border-radius: 20px;
+	padding: 7px;
+	background-color: #ff6550;
+	color: #FFFFFF;
+	width: 800px;
+}
+
+.ButtonDCopy {
+	margin: 4px 10px 4px 10px;
+	border-radius: 20px;
+	padding: 7px 12px 7px 12px;
+	background-color: #ff6550;
+	color: #FFFFFF;
+	width: 800px;
+}
+
+
+.bubble1BCopy {
+	border-radius: 4px;
+	font-family: Montserrat, sans-serif;
+	color: #FFFFFF;
+	background-color: #3399ff;
+	padding: 9px;
+	font-size: .6em;
+	float: right;
+	width: auto;
+}
+.bubble1BCopy:hover {
+	background-color: rgba(107,119,133,.85);
+	color: white;
+}
+
+
+/*-------------------BUBBLE LEGISLATION--------------*/
+.BubbleSenLegislation {
+	margin: auto;
+	padding: 2% 0.2% 2% 0.2%;
+	font-family: Montserrat, sans-serif;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	font-weight: normal;
+	background-color: rgba(48,78,113,.85); /*background-image: url('/H_Reps/Capito15PCent150Pix.png');*/;
+	text-decoration: none;
+	width: 70%;
+	text-align: center;
+}
+.BubbleSenLegislation:hover {
+	background-color: rgba(107,119,133,.85);
+	color: white;
+}
+
+
+/*-------------------BUBBLE END--------------*/
+
+
+
+
+
+
+/* iPads (portrait and landscape) ----------- */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		body {
+			width: 100%;
+		}
+			
+.bubble1BCopy1 {
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	font-family: Calibri;
+	color: #FFFFFF;
+	background-color: #db6172;
+	padding: 9px;
+	font-size: 1em;
+	float: right;
+	width: auto;
+}
+
+.RightAlign {
+text-align:left;
+	
+}
+
+.bubble1BCopy2 {
+	border-radius: 4px;
+	font-family: Calibri;
+	color: #FFFFFF;
+	background-color: #db6172;
+	padding: 9px;
+	font-size: 1em;
+	float: left;
+	width: auto;
+}
+
+
+.linkStyle2 a {
+	color: #454545;
+	text-decoration: none;
+	font-family: Montserrat, sans-serif;
+	font-size: .9em;
+	text-align:left;
+
+	
+}
+.linkStyle2 {
+	color: #454545;
+	text-decoration: none;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
+	text-align:center;
+}
+
+.linkStyle2 a:visited {
+    color: #454545;
+    text-decoration: none;
+}
+.linkStyle2 a:hover {
+    color: #454545;
+    text-decoration: underline;
+}
+.linkStyle2 a:active {
+	color: #454545;
+	text-decoration: none;
+	text-align:left;
+
+}
+.fontstyling {
+	font-family: Montserrat, sans-serif;
+	font-size: .9em;
+	margin-left: 60px;
+}
+
+
+.ADA {
+	font-family: Montserrat, sans-serif;
+	font-size: 1.3em;
+}
+
+
+
+#h1Acopy1em {
+	color: #000000;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+
+div.Staff {
+	/*border: 10px solid #FFFFFF;
+	border-radius: 10px;
+	text-shadow: black 0.02em 0.02em 0.05em;
+	box-shadow: 3px 1px 10px 3px #DADADA;*/
+	padding: 20px 10px 30px 15px;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
+	color: #fff;
+	position: inherit;
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #798086;
+	background-repeat: no-repeat;
+	background-image: url('hstaff3499.png');
+	background-position: right bottom;
+	height: 300px;
+
+}
+
+div.StaffHR {
+	/*border: 10px solid #FFFFFF;
+	border-radius: 10px;
+	text-shadow: black 0.02em 0.02em 0.05em;
+	box-shadow: 3px 1px 10px 3px #DADADA;*/
+	padding: 20px 10px 30px 15px;
+	font-family: Montserrat, sans-serif;
+	font-size: 1em;
+	color: #fff;
+	position: inherit;
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #798086;
+	padding-left:10%;
+	padding-right:10%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+	height: auto;
+}
+
+
+div.BYPARISH {
+	padding: 1% 20% 2% 20%;
+	overflow: hidden;
+	height: auto;
+	text-align: left;
+	background-color: #ebebeb;
+}
+
+
+
+<!--RESPONSIVE TABLE CSS-->
+
+
+/*
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media
+	only screen and (max-width: 760px),
+	(min-device-width: 768px) and (max-device-width: 1024px)  {
+/* Force table to not be like tables anymore */
+table, thead, tbody, th, td, tr {
+	display: block;
+}
+/* Hide table headers (but not display: none;, for accessibility) */
+thead tr {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+/* tr { border: 1px solid #ccc; }*/
+td {
+	/* Behave  like a "row" */
+	border: none;
+	/* border-bottom: 1px solid #eee;*/
+	position: relative;
+	padding-left: 10%;
+}
+td:before {
+	/* Now like a table header */
+	position: absolute; /* Top/left values mimic padding */;
+	top: 6px;
+	left: 6px;
+	width: 45%;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+/*
+		Label the data
+		
+		td:nth-of-type(1):before { content: "First Name"; }
+		td:nth-of-type(2):before { content: "Last Name"; }
+		td:nth-of-type(3):before { content: "Job Title"; }
+		td:nth-of-type(4):before { content: "Favorite Color"; }
+		td:nth-of-type(5):before { content: "Wars of Trek?"; }
+		td:nth-of-type(7):before { content: "Date of Birth"; }
+		td:nth-of-type(8):before { content: "Dream Vacation City"; }
+		td:nth-of-type(9):before { content: "GPA"; }
+		td:nth-of-type(10):before { content: "Arbitrary Data"; }
+	}*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+	and (min-device-width : 320px)
+	and (max-device-width : 480px) {
+body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+
+}
+
+/* TABS FONT ----------- */
+
+@media (max-width: 580px) {
+  .caption {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 10px 10px 30px;
+  background: #000;
+  font-family:'Lato', sans-serif;
+  font-size: .6em;
+  margin: 0;/*overflow-y: scroll;*/
+  background: rgba(51,51,51,.6);
+  /*background:rgba(70, 81, 92, 0.8);*/ /*This is a cool blue/gray tone color*/
+  color: #EDF0F6;
+ 	-moz-opacity: 0.7;
+	filter: alpha(opacity=70);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */;
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */;
+	box-sizing: border-box;      /* Opera/IE 8+ */
+}
+
+
+/* --------------------------MATCH HEIGHT COLUMNS SIDE BY SIDE HOUSE HOME DESIGN----------------------- */
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float: left; /* margin: 1% 0 1% 1.6%;*/;
+	margin: 0% 0 0% 0%; /* top, right, bottom, left */
+}
+.col:first-child {
+	margin-left: 0;
+}
+/*  GROUPING  */
+.group:before, .group:after {
+	content: "";
+	display: table;
+}
+.group:after {
+	clear: both;
+}
+.group {
+	zoom: 1; /* For IE 6/7 */
+}
+/*  GRID OF 3  */
+.span_3Social {
+	background-position: center;
+/* top, right, bottom, left
+	padding: 20px 15px 5px 25px;*/
+	width: 40%;
+	/*background-color: rgba(23, 47, 70, 0.80);
+	color: #FFFFFF;*/
+	text-align: center;
+	font-size: 1em;
+}
+
+.span_2Social {
+	background-position: center;
+	padding: 20px 15px 5px 25px;
+/* top, right, bottom, left 
+	background-color: rgba(153, 153, 153, 0.75);*/
+	width: 20%;
+	/*background-color: rgba(14, 28, 42, 0.80);
+	color: #FFFFFF;*/
+	text-align: center;
+	font-size: 1em;
+}
+
+.span_1Social {
+	background-position: center;
+	padding: 20px 15px 5px 25px;
+/* top, right, bottom, left 
+	background-color: rgba(153, 153, 153, 0.75);*/width: 40%;
+	color: #3193CC;
+	/*background-color: rgba(14, 28, 42, 0.80);	*/
+	text-align: left;
+	font-weight: 800;
+	font-size: 5em;
+}
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+.col {
+	margin: 0% 0 0% 0%;
+}
+/*.col {  margin: 1% 0 1% 0%; }*/
+.span_1Social, .span_2Social, .span_3Social {
+	width: 100%;}
+}
+/* COLUMNS CODE BY SIDE DESIGN END */
+
+
+/* ICON CIRCLE
+======================================================================*/
+
+/* Feature Icon */
+
+	.feature-icon {
+		padding-bottom: 0;
+	}
+
+		.feature-icon:before, .feature-icon:after {
+			display: none;
+		}
+
+		.feature-icon .icon {
+			position: relative;
+			-ms-behavior: url("assets/js/ie/PIE.htc");
+			background: rgba(115, 138, 141, 0.15);
+			
+		}
+
+			.feature-icon .icon:before {
+				font-size: 1em;
+				color: #738a8d;
+			}
+			
+			.feature-icon .icon:hover {
+				font-size: 2.5em;
+				color: #000000;
+			}
+
+
+	/* Icon */
+.icon {
+	position: relative;
+	text-decoration: none;
+}
+.icon:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: none !important;
+}
+.icon > .label {
+	display: none;
+}
+
+.icon.majorPicture {
+	/* MAJOR ICONS BKG COLORS */
+
+	text-align: center;
+	cursor: hand;
+	/*background-color: #738a8d;*/
+	color: #FFFFFF;
+	border-radius: 100%;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	line-height: 1em;
+	box-shadow: 0 0 0 4px #cc3300, 0 0 0 2px #e0e0e0; /* CIRCLE AROUND CIRCLE :-) */;
+	margin: 0 0 .2em 0;
+}
+.Picture {
+	width: 296px;
+	height: 296px;
+	border-radius: 148px;
+	-webkit-border-radius: 148px;
+	-moz-border-radius: 96px;
+	background: no-repeat;
+	background-color: #666666;
+	/* A complete circle requires your border radius to be half of your picture's width/height*/
+}
+
+/* CIRCLE TEXT */
+
+.circle-text {
+    width:50%;
+}
+.circle-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: rgba(102, 153, 153, 0.9); 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.circle-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+}
+
+
+
+
+.auto-style46 {
+	border-width: 2px;
+}
+
+.SenStaff_Full {
+		font-family: Montserrat, sans-serif;
+	}
+
+
+#h1AcopyLINK {
+	color: #336699;
+	font-family: Montserrat,san- serif;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+/* TALK TEXT */
+
+.trapezium {
+  border-bottom: 100px solid #333;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 100px;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background-color: #3d9970;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row1bCmtesCopy {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;*/
+	padding: 1% 12% 4% 12%;
+	text-align: center;
+	font-family: Montserrat, sans-serif;	background-color: #FFFFFF;
+	overflow: hidden;
+	background-image: url('FLAG_PelicanFABRIC4.png');
+}
+
+.row2_Home1Members {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 2% 5% 2% 12%;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.row2_Home2021 {
+	/*margin: 0 -10px;*/
+	/*margin-bottom: 20px;
+	background-image: url('BKG_BLUE.jpg');*/
+	padding: 3% 9% 3% 9%;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+
+
+
+/*------------------------------------*\
+-------- Page Styles: Accordion
+\*------------------------------------*/
+body {
+	position:relative;
+	z-index:0;
+}
+.main:before {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:-1;
+	content:'';
+	background:-webkit-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('imgparish/body-bg.png');
+	background:-moz-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('imgparish/body-bg.png');
+	background:-o-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('imgparish/body-bg.png');
+	background:radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('imgparish/body-bg.png');
+	
+
+}
+
+.site-header-wrap {
+	margin-bottom:60px;
+	border-bottom:1px solid #cd9ad6;
+}
+
+
+div.ACCORDION_NEW {
+	padding: 1% 20% 2% 20%;
+	overflow: hidden;
+	height: auto;
+	text-align: left;
+	background-color: #f7f8f8;
+}
+
+
+/*------------------------------------*\
+-------- DEMO Code: accordion
+\*------------------------------------*/
+/*----- Accordion -----*/
+.accordion, .accordion * {
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.accordion {
+	overflow:hidden;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+	border-radius:0px;
+	background:#EBEBEB;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+	height: auto;
+
+	
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+	width: 100%;
+	padding: 15px;
+	display: inline-block;
+	border-bottom: 1px solid #1a1a1a;
+	background: #C0C0C0;
+	transition: all linear 0.15s;
+/* Type */font-size: 1.200em;
+	text-shadow: 0px 1px 0px #1a1a1a;
+	color: #000;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 2%;
+	padding-top: 1%;
+	overflow: hidden;
+	height: auto;
+	border-bottom-style: none;
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+	background:#4c4c4c;
+	/* Type */
+	text-decoration:none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+	border-bottom:none;
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+	padding:15px;
+	display:none;
+}
+
+
+
+
+
+
+/*-------------------------------- START CARD STAFF PAGES---------------------------------*/
+
+
+.fa-lg {
+    font-size: 1.25em;
+    line-height: .05em;
+    vertical-align: -0.075em;
+	text-align: left;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-2x {
+    font-size: 2em;
+	text-align: left;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#wrapper3 {
+		padding-left: 10%;
+		padding-right: 0%;
+	}
+	
+	
+	.p-5 {
+		padding: 1rem 1rem!important;
+	}
+	
+	@media (min-width: 1200px) {
+	.container {
+		width: 90% !important;
+		max-width: 100%;
+	}
+	}
+	
+	.h1,
+	h1 {
+		font-size: 1.5rem;
+	}
+	
+	.container-fluid {
+		max-width: 1400px;
+	}
+	
+	.card {
+		background: #fff;
+		box-shadow: 0 6px 10px rgba(0, 0, 0, .06), 0 0 6px rgba(0, 0, 0, .03);
+		border: 1;
+		border-radius: 2rem;
+		display:flex;
+	}
+	
+	.card:hover {
+		background-color: #ebebeb;
+	}
+	
+	.img-hover-zoom--colorize img {
+		border-radius: 50%;
+		width: 150px;
+		height: auto;
+		margin-top: 20px;
+		padding: 1px;
+		transition: transform .5s;
+		/*filter: grayscale(100%);*/
+	}
+	
+	.img-hover-zoom--colorize:hover img {
+		filter: grayscale(100%);
+		transform: scale(1.05);
+	}
+	
+	.card h5 {
+		overflow: hidden;
+		height: 80px;
+		font-weight: 300;
+		font-size: 1rem;
+	}
+	
+	.card h5 a {
+		color: black;
+		text-decoration: none;
+	}
+	
+	.role {
+		color: #7a7a7a;
+	}
+	
+	.box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.fab {
+		font-size: 1.5rem;
+		color: darkgray;
+		transition: transform .5s;
+	}
+	
+	.fab:hover {
+		color: black;
+		transform: scale(1.1);
+	}
+	
+	.card h2 {
+		font-size: 1rem;
+	}
+/*
+	Max width before this PARTICULAR table gets nasty
+	This query will take effect for any screen smaller than 760px
+	and also iPads specifically.
+	*/
+@media
+	only screen and (max-width: 760px),
+	(min-device-width: 768px) and (max-device-width: 1024px)  {
+/* Force table to not be like tables anymore */
+/* Hide table headers (but not display: none;, for accessibility) */
+/* tr { border: 1px solid #ccc; }*/
+td:before {
+	/* Now like a table header */
+	position: absolute; /* Top/left values mimic padding */;
+	top: 6px;
+	left: 6px;
+	width: 45%;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+	}
+
+
+
+/*-------------------------------- START CARD STAFF PAGES---------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
