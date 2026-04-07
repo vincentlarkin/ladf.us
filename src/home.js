@@ -26,7 +26,7 @@ document.querySelector('#app').innerHTML = `
           <div class="nav__title">Sections</div>
           <ul class="nav__list">
             <li><a class="nav__link is-active" href="/index.html">Home</a></li>
-            <li><a class="nav__link" href="/map.html">Find Your Districts</a></li>
+            <li><a class="nav__link" href="/map.html">Parish Map</a></li>
             <li><a class="nav__link" href="/services.html">Services by ZIP</a></li>
             <li><a class="nav__link" href="#overview">Overview</a></li>
             <li><a class="nav__link" href="#coverage">Coverage</a></li>
@@ -47,7 +47,7 @@ document.querySelector('#app').innerHTML = `
           <div class="page-intro hero-grid" id="start">
             <div>
               <div class="eyebrow">Louisiana civic infrastructure</div>
-              <h1>Plain-language Louisiana civics with a live district map.</h1>
+              <h1>Plain-language Louisiana civics with parish-first directories.</h1>
               <p class="lead">
                 Louisiana Data & Defense Foundation (LADF) is an independent,
                 nonpartisan civic education project focused on one thing:
@@ -55,12 +55,12 @@ document.querySelector('#app').innerHTML = `
                 people can actually use.
               </p>
               <p class="lead">
-                The current launch build centers on district lookup, contact
+                The current launch build centers on parish directories, contact
                 routing, public-source transparency, and a structure that can
                 expand into laws, guides, meeting tracking, and records access.
               </p>
               <div class="cta-row">
-                <a class="button" href="/map.html">Open the district map</a>
+                <a class="button" href="/map.html">Browse parish directories</a>
                 <a class="button button--secondary" href="#coverage">See launch coverage</a>
               </div>
             </div>
@@ -102,11 +102,10 @@ document.querySelector('#app').innerHTML = `
             <div class="card-grid">
               <article class="info-card">
                 <div class="result-type">Launch feature</div>
-                <h4>Find overlapping districts</h4>
+                <h4>Open a parish directory</h4>
                 <p>
-                  Click anywhere in Louisiana and see the overlapping city,
-                  parish, school, state, and federal jurisdictions at that
-                  point.
+                  Click a parish on the Louisiana map and jump straight to a
+                  dedicated contact page for that parish.
                 </p>
               </article>
               <article class="info-card">
@@ -119,11 +118,10 @@ document.querySelector('#app').innerHTML = `
               </article>
               <article class="info-card">
                 <div class="result-type">Launch feature</div>
-                <h4>Route to the right office</h4>
+                <h4>Start with Caddo Parish</h4>
                 <p>
-                  Turn the map result into a practical contact stack with office
-                  names, member names, phone numbers, emails, and official
-                  source links where available.
+                  The first expanded parish page is Caddo, with parish offices,
+                  district rosters, municipal contacts, and the parish GOP.
                 </p>
               </article>
               <article class="info-card">
@@ -142,34 +140,33 @@ document.querySelector('#app').innerHTML = `
             <h2>Launch Coverage</h2>
             <p>
               The current launch scope is statewide for reference and
-              legislative layers, with a deeper first local stack in
-              Shreveport and Caddo Parish.
+              parish selection, with a deeper first local directory in
+              Caddo Parish.
             </p>
             <div class="card-grid card-grid--two">
               <article class="info-card">
                 <div class="result-type">Statewide</div>
-                <h4>Always-on layers</h4>
+                <h4>All 64 parishes</h4>
                 <p>
-                  Louisiana outline, municipal boundaries, parish boundaries,
-                  House districts, Senate districts, and U.S. House districts
-                  are available in the base stack.
+                  The new parish map shows every parish and opens a dedicated
+                  parish page instead of trying to show every directory inline.
                 </p>
               </article>
               <article class="info-card">
                 <div class="result-type">Local depth</div>
-                <h4>Shreveport demo stack</h4>
+                <h4>Caddo first</h4>
                 <p>
-                  Shreveport City Council, Caddo Parish Commission, and Caddo
-                  Parish School Board layers can be toggled on for a fully local
-                  overlap demo.
+                  Caddo includes parish government, core offices, district
+                  rosters, and municipal contacts as the first fuller template.
                 </p>
               </article>
             </div>
             <div class="link-list">
-              <a href="/map.html">Launch the full interactive map</a>
+              <a href="/map.html">Open the parish map</a>
+              <a href="/parish.html?parish=caddo">Open Caddo Parish</a>
               <a href="/services.html">Open the services-by-ZIP lookup</a>
-              <a href="/map.html#sources">Review the synced layer sources</a>
-              <a href="/map.html#how-overlap-works">Read the overlap explainer</a>
+              <a href="/map.html#hosting">Read the static-hosting note</a>
+              <a href="/map.html#directory-list">Browse all parishes</a>
             </div>
           </section>
 
@@ -296,7 +293,7 @@ document.querySelector('#app').innerHTML = `
       <div class="site-footer__inner">
         <span class="flag-glyph">LA</span>
         <span>LADF is a private nonprofit civic education organization and is not affiliated with Louisiana state or local government.</span>
-        <span><a href="/map.html">Find Your Districts</a> | <a href="/services.html">Services by ZIP</a></span>
+        <span><a href="/map.html">Parish Map</a> | <a href="/services.html">Services by ZIP</a></span>
       </div>
     </footer>
   </div>

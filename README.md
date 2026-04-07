@@ -1,15 +1,14 @@
 # LADF Website
 
-`ladf.us` is a Vite-powered static site for the Louisiana Data & Defense Foundation (LADF), a Louisiana civic information and education project. It ships with a district map interface, synced public GIS data, launch-ready homepage content, and a first local overlap stack for Caddo Parish and Shreveport.
+`ladf.us` is a Vite-powered static site for the Louisiana Data & Defense Foundation (LADF), a Louisiana civic information and education project. It ships with a parish-first map interface, synced public GIS data, launch-ready homepage content, and a first expanded parish directory for Caddo Parish.
 
 ## What is included
 
-- Separate home page and dedicated full-size map page at `/map.html`
+- Separate home page, parish map at `/map.html`, and parish directory pages at `/parish.html?parish=...`
 - Dedicated service-routing lookup at `/services.html` for ZIP, city, or address searches
-- Statewide Louisiana outline, parishes, House, Senate, and congressional districts
-- Municipal boundary reference layer for Louisiana cities and towns
-- Local Caddo / Shreveport stack for city council, parish commission, and school board districts
-- Address search, geolocation, hover inspection, click-to-pin lookup, and city jump presets
+- Statewide Louisiana parish selection map covering all 64 parishes
+- Dedicated parish directory page that can be expanded parish by parish
+- First enriched parish page for Caddo with parish offices, district rosters, municipal contacts, and parish GOP link
 - Statewide municipality and parish service-directory data for routing water, public works, permits, and parish office questions
 
 ## Prerequisites
@@ -39,7 +38,8 @@ npm run dev
 ```
 
 4. Open the localhost URL printed by Vite.
-   The map tool lives at `/map.html`.
+   The parish map lives at `/map.html`.
+   Parish pages live at `/parish.html?parish=caddo`.
    The service-routing lookup lives at `/services.html`.
 
 ## Build for production
@@ -74,7 +74,25 @@ The sync script is at `scripts/sync-district-data.mjs` and writes normalized Geo
 
 The statewide service-directory sync script is at `scripts/sync-service-directory.mjs` and writes municipality/parish service routing data to `public/data/service-directory.json`.
 
+## Static hosting
+
+This project already builds to static files.
+
+After `npm run build`, you can deploy the contents of `dist/` to any static host that can serve HTML, JavaScript, CSS, JSON, and image files.
+
+Examples:
+
+- Netlify
+- Cloudflare Pages
+- GitHub Pages
+- An ordinary Nginx or Apache vhost
+- Any CDN or object-storage bucket configured for static site hosting
+
+No Node server is required in production once the build is finished.
+
 ## Docker
+
+Docker is optional. It only packages the static `dist/` output behind Nginx.
 
 Build the container image:
 
@@ -110,6 +128,6 @@ Update the SSL certificate paths in that file to match your host before enabling
 
 ## Notes
 
-- The Docker build does not resync data automatically. It uses the GeoJSON already committed in `public/data`.
+- The Docker build does not resync data automatically. It uses the data already committed in `public/data`.
 - Run `npm run sync:data` or `npm run build:refresh` only when you intentionally want to refresh the underlying public datasets.
-- Local municipal district coverage is currently strongest in Shreveport / Caddo; other cities currently use statewide municipal boundary reference plus state/parish/federal overlays until more official city GIS feeds are added.
+- Caddo is currently the first parish with an expanded local directory page; other parishes currently use the official parish and statewide link directory until more local pages are added.

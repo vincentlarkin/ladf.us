@@ -35,7 +35,7 @@ document.querySelector('#app').innerHTML = `
           <div class="nav__title">Sections</div>
           <ul class="nav__list">
             <li><a class="nav__link" href="/index.html">Home</a></li>
-            <li><a class="nav__link" href="/map.html">Find Your Districts</a></li>
+            <li><a class="nav__link" href="/map.html">Parish Map</a></li>
             <li><a class="nav__link is-active" href="/services.html">Services by ZIP</a></li>
             <li><a class="nav__link" href="#lookup">Lookup</a></li>
             <li><a class="nav__link" href="#services">Service Routing</a></li>
@@ -87,8 +87,8 @@ document.querySelector('#app').innerHTML = `
                 </div>
                 <div class="quick-chip-row" id="quick-chip-row"></div>
                 <div class="tool-row">
-                  <button class="button button--secondary" id="use-current-location" type="button">Use my location</button>
-                  <a class="button button--secondary" href="/map.html">Open full map</a>
+                    <button class="button button--secondary" id="use-current-location" type="button">Use my location</button>
+                  <a class="button button--secondary" href="/map.html">Open parish map</a>
                 </div>
                 <p class="status-line" id="service-status">
                   Loading statewide service and district datasets...
@@ -147,7 +147,7 @@ document.querySelector('#app').innerHTML = `
       <div class="site-footer__inner">
         <span class="flag-glyph">LA</span>
         <span>LADF is a private nonprofit civic education organization and is not affiliated with Louisiana state or local government.</span>
-        <span><a href="/map.html">District Map</a> | <a href="/index.html#disclaimer">Disclaimer</a></span>
+        <span><a href="/map.html">Parish Map</a> | <a href="/index.html#disclaimer">Disclaimer</a></span>
       </div>
     </footer>
   </div>
@@ -553,7 +553,7 @@ function renderDistrictCards(matches) {
       <article class="info-card">
         <div class="result-type">No match</div>
         <h4>No district layers matched this point.</h4>
-        <p>Try a fuller street address or use the district map page for a visual check.</p>
+        <p>Try a fuller street address or use the parish map page for a visual check.</p>
       </article>
     `;
     return;
@@ -648,8 +648,8 @@ function renderNotes({ result, matches, municipalityRecord, parishRecord }) {
       title: 'Need more exact district detail?',
       body:
         matches.length
-          ? 'Use the full district map if you want to visually confirm boundary overlap or pin a more exact address.'
-          : 'If this lookup came back empty, open the district map and inspect the location visually with a pinned point.',
+          ? 'Use the parish map if you want to jump straight to the parish contact page or visually confirm the parish boundary.'
+          : 'If this lookup came back empty, open the parish map and inspect the location visually from there.',
     },
   ];
 

@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, 'index.html'),
         map: resolve(__dirname, 'map.html'),
+        parish: resolve(__dirname, 'parish.html'),
         services: resolve(__dirname, 'services.html'),
       },
     },
