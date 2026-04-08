@@ -23,7 +23,6 @@ document.querySelector('#app').innerHTML = `
           { href: '#overview', label: 'Overview' },
           { href: '#directory', label: 'Parish Directory' },
           { href: '#services', label: 'Services by ZIP' },
-          { href: '#mission', label: 'Why LADF' },
           { href: '#disclaimer', label: 'Disclaimer' },
         ],
       })}
@@ -113,36 +112,6 @@ document.querySelector('#app').innerHTML = `
             </div>
             <div class="cta-row">
               <a class="button" href="/services.html">Go to services by ZIP</a>
-            </div>
-          </section>
-
-          <section class="section" id="mission">
-            <h2>Why LADF</h2>
-            <div class="card-grid">
-              <article class="info-card">
-                <div class="result-type">Simple</div>
-                <h4>Less digging</h4>
-                <p>
-                  Parish and local-government information is often scattered. LADF brings
-                  the key starting points into one place.
-                </p>
-              </article>
-              <article class="info-card">
-                <div class="result-type">Official</div>
-                <h4>Primary links first</h4>
-                <p>
-                  The pages are built to send people to official offices, official
-                  directories, and official public contact pages.
-                </p>
-              </article>
-              <article class="info-card">
-                <div class="result-type">Practical</div>
-                <h4>Made for regular use</h4>
-                <p>
-                  This site is for people who just want to know who to call, where to
-                  start, or how to find the right local office.
-                </p>
-              </article>
             </div>
           </section>
 

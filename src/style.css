@@ -22,6 +22,11 @@
   --shadow-soft: 0 8px 20px rgba(0, 33, 71, 0.08);
   --radius-sharp: 0px;
   --radius-control: 0px;
+  --page-safe-inline: clamp(18px, 2.4vw, 34px);
+  --surface-pad: clamp(16px, 1.6vw, 24px);
+  --surface-pad-tight: clamp(12px, 1.2vw, 18px);
+  --chip-pad-inline: 12px;
+  --chip-pad-block: 8px;
 }
 
 * {
@@ -417,7 +422,7 @@ select {
   border: none;
   border-radius: var(--radius-sharp);
   box-shadow: none;
-  padding: 24px 40px 56px;
+  padding: 24px var(--page-safe-inline) 56px;
 }
 
 .content--wide {
@@ -450,7 +455,7 @@ select {
 .page-intro {
   display: grid;
   gap: 14px;
-  padding: 24px 26px;
+  padding: var(--surface-pad);
   border: 1px solid var(--border);
   border-top: 6px solid var(--blue-900);
   border-left: 1px solid var(--border);
@@ -465,7 +470,7 @@ select {
 .page-intro--compact {
   display: grid;
   gap: 20px;
-  padding: 24px;
+  padding: var(--surface-pad);
 }
 
 .page-intro__heading {
@@ -549,7 +554,7 @@ p {
 
 .section {
   margin-top: 28px;
-  padding: 22px 22px 24px;
+  padding: var(--surface-pad);
   border: 1px solid var(--border);
   border-left: 1px solid var(--border);
   border-top: 5px solid var(--blue-900);
@@ -592,7 +597,7 @@ p {
   background: var(--panel);
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
-  padding: 16px;
+  padding: var(--surface-pad-tight);
   margin-top: 16px;
   border-radius: var(--radius-sharp);
   box-shadow: none;
@@ -615,7 +620,7 @@ p {
 .hero-aside {
   display: grid;
   gap: 12px;
-  padding: 18px;
+  padding: var(--surface-pad);
   border-top: 2px solid var(--accent);
 }
 
@@ -801,7 +806,7 @@ p {
 .info-card {
   display: grid;
   gap: 10px;
-  padding: 16px;
+  padding: var(--surface-pad-tight);
   border-radius: var(--radius-control);
   box-shadow: none;
 }
@@ -990,10 +995,10 @@ p {
   border: 1px solid var(--border);
   background: var(--white);
   color: var(--blue-900);
-  padding: 4px 9px;
+  padding: var(--chip-pad-block) var(--chip-pad-inline);
   cursor: pointer;
   border-radius: var(--radius-control);
-  line-height: 1.2;
+  line-height: 1.35;
   font-size: 0.88rem;
 }
 
@@ -1021,7 +1026,7 @@ p {
 .summary-metric {
   border: 1px solid var(--border);
   background: var(--white);
-  padding: 12px;
+  padding: var(--surface-pad-tight);
   display: grid;
   gap: 4px;
   border-radius: var(--radius-control);
@@ -1042,8 +1047,9 @@ p {
 .service-card {
   display: grid;
   gap: 10px;
-  padding: 13px;
+  padding: var(--surface-pad-tight);
   border-radius: var(--radius-control);
+  align-content: start;
 }
 
 .service-card h4 {
@@ -1062,9 +1068,9 @@ p {
 .service-contact {
   border: 1px solid var(--border);
   background: var(--white);
-  padding: 10px 11px;
+  padding: var(--surface-pad-tight);
   display: grid;
-  gap: 3px;
+  gap: 6px;
   border-radius: var(--radius-control);
 }
 
@@ -1264,14 +1270,14 @@ p {
 .resource-group-card {
   border: 1px solid var(--border);
   background: var(--panel);
-  padding: 18px;
+  padding: var(--surface-pad);
   box-shadow: none;
 }
 
 .directory-card {
   display: grid;
   gap: 12px;
-  padding: 15px;
+  padding: var(--surface-pad-tight);
   border-radius: var(--radius-control);
 }
 
@@ -1307,12 +1313,13 @@ p {
 
 .resource-link {
   display: block;
-  padding: 7px 10px;
+  padding: 11px 13px;
   border: 1px solid var(--border);
   border-left: 4px solid var(--blue-900);
   background: var(--white);
   color: var(--gray-900);
   border-radius: var(--radius-control);
+  line-height: 1.4;
 }
 
 .resource-link:hover,
@@ -1337,7 +1344,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 18px 20px;
+  padding: var(--surface-pad);
   background:
     linear-gradient(180deg, rgba(11, 47, 91, 0.06) 0%, rgba(11, 47, 91, 0.01) 100%),
     var(--white);
@@ -1401,7 +1408,7 @@ p {
 }
 
 .section-accordion__content {
-  padding: 0 20px 20px;
+  padding: 0 var(--surface-pad) var(--surface-pad);
 }
 
 .accordion-stack {
@@ -1422,7 +1429,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 14px 16px;
+  padding: var(--surface-pad-tight);
   background: linear-gradient(180deg, rgba(11, 47, 91, 0.04), rgba(255, 255, 255, 0.96));
 }
 
@@ -1446,7 +1453,7 @@ p {
 }
 
 .subsection-accordion__content {
-  padding: 0 16px 16px;
+  padding: 0 var(--surface-pad-tight) var(--surface-pad-tight);
 }
 
 .logo-badge {
@@ -1834,22 +1841,24 @@ p {
 }
 
 .contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
   margin-top: 0;
 }
 
 .contact-links a {
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 8px;
+  display: flex;
+  align-items: flex-start;
+  min-height: 56px;
+  padding: 12px 14px;
   border: 1px solid var(--border);
   border-left: 3px solid var(--blue-900);
   background: var(--white);
   color: var(--gray-900);
   border-radius: var(--radius-control);
   font-size: 0.92rem;
+  line-height: 1.4;
 }
 
 .contact-links a:hover {
@@ -1918,7 +1927,7 @@ p {
 }
 
 .district-popup {
-  padding: 16px 18px;
+  padding: var(--surface-pad);
   max-height: min(72vh, calc(100vh - 120px));
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -1927,7 +1936,7 @@ p {
 .parish-popup {
   display: grid;
   gap: 12px;
-  padding: 16px 18px;
+  padding: var(--surface-pad);
   max-height: min(72vh, calc(100vh - 120px));
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -1977,7 +1986,7 @@ p {
 .district-popup li {
   border: 1px solid var(--border);
   background: var(--panel);
-  padding: 10px 11px;
+  padding: 12px 13px;
   border-radius: var(--radius-control);
 }
 

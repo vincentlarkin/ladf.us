@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
 
 const rootDir = process.cwd();
 const dataDir = path.join(rootDir, 'public', 'data');
@@ -11,6 +12,10 @@ const SOURCES = {
   municipalProfileBase:
     'https://www.lma.org/LMA/About_LMA/Organization_Profile.aspx?id=',
   parishIndex: 'https://www.la.gov/local-louisiana/',
+};
+
+const MANUAL_PARISH_ASSIGNMENTS = {
+  eastbatonrougeparish: ['St. George'],
 };
 
 const MUNICIPAL_SHOW_ALL_EVENT =
@@ -53,12 +58,22 @@ serviceDirectory.municipalities = await mapWithConcurrency(
     fetchMunicipalityProfile(entry, index + 1, municipalityEntries.length),
 );
 
+const parishMunicipalityLookup = await buildParishMunicipalityLookup(
+  serviceDirectory.municipalities,
+);
+
 const parishEntries = await fetchParishEntries();
 serviceDirectory.parishes = await mapWithConcurrency(
   parishEntries,
   6,
   (entry, index) =>
-    fetchParishProfile(entry, index + 1, parishEntries.length),
+    fetchParishProfile(
+      entry,
+      index + 1,
+      parishEntries.length,
+      parishMunicipalityLookup,
+      serviceDirectory.municipalities,
+    ),
 );
 
 await fs.writeFile(outputFile, JSON.stringify(serviceDirectory), 'utf8');
@@ -142,7 +157,13 @@ async function fetchParishEntries() {
   }));
 }
 
-async function fetchParishProfile(entry, index, total) {
+async function fetchParishProfile(
+  entry,
+  index,
+  total,
+  parishMunicipalityLookup,
+  serviceMunicipalities,
+) {
   console.log(`Syncing parish ${index}/${total}: ${entry.name}`);
   const response = await fetchHtml(entry.pageUrl);
   const normalizedHtml = normalizeSectionHtml(response.html);
@@ -161,7 +182,12 @@ async function fetchParishProfile(entry, index, total) {
     'Municipalities\\s+and\\s+Communities',
   );
   const links = parseParishLinks(localLinksBlock, entry.pageUrl);
-  const municipalityNames = parseParishMunicipalityNames(municipalitiesBlock);
+  const municipalityNames = resolveParishMunicipalityNames(
+    entry.name,
+    parseParishMunicipalityNames(municipalitiesBlock),
+    parishMunicipalityLookup,
+    serviceMunicipalities,
+  );
 
   return {
     ...entry,
@@ -236,6 +262,91 @@ function parseParishMunicipalityNames(sectionHtml) {
     });
 
   return [...new Set(items)];
+}
+
+async function buildParishMunicipalityLookup(serviceMunicipalities) {
+  const [parishGeojson, placeGeojson] = await Promise.all([
+    readJson(path.join(dataDir, 'louisiana-parishes.geojson')),
+    readJson(path.join(dataDir, 'louisiana-places.geojson')),
+  ]);
+
+  const serviceMunicipalityMap = new Map(
+    serviceMunicipalities
+      .filter((record) => !shouldSkipMunicipalityName(record.name))
+      .map((record) => [record.normalizedName, record.name]),
+  );
+  const parishes = (parishGeojson.features ?? []).map((feature) => ({
+    key: normalizeName(
+      feature.properties?.__districtLabel ?? feature.properties?.NAME ?? '',
+    ),
+    feature,
+    bbox: getFeatureBbox(feature),
+  }));
+  const lookup = new Map(parishes.map((parish) => [parish.key, []]));
+
+  for (const place of placeGeojson.features ?? []) {
+    const placeName = normalizeText(
+      place.properties?.__districtLabel ?? place.properties?.BASENAME,
+    );
+    const canonicalName = canonicalizeMunicipalityName(
+      placeName,
+      serviceMunicipalityMap,
+      { allowRaw: true },
+    );
+
+    if (!canonicalName) {
+      continue;
+    }
+
+    for (const parishKey of findIntersectingParishKeys(place, parishes)) {
+      lookup.get(parishKey)?.push(canonicalName);
+    }
+  }
+
+  for (const [parishKey, names] of Object.entries(MANUAL_PARISH_ASSIGNMENTS)) {
+    for (const rawName of names) {
+      const canonicalName = canonicalizeMunicipalityName(
+        rawName,
+        serviceMunicipalityMap,
+        { allowRaw: true },
+      );
+      if (canonicalName) {
+        lookup.get(parishKey)?.push(canonicalName);
+      }
+    }
+  }
+
+  return new Map(
+    [...lookup.entries()].map(([parishKey, names]) => [
+      parishKey,
+      sortMunicipalityNames(names),
+    ]),
+  );
+}
+
+function resolveParishMunicipalityNames(
+  parishName,
+  parsedNames,
+  parishMunicipalityLookup,
+  serviceMunicipalities,
+) {
+  const serviceMunicipalityMap = new Map(
+    serviceMunicipalities
+      .filter((record) => !shouldSkipMunicipalityName(record.name))
+      .map((record) => [record.normalizedName, record.name]),
+  );
+  const parishKey = normalizeName(parishName);
+
+  return sortMunicipalityNames([
+    ...(parishMunicipalityLookup.get(parishKey) ?? []),
+    ...parsedNames
+      .map((name) =>
+        canonicalizeMunicipalityName(name, serviceMunicipalityMap, {
+          allowRaw: false,
+        }),
+      )
+      .filter(Boolean),
+  ]);
 }
 
 function parseMunicipalityRoster(html) {
@@ -336,6 +447,206 @@ function pickEntries(roster, pattern, excludePattern = null) {
   );
 }
 
+function shouldSkipMunicipalityName(name) {
+  return /\bparish\b/i.test(normalizeText(name) ?? '');
+}
+
+function canonicalizeMunicipalityName(
+  rawName,
+  serviceMunicipalityMap,
+  { allowRaw = false } = {},
+) {
+  const name = normalizeText(rawName);
+  if (!name || shouldSkipMunicipalityName(name)) {
+    return null;
+  }
+
+  for (const key of buildMunicipalityLookupKeys(name)) {
+    if (serviceMunicipalityMap.has(key)) {
+      return serviceMunicipalityMap.get(key);
+    }
+  }
+
+  return allowRaw ? name : null;
+}
+
+function buildMunicipalityLookupKeys(name) {
+  const raw = normalizeText(name);
+  const variants = new Set();
+
+  if (!raw) {
+    return [];
+  }
+
+  variants.add(normalizeName(raw));
+  variants.add(
+    normalizeName(raw.replace(/\b(city|town|village|municipality|parish)\b/gi, ' ')),
+  );
+
+  if (/ city$/i.test(raw) && !/bossier city$/i.test(raw)) {
+    variants.add(normalizeName(raw.replace(/\s+city$/i, '')));
+  }
+
+  return [...variants].filter(Boolean);
+}
+
+function sortMunicipalityNames(names) {
+  const unique = new Map();
+
+  for (const name of names) {
+    const normalized = normalizeName(name);
+    if (normalized && !unique.has(normalized)) {
+      unique.set(normalized, normalizeText(name));
+    }
+  }
+
+  return [...unique.values()].sort((left, right) => left.localeCompare(right));
+}
+
+function findIntersectingParishKeys(placeFeature, parishes) {
+  const placeBbox = getFeatureBbox(placeFeature);
+  const samplePoints = getFeatureSamplePoints(placeFeature);
+  const matches = [];
+
+  for (const parish of parishes) {
+    if (!bboxesOverlap(placeBbox, parish.bbox)) {
+      continue;
+    }
+
+    const count = samplePoints.reduce(
+      (total, coordinates) =>
+        total +
+        Number(
+          booleanPointInPolygon(
+            {
+              type: 'Feature',
+              properties: {},
+              geometry: { type: 'Point', coordinates },
+            },
+            parish.feature,
+          ),
+        ),
+      0,
+    );
+
+    if (count) {
+      matches.push({ key: parish.key, count });
+    }
+  }
+
+  if (!matches.length) {
+    return [];
+  }
+
+  matches.sort((left, right) => right.count - left.count);
+  const dominantCount = matches[0].count;
+
+  return matches
+    .filter(
+      (match) =>
+        match.count === dominantCount ||
+        (match.count >= 3 && match.count / dominantCount >= 0.35),
+    )
+    .map((match) => match.key);
+}
+
+function getFeatureSamplePoints(feature) {
+  const points = [];
+
+  for (const ring of getOuterRings(feature.geometry)) {
+    if (!Array.isArray(ring) || !ring.length) {
+      continue;
+    }
+
+    const step = Math.max(1, Math.floor(ring.length / 12));
+    for (let index = 0; index < ring.length; index += step) {
+      points.push(ring[index]);
+    }
+
+    points.push(ring[Math.floor(ring.length / 2)]);
+
+    const [minX, minY, maxX, maxY] = getCoordinateBbox(ring);
+    points.push([(minX + maxX) / 2, (minY + maxY) / 2]);
+  }
+
+  const seen = new Set();
+  return points.filter((coordinates) => {
+    if (!Array.isArray(coordinates) || coordinates.length < 2) {
+      return false;
+    }
+
+    const key = `${coordinates[0]}|${coordinates[1]}`;
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
+}
+
+function getOuterRings(geometry) {
+  if (!geometry) {
+    return [];
+  }
+
+  if (geometry.type === 'Polygon') {
+    return geometry.coordinates ? [geometry.coordinates[0]] : [];
+  }
+
+  if (geometry.type === 'MultiPolygon') {
+    return (geometry.coordinates ?? []).map((polygon) => polygon[0]).filter(Boolean);
+  }
+
+  return [];
+}
+
+function getFeatureBbox(feature) {
+  return getCoordinateBbox(flattenCoordinates(feature?.geometry?.coordinates ?? []));
+}
+
+function getCoordinateBbox(coordinates) {
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+
+  for (const coordinate of coordinates) {
+    if (!Array.isArray(coordinate) || coordinate.length < 2) {
+      continue;
+    }
+
+    const [x, y] = coordinate;
+    minX = Math.min(minX, x);
+    minY = Math.min(minY, y);
+    maxX = Math.max(maxX, x);
+    maxY = Math.max(maxY, y);
+  }
+
+  return [minX, minY, maxX, maxY];
+}
+
+function flattenCoordinates(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  if (typeof value[0] === 'number') {
+    return [value];
+  }
+
+  return value.flatMap((entry) => flattenCoordinates(entry));
+}
+
+function bboxesOverlap(left, right) {
+  return (
+    left[0] <= right[2] &&
+    left[2] >= right[0] &&
+    left[1] <= right[3] &&
+    left[3] >= right[1]
+  );
+}
+
 async function postBackShowAll(url, initialResponse, eventTarget) {
   const html =
     typeof initialResponse === 'string' ? initialResponse : initialResponse.html;
@@ -385,6 +696,10 @@ async function fetchHtml(url, options = {}) {
     html: await response.text(),
     cookies: response.headers.getSetCookie?.() ?? [],
   };
+}
+
+async function readJson(filePath) {
+  return JSON.parse(await fs.readFile(filePath, 'utf8'));
 }
 
 function getHiddenInput(html, name) {

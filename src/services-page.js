@@ -922,6 +922,7 @@ function collectMunicipalContacts(record, keys, routingBand = 1) {
         `${formatMunicipalityType(record.type)} office`,
       ),
       phone: sanitizeText(entry.phone, record.phone),
+      email: sanitizeText(entry.email),
       address: sanitizeText(entry.address, record.address),
       sourceUrl: sanitizeText(entry.sourceUrl, record.sourceUrl),
       sourceKey: key,
@@ -935,7 +936,7 @@ function buildRoutingContacts(
   primaryKeys,
   fallbackKeys = [],
   {
-    limit = 6,
+    limit = 3,
     includeExecutive = false,
     includeMainOffice = true,
     includeMainOfficeWhenEmpty = true,
@@ -1001,6 +1002,7 @@ function createMainOfficeContact(record) {
     name: record.name,
     title: `${formatMunicipalityType(record.type)} hall main office`,
     phone: sanitizeText(record.phone),
+    email: sanitizeText(record.email),
     address: sanitizeText(record.address),
     sourceUrl: sanitizeText(record.sourceUrl),
     sourceKey: 'mainOffice',
@@ -1051,6 +1053,7 @@ function normalizeServiceContacts(serviceContacts = {}, fallback = {}) {
           name: sanitizeText(contact.name),
           title: sanitizeText(contact.title),
           phone: sanitizeText(contact.phone, fallback.phone),
+          email: sanitizeText(contact.email, fallback.email),
           address: sanitizeText(contact.address, fallback.address),
           sourceUrl: sanitizeText(contact.sourceUrl, fallback.sourceUrl),
         })),
@@ -1120,10 +1123,8 @@ function renderServiceCard(card) {
                           : ''
                       }
                       ${
-                        contact.address
-                          ? `<div class="service-contact__meta">${renderAddressLines(contact.address)
-                              .map((line) => escapeHtml(line))
-                              .join('<br>')}</div>`
+                        contact.email
+                          ? `<div class="service-contact__meta">${renderLinkValue(`mailto:${contact.email}`, contact.email)}</div>`
                           : ''
                       }
                     </article>

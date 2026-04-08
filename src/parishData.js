@@ -361,11 +361,15 @@ function buildMunicipalityCards(serviceDirectory, names) {
   return names
     .map((name) => {
       const record = findMunicipalityRecord(serviceDirectory, name);
+      const serviceLookupLink = `/services.html?lookup=${encodeURIComponent(
+        `${name}, LA`,
+      )}`;
       if (!record) {
         return {
           label: 'Municipality',
           name,
-          role: 'Municipality listed on the official parish page',
+          role: 'Municipality listed in the parish boundary data',
+          links: buildLinks([['Service lookup', serviceLookupLink]]),
         };
       }
 
@@ -376,7 +380,10 @@ function buildMunicipalityCards(serviceDirectory, names) {
         person: getMunicipalityLead(record),
         address: record.address,
         phone: record.phone,
-        links: buildLinks([['Municipal directory', record.sourceUrl]]),
+        links: buildLinks([
+          ['Municipal directory', record.sourceUrl],
+          ['Service lookup', serviceLookupLink],
+        ]),
       };
     })
     .map(normalizeCard);
