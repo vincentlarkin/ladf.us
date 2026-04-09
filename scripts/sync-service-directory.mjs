@@ -12,6 +12,7 @@ const SOURCES = {
   municipalProfileBase:
     'https://www.lma.org/LMA/About_LMA/Organization_Profile.aspx?id=',
   parishIndex: 'https://www.la.gov/local-louisiana/',
+  sheriffDirectory: 'https://lsa.org/sheriffs-directory/',
 };
 
 const MANUAL_PARISH_ASSIGNMENTS = {
@@ -61,6 +62,7 @@ serviceDirectory.municipalities = await mapWithConcurrency(
 const parishMunicipalityLookup = await buildParishMunicipalityLookup(
   serviceDirectory.municipalities,
 );
+const sheriffDirectoryLookup = await fetchSheriffDirectoryLookup();
 
 const parishEntries = await fetchParishEntries();
 serviceDirectory.parishes = await mapWithConcurrency(
@@ -72,6 +74,7 @@ serviceDirectory.parishes = await mapWithConcurrency(
       index + 1,
       parishEntries.length,
       parishMunicipalityLookup,
+      sheriffDirectoryLookup,
       serviceDirectory.municipalities,
     ),
 );
@@ -162,6 +165,7 @@ async function fetchParishProfile(
   index,
   total,
   parishMunicipalityLookup,
+  sheriffDirectoryLookup,
   serviceMunicipalities,
 ) {
   console.log(`Syncing parish ${index}/${total}: ${entry.name}`);
@@ -194,7 +198,7 @@ async function fetchParishProfile(
     normalizedName: normalizeName(entry.name),
     seat,
     links,
-    linkMap: buildParishLinkMap(links),
+    linkMap: buildParishLinkMap(entry.name, links, sheriffDirectoryLookup),
     municipalityNames,
   };
 }
@@ -229,19 +233,6 @@ function parseParishMunicipalityNames(sectionHtml) {
   const items = [...sectionHtml.matchAll(/<li>([\s\S]*?)<\/li>/gi)]
     .flatMap((match) => {
       const itemHtml = match[1];
-      const typeLabel = normalizeText(
-        itemHtml.match(/<strong>([\s\S]*?)<\/strong>/i)?.[1],
-      );
-
-      if (
-        !typeLabel ||
-        !/(city|cities|town|towns|village|villages|municipality|municipalities)/i.test(
-          typeLabel,
-        )
-      ) {
-        return [];
-      }
-
       const text = normalizeInlineHtml(
         itemHtml
           .replace(/<strong>[\s\S]*?<\/strong>\s*:?\s*/i, '')
@@ -303,19 +294,6 @@ async function buildParishMunicipalityLookup(serviceMunicipalities) {
     }
   }
 
-  for (const [parishKey, names] of Object.entries(MANUAL_PARISH_ASSIGNMENTS)) {
-    for (const rawName of names) {
-      const canonicalName = canonicalizeMunicipalityName(
-        rawName,
-        serviceMunicipalityMap,
-        { allowRaw: true },
-      );
-      if (canonicalName) {
-        lookup.get(parishKey)?.push(canonicalName);
-      }
-    }
-  }
-
   return new Map(
     [...lookup.entries()].map(([parishKey, names]) => [
       parishKey,
@@ -336,16 +314,25 @@ function resolveParishMunicipalityNames(
       .map((record) => [record.normalizedName, record.name]),
   );
   const parishKey = normalizeName(parishName);
+  const parsedCanonicalNames = parsedNames
+    .map((name) =>
+      canonicalizeMunicipalityName(name, serviceMunicipalityMap, {
+        allowRaw: true,
+      }),
+    )
+    .filter(Boolean);
+  const manualNames = getManualParishMunicipalityNames(
+    parishKey,
+    serviceMunicipalityMap,
+  );
+
+  if (parsedCanonicalNames.length) {
+    return sortMunicipalityNames([...parsedCanonicalNames, ...manualNames]);
+  }
 
   return sortMunicipalityNames([
     ...(parishMunicipalityLookup.get(parishKey) ?? []),
-    ...parsedNames
-      .map((name) =>
-        canonicalizeMunicipalityName(name, serviceMunicipalityMap, {
-          allowRaw: false,
-        }),
-      )
-      .filter(Boolean),
+    ...manualNames,
   ]);
 }
 
@@ -407,7 +394,7 @@ function classifyMunicipalContacts(roster) {
   return categories;
 }
 
-function buildParishLinkMap(links) {
+function buildParishLinkMap(parishName, links, sheriffDirectoryLookup) {
   const getHref = (pattern) =>
     links.find((entry) => pattern.test(entry.label))?.links?.[0]?.href ?? null;
 
@@ -422,10 +409,34 @@ function buildParishLinkMap(links) {
     omv: getHref(/motor vehicles/i),
     registrar: getHref(/registrar of voters/i),
     schools: getHref(/school district/i),
-    sheriff: getHref(/sheriff/i),
+    sheriff:
+      sheriffDirectoryLookup.get(normalizeName(parishName)) ??
+      getHref(/sheriff/i),
     house: getHref(/state representatives/i),
     senate: getHref(/state senators/i),
   };
+}
+
+async function fetchSheriffDirectoryLookup() {
+  const response = await fetchHtml(SOURCES.sheriffDirectory, {
+    headers: {
+      'user-agent': 'Mozilla/5.0',
+    },
+  });
+  const lookup = new Map();
+
+  for (const match of response.html.matchAll(
+    /href="(https:\/\/lsa\.org\/directory\/[^"#?]+\/?)"[^>]*>([^<]+)<\/a>/gi,
+  )) {
+    const parishName = normalizeText(decodeHtmlEntities(match[2]));
+    if (!/\bparish\b/i.test(parishName)) {
+      continue;
+    }
+
+    lookup.set(normalizeName(parishName), match[1]);
+  }
+
+  return lookup;
 }
 
 function extractParishSection(html, headingPattern) {
@@ -445,6 +456,16 @@ function pickEntries(roster, pattern, excludePattern = null) {
       (pattern.test(entry.title) || pattern.test(entry.fullText)) &&
       !(excludePattern && (excludePattern.test(entry.title) || excludePattern.test(entry.fullText))),
   );
+}
+
+function getManualParishMunicipalityNames(parishKey, serviceMunicipalityMap) {
+  return (MANUAL_PARISH_ASSIGNMENTS[parishKey] ?? [])
+    .map((rawName) =>
+      canonicalizeMunicipalityName(rawName, serviceMunicipalityMap, {
+        allowRaw: true,
+      }),
+    )
+    .filter(Boolean);
 }
 
 function shouldSkipMunicipalityName(name) {

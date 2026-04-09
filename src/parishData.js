@@ -124,6 +124,8 @@ const GENERIC_BRANDS = {
   sheriff: STATEWIDE_OFFICE_BRANDS.sheriff,
 };
 
+const PARISH_GOP_DIRECTORY_URL = 'https://www.lagop.com/rpec';
+
 const CADDO_PROFILE = {
   brand: CADDO_BRANDS.parish,
   intro:
@@ -160,7 +162,7 @@ const CADDO_PROFILE = {
       address: '501 Texas Street, Room 103\nShreveport, LA 71101',
       phone: '(318) 226-6780',
       links: [
-        ['Official site', 'https://www.caddoclerk.com/'],
+        ['Open site', 'https://www.caddoclerk.com/'],
         ['Department contacts', 'https://www.caddoclerk.com/contacts.htm'],
       ],
     },
@@ -172,7 +174,7 @@ const CADDO_PROFILE = {
       address: '501 Texas Street, Room 102\nShreveport, LA 71101',
       phone: '(318) 226-6704',
       email: 'info@caddoassessor.org',
-      links: [['Official site', 'https://www.caddoassessor.org/']],
+      links: [['Open site', 'https://www.caddoassessor.org/']],
     },
     {
       label: 'Sheriff',
@@ -226,8 +228,8 @@ const CADDO_PROFILE = {
       brand: CADDO_BRANDS.gop,
       person: 'Chairman Matt Kay',
       note:
-        'The official site says the group meets for lunch on the first Tuesday of each month from 11:30 AM to 1:00 PM at Superior Grill and publishes updates through its website and Facebook page.',
-      links: [['Official site', 'https://www.caddogop.com/']],
+        'The site says the group meets for lunch on the first Tuesday of each month from 11:30 AM to 1:00 PM at Superior Grill and publishes updates through its website and Facebook page.',
+      links: [['Open site', 'https://www.caddogop.com/']],
     },
   ],
   municipalityNames: CADDO_MUNICIPALITY_NAMES,
@@ -294,6 +296,7 @@ export async function loadParishProfile(parishKey) {
     parishRecord?.municipalityNames ?? [],
     enhancement?.municipalityNames ?? [],
     styleEnhancement?.municipalityNames ?? [],
+    deriveMunicipalityNamesFromDirectory(serviceDirectory, parishLabel),
   );
 
   return {
@@ -323,11 +326,14 @@ export async function loadParishProfile(parishKey) {
     communityOrganizations: (
       enhancement?.communityOrganizations ??
       styleEnhancement?.communityOrganizations ??
-      []
-    ).map(
-      normalizeCard,
-    ),
-    municipalities: buildMunicipalityCards(serviceDirectory, municipalityNames),
+      buildGenericCommunityOrganizations(parishLabel, styleEnhancement)
+    ).map(normalizeCard),
+    municipalities: buildMunicipalityCards({
+      serviceDirectory,
+      names: municipalityNames,
+      parishLabel,
+      parishRecord,
+    }),
     resourceGroups: (
       enhancement?.resourceGroups ??
       styleEnhancement?.resourceGroups ??
@@ -357,19 +363,31 @@ export async function loadParishProfile(parishKey) {
   };
 }
 
-function buildMunicipalityCards(serviceDirectory, names) {
+function buildMunicipalityCards({
+  serviceDirectory,
+  names,
+  parishLabel,
+  parishRecord,
+}) {
+  if (!names.length) {
+    return [];
+  }
+
   return names
     .map((name) => {
       const record = findMunicipalityRecord(serviceDirectory, name);
-      const serviceLookupLink = `/services.html?lookup=${encodeURIComponent(
-        `${name}, LA`,
-      )}`;
+      const serviceLookupLink = buildLocalLookupLink(name);
+      const parishOfficeLink =
+        parishRecord?.linkMap?.localGovernment ?? parishRecord?.pageUrl ?? '';
       if (!record) {
         return {
-          label: 'Municipality',
+          label: 'Community',
           name,
-          role: 'Municipality listed in the parish boundary data',
-          links: buildLinks([['Service lookup', serviceLookupLink]]),
+          role: `Local place listed on the ${parishLabel} page`,
+          links: buildLinks([
+            ['Open local lookup', serviceLookupLink],
+            ['Parish offices', parishOfficeLink],
+          ]),
         };
       }
 
@@ -381,8 +399,8 @@ function buildMunicipalityCards(serviceDirectory, names) {
         address: record.address,
         phone: record.phone,
         links: buildLinks([
-          ['Municipal directory', record.sourceUrl],
-          ['Service lookup', serviceLookupLink],
+          ['Open local lookup', serviceLookupLink],
+          ['City or town directory', record.sourceUrl],
         ]),
       };
     })
@@ -400,7 +418,7 @@ function buildDistrictGroups(parishKey, commissionGeojson, schoolBoardGeojson) {
     districtGroups.push({
       title: 'Caddo Parish Commission Districts',
       description:
-        'Each commissioner card links back to the official district page. Emails and mailing addresses come from the published district layer.',
+        'Each commissioner card links back to the district page. Emails and mailing addresses come from the published district layer.',
       brand: CADDO_BRANDS.parish,
       cards: commissionGeojson.features
         .map((feature) => feature.properties)
@@ -411,7 +429,7 @@ function buildDistrictGroups(parishKey, commissionGeojson, schoolBoardGeojson) {
           role: properties.__representative,
           address: properties.__contactAddress,
           email: properties.__contactEmail,
-          links: [['Official district page', properties.__officialWebsite]],
+          links: [['District page', properties.__officialWebsite]],
         })),
     });
   }
@@ -420,7 +438,7 @@ function buildDistrictGroups(parishKey, commissionGeojson, schoolBoardGeojson) {
     districtGroups.push({
       title: 'Caddo School Board Districts',
       description:
-        'School-board member cards are driven from the local district layer and the official board-members page.',
+        'School-board member cards are driven from the local district layer and the published board-members page.',
       brand: CADDO_BRANDS.schools,
       cards: schoolBoardGeojson.features
         .map((feature) => feature.properties)
@@ -447,14 +465,18 @@ function buildGenericIntro(parishLabel, parishRecord, municipalityNames) {
   const municipalityCount = municipalityNames.length;
 
   if (!parishRecord) {
-    return `This page is a placeholder for ${parishLabel} while the statewide parish directory is still loading official office links.`;
+    return `This page is getting filled in for ${parishLabel}. The main parish links will show here as soon as the statewide directory finishes loading.`;
   }
 
   if (municipalityCount) {
-    return `${parishLabel} now uses the official Louisiana parish directory plus the municipal list published on the state parish page, so the core offices and incorporated places in this parish are all on one screen.`;
+    return `${parishLabel} puts the main parish offices, local places in this parish, and the links people use most on one page so it is faster to move.`;
   }
 
-  return `${parishLabel} now uses the official Louisiana parish directory for its core office links, with statewide fallback resources grouped below for the services people use most often.`;
+  return `${parishLabel} keeps the main parish offices and the most useful links together in one place while local place coverage gets filled in.`;
+}
+
+function buildLocalLookupLink(placeName) {
+  return `/services.html?lookup=${encodeURIComponent(`${placeName}, LA`)}#results`;
 }
 
 function buildGenericFeaturedContacts(
@@ -511,7 +533,7 @@ function buildGenericFeaturedContacts(
       name: getOfficeName(styleEnhancement, 'parish', parishLabel),
       role: parishRecord.seat
         ? `Parish seat: ${parishRecord.seat}`
-        : 'Official parish reference page',
+        : 'Parish page and main contact path',
       brand: getOfficeBrand(
         styleEnhancement,
         'parish',
@@ -522,7 +544,7 @@ function buildGenericFeaturedContacts(
         ['Local government', parishGovernmentLink],
       ]),
       note:
-        'Official parish office links pulled from the Louisiana local-government directory.',
+        'Main parish links pulled into one card so you do not have to hop across several sites first.',
     },
     {
       label: 'Assessor',
@@ -579,7 +601,7 @@ function buildGenericFeaturedContacts(
         'schools',
         `${parishBase} Parish Schools`,
       ),
-      role: 'Official school district information for this parish',
+      role: 'School district information for this parish',
       brand: getOfficeBrand(
         styleEnhancement,
         'schools',
@@ -620,6 +642,22 @@ function buildGenericFeaturedContacts(
   ];
 
   return cards.filter((card) => card.links?.length);
+}
+
+function buildGenericCommunityOrganizations(parishLabel, styleEnhancement = null) {
+  const parishBase = stripParishSuffix(parishLabel);
+
+  return [
+    {
+      label: 'Parish GOP',
+      name: `${parishBase} Parish Republican Executive Committee`,
+      role: 'Local parish Republican committee',
+      brand: styleEnhancement?.officeBrands?.gop ?? null,
+      links: [['State parish chapter directory', PARISH_GOP_DIRECTORY_URL]],
+      note:
+        'Use the statewide parish chapter directory as the starting point for local Republican contacts and chapter details.',
+    },
+  ];
 }
 
 function getOfficeName(styleEnhancement, officeKey, fallback) {
@@ -674,10 +712,20 @@ function getMunicipalityLead(record) {
     record.serviceContacts?.administration?.find((entry) =>
       /mayor/i.test(entry.title),
     ) ?? null;
+  const judge =
+    Object.values(record.serviceContacts ?? {})
+      .flat()
+      .find((entry) => /judge/i.test(entry.title)) ?? null;
   const clerk = record.serviceContacts?.clerk?.[0] ?? null;
   const administration = record.serviceContacts?.administration?.[0] ?? null;
 
-  return mayor?.fullText ?? clerk?.fullText ?? administration?.fullText ?? '';
+  return (
+    mayor?.fullText ??
+    judge?.fullText ??
+    clerk?.fullText ??
+    administration?.fullText ??
+    ''
+  );
 }
 
 function formatMunicipalityGovernmentLabel(type) {
@@ -690,7 +738,7 @@ function formatMunicipalityGovernmentLabel(type) {
 }
 
 function mergeUniqueNames(primary, secondary) {
-  const values = [...primary, ...secondary].map((value) => sanitizeText(value));
+  const values = [...primary, ...secondary].flat().map((value) => sanitizeText(value));
   const seen = new Set();
 
   return values.filter((value) => {
@@ -730,7 +778,7 @@ function buildResourceGroups(parishRecord, serviceDirectory) {
 
   return [
     {
-      title: 'Statewide Official Links',
+      title: 'Helpful Statewide Links',
       links: buildLinks([
         ['Office of Motor Vehicles', statewide.omv],
         ['Registrar of voters', statewide.registrar],
@@ -742,6 +790,17 @@ function buildResourceGroups(parishRecord, serviceDirectory) {
       ]),
     },
   ];
+}
+
+function deriveMunicipalityNamesFromDirectory(serviceDirectory, parishLabel) {
+  const parishKey = normalizeLookupName(parishLabel);
+
+  return (serviceDirectory.municipalities ?? [])
+    .filter(
+      (record) =>
+        normalizeLookupName(record.parish) === parishKey,
+    )
+    .map((record) => record.name);
 }
 
 function buildLinks(entries) {

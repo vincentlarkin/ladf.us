@@ -27,7 +27,7 @@ if (!profile) {
 }
 
 function renderParishPage(parish) {
-  document.title = `LADF | ${parish.label}`;
+  document.title = `Louisiana Data Force | ${parish.label}`;
 
   const districtCardCount = parish.districtGroups.reduce(
     (count, group) => count + group.cards.length,
@@ -48,15 +48,15 @@ function renderParishPage(parish) {
             { href: '#overview', label: 'Overview' },
             { href: '#contacts', label: 'Key Contacts' },
             ...(parish.districtGroups.length
-              ? [{ href: '#districts', label: 'District Directories' }]
+              ? [{ href: '#districts', label: 'District Lists' }]
               : []),
             ...(parish.municipalities.length
-              ? [{ href: '#municipalities', label: 'Municipal Governments' }]
+              ? [{ href: '#municipalities', label: 'Local Places' }]
               : []),
             ...(parish.communityOrganizations.length
-              ? [{ href: '#organizations', label: 'Organizations' }]
+              ? [{ href: '#organizations', label: 'Parish Groups' }]
               : []),
-            { href: '#links', label: 'Official Links' },
+            { href: '#links', label: 'Main Links' },
           ],
         })}
 
@@ -91,11 +91,11 @@ function renderParishPage(parish) {
                   <strong>${escapeHtml(sanitizeText(parish.seat, 'Unavailable'))}</strong>
                 </article>
                 <article class="summary-metric">
-                  <span class="metric-label">Official office cards</span>
+                  <span class="metric-label">Main contacts</span>
                   <strong>${parish.featuredContacts.length}</strong>
                 </article>
                 <article class="summary-metric">
-                  <span class="metric-label">Municipal governments</span>
+                  <span class="metric-label">Local places</span>
                   <strong>${parish.municipalities.length}</strong>
                 </article>
               </div>
@@ -115,7 +115,7 @@ function renderParishPage(parish) {
                   parish.districtGroups.length
                     ? renderSectionChip(
                         'districts',
-                        'District Directories',
+                        'District Lists',
                         formatCountLabel(districtCardCount, 'district'),
                       )
                     : ''
@@ -124,8 +124,8 @@ function renderParishPage(parish) {
                   parish.municipalities.length
                     ? renderSectionChip(
                         'municipalities',
-                        'Municipal Governments',
-                        formatCountLabel(parish.municipalities.length, 'municipality', 'municipalities'),
+                        'Local Places',
+                        formatCountLabel(parish.municipalities.length, 'place'),
                       )
                     : ''
                 }
@@ -133,14 +133,14 @@ function renderParishPage(parish) {
                   parish.communityOrganizations.length
                     ? renderSectionChip(
                         'organizations',
-                        'Organizations',
-                        formatCountLabel(parish.communityOrganizations.length, 'organization'),
+                        'Parish Groups',
+                        formatCountLabel(parish.communityOrganizations.length, 'group'),
                       )
                     : ''
                 }
                 ${renderSectionChip(
                   'links',
-                  'Official Links',
+                  'Main Links',
                   formatCountLabel(officialLinkCount, 'link'),
                 )}
               </div>
@@ -150,7 +150,7 @@ function renderParishPage(parish) {
               id: 'contacts',
               title: 'Key Contacts',
               description:
-                'Primary offices and official starting points for people trying to reach parish government quickly.',
+                'The main parish contacts most people are looking for first.',
               countLabel: formatCountLabel(parish.featuredContacts.length, 'contact'),
               open: true,
               content: parish.featuredContacts.length
@@ -158,9 +158,9 @@ function renderParishPage(parish) {
                     ${parish.featuredContacts.map(renderDirectoryCard).join('')}
                   </div>`
                 : `<article class="info-card">
-                    <div class="result-type">No local directory yet</div>
-                    <h4>This parish is still on the lightweight profile.</h4>
-                    <p>Use the official links below for the current parish contact path.</p>
+                    <div class="result-type">Still filling in</div>
+                    <h4>This parish is still on the lighter version of the page.</h4>
+                    <p>Use the main links below as your best starting point for now.</p>
                   </article>`,
             })}
 
@@ -168,9 +168,9 @@ function renderParishPage(parish) {
               parish.districtGroups.length
                 ? renderSectionAccordion({
                     id: 'districts',
-                    title: 'District Directories',
+                    title: 'District Lists',
                     description:
-                      'Commission and school-board districts are grouped into their own dropdowns so the page stays short until you need them.',
+                      'District rosters stay tucked into their own dropdowns so the page stays easier to scan.',
                     countLabel: formatCountLabel(districtCardCount, 'district'),
                     content: `<div class="accordion-stack">
                       ${parish.districtGroups.map(renderDirectoryGroupAccordion).join('')}
@@ -183,13 +183,12 @@ function renderParishPage(parish) {
               parish.municipalities.length
                 ? renderSectionAccordion({
                     id: 'municipalities',
-                    title: 'Municipal Governments In This Parish',
+                    title: 'Local Places In This Parish',
                     description:
-                      'These municipal government contacts are pulled from the Louisiana Municipal Association directory for the places currently included in this parish profile.',
+                      'Quick local starting points for the cities, towns, villages, and communities tied to this parish.',
                     countLabel: formatCountLabel(
                       parish.municipalities.length,
-                      'municipality',
-                      'municipalities',
+                      'place',
                     ),
                     content: `<div class="directory-grid directory-grid--cards">
                       ${parish.municipalities.map(renderDirectoryCard).join('')}
@@ -202,12 +201,12 @@ function renderParishPage(parish) {
               parish.communityOrganizations.length
                 ? renderSectionAccordion({
                     id: 'organizations',
-                    title: 'Community Organizations',
+                    title: 'Parish Groups',
                     description:
-                      'Local organizations stay visible in their own dropdown and now carry logos when we have a reliable mark for them.',
+                      'A place for the main parish-level groups people may want handy alongside the civic links.',
                     countLabel: formatCountLabel(
                       parish.communityOrganizations.length,
-                      'organization',
+                      'group',
                     ),
                     open: true,
                     content: `<div class="directory-grid directory-grid--cards">
@@ -219,9 +218,9 @@ function renderParishPage(parish) {
 
             ${renderSectionAccordion({
               id: 'links',
-              title: 'Official Links',
+              title: 'Main Links',
               description:
-                'Official parish, state, and emergency resources are grouped into smaller dropdowns instead of one long link wall.',
+                'The main parish and statewide links grouped into smaller dropdowns instead of one long wall of links.',
               countLabel: formatCountLabel(officialLinkCount, 'link'),
               content: `<div class="accordion-stack">
                 ${parish.resourceGroups.map(renderResourceGroupAccordion).join('')}
@@ -247,7 +246,7 @@ function renderParishPage(parish) {
 }
 
 function renderMissingParish() {
-  document.title = 'LADF | Parish Not Found';
+  document.title = 'Louisiana Data Force | Parish Not Found';
 
   document.querySelector('#app').innerHTML = `
     <div class="page">
@@ -268,7 +267,7 @@ function renderMissingParish() {
               <div class="eyebrow">Parish directory</div>
               <h1>Parish not found</h1>
               <p class="lead">
-                We could not match that parish. Start from the map and pick a parish again.
+                We could not match that parish. Start from the map and pick one again.
               </p>
               <div class="cta-row">
                 <a class="button" href="/map.html">Open parish map</a>
@@ -454,7 +453,7 @@ function renderResourceGroupAccordion(group) {
       <summary class="subsection-accordion__summary">
         <span class="subsection-accordion__summary-main">
           <span class="subsection-accordion__title-block">
-            <span class="result-type">Official links</span>
+            <span class="result-type">Main links</span>
             <span class="subsection-accordion__heading">${escapeHtml(group.title)}</span>
           </span>
         </span>

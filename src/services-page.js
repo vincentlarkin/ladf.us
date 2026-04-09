@@ -297,8 +297,8 @@ document.querySelector('#app').innerHTML = `
         sections: [
           { href: '#overview', label: 'Overview' },
           { href: '#lookup', label: 'Search' },
-          { href: '#results', label: 'Your Match' },
-          { href: '#services', label: 'Who To Call' },
+          { href: '#results', label: 'Local Snapshot' },
+          { href: '#services', label: 'Service Routes' },
           { href: '#districts', label: 'Districts' },
         ],
       })}
@@ -312,11 +312,10 @@ document.querySelector('#app').innerHTML = `
 
           <section class="page-intro" id="overview">
             <div class="eyebrow">Local Help</div>
-            <h1>Enter a ZIP code, city, or address.</h1>
+            <h1>Find the right local office fast.</h1>
             <p class="lead">
-              We will show the city, parish, and the best official places to start
-              for common local questions like water, trash, permits, schools, and
-              parish offices.
+              Search a Louisiana ZIP code, city, or address and this page lays out the
+              city, parish, and the best first calls in one clean view.
             </p>
             <div class="disclaimer-box disclaimer-box--compact">
               <p>
@@ -354,19 +353,21 @@ document.querySelector('#app').innerHTML = `
           </section>
 
           <section class="section" id="results">
-            <h2>Your Match</h2>
+            <h2>Local Snapshot</h2>
             <div id="service-summary" class="contact-summary">
-              <div class="summary-kicker">Start Here</div>
-              <h4>Search a place to see the right local offices.</h4>
-              <p>
-                Your result will show the city, parish, and a simple top-to-bottom
-                order for who to contact first.
-              </p>
+              <div class="lookup-result lookup-result--empty">
+                <div class="summary-kicker">Start Here</div>
+                <h4>Search a place to load the right local routing.</h4>
+                <p>
+                  Your result will bring the city or town, parish, best first stops,
+                  and key service links together in one place.
+                </p>
+              </div>
             </div>
           </section>
 
           <section class="section" id="services">
-            <h2>Who To Call</h2>
+            <h2>Service Routes</h2>
             <div id="service-card-grid" class="service-card-grid"></div>
           </section>
 
@@ -521,6 +522,7 @@ async function renderLookupResult(result) {
 
   renderDistrictCards(matches);
 
+  updateLookupUrl(result.query === 'Current location' ? '' : result.query);
   setStatus(`Showing local results for ${result.address ?? result.query}.`);
 }
 
@@ -538,42 +540,272 @@ function renderSummary({
   const precisionNote = getPrecisionNote(result);
   const municipalHierarchy = buildMunicipalHierarchy(municipalityRecord);
   const parishHierarchy = buildParishHierarchy(parishRecord);
+  const parishPageLink = buildParishPageLink(parishRecord);
+  const cityActionHref = municipalityRecord?.sourceUrl ?? null;
+  const sheriffActionHref =
+    parishRecord?.linkMap.sheriff ??
+    state.context.serviceDirectory.statewideLinks.sheriffDirectory;
+  const topMunicipalContact = municipalHierarchy[0] ?? null;
+  const actionLinks = compactLinks([
+    cityActionHref && {
+      label: municipalityRecord ? `Open ${municipalityRecord.name} directory` : 'Open local directory',
+      href: cityActionHref,
+      variant: 'primary',
+      external: true,
+    },
+    parishPageLink && {
+      label: parishRecord ? `Open ${parishRecord.name} page` : 'Open parish page',
+      href: parishPageLink,
+      variant: cityActionHref ? 'secondary' : 'primary',
+      external: false,
+    },
+    sheriffActionHref && {
+      label: 'Open sheriff page',
+      href: sheriffActionHref,
+      variant: 'secondary',
+      external: true,
+    },
+  ]);
 
   summaryNode.innerHTML = `
-    <div class="summary-kicker">Match</div>
-    <h4>${escapeHtml(result.address ?? result.query)}</h4>
-    <p>
-      Closest match: <strong>${escapeHtml(municipalityName)}</strong> in
-      <strong>${escapeHtml(parishName)}</strong>.
-    </p>
-    <p class="mini-meta">${escapeHtml(precisionNote)}</p>
-    <div class="routing-ladder-grid">
-      ${renderHierarchyPanel({
-        kicker: 'City Hall',
-        title: municipalityRecord
-          ? `${municipalityRecord.name} who to call first`
-          : 'City or town contacts',
-        description: municipalityRecord
-          ? 'Top to bottom local contacts for the city or town that matched.'
-          : 'No city or town contact list was found for this result.',
-        entries: municipalHierarchy,
-        emptyMessage:
-          'No city or town list was found here. Use the parish offices below.',
-      })}
-      ${renderHierarchyPanel({
-        kicker: 'Parish Offices',
-        title: parishRecord
-          ? `${parishRecord.name} parish offices`
-          : 'Parish offices',
-        description: parishRecord
-          ? 'Common parish offices people usually need, in a simple order.'
-          : 'A parish office list was not found for this result.',
-        entries: parishHierarchy,
-        emptyMessage:
-          'No parish office list is available for this result yet.',
-      })}
+    <div class="lookup-result">
+      <div class="lookup-result__hero">
+        <div class="lookup-result__intro">
+          <div class="summary-kicker">Lookup Result</div>
+          <h4>${escapeHtml(result.address ?? result.query)}</h4>
+          <p class="lookup-result__lede">
+            ${escapeHtml(
+              getLookupLead({
+                municipalityMatch,
+                municipalityRecord,
+                municipalityName,
+                parishName,
+              }),
+            )}
+          </p>
+        </div>
+        ${
+          actionLinks.length
+            ? `<div class="lookup-result__actions">
+                ${actionLinks
+                  .map((link) =>
+                    renderActionButton(link.label, link.href, {
+                      variant: link.variant,
+                      external: link.external,
+                    }),
+                  )
+                  .join('')}
+              </div>`
+            : ''
+        }
+      </div>
+
+      <div class="lookup-pill-row">
+        ${renderSummaryBadge('City / town', municipalityName)}
+        ${renderSummaryBadge('Parish', parishName)}
+        ${renderSummaryBadge('Match type', formatLookupMatchType(result))}
+      </div>
+
+      <p class="mini-meta">${escapeHtml(precisionNote)}</p>
+
+      <div class="lookup-spotlight-grid">
+        ${renderSpotlightCard({
+          kicker: 'City / town start',
+          title: municipalityRecord?.name ?? municipalityName,
+          detail: topMunicipalContact?.title ?? getMunicipalSpotlightDetail(municipalityRecord),
+          phone: topMunicipalContact?.phone ?? municipalityRecord?.phone,
+          address: topMunicipalContact?.address ?? municipalityRecord?.address,
+          actions: compactLinks([
+            cityActionHref && {
+              label: municipalityRecord ? 'Open city directory' : 'Open local directory',
+              href: cityActionHref,
+              variant: 'primary',
+              external: true,
+            },
+            parishPageLink && {
+              label: 'Open parish page',
+              href: parishPageLink,
+              variant: 'secondary',
+              external: false,
+            },
+          ]),
+          emptyMessage:
+            'No dedicated city hall roster was found for this result. Use the parish page below as the main path.',
+        })}
+        ${renderSpotlightCard({
+          kicker: 'Parish start',
+          title: parishRecord?.name ?? parishName,
+          detail: parishRecord
+            ? parishRecord.seat
+              ? `Parish offices and main links for the seat in ${parishRecord.seat}`
+              : 'Parish offices and main local links'
+            : 'Use the parish offices below for the best parish-level starting point.',
+          actions: compactLinks([
+            parishPageLink && {
+              label: 'Open parish page',
+              href: parishPageLink,
+              variant: 'primary',
+              external: false,
+            },
+            sheriffActionHref && {
+              label: 'Open sheriff page',
+              href: sheriffActionHref,
+              variant: 'secondary',
+              external: true,
+            },
+          ]),
+          emptyMessage: 'No parish directory link is loaded for this result yet.',
+        })}
+      </div>
+
+      <div class="routing-ladder-grid">
+        ${renderHierarchyPanel({
+          kicker: 'City Hall',
+          title: municipalityRecord
+            ? `${municipalityRecord.name} who to call first`
+            : 'City or town contacts',
+          description: municipalityRecord
+            ? 'Top to bottom local contacts for the city or town that matched.'
+            : 'No city or town contact list was found for this result.',
+          entries: municipalHierarchy,
+          emptyMessage:
+            'No city or town list was found here. Use the parish offices below.',
+        })}
+        ${renderHierarchyPanel({
+          kicker: 'Parish Offices',
+          title: parishRecord
+            ? `${parishRecord.name} parish offices`
+            : 'Parish offices',
+          description: parishRecord
+            ? 'Common parish offices people usually need, in a simple order.'
+            : 'A parish office list was not found for this result.',
+          entries: parishHierarchy,
+          emptyMessage:
+            'No parish office list is available for this result yet.',
+        })}
+      </div>
     </div>
   `;
+}
+
+function getLookupLead({
+  municipalityMatch,
+  municipalityRecord,
+  municipalityName,
+  parishName,
+}) {
+  if (municipalityRecord) {
+    return `${municipalityRecord.name} is the local city or town start, and ${parishName} covers the parish-level offices around it.`;
+  }
+
+  if (municipalityMatch) {
+    return `${municipalityName} matched as the local place, but a dedicated city hall roster was not attached here. ${parishName} is still the right parish-level path.`;
+  }
+
+  return `This point landed outside a listed city or town, so ${parishName} parish offices are the best first stop.`;
+}
+
+function getMunicipalSpotlightDetail(municipalityRecord) {
+  if (municipalityRecord) {
+    return `${formatMunicipalityType(municipalityRecord.type)} hall main office and local directory`;
+  }
+
+  return 'No dedicated city hall roster was found for this result.';
+}
+
+function renderSummaryBadge(label, value) {
+  return `
+    <div class="lookup-pill">
+      <span>${escapeHtml(label)}</span>
+      <strong>${escapeHtml(value)}</strong>
+    </div>
+  `;
+}
+
+function renderActionButton(label, href, { variant = 'primary', external = false } = {}) {
+  const className =
+    variant === 'secondary' ? 'button button--secondary' : 'button';
+  const externalAttributes = external
+    ? ' target="_blank" rel="noreferrer"'
+    : '';
+
+  return `<a class="${className}" href="${escapeAttribute(href)}"${externalAttributes}>${escapeHtml(label)}</a>`;
+}
+
+function renderSpotlightCard({
+  kicker,
+  title,
+  detail,
+  phone,
+  address,
+  actions = [],
+  emptyMessage,
+}) {
+  const addressLines = renderAddressLines(address);
+  const hasContent = detail || phone || addressLines.length || actions.length;
+
+  return `
+    <article class="lookup-spotlight">
+      <div class="result-type">${escapeHtml(kicker)}</div>
+      <h5>${escapeHtml(title)}</h5>
+      ${
+        hasContent
+          ? `
+            <p class="lookup-spotlight__detail">${escapeHtml(detail)}</p>
+            ${
+              phone
+                ? `<div class="lookup-spotlight__meta">${renderLinkValue(
+                    `tel:${sanitizePhone(phone)}`,
+                    phone,
+                  )}</div>`
+                : ''
+            }
+            ${
+              addressLines.length
+                ? `<div class="lookup-spotlight__address">
+                    ${addressLines
+                      .map((line) => `<span>${escapeHtml(line)}</span>`)
+                      .join('')}
+                  </div>`
+                : ''
+            }
+            ${
+              actions.length
+                ? `<div class="lookup-spotlight__actions">
+                    ${actions
+                      .map((action) =>
+                        renderActionButton(action.label, action.href, {
+                          variant: action.variant,
+                          external: action.external,
+                        }),
+                      )
+                      .join('')}
+                  </div>`
+                : ''
+            }
+          `
+          : `<div class="routing-ladder-empty">${escapeHtml(emptyMessage)}</div>`
+      }
+    </article>
+  `;
+}
+
+function buildParishPageLink(parishRecord) {
+  if (!parishRecord) {
+    return null;
+  }
+
+  const parishKey = normalizeLookupName(parishRecord.normalizedName ?? parishRecord.name)
+    .replace(/parish$/, '');
+  return `/parish.html?parish=${encodeURIComponent(parishKey)}`;
+}
+
+function formatLookupMatchType(result) {
+  if (result.query === 'Current location') {
+    return 'Current location';
+  }
+
+  return sanitizeText(result.matchType, 'Lookup');
 }
 
 function renderServiceCards({
@@ -756,7 +988,7 @@ function renderServiceCards({
       ),
       links: compactLinks([
         {
-          label: "Sheriff's directory",
+          label: parishRecord ? "Open parish sheriff page" : "Sheriff's directory",
           href: parishRecord?.linkMap.sheriff ?? state.context.serviceDirectory.statewideLinks.sheriffDirectory,
         },
         {
@@ -780,7 +1012,7 @@ function renderServiceCards({
       title: 'Assessor, clerk, registrar, schools, and OMV',
       description:
         parishRecord
-          ? `${parishRecord.name} has official links for the parish offices people often need most.`
+          ? `${parishRecord.name} has the main parish links people often need most.`
           : 'These parish office links help with common needs like records, assessments, schools, and driver services.',
       contacts: dedupeContacts([
         parishRecord && {
@@ -885,7 +1117,7 @@ function renderDistrictCards(matches) {
           </div>
           ${
             website
-              ? `<div class="contact-links"><a href="${escapeAttribute(website)}" target="_blank" rel="noreferrer">Official page</a></div>`
+              ? `<div class="contact-links"><a href="${escapeAttribute(website)}" target="_blank" rel="noreferrer">Open page</a></div>`
               : ''
           }
         </article>
@@ -1300,7 +1532,7 @@ function getDistrictDescription(layerId) {
     case 'louisiana-places':
       return 'Your city, town, or village when the search point falls inside one.';
     case 'louisiana-parishes':
-      return 'The parish government area for this point.';
+      return 'The parish area for this point.';
     case 'caddo-commission':
       return 'Parish commission district.';
     case 'shreveport-council':
@@ -1427,6 +1659,19 @@ function formatMunicipalityType(value) {
 
 function renderLinkValue(href, label) {
   return `<a href="${escapeAttribute(href)}">${escapeHtml(label)}</a>`;
+}
+
+function updateLookupUrl(query) {
+  const url = new URL(window.location.href);
+
+  if (query) {
+    url.searchParams.set('lookup', query);
+  } else {
+    url.searchParams.delete('lookup');
+  }
+
+  url.hash = 'results';
+  window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
 }
 
 function setStatus(message) {

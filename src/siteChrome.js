@@ -10,9 +10,9 @@ export function renderSiteHeader({ activePage = null } = {}) {
       <div class="site-trust-strip" role="note" aria-label="Site identity">
         <div class="site-trust-strip__inner">
           <span class="site-trust-strip__badge">LADF</span>
-          <span>Independent Louisiana civic directory project</span>
+          <span>Louisiana Data Force</span>
           <span class="site-trust-strip__sep" aria-hidden="true">|</span>
-          <span>Not an official Louisiana government website</span>
+          <span>Independent, not a government website</span>
         </div>
       </div>
       <div class="site-header__inner">
@@ -20,7 +20,7 @@ export function renderSiteHeader({ activePage = null } = {}) {
           <span class="brand__crest">LA</span>
           <span class="brand__text">
             <span class="brand__name">LADF</span>
-            <span class="brand__descriptor">Louisiana Data & Defense Foundation</span>
+            <span class="brand__descriptor">Louisiana Data Force</span>
           </span>
         </a>
         <nav class="site-primary-nav" aria-label="Main">
@@ -148,8 +148,8 @@ export function renderSiteFooter() {
     <footer class="site-footer">
       <div class="site-footer__inner">
         <span class="flag-glyph">LA</span>
-        <span>In Service to God • Soli Deo Gloria</span>
-        <span>LADF is a private nonprofit civic education organization and is not affiliated with Louisiana state or local government.</span>
+        <span>Louisiana parish, city, and service links in one place.</span>
+        <span>Use this as a starting point, then double-check details with the office you need.</span>
         <span><a href="/map.html">Parish Map</a> | <a href="/services.html">Services by ZIP</a></span>
       </div>
     </footer>

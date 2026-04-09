@@ -11,7 +11,7 @@ import {
   renderSiteHeader,
 } from './siteChrome.js';
 
-document.title = 'LADF | Parish Map';
+document.title = 'Louisiana Data Force | Parish Map';
 
 document.querySelector('#app').innerHTML = `
   <div class="page">
@@ -39,8 +39,8 @@ document.querySelector('#app').innerHTML = `
               <h1>Pick a parish, then choose the parish page or one of its cities.</h1>
               <p class="lead">
                 Click a parish on the map to open a small chooser with the parish page
-                and city links. If you already know the parish name, use the list on
-                the right for a direct jump.
+                and city or town links. If you already know the parish name, use the
+                list on the right for a direct jump.
               </p>
             </div>
 
@@ -70,7 +70,7 @@ document.querySelector('#app').innerHTML = `
                   <h3>All Parishes</h3>
                   <p>
                     Parish buttons open the parish page directly. Map clicks open the
-                    simpler chooser with parish and city links.
+                    simpler chooser with parish and local place links.
                   </p>
                 </div>
                 <label class="field-label" for="parish-filter">Filter parishes</label>
@@ -166,7 +166,7 @@ function initializeMap(parishes, parishLookup) {
 
           hoverLayer = layer;
           setActiveLayerStyle(layer, { selected: false });
-          statusNode.textContent = `${parishLabel} selected. Click to open the parish and city chooser.`;
+          statusNode.textContent = `${parishLabel} selected. Click to open the parish and local place chooser.`;
         });
 
         layer.on('mouseout', () => {
@@ -177,7 +177,7 @@ function initializeMap(parishes, parishLookup) {
 
           if (!selectedLayer) {
             statusNode.textContent =
-              'Hover a parish to preview it. Click to open the parish and city chooser.';
+              'Hover a parish to preview it. Click to open the parish and local place chooser.';
           }
         });
 
@@ -189,7 +189,7 @@ function initializeMap(parishes, parishLookup) {
           selectedLayer = layer;
           hoverLayer = layer;
           setActiveLayerStyle(layer, { selected: true });
-          statusNode.textContent = `${parishLabel} selected. Choose the parish page or a city in the popup.`;
+          statusNode.textContent = `${parishLabel} selected. Choose the parish page or a local place in the popup.`;
 
           L.popup({
             closeButton: true,
@@ -224,7 +224,7 @@ function initializeMap(parishes, parishLookup) {
     }
 
     statusNode.textContent =
-      'Hover a parish to preview it. Click to open the parish and city chooser.';
+      'Hover a parish to preview it. Click to open the parish and local place chooser.';
   });
 
   map.fitBounds(geoJsonLayer.getBounds().pad(0.04));
@@ -263,6 +263,7 @@ function buildParishLookup(serviceDirectory) {
         key: getParishKey(record.name),
         label: record.name,
         cityNames: getCityNames(record),
+        seat: record.seat ?? '',
       },
     ]),
   );
@@ -279,27 +280,27 @@ function getCityNames(record) {
 }
 
 function renderParishPopup(parish) {
-  const cityLinks = parish.cityNames.length
+  const placeLinks = parish.cityNames.length
     ? parish.cityNames
         .map(
           (cityName) => `
             <a
               class="quick-chip quick-chip--link"
-              href="/services.html?lookup=${encodeURIComponent(`${cityName}, LA`)}"
+              href="/services.html?lookup=${encodeURIComponent(`${cityName}, LA`)}#results"
             >
               ${escapeHtml(cityName)}
             </a>
           `,
         )
         .join('')
-    : '<p class="parish-popup__empty">City links are still being added for this parish.</p>';
+    : '<p class="parish-popup__empty">Open the parish page for the best local starting point here.</p>';
 
   return `
     <div class="parish-popup">
       <div>
         <div class="result-type">Parish</div>
         <h4>${escapeHtml(parish.label)}</h4>
-        <p>Open the parish page or jump into a city lookup.</p>
+        <p>Open the parish page or jump into a city, town, or local area lookup.</p>
       </div>
 
       <div class="parish-popup__actions">
@@ -309,9 +310,9 @@ function renderParishPopup(parish) {
       </div>
 
       <div class="parish-popup__cities">
-        <div class="result-type">Cities</div>
+        <div class="result-type">Local places</div>
         <div class="popup-chip-list">
-          ${cityLinks}
+          ${placeLinks}
         </div>
       </div>
     </div>

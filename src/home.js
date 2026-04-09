@@ -23,7 +23,7 @@ document.querySelector('#app').innerHTML = `
           { href: '#overview', label: 'Overview' },
           { href: '#directory', label: 'Parish Directory' },
           { href: '#services', label: 'Services by ZIP' },
-          { href: '#disclaimer', label: 'Disclaimer' },
+          { href: '#disclaimer', label: 'Quick Note' },
         ],
       })}
 
@@ -33,13 +33,12 @@ document.querySelector('#app').innerHTML = `
 
           <section class="page-intro page-intro--compact" id="overview">
             <div class="page-intro__title-block">
-              <div class="eyebrow">Louisiana civic directories</div>
+              <div class="eyebrow">Louisiana Data Force</div>
               <p class="page-intro__meta">Updated as of ${escapeHtml(HOME_UPDATED_AS)}</p>
-              <h1>Find the parish office or local service link you need.</h1>
+              <h1>Find the parish page, city contact, or local link you need.</h1>
               <p class="lead">
-                LADF keeps Louisiana local government information simple: pick a parish,
-                open official office links, and use the ZIP lookup when you just need the
-                right place to start.
+                Pick a parish, jump into the main local links, or use the ZIP lookup
+                when you just need the best place to start.
               </p>
             </div>
 
@@ -69,10 +68,10 @@ document.querySelector('#app').innerHTML = `
             <div class="card-grid card-grid--two">
               <article class="info-card">
                 <div class="result-type">Parish pages</div>
-                <h4>Open a parish and get straight to the important offices</h4>
+                <h4>Open a parish and get straight to the main local contacts</h4>
                 <p>
-                  Each parish page groups official contacts, municipal governments, and
-                  parish-level links into one cleaner view.
+                  Each parish page pulls the main parish contacts, cities and towns,
+                  and parish-level links into one cleaner view.
                 </p>
               </article>
               <article class="info-card">
@@ -80,7 +79,7 @@ document.querySelector('#app').innerHTML = `
                 <h4>Use the map when you know the parish name or just want to browse</h4>
                 <p>
                   The parish map is the fastest way to jump into a parish page without
-                  digging through multiple government sites.
+                  digging through a bunch of scattered pages first.
                 </p>
               </article>
             </div>
@@ -105,8 +104,8 @@ document.querySelector('#app').innerHTML = `
                 <div class="result-type">Routing</div>
                 <h4>Get a better first stop for everyday local questions</h4>
                 <p>
-                  The goal is not to replace official offices. It is to help people reach
-                  the right official office faster.
+                  The goal is to help people reach the right desk faster without guessing
+                  where to start.
                 </p>
               </article>
             </div>
@@ -116,15 +115,15 @@ document.querySelector('#app').innerHTML = `
           </section>
 
           <section class="section" id="disclaimer">
-            <h2>Disclaimer</h2>
+            <h2>A Quick Note</h2>
             <div class="disclaimer-box">
               <p>
-                LADF is a private civic education project and is not affiliated with the
-                State of Louisiana, any parish or municipality, or any public agency.
+                This is an independent Louisiana guide built to make local links easier
+                to find.
               </p>
               <p>
-                Official government websites, clerks, agencies, and elected offices remain
-                the controlling sources for legal notices, filings, and government action.
+                Hours, staff names, forms, and service details can change, so double-check
+                the office page before you go.
               </p>
             </div>
           </section>
