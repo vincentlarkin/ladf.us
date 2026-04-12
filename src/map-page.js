@@ -146,9 +146,9 @@ function initializeMap(parishes, parishLookup) {
     },
     {
       style: () => ({
-        color: '#0b2f5b',
+        color: '#162e51',
         weight: 1.2,
-        fillColor: '#d4af37',
+        fillColor: '#D4AD42',
         fillOpacity: 0.14,
       }),
       onEachFeature(feature, layer) {

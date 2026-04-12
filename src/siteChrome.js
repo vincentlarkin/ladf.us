@@ -148,9 +148,12 @@ export function renderSiteFooter() {
     <footer class="site-footer">
       <div class="site-footer__inner">
         <span class="flag-glyph">LA</span>
-        <span>Louisiana parish, city, and service links in one place.</span>
-        <span>Use this as a starting point, then double-check details with the office you need.</span>
-        <span><a href="/map.html">Parish Map</a> | <a href="/services.html">Services by ZIP</a></span>
+        <span>Louisiana Data Force &mdash; parish, city, and service links in one place.</span>
+        <span class="site-footer__sep" aria-hidden="true">&middot;</span>
+        <span>Always verify details with the office you need.</span>
+        <span class="site-footer__sep" aria-hidden="true">&middot;</span>
+        <span><a href="/map.html">Parish Map</a></span>
+        <span><a href="/services.html">Services by ZIP</a></span>
       </div>
     </footer>
   `;
