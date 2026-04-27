@@ -7,6 +7,10 @@ import {
   renderSiteHeader,
 } from './siteChrome.js';
 import {
+  PARISH_STYLE_ENHANCEMENTS,
+  STATEWIDE_OFFICE_BRANDS,
+} from './parishEnhancements.js';
+import {
   findMunicipalityServiceRecord,
   findParishServiceRecord,
   formatDistrictLabel,
@@ -26,12 +30,33 @@ const SHREVEPORT_WATER_SEWER_URL = 'https://www.shreveportla.gov/131/4088/Water-
 const SHREVEPORT_WATER_BILL_URL = 'https://www.shreveportla.gov/2474/16127/Pay-Your-Water-Bill';
 const SWEPCO_URL = 'https://www.swepco.com/';
 const DELTA_UTILITIES_URL = 'https://deltautilities.com/';
+const SHREVEPORT_CITY_LOGO_URL = '/org-logos/shreveport-city-logo.png';
+
+const LOUISIANA_STATE_BRAND = {
+  src: '/org-logos/louisiana-state-seal.png',
+  alt: 'Louisiana state seal',
+  variant: 'seal',
+  frame: 'soft',
+};
+
+const LOUISIANA_SOS_BRAND = {
+  src: '/org-logos/louisiana-sos-seal.png',
+  alt: 'Louisiana Secretary of State seal',
+  variant: 'seal',
+  frame: 'soft',
+};
 
 const QUICK_SEARCHES = ['70301', 'Thibodaux, LA', 'Shreveport, LA', 'Alexandria, LA'];
 const initialLookup = new URLSearchParams(window.location.search).get('lookup')?.trim() ?? '';
 
 const MUNICIPALITY_OVERRIDES = {
   shreveport: {
+    brand: {
+      src: SHREVEPORT_CITY_LOGO_URL,
+      alt: 'City of Shreveport logo',
+      variant: 'wide',
+      frame: 'dark',
+    },
     sourceUrl: SHREVEPORT_DIRECTORY_URL,
     phone: '318-673-7300',
     address: SHREVEPORT_CITY_HALL_ADDRESS,
@@ -541,6 +566,8 @@ function renderSummary({
   const municipalHierarchy = buildMunicipalHierarchy(municipalityRecord);
   const parishHierarchy = buildParishHierarchy(parishRecord);
   const parishPageLink = buildParishPageLink(parishRecord);
+  const municipalityBrand = getMunicipalityBrand(municipalityRecord, municipalityName);
+  const parishBrand = getParishOfficeBrand(parishRecord, 'parish');
   const cityActionHref = municipalityRecord?.sourceUrl ?? null;
   const sheriffActionHref =
     parishRecord?.linkMap.sheriff ??
@@ -612,6 +639,7 @@ function renderSummary({
         ${renderSpotlightCard({
           kicker: 'City / town start',
           title: municipalityRecord?.name ?? municipalityName,
+          brand: municipalityBrand,
           detail: topMunicipalContact?.title ?? getMunicipalSpotlightDetail(municipalityRecord),
           phone: topMunicipalContact?.phone ?? municipalityRecord?.phone,
           address: topMunicipalContact?.address ?? municipalityRecord?.address,
@@ -635,6 +663,7 @@ function renderSummary({
         ${renderSpotlightCard({
           kicker: 'Parish start',
           title: parishRecord?.name ?? parishName,
+          brand: parishBrand,
           detail: parishRecord
             ? parishRecord.seat
               ? `Parish offices and main links for the seat in ${parishRecord.seat}`
@@ -664,6 +693,7 @@ function renderSummary({
           title: municipalityRecord
             ? `${municipalityRecord.name} who to call first`
             : 'City or town contacts',
+          brand: municipalityBrand,
           description: municipalityRecord
             ? 'Top to bottom local contacts for the city or town that matched.'
             : 'No city or town contact list was found for this result.',
@@ -676,6 +706,7 @@ function renderSummary({
           title: parishRecord
             ? `${parishRecord.name} parish offices`
             : 'Parish offices',
+          brand: parishBrand,
           description: parishRecord
             ? 'Common parish offices people usually need, in a simple order.'
             : 'A parish office list was not found for this result.',
@@ -735,6 +766,7 @@ function renderActionButton(label, href, { variant = 'primary', external = false
 function renderSpotlightCard({
   kicker,
   title,
+  brand,
   detail,
   phone,
   address,
@@ -746,8 +778,13 @@ function renderSpotlightCard({
 
   return `
     <article class="lookup-spotlight">
-      <div class="result-type">${escapeHtml(kicker)}</div>
-      <h5>${escapeHtml(title)}</h5>
+      <div class="branded-card-header">
+        ${renderBrandLogo(brand, title)}
+        <div class="branded-card-heading">
+          <div class="result-type">${escapeHtml(kicker)}</div>
+          <h5>${escapeHtml(title)}</h5>
+        </div>
+      </div>
       ${
         hasContent
           ? `
@@ -816,6 +853,12 @@ function renderServiceCards({
 }) {
   const municipalityKey = municipalityRecord ? getMunicipalityKey(municipalityRecord) : null;
   const isShreveport = municipalityKey === 'shreveport';
+  const municipalityBrand = getMunicipalityBrand(
+    municipalityRecord,
+    municipalityMatch?.feature.properties.__districtLabel,
+  );
+  const parishBrand = getParishOfficeBrand(parishRecord, 'parish');
+  const sheriffBrand = getParishOfficeBrand(parishRecord, 'sheriff');
   const localGovernmentLink =
     parishRecord?.linkMap.localGovernment ?? parishRecord?.pageUrl ?? null;
   const localEntityName =
@@ -827,6 +870,7 @@ function renderServiceCards({
     {
       type: 'Water / Sewer',
       title: 'Water, sewer, and utility billing',
+      brand: municipalityBrand,
       description:
         municipalityMatch
           ? `${municipalityMatch.feature.properties.__districtLabel} is the first local place to check for water, sewer, or utility billing questions.`
@@ -876,6 +920,7 @@ function renderServiceCards({
     {
       type: 'Trash / Streets',
       title: 'Garbage, recycling, streets, drainage, and public works',
+      brand: municipalityBrand,
       description:
         municipalityMatch
           ? `${municipalityMatch.feature.properties.__districtLabel} usually handles routine local service issues like trash pickup schedules, drainage, streets, and similar public-works concerns.`
@@ -903,6 +948,7 @@ function renderServiceCards({
     {
       type: 'Permits / Code',
       title: 'Permits, zoning, code, inspections, and local admin',
+      brand: municipalityBrand,
       description:
         municipalityMatch
           ? 'Building permits, code questions, and municipal paperwork usually start with city hall, the clerk, code office, or local inspections staff.'
@@ -928,6 +974,7 @@ function renderServiceCards({
     {
       type: 'Power / Gas',
       title: 'Electricity and natural gas',
+      brand: municipalityBrand,
       description:
         'Utility providers vary by address. When a city lists its own utility contact, it will appear here. Otherwise start with the local office and use the state utility commission for provider questions or complaints.',
       contacts: buildRoutingContacts(
@@ -977,6 +1024,7 @@ function renderServiceCards({
     {
       type: 'Public Safety',
       title: 'Police, fire, sheriff, and emergency preparedness',
+      brand: municipalityRecord ? municipalityBrand : sheriffBrand,
       description:
         municipalityMatch
           ? 'When the city or town lists police or fire contacts, they appear here. Sheriff and parish emergency links stay here too.'
@@ -1010,6 +1058,7 @@ function renderServiceCards({
     {
       type: 'Parish Offices',
       title: 'Assessor, clerk, registrar, schools, and OMV',
+      brand: parishBrand,
       description:
         parishRecord
           ? `${parishRecord.name} has the main parish links people often need most.`
@@ -1071,17 +1120,31 @@ function renderDistrictCards(matches) {
     return;
   }
 
+  const parishMatch = getParishMatch(matches);
+  const parishRecord = parishMatch
+    ? findParishServiceRecord(
+        state.context,
+        parishMatch.feature.properties.__districtLabel,
+      )
+    : null;
+
   districtGridNode.innerHTML = matches
     .map((match) => {
       const rep = match.feature.properties.__representative;
       const phone = match.feature.properties.__contactPhone;
       const email = match.feature.properties.__contactEmail;
       const website = match.feature.properties.__officialWebsite;
+      const brand = getDistrictBrand(match, parishRecord);
 
       return `
         <article class="info-card">
-          <div class="result-type">${escapeHtml(match.label)}</div>
-          <h4>${escapeHtml(formatDistrictLabel(match))}</h4>
+          <div class="branded-card-header branded-card-header--compact">
+            ${renderBrandLogo(brand, formatDistrictLabel(match))}
+            <div class="branded-card-heading">
+              <div class="result-type">${escapeHtml(match.label)}</div>
+              <h4>${escapeHtml(formatDistrictLabel(match))}</h4>
+            </div>
+          </div>
           <p>${escapeHtml(getDistrictDescription(match.id))}</p>
           <div class="contact-field-list">
             ${
@@ -1124,6 +1187,36 @@ function renderDistrictCards(matches) {
       `;
     })
     .join('');
+}
+
+function getDistrictBrand(match, parishRecord) {
+  switch (match.id) {
+    case 'louisiana-places': {
+      const record = findMunicipalityServiceRecord(
+        state.context,
+        match.feature.properties.__districtLabel,
+      );
+      return getMunicipalityBrand(record, match.feature.properties.__districtLabel);
+    }
+    case 'louisiana-parishes':
+    case 'caddo-commission':
+      return getParishOfficeBrand(parishRecord, 'parish');
+    case 'caddo-school-board':
+      return getParishOfficeBrand(parishRecord, 'schools');
+    case 'shreveport-council':
+      return getMunicipalityBrand(
+        applyMunicipalityOverrides(
+          findMunicipalityServiceRecord(state.context, 'Shreveport'),
+        ),
+        'Shreveport',
+      );
+    case 'louisiana-house':
+    case 'louisiana-senate':
+    case 'louisiana-congress':
+      return LOUISIANA_STATE_BRAND;
+    default:
+      return LOUISIANA_STATE_BRAND;
+  }
 }
 
 function renderQuickChips() {
@@ -1331,8 +1424,13 @@ function compactLinks(links) {
 function renderServiceCard(card) {
   return `
     <article class="service-card">
-      <div class="result-type">${escapeHtml(card.type)}</div>
-      <h4>${escapeHtml(card.title)}</h4>
+      <div class="branded-card-header branded-card-header--compact">
+        ${renderBrandLogo(card.brand, card.title)}
+        <div class="branded-card-heading">
+          <div class="result-type">${escapeHtml(card.type)}</div>
+          <h4>${escapeHtml(card.title)}</h4>
+        </div>
+      </div>
       <p>${escapeHtml(card.description)}</p>
       ${
         card.contacts.length
@@ -1447,33 +1545,39 @@ function buildParishHierarchy(record) {
       title: record.seat
         ? `Parish government and seat at ${record.seat}`
         : 'Parish government',
+      brand: getParishOfficeBrand(record, 'parish'),
       href: record.linkMap.localGovernment ?? record.pageUrl,
     },
     {
       name: "Sheriff's Office",
       title: 'Public safety, jail, and sheriff services',
+      brand: getParishOfficeBrand(record, 'sheriff'),
       href:
         record.linkMap.sheriff ?? state.context.serviceDirectory.statewideLinks.sheriffDirectory,
     },
     {
       name: 'Assessor',
       title: 'Property assessment and parcel records',
+      brand: getParishOfficeBrand(record, 'assessor'),
       href: record.linkMap.assessor,
     },
     {
       name: 'Clerk of Court',
       title: 'Court filings, land records, and clerk services',
+      brand: getParishOfficeBrand(record, 'clerk'),
       href: record.linkMap.clerk,
     },
     {
       name: 'Registrar of Voters',
       title: 'Voter registration and election records',
+      brand: LOUISIANA_SOS_BRAND,
       href:
         record.linkMap.registrar ?? state.context.serviceDirectory.statewideLinks.registrar,
     },
     {
       name: 'School District',
       title: 'School board and district administration',
+      brand: getParishOfficeBrand(record, 'schools'),
       href:
         record.linkMap.schools ?? state.context.serviceDirectory.statewideLinks.schoolDistricts,
     },
@@ -1483,14 +1587,20 @@ function buildParishHierarchy(record) {
 function renderHierarchyPanel({
   kicker,
   title,
+  brand,
   description,
   entries,
   emptyMessage,
 }) {
   return `
     <article class="routing-ladder-card">
-      <div class="result-type">${escapeHtml(kicker)}</div>
-      <h5>${escapeHtml(title)}</h5>
+      <div class="branded-card-header branded-card-header--compact">
+        ${renderBrandLogo(brand, title)}
+        <div class="branded-card-heading">
+          <div class="result-type">${escapeHtml(kicker)}</div>
+          <h5>${escapeHtml(title)}</h5>
+        </div>
+      </div>
       <p class="routing-ladder-card__description">${escapeHtml(description)}</p>
       ${
         entries.length
@@ -1499,7 +1609,9 @@ function renderHierarchyPanel({
                 .map(
                   (entry, index) => `
                     <div class="routing-ladder-row">
-                      <span class="routing-ladder-rank">${index + 1}</span>
+                      ${entry.brand ? renderBrandLogo(entry.brand, entry.name, {
+                        className: 'routing-ladder-brand',
+                      }) : `<span class="routing-ladder-rank">${index + 1}</span>`}
                       <div class="routing-ladder-body">
                         <div class="routing-ladder-name">${escapeHtml(entry.name)}</div>
                         <div class="routing-ladder-role">${escapeHtml(entry.title)}</div>
@@ -1661,6 +1773,141 @@ function renderLinkValue(href, label) {
   return `<a href="${escapeAttribute(href)}">${escapeHtml(label)}</a>`;
 }
 
+function renderBrandLogo(brand, fallbackLabel, { className = '' } = {}) {
+  if (!brand) {
+    return '';
+  }
+
+  if (brand.src) {
+    const variant = sanitizeText(brand.variant, 'seal');
+    const frame = sanitizeText(brand.frame, 'white');
+    const classes = ['logo-badge', className, `logo-badge--${variant}`, `logo-badge--${frame}`]
+      .filter(Boolean)
+      .join(' ');
+
+    return `
+      <span class="${classes}">
+        <img
+          src="${escapeAttribute(brand.src)}"
+          alt="${escapeAttribute(sanitizeText(brand.alt, `${fallbackLabel} logo`))}"
+          loading="lazy"
+        />
+      </span>
+    `;
+  }
+
+  if (brand.initials) {
+    const classes = ['logo-badge', className, 'logo-badge--seal', 'logo-badge--municipal']
+      .filter(Boolean)
+      .join(' ');
+
+    return `
+      <span class="${classes}" aria-label="${escapeAttribute(
+        sanitizeText(brand.alt, `${fallbackLabel} municipal mark`),
+      )}">
+        <span class="logo-badge__initials">${escapeHtml(brand.initials)}</span>
+      </span>
+    `;
+  }
+
+  return '';
+}
+
+function getMunicipalityBrand(record, fallbackName) {
+  if (record?.brand) {
+    return normalizeBrand(record.brand);
+  }
+
+  const name = sanitizeText(record?.name, fallbackName);
+  if (!name || name === 'Outside a city or town') {
+    return null;
+  }
+
+  const municipalityKey = normalizeParishKey(record?.normalizedName ?? name);
+  const generatedEnhancement =
+    state.context?.municipalityEnhancements?.municipalities?.[municipalityKey] ?? null;
+
+  if (generatedEnhancement?.brand) {
+    return normalizeBrand(generatedEnhancement.brand);
+  }
+
+  return {
+    initials: getInitials(name),
+    alt: `${name} municipal mark`,
+  };
+}
+
+function getParishOfficeBrand(record, officeKey) {
+  if (!record) {
+    return LOUISIANA_STATE_BRAND;
+  }
+
+  const parishKey = normalizeParishKey(record.normalizedName ?? record.name);
+  const generatedEnhancement = state.context?.parishEnhancements?.parishes?.[parishKey] ?? null;
+  const manualEnhancement = PARISH_STYLE_ENHANCEMENTS[parishKey] ?? null;
+  const officeBrand =
+    manualEnhancement?.officeBrands?.[officeKey] ??
+    generatedEnhancement?.officeBrands?.[officeKey] ??
+    manualEnhancement?.brand ??
+    generatedEnhancement?.brand;
+
+  if (officeBrand) {
+    return normalizeBrand(officeBrand);
+  }
+
+  switch (officeKey) {
+    case 'clerk':
+      return STATEWIDE_OFFICE_BRANDS.clerk;
+    case 'assessor':
+      return STATEWIDE_OFFICE_BRANDS.assessor;
+    case 'sheriff':
+      return STATEWIDE_OFFICE_BRANDS.sheriff;
+    case 'registrar':
+      return LOUISIANA_SOS_BRAND;
+    default:
+      return LOUISIANA_STATE_BRAND;
+  }
+}
+
+function normalizeBrand(brand) {
+  if (!brand) {
+    return null;
+  }
+
+  if (brand.initials) {
+    return {
+      initials: sanitizeText(brand.initials),
+      alt: sanitizeText(brand.alt),
+    };
+  }
+
+  const src = sanitizeAssetPath(brand.src);
+  if (!src) {
+    return null;
+  }
+
+  return {
+    src,
+    alt: sanitizeText(brand.alt),
+    variant: sanitizeText(brand.variant, 'seal'),
+    frame: sanitizeText(brand.frame, 'white'),
+  };
+}
+
+function normalizeParishKey(value) {
+  return normalizeLookupName(value).replace(/parish$/, '');
+}
+
+function getInitials(value) {
+  const words = sanitizeText(value)
+    .replace(/\b(city|town|village|municipality|of|the)\b/gi, ' ')
+    .split(/\s+/)
+    .filter(Boolean);
+  const initials = words.slice(0, 2).map((word) => word.charAt(0)).join('');
+
+  return initials.toUpperCase() || 'LA';
+}
+
 function updateLookupUrl(query) {
   const url = new URL(window.location.href);
 
@@ -1698,4 +1945,26 @@ function escapeHtml(value) {
 
 function escapeAttribute(value) {
   return escapeHtml(value);
+}
+
+function sanitizeAssetPath(value) {
+  const src = sanitizeText(value);
+  if (!src) {
+    return '';
+  }
+
+  if (src.startsWith('/')) {
+    return src;
+  }
+
+  try {
+    const url = new URL(src);
+    if (['http:', 'https:'].includes(url.protocol)) {
+      return url.toString();
+    }
+  } catch (error) {
+    return '';
+  }
+
+  return '';
 }

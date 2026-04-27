@@ -46,8 +46,8 @@
   --font-display: 'Merriweather', Georgia, serif;
   --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --page-max: 1400px;
-  --page-pad: clamp(16px, 3vw, 40px);
-  --section-pad: clamp(20px, 2.4vw, 32px);
+  --page-pad: clamp(14px, 2.6vw, 34px);
+  --section-pad: clamp(16px, 2vw, 24px);
   --safe-left: env(safe-area-inset-left, 0px);
   --safe-right: env(safe-area-inset-right, 0px);
   --safe-top: env(safe-area-inset-top, 0px);
@@ -55,7 +55,7 @@
   --shell-max-width: 1400px;
   --shell-inline-pad: clamp(16px, 3vw, 40px);
   --surface-pad: var(--section-pad);
-  --surface-pad-tight: clamp(14px, 1.4vw, 20px);
+  --surface-pad-tight: clamp(12px, 1.1vw, 16px);
   --chip-pad-inline: 12px;
   --chip-pad-block: 8px;
   --page-safe-inline: var(--page-pad);
@@ -188,8 +188,8 @@ select {
 .site-header__inner {
   width: min(var(--shell-max-width), 100%);
   margin: 0 auto;
-  padding: 16px max(var(--shell-inline-pad), var(--safe-right))
-    16px max(var(--shell-inline-pad), var(--safe-left));
+  padding: 14px max(var(--shell-inline-pad), var(--safe-right))
+    14px max(var(--shell-inline-pad), var(--safe-left));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -299,9 +299,9 @@ select {
   align-items: flex-start;
   width: min(var(--shell-max-width), 100%);
   margin: 0 auto;
-  padding: 24px max(var(--shell-inline-pad), var(--safe-right))
-    24px max(var(--shell-inline-pad), var(--safe-left));
-  gap: 28px;
+  padding: 20px max(var(--shell-inline-pad), var(--safe-right))
+    20px max(var(--shell-inline-pad), var(--safe-left));
+  gap: 24px;
   min-height: calc(100vh - 160px);
   transition: all 0.2s ease;
 }
@@ -314,7 +314,7 @@ select {
   border: 1px solid var(--border);
   border-left: 3px solid var(--primary);
   border-radius: var(--radius-lg);
-  padding: 16px 14px 20px;
+  padding: 14px 12px 16px;
   align-self: flex-start;
   position: sticky;
   top: 16px;
@@ -605,10 +605,10 @@ p {
 
 .page-intro {
   display: grid;
-  gap: 16px;
+  gap: 14px;
   padding: var(--section-pad);
   border: 1px solid var(--border);
-  border-top: 4px solid var(--primary);
+  border-top: 3px solid var(--primary);
   border-radius: var(--radius-lg);
   background: var(--white);
   box-shadow: var(--shadow-sm);
@@ -617,7 +617,7 @@ p {
 
 .page-intro--compact {
   display: grid;
-  gap: 20px;
+  gap: 16px;
   padding: var(--section-pad);
 }
 
@@ -654,10 +654,10 @@ p {
 /* ── Sections ──────────────────────────────────────────────── */
 
 .section {
-  margin-top: 28px;
+  margin-top: 22px;
   padding: var(--section-pad);
   border: 1px solid var(--border);
-  border-top: 4px solid var(--primary);
+  border-top: 3px solid var(--primary);
   border-radius: var(--radius-lg);
   background: var(--white);
   box-shadow: var(--shadow-sm);
@@ -669,10 +669,10 @@ p {
 }
 
 .section.section-accordion {
-  margin-top: 24px;
+  margin-top: 18px;
   padding: 0;
   border: 1px solid var(--border);
-  border-top: 4px solid var(--primary);
+  border-top: 3px solid var(--primary);
   border-radius: var(--radius-lg);
   background: var(--white);
   overflow: hidden;
@@ -684,7 +684,7 @@ p {
 }
 
 .section--map {
-  margin-top: 32px;
+  margin-top: 22px;
 }
 
 /* ── Lists & panels ────────────────────────────────────────── */
@@ -813,8 +813,8 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 10px 20px;
+  min-height: 40px;
+  padding: 8px 16px;
   border-radius: var(--radius);
   background: var(--primary);
   border: none;
@@ -865,7 +865,7 @@ p {
 }
 
 .cta-row {
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 /* ── Chips ─────────────────────────────────────────────────── */
@@ -931,8 +931,8 @@ p {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 16px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .card-grid--two {
@@ -984,7 +984,7 @@ p {
 .disclaimer-box {
   display: grid;
   gap: 8px;
-  padding: 16px 20px;
+  padding: 14px 16px;
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent-warm);
   margin-top: 14px;
@@ -1040,8 +1040,8 @@ p {
 .summary-metrics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 18px 0 16px;
+  gap: 10px;
+  margin: 12px 0 10px;
 }
 
 .summary-metric {
@@ -1134,17 +1134,20 @@ p {
 .parish-map-shell {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.95fr);
-  gap: 24px;
+  gap: 18px;
   align-items: start;
-  margin-top: 20px;
+  margin-top: 14px;
 }
 
 .parish-map {
-  min-height: clamp(640px, 72vh, 880px);
+  min-height: clamp(560px, 66vh, 740px);
 }
 
 .parish-list-panel {
   margin-top: 0;
+  max-height: clamp(560px, 66vh, 740px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .parish-count {
@@ -1171,7 +1174,7 @@ p {
   background: var(--white);
   color: var(--navy-800);
   text-align: left;
-  padding: 10px 14px;
+  padding: 9px 12px;
   cursor: pointer;
   border-radius: var(--radius);
   line-height: 1.25;
@@ -1302,7 +1305,7 @@ p {
 
 .quicklook-summary,
 .contact-summary {
-  padding: 20px;
+  padding: 16px;
   border: 1px solid var(--border);
   border-top: 4px solid var(--gold-500);
   background: var(--white);
@@ -1455,7 +1458,7 @@ p {
 }
 
 .service-lookup-form {
-  padding: 24px;
+  padding: 18px;
   border-radius: var(--radius-lg);
   background: var(--white);
   border: 1px solid var(--border);
@@ -1538,7 +1541,7 @@ p {
 .service-card {
   display: grid;
   gap: 10px;
-  padding: 20px;
+  padding: 16px;
   border-radius: var(--radius-lg);
   align-content: start;
   background: var(--white);
@@ -1668,6 +1671,21 @@ p {
   font-weight: 700;
 }
 
+.routing-ladder-brand.logo-badge {
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  padding: 3px;
+}
+
+.routing-ladder-brand.logo-badge--wide {
+  width: 46px;
+  min-width: 46px;
+  height: 28px;
+  padding: 3px 4px;
+  border-radius: var(--radius);
+}
+
 .routing-ladder-body {
   min-width: 0;
   display: grid;
@@ -1771,7 +1789,7 @@ p {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--white);
-  padding: 20px;
+  padding: 16px;
   display: grid;
   gap: 10px;
   box-shadow: var(--shadow-sm);
@@ -1781,6 +1799,37 @@ p {
   margin-bottom: 0;
   color: var(--navy-800);
   font-size: 1.1rem;
+}
+
+.branded-card-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.branded-card-header--compact {
+  gap: 10px;
+}
+
+.branded-card-header--compact .logo-badge {
+  width: 52px;
+  min-width: 52px;
+  height: 52px;
+  padding: 6px;
+}
+
+.branded-card-header--compact .logo-badge--wide {
+  width: 104px;
+  min-width: 104px;
+  height: 48px;
+  padding: 6px 8px;
+}
+
+.branded-card-heading {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
 }
 
 .lookup-spotlight__detail {
@@ -1833,7 +1882,7 @@ p {
 
 .directory-card {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   padding: var(--surface-pad-tight);
 }
 
@@ -2080,6 +2129,56 @@ p {
 .logo-badge--dark {
   background: var(--navy-800);
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+.logo-badge--municipal {
+  background: var(--primary-darker);
+  border-color: var(--gold-500);
+  color: var(--gold-300);
+}
+
+.logo-badge__initials {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.logo-rail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.logo-rail .logo-badge {
+  width: 46px;
+  min-width: 46px;
+  height: 46px;
+  padding: 6px;
+  background: var(--white);
+}
+
+.logo-rail .logo-badge--wide {
+  width: 104px;
+  min-width: 104px;
+  height: 46px;
+  padding: 6px 8px;
+}
+
+.logo-rail__more {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 10px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background: var(--base-lightest);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 /* ── Quicklook & popup ─────────────────────────────────────── */
@@ -2338,6 +2437,22 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.leaflet-popup-content .button {
+  color: var(--white) !important;
+}
+
+.parish-popup__actions .button {
+  background: var(--gold-500);
+  border: 1px solid var(--gold-600);
+  color: var(--primary-darker) !important;
+}
+
+.parish-popup__actions .button:hover,
+.parish-popup__actions .button:focus-visible {
+  background: var(--gold-600);
+  color: var(--white) !important;
 }
 
 .parish-popup__cities {

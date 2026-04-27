@@ -54,8 +54,17 @@ const lookupDefinitions = [
 ];
 
 export async function loadLookupContext() {
-  const [serviceDirectory, ...collections] = await Promise.all([
+  const [
+    serviceDirectory,
+    parishEnhancements,
+    municipalityEnhancements,
+    ...collections
+  ] = await Promise.all([
     fetchJson('/data/service-directory.json'),
+    fetchJsonOrDefault('/data/parish-enhancements.json', { parishes: {} }),
+    fetchJsonOrDefault('/data/municipality-enhancements.json', {
+      municipalities: {},
+    }),
     ...lookupDefinitions.map((definition) => fetchJson(definition.file)),
   ]);
 
@@ -70,6 +79,8 @@ export async function loadLookupContext() {
 
   return {
     serviceDirectory,
+    parishEnhancements,
+    municipalityEnhancements,
     layers,
   };
 }
@@ -186,6 +197,14 @@ async function fetchJson(url) {
   }
 
   return response.json();
+}
+
+async function fetchJsonOrDefault(url, fallback) {
+  try {
+    return await fetchJson(url);
+  } catch (error) {
+    return fallback;
+  }
 }
 
 function pointInsideBounds(bounds, latLng) {

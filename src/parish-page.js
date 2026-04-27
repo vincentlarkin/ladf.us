@@ -100,6 +100,8 @@ function renderParishPage(parish) {
                 </article>
               </div>
 
+              ${renderLogoRail(parish)}
+
               <div class="cta-row">
                 <a class="button" href="/map.html">Back to parish map</a>
                 <a class="button button--secondary" href="/services.html">Services by ZIP</a>
@@ -487,6 +489,64 @@ function renderTextLink(link) {
       ${escapeHtml(link.label)}
     </a>
   `;
+}
+
+function renderLogoRail(parish) {
+  const brands = collectParishBrands(parish);
+  const visibleBrands = brands.slice(0, 10);
+  const remainingCount = brands.length - visibleBrands.length;
+
+  if (!visibleBrands.length) {
+    return '';
+  }
+
+  return `
+    <div class="logo-rail" aria-label="Featured parish office logos">
+      ${visibleBrands
+        .map((item) =>
+          renderBrandLogo(item.brand, item.label, {
+            className: 'logo-rail__brand',
+          }),
+        )
+        .join('')}
+      ${
+        remainingCount > 0
+          ? `<span class="logo-rail__more">+${remainingCount} more</span>`
+          : ''
+      }
+    </div>
+  `;
+}
+
+function collectParishBrands(parish) {
+  const seen = new Set();
+  const brands = [];
+  const addBrand = (brand, label) => {
+    const src = sanitizeText(brand?.src);
+    if (!src || seen.has(src)) {
+      return;
+    }
+
+    seen.add(src);
+    brands.push({ brand, label });
+  };
+
+  addBrand(parish.brand, parish.label);
+
+  parish.featuredContacts.forEach((card) => {
+    addBrand(card.brand, card.name);
+  });
+
+  parish.districtGroups.forEach((group) => {
+    addBrand(group.brand, group.title);
+    group.cards.forEach((card) => addBrand(card.brand, card.name));
+  });
+
+  parish.communityOrganizations.forEach((card) => {
+    addBrand(card.brand, card.name);
+  });
+
+  return brands;
 }
 
 function renderSectionChip(id, label, countLabel) {

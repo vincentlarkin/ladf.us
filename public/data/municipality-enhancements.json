@@ -1,0 +1,550 @@
+{
+  "generatedAt": "2026-04-27T02:42:10.400Z",
+  "generator": "scripts/sync-municipality-enhancements.mjs",
+  "sources": {
+    "serviceDirectory": "/public/data/service-directory.json",
+    "search": "https://duckduckgo.com/html/"
+  },
+  "municipalities": {
+    "alexandria": {
+      "officialSite": "https://www.cityofalexandriala.com/",
+      "brand": {
+        "src": "/org-logos/municipal/alexandria-41b3565283.png",
+        "alt": "Alexandria logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "abbeville": {
+      "officialSite": "https://www.cityofabbeville.org/",
+      "brand": {
+        "src": "/org-logos/municipal/abbeville-e2f494a7af.png",
+        "alt": "Abbeville logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "bastrop": {
+      "officialSite": "https://www.cityofbastrop.org/",
+      "brand": {
+        "src": "/org-logos/municipal/bastrop-011d06b150.png",
+        "alt": "Bastrop logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "batonrouge": {
+      "officialSite": "https://www.brla.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/batonrouge-83e4480ee0.png",
+        "alt": "Baton Rouge logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "bogalusa": {
+      "officialSite": "https://www.bogalusa.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/bogalusa-ac4afda940.png",
+        "alt": "Bogalusa logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "bossiercity": {
+      "officialSite": "https://www.bossiercity.org/",
+      "brand": {
+        "src": "/org-logos/municipal/bossiercity-faebe0a4d9.png",
+        "alt": "Bossier City logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "breauxbridge": {
+      "officialSite": "https://breauxbridgela.net/",
+      "brand": {
+        "src": "/org-logos/municipal/breauxbridge-ae50de0395.png",
+        "alt": "Breaux Bridge logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "broussard": {
+      "officialSite": "https://www.livebroussard.com/",
+      "brand": {
+        "src": "/org-logos/municipal/broussard-d9dee34708.png",
+        "alt": "Broussard logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "carencro": {
+      "officialSite": "https://carencro.org/",
+      "brand": {
+        "src": "/org-logos/municipal/carencro-076f99b670.png",
+        "alt": "Carencro logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "central": {
+      "officialSite": "https://www.centralgov.com/",
+      "brand": {
+        "src": "/org-logos/municipal/central-22f3edbe25.png",
+        "alt": "Central logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "covington": {
+      "officialSite": "https://www.covla.com/",
+      "brand": {
+        "src": "/org-logos/municipal/covington-0fbe963189.png",
+        "alt": "Covington logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "baker": {
+      "officialSite": "https://cityofbakerla.com/",
+      "brand": {
+        "src": "/org-logos/municipal/baker-f5aa045a97.png",
+        "alt": "Baker logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "denhamsprings": {
+      "officialSite": "https://www.cityofdenhamsprings.com/",
+      "brand": {
+        "src": "/org-logos/municipal/denhamsprings-ee6922c239.svg",
+        "alt": "Denham Springs logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "deridder": {
+      "officialSite": "https://www.cityofderidder.org/",
+      "brand": {
+        "src": "/org-logos/municipal/deridder-9b0ecdf360.jpg",
+        "alt": "DeRidder logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "donaldsonville": {
+      "officialSite": "https://www.donaldsonville-la.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/donaldsonville-78f8cad2f0.png",
+        "alt": "Donaldsonville logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "eunice": {
+      "officialSite": "https://www.cityofeunice.org/",
+      "brand": {
+        "src": "/org-logos/municipal/eunice-8454ef629d.png",
+        "alt": "Eunice logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "franklin": {
+      "officialSite": "https://www.franklin-la.com/",
+      "brand": {
+        "src": "/org-logos/municipal/franklin-2bbb54b28d.png",
+        "alt": "Franklin logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "crowley": {
+      "officialSite": "https://www.crowley.com/",
+      "brand": {
+        "src": "/org-logos/municipal/crowley-e02bb669b1.png",
+        "alt": "Crowley logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "hammond": {
+      "officialSite": "https://hammond.org/",
+      "brand": {
+        "src": "/org-logos/municipal/hammond-89f62cbfeb.png",
+        "alt": "Hammond logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "gonzales": {
+      "officialSite": "https://gonzalesla.com/",
+      "brand": {
+        "src": "/org-logos/municipal/gonzales-2de7d24486.png",
+        "alt": "Gonzales logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "gretna": {
+      "officialSite": "https://www.gretnala.com/",
+      "brand": {
+        "src": "/org-logos/municipal/gretna-f1ff43c379.gif",
+        "alt": "Gretna logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "jennings": {
+      "officialSite": "https://www.cityofjennings.org/",
+      "brand": {
+        "src": "/org-logos/municipal/jennings-a56f9c094a.png",
+        "alt": "Jennings logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "jeanerette": {
+      "officialSite": "https://jeanerette.com/",
+      "brand": {
+        "src": "/org-logos/municipal/jeanerette-11ca2c258f.png",
+        "alt": "Jeanerette logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "kenner": {
+      "officialSite": "https://www.kenner.la.us/",
+      "brand": {
+        "src": "/org-logos/municipal/kenner-cb1ce14d74.png",
+        "alt": "Kenner logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "kaplan": {
+      "officialSite": "https://cityofkaplan.com/",
+      "brand": {
+        "src": "/org-logos/municipal/kaplan-33a6e493fb.jpg",
+        "alt": "Kaplan logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "lafayette": {
+      "officialSite": "https://www.lafayettela.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/lafayette-6fc599150a.png",
+        "alt": "Lafayette logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "lakecharles": {
+      "officialSite": "https://www.cityoflakecharles.com/",
+      "brand": {
+        "src": "/org-logos/municipal/lakecharles-2bbb54b28d.png",
+        "alt": "Lake Charles logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "mandeville": {
+      "officialSite": "https://www.cityofmandeville.com/",
+      "brand": {
+        "src": "/org-logos/municipal/mandeville-9d24071783.png",
+        "alt": "Mandeville logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "mansfield": {
+      "officialSite": "https://www.cityofmansfield.net/",
+      "brand": {
+        "src": "/org-logos/municipal/mansfield-99960afd69.png",
+        "alt": "Mansfield logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "marksville": {
+      "officialSite": "https://www.cityofmarksville.com/",
+      "brand": {
+        "src": "/org-logos/municipal/marksville-1b27bce5cb.png",
+        "alt": "Marksville logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "monroe": {
+      "officialSite": "https://monroela.us/",
+      "brand": {
+        "src": "/org-logos/municipal/monroe-9bfa1ba88e.png",
+        "alt": "Monroe logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "leesville": {
+      "officialSite": "https://www.leesvillela.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/leesville-3bb5ac0641.jpg",
+        "alt": "Leesville logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "minden": {
+      "officialSite": "https://mindenla.org/",
+      "brand": {
+        "src": "/org-logos/municipal/minden-c5971a8562.png",
+        "alt": "Minden logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "natchitoches": {
+      "officialSite": "https://www.natchitochesla.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/natchitoches-706fbb4455.png",
+        "alt": "Natchitoches logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "newiberia": {
+      "officialSite": "https://www.cityofnewiberia.com/",
+      "brand": {
+        "src": "/org-logos/municipal/newiberia-2e6bbc03c0.png",
+        "alt": "New Iberia logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "neworleans": {
+      "officialSite": "https://nola.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/neworleans-0b7d361523.png",
+        "alt": "New Orleans logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "opelousas": {
+      "officialSite": "https://www.cityofopelousas.com/",
+      "brand": {
+        "src": "/org-logos/municipal/opelousas-5e8d5a3bbf.png",
+        "alt": "Opelousas logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "morgancity": {
+      "officialSite": "https://morgan-city.com/",
+      "brand": {
+        "src": "/org-logos/municipal/morgancity-3973127398.webp",
+        "alt": "Morgan City logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "plaquemine": {
+      "officialSite": "https://www.plaquemine.org/",
+      "brand": {
+        "src": "/org-logos/municipal/plaquemine-dd2f1d4d18.png",
+        "alt": "Plaquemine logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "ponchatoula": {
+      "officialSite": "https://cityofponchatoula.com/",
+      "brand": {
+        "src": "/org-logos/municipal/ponchatoula-184ed2a409.svg",
+        "alt": "Ponchatoula logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "pineville": {
+      "officialSite": "https://www.pineville.net/",
+      "brand": {
+        "src": "/org-logos/municipal/pineville-441b0e5acd.png",
+        "alt": "Pineville logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "ruston": {
+      "officialSite": "https://www.ruston.org/",
+      "brand": {
+        "src": "/org-logos/municipal/ruston-f80effff2d.svg",
+        "alt": "Ruston logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "portallen": {
+      "officialSite": "https://www.portallen.org/",
+      "brand": {
+        "src": "/org-logos/municipal/portallen-9f34f6135e.png",
+        "alt": "Port Allen logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "scott": {
+      "officialSite": "https://www.cityofscott.org/",
+      "brand": {
+        "src": "/org-logos/municipal/scott-6091163b2f.png",
+        "alt": "Scott logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "slidell": {
+      "officialSite": "https://myslidell.com/",
+      "brand": {
+        "src": "/org-logos/municipal/slidell-96022a4965.png",
+        "alt": "Slidell logo",
+        "variant": "seal",
+        "frame": "white"
+      }
+    },
+    "shreveport": {
+      "officialSite": "https://www.shreveportla.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/shreveport-a94b43172a.jpg",
+        "alt": "Shreveport logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "rayne": {
+      "officialSite": "https://www.rayne.org/",
+      "brand": {
+        "src": "/org-logos/municipal/rayne-d8b50c509e.jpg",
+        "alt": "Rayne logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "stgeorge": {
+      "officialSite": "https://www.cityofstgeorge.org/",
+      "brand": {
+        "src": "/org-logos/municipal/stgeorge-17f12898e6.png",
+        "alt": "St. George logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "stgabriel": {
+      "officialSite": "https://cityofstgabriel.us/",
+      "brand": {
+        "src": "/org-logos/municipal/stgabriel-253bf3faa4.png",
+        "alt": "St. Gabriel logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "springhill": {
+      "officialSite": "https://www.springhillla.com/",
+      "brand": {
+        "src": "/org-logos/municipal/springhill-8340491f34.png",
+        "alt": "Springhill logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "stmartinville": {
+      "officialSite": "https://stmartinville.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/stmartinville-5084971653.webp",
+        "alt": "St. Martinville logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "thibodaux": {
+      "officialSite": "https://ci.thibodaux.la.us/",
+      "brand": {
+        "src": "/org-logos/municipal/thibodaux-2353af6fbc.png",
+        "alt": "Thibodaux logo",
+        "variant": "seal",
+        "frame": "white"
+      }
+    },
+    "villeplatte": {
+      "officialSite": "https://www.cityofvilleplatte.com/",
+      "brand": {
+        "src": "/org-logos/municipal/villeplatte-22631028c8.png",
+        "alt": "Ville Platte logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "westmonroe": {
+      "officialSite": "https://www.cityofwestmonroe.com/",
+      "brand": {
+        "src": "/org-logos/municipal/westmonroe-27640009ee.png",
+        "alt": "West Monroe logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "westlake": {
+      "officialSite": "https://www.cityofwestlake.org/",
+      "brand": {
+        "src": "/org-logos/municipal/westlake-fb1cb86ced.png",
+        "alt": "Westlake logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "sulphur": {
+      "officialSite": "https://www.sulphur.org/",
+      "brand": {
+        "src": "/org-logos/municipal/sulphur-296763b084.png",
+        "alt": "Sulphur logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "westwego": {
+      "officialSite": "https://www.westwego.org/",
+      "brand": {
+        "src": "/org-logos/municipal/westwego-4b56de240e.svg",
+        "alt": "Westwego logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "winnfield": {
+      "officialSite": "https://cityofwinnfield.com/",
+      "brand": {
+        "src": "/org-logos/municipal/winnfield-10ddf9c074.png",
+        "alt": "Winnfield logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "winnsboro": {
+      "officialSite": "https://www.cityofwinnsboro.org/",
+      "brand": {
+        "src": "/org-logos/municipal/winnsboro-a0ce4abdda.jpg",
+        "alt": "Winnsboro logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    },
+    "zachary": {
+      "officialSite": "https://www.cityofzachary.org/",
+      "brand": {
+        "src": "/org-logos/municipal/zachary-45bdbd5e38.svg",
+        "alt": "Zachary logo",
+        "variant": "wide",
+        "frame": "white"
+      }
+    }
+  }
+}
