@@ -336,12 +336,28 @@ document.querySelector('#app').innerHTML = `
           ])}
 
           <section class="page-intro" id="overview">
-            <div class="eyebrow">Local Help</div>
-            <h1>Find the right local office fast.</h1>
-            <p class="lead">
-              Search a Louisiana ZIP code, city, or address and this page lays out the
-              city, parish, and the best first calls in one clean view.
-            </p>
+            <div class="page-intro__title-block">
+              <div class="eyebrow">Local Help</div>
+              <h1>Find the right local office fast.</h1>
+              <p class="lead">
+                Search a Louisiana ZIP code, city, or address and this page lays out the
+                city, parish, and the best first calls in one clean view.
+              </p>
+            </div>
+            <div class="summary-metrics parish-summary-grid">
+              <article class="summary-metric">
+                <span class="metric-label">Search</span>
+                <strong>ZIP</strong>
+              </article>
+              <article class="summary-metric">
+                <span class="metric-label">Local layer</span>
+                <strong>City</strong>
+              </article>
+              <article class="summary-metric">
+                <span class="metric-label">Regional layer</span>
+                <strong>Parish</strong>
+              </article>
+            </div>
             <div class="disclaimer-box disclaimer-box--compact">
               <p>
                 A full street address gives the best match. ZIP codes and city names

@@ -44,6 +44,21 @@ document.querySelector('#app').innerHTML = `
               </p>
             </div>
 
+            <div class="summary-metrics parish-summary-grid">
+              <article class="summary-metric">
+                <span class="metric-label">Parish pages</span>
+                <strong>64</strong>
+              </article>
+              <article class="summary-metric">
+                <span class="metric-label">Local places</span>
+                <strong>300+</strong>
+              </article>
+              <article class="summary-metric">
+                <span class="metric-label">Map mode</span>
+                <strong>Browse</strong>
+              </article>
+            </div>
+
             <div class="cta-row">
               <a class="button" href="#directory-list">Browse all parishes</a>
               <a class="button button--secondary" href="/services.html">Open services by ZIP</a>

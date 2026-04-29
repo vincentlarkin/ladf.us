@@ -13,6 +13,39 @@ const HOME_UPDATED_AS = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
 }).format(new Date());
 
+const HOME_LOGOS = [
+  {
+    src: '/org-logos/louisiana-state-seal.png',
+    alt: 'Louisiana state seal',
+    label: 'Statewide',
+  },
+  {
+    src: '/org-logos/louisiana-sos-seal.png',
+    alt: 'Louisiana Secretary of State seal',
+    label: 'Elections',
+  },
+  {
+    src: '/org-logos/louisiana-sheriffs-logo.jpeg',
+    alt: 'Louisiana Sheriffs Association logo',
+    label: 'Sheriffs',
+  },
+  {
+    src: '/org-logos/louisiana-clerks-logo.png',
+    alt: 'Louisiana Clerks of Court Association logo',
+    label: 'Clerks',
+  },
+  {
+    src: '/org-logos/louisiana-assessors-logo.jpg',
+    alt: 'Louisiana Assessors Association logo',
+    label: 'Assessors',
+  },
+  {
+    src: '/org-logos/municipal/batonrouge-83e4480ee0.png',
+    alt: 'Baton Rouge logo',
+    label: 'Cities',
+  },
+];
+
 document.querySelector('#app').innerHTML = `
   <div class="page">
     ${renderSiteHeader({ activePage: 'home' })}
@@ -32,34 +65,44 @@ document.querySelector('#app').innerHTML = `
           ${renderBreadcrumb([{ label: 'Home' }])}
 
           <section class="page-intro page-intro--compact" id="overview">
-            <div class="page-intro__title-block">
-              <div class="eyebrow">Louisiana Data Force</div>
-              <p class="page-intro__meta">Updated as of ${escapeHtml(HOME_UPDATED_AS)}</p>
-              <h1>Find the parish page, city contact, or local link you need.</h1>
-              <p class="lead">
-                Pick a parish, jump into the main local links, or use the ZIP lookup
-                when you just need the best place to start.
-              </p>
+            <div class="home-hero">
+              <div class="page-intro__title-block">
+                <div class="eyebrow">Louisiana Data Force</div>
+                <p class="page-intro__meta">Updated as of ${escapeHtml(HOME_UPDATED_AS)}</p>
+                <h1>Find the parish page, city contact, or local link you need.</h1>
+                <p class="lead">
+                  Pick a parish, jump into the main local links, or use the ZIP lookup
+                  when you just need the best place to start.
+                </p>
+                <div class="cta-row">
+                  <a class="button" href="/services.html">Search by ZIP or city</a>
+                  <a class="button button--secondary" href="/map.html">Browse parish map</a>
+                </div>
+              </div>
+
+              <div class="home-hero__panel" aria-label="Louisiana directory coverage">
+                <div class="home-hero__seal">
+                  <img src="/org-logos/louisiana-state-seal.png" alt="Louisiana state seal" />
+                </div>
+                <div class="home-hero__metrics">
+                  <article>
+                    <span>Parishes</span>
+                    <strong>64</strong>
+                  </article>
+                  <article>
+                    <span>Municipalities</span>
+                    <strong>300+</strong>
+                  </article>
+                  <article>
+                    <span>City logos</span>
+                    <strong>60</strong>
+                  </article>
+                </div>
+              </div>
             </div>
 
-            <div class="summary-metrics parish-summary-grid">
-              <article class="summary-metric">
-                <span class="metric-label">Parishes</span>
-                <strong>64</strong>
-              </article>
-              <article class="summary-metric">
-                <span class="metric-label">Municipalities</span>
-                <strong>300+</strong>
-              </article>
-              <article class="summary-metric">
-                <span class="metric-label">Coverage</span>
-                <strong>Statewide</strong>
-              </article>
-            </div>
-
-            <div class="cta-row">
-              <a class="button" href="/map.html">Browse parish map</a>
-              <a class="button button--secondary" href="/services.html">Open services by ZIP</a>
+            <div class="home-logo-strip" aria-label="Directory source categories">
+              ${HOME_LOGOS.map(renderHomeLogo).join('')}
             </div>
           </section>
 
@@ -91,26 +134,31 @@ document.querySelector('#app').innerHTML = `
 
           <section class="section" id="services">
             <h2>Services by ZIP</h2>
-            <div class="card-grid card-grid--two">
-              <article class="info-card">
+            <div class="home-action-grid">
+              <a class="home-action-card" href="/services.html">
                 <div class="result-type">Lookup</div>
                 <h4>Search by ZIP, city, or address</h4>
                 <p>
                   Start with the place you live, and the lookup points you toward likely
                   local contacts for things like water, trash, permits, and parish offices.
                 </p>
-              </article>
-              <article class="info-card">
+              </a>
+              <a class="home-action-card" href="/services.html?lookup=Shreveport%2C%20LA#results">
                 <div class="result-type">Routing</div>
-                <h4>Get a better first stop for everyday local questions</h4>
+                <h4>See a city directory in context</h4>
                 <p>
-                  The goal is to help people reach the right desk faster without guessing
-                  where to start.
+                  City, parish, and service cards sit together so the right first call is
+                  easier to compare.
                 </p>
-              </article>
-            </div>
-            <div class="cta-row">
-              <a class="button" href="/services.html">Go to services by ZIP</a>
+              </a>
+              <a class="home-action-card" href="/map.html#directory-list">
+                <div class="result-type">Directory</div>
+                <h4>Jump from parish to local places</h4>
+                <p>
+                  The parish map opens pages and local place links without making you
+                  remember every jurisdiction boundary.
+                </p>
+              </a>
             </div>
           </section>
 
@@ -137,6 +185,17 @@ document.querySelector('#app').innerHTML = `
 
 bindSiteChrome();
 
+function renderHomeLogo(logo) {
+  return `
+    <div class="home-logo-tile">
+      <span class="logo-badge logo-badge--white">
+        <img src="${escapeAttribute(logo.src)}" alt="${escapeAttribute(logo.alt)}" loading="lazy" />
+      </span>
+      <span>${escapeHtml(logo.label)}</span>
+    </div>
+  `;
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -144,4 +203,8 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;');
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value);
 }
