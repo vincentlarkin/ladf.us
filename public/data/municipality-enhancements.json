@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T02:42:10.400Z",
+  "generatedAt": "2026-04-29T01:45:45.866Z",
   "generator": "scripts/sync-municipality-enhancements.mjs",
   "sources": {
     "serviceDirectory": "/public/data/service-directory.json",
@@ -13,7 +13,45 @@
         "alt": "Alexandria logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofalexandriala.com/resident/utility-department/",
+          "sourceText": "Pay Utility Bill"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofalexandriala.com/resident/sanitation-trash-pickup/",
+          "sourceText": "Sanitation"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofalexandriala.com/community/events-calendar/",
+          "sourceText": "Calendar of Events"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofalexandriala.com/community/ahpc/",
+          "sourceText": "Historic Preservation Commission"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.cityofalexandriala.com/government/public-records-requests/",
+          "sourceText": "Public Records Requests"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofalexandriala.com/services/zoning/",
+          "sourceText": "Zoning"
+        }
+      ]
     },
     "abbeville": {
       "officialSite": "https://www.cityofabbeville.org/",
@@ -22,7 +60,27 @@
         "alt": "Abbeville logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofabbeville.org/agendas-and-minutes",
+          "sourceText": "Agendas & Minutes"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofabbeville.org/public-works",
+          "sourceText": "Public Works"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.xpressbillpay.com/",
+          "sourceText": "XPRESS Bill Pay"
+        }
+      ]
     },
     "bastrop": {
       "officialSite": "https://www.cityofbastrop.org/",
@@ -31,7 +89,57 @@
         "alt": "Bastrop logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://bastrop-tx.municodemeetings.com/?field_microsite_tid_selective=27",
+          "sourceText": "COUNCIL AGENDA"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.cityofbastrop.org/page/fire.home",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofbastrop.org/page/mc.online_payments",
+          "sourceText": "Pay Online"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofbastrop.org/page/parks.rec.home",
+          "sourceText": "Parks & Recreation"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofbastrop.org/page/police.home",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofbastrop.org/page/pw.home",
+          "sourceText": "Streets & Drainage"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.cityofbastrop.org/page/city.quarterlyreport",
+          "sourceText": "Quarterly Reports"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofbastrop.org/page/cs.boards_planning",
+          "sourceText": "Planning / Zoning Commission"
+        }
+      ]
     },
     "batonrouge": {
       "officialSite": "https://www.brla.gov/",
@@ -40,16 +148,45 @@
         "alt": "Baton Rouge logo",
         "variant": "wide",
         "frame": "white"
-      }
-    },
-    "bogalusa": {
-      "officialSite": "https://www.bogalusa.gov/",
-      "brand": {
-        "src": "/org-logos/municipal/bogalusa-ac4afda940.png",
-        "alt": "Bogalusa logo",
-        "variant": "wide",
-        "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.brla.gov/337/Garbage-Collection",
+          "sourceText": "Garbage Collection"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.brla.gov/1382/Online-Ticket-Payments",
+          "sourceText": "Pay a Traffic Ticket"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "http://311.brla.gov/",
+          "sourceText": "311 Request for Service"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.brla.gov/AgendaCenter",
+          "sourceText": "Agendas & Minutes"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.brla.gov/permits",
+          "sourceText": "Permits & Inspections"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.brla.gov/calendar.aspx?CID=62,88,25,63,61,64,80,78,68,27,83,93,67,77,84,14,71,65,79,30,81,85,82,94,89,86,97",
+          "sourceText": "View All Events"
+        }
+      ]
     },
     "bossiercity": {
       "officialSite": "https://www.bossiercity.org/",
@@ -58,7 +195,45 @@
         "alt": "Bossier City logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.bossiercity.org/345/Pay-Bills",
+          "sourceText": "Pay Bills"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.bossiercity.org/agendacenter",
+          "sourceText": "Agendas & Minutes"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.bossiercity.org/199/Parks-Recreation",
+          "sourceText": "Parks & Rec"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.bossiercity.org/237/Police",
+          "sourceText": "Police"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.bossiercity.org/216/Public-Works",
+          "sourceText": "Public Works"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.swepco.com/outages/problem/streetlight",
+          "sourceText": "Report Streetlight Outage"
+        }
+      ]
     },
     "breauxbridge": {
       "officialSite": "https://breauxbridgela.net/",
@@ -67,7 +242,33 @@
         "alt": "Breaux Bridge logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://breauxbridgela.net/government/mayor-and-city-council/",
+          "sourceText": "MAYOR &#038; CITY COUNCIL"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://breauxbridgela.net/#",
+          "sourceText": "PERMITS"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://4.municipal.cc/breauxbridge/WEBPORTAL/",
+          "sourceText": "PAY BILLS"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://breauxbridgela.net/holiday-garbage-pickup/",
+          "sourceText": "Holiday Garbage Pickup"
+        }
+      ]
     },
     "broussard": {
       "officialSite": "https://www.livebroussard.com/",
@@ -76,7 +277,15 @@
         "alt": "Broussard logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://discoverbroussard.com/",
+          "sourceText": "Discover Broussard Your guide to exploring local attractions,..."
+        }
+      ]
     },
     "carencro": {
       "officialSite": "https://carencro.org/",
@@ -85,7 +294,104 @@
         "alt": "Carencro logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://1.municipal.cc/CarencroLA/Webportal/",
+          "sourceText": "Pay Utilities"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://carencro.org/requests-or-questions/",
+          "sourceText": "Requests or Questions"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://carencro.org/carencro-water-infrastructure-revitalization-information/",
+          "sourceText": "City Water Revitalization"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://carencro.org/occupational-license-renewal-info/",
+          "sourceText": "2025 Occupational License Renewal"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://carencro.org/council-meetings/",
+          "sourceText": "Council Meetings"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://carencro.org/police/",
+          "sourceText": "Police"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://carencro.org/parks-rec/",
+          "sourceText": "Parks &#038; Rec"
+        }
+      ]
+    },
+    "bogalusa": {
+      "officialSite": "https://www.bogalusa.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/bogalusa-ac4afda940.png",
+        "alt": "Bogalusa logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.bogalusa.gov/page/police",
+          "sourceText": "Police"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.bogalusa.gov/page/crime-prevention-safety",
+          "sourceText": "Crime Prevention & Safety"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.bogalusa.gov/page/city-council",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.bogalusa.gov/page/public-works",
+          "sourceText": "Public Works"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.bogalusa.gov/page/plan-zone",
+          "sourceText": "Planning and Zoning Commission"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.bogalusa.gov/page/payment-center",
+          "sourceText": "Payment Center"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.myentergy.com/s/reportoutage",
+          "sourceText": "Street Light Outage Reports"
+        }
+      ]
     },
     "central": {
       "officialSite": "https://www.centralgov.com/",
@@ -94,7 +400,51 @@
         "alt": "Central logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.centralgov.com/o/central/page/city-council",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.centralgov.com/o/central/page/pz-commission",
+          "sourceText": "Planning & Zoning Commission"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.centralfd.org/o/centralfd",
+          "sourceText": "Central Fire Department"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.centralgov.com/page/police-department",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.centralgov.com/page/crash-reports",
+          "sourceText": "Crash Report Request"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.centralgov.com/page/drainagesum",
+          "sourceText": "Infrastructure Projects"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.centralgov.com/events",
+          "sourceText": "Events"
+        }
+      ]
     },
     "covington": {
       "officialSite": "https://www.covla.com/",
@@ -103,16 +453,39 @@
         "alt": "Covington logo",
         "variant": "wide",
         "frame": "white"
-      }
-    },
-    "baker": {
-      "officialSite": "https://cityofbakerla.com/",
-      "brand": {
-        "src": "/org-logos/municipal/baker-f5aa045a97.png",
-        "alt": "Baker logo",
-        "variant": "wide",
-        "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://covla.com/pay-water-bill/",
+          "sourceText": "Pay Water Bill"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.covla.com/covington-city-council/",
+          "sourceText": "CITY COUNCIL"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.covla.com/wp-content/uploads/2024/12/City-of-Covington-Zoning-24x36-PUDs.pdf",
+          "sourceText": "Covington Zoning Map"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://covla.com/report-a-concern/",
+          "sourceText": "Report"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.covla.com/wp-content/uploads/2020/06/3_BOGUE_FALAYA_ROAD-1.jpg",
+          "sourceText": "Private toll bridge at Sulphur Springs (upriver from Boston S..."
+        }
+      ]
     },
     "denhamsprings": {
       "officialSite": "https://www.cityofdenhamsprings.com/",
@@ -121,7 +494,104 @@
         "alt": "Denham Springs logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofdenhamsprings.com/events",
+          "sourceText": "Upcoming Events"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofdenhamsprings.com/MonthlyMinutesDocument",
+          "sourceText": "Meeting Minutes"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofdenhamsprings.com/dept-garbage-and-recycling",
+          "sourceText": "Garbage and Recycling"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofdenhamsprings.com/dept-planning-and-development",
+          "sourceText": "Planning and Development"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofdenhamsprings.com/dept-police",
+          "sourceText": "Police"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofdenhamsprings.com/dept-utility-billing",
+          "sourceText": "Utility Billing"
+        }
+      ]
+    },
+    "baker": {
+      "officialSite": "https://cityofbakerla.com/",
+      "brand": {
+        "src": "/org-logos/municipal/baker-f5aa045a97.png",
+        "alt": "Baker logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://cityofbakerla.com/wp-content/uploads/2025/10/Occupational-License-Check-List-Revised-02092022.pdf",
+          "sourceText": "Occupational License How To"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://cityofbakerla.com/cat_doc/budgets/",
+          "sourceText": "Budget &#038; Reports"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://cityofbakerla.com/anthony-douglas/",
+          "sourceText": "Director of Public Works"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://cityofbakerla.com/#",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.ncourt.com/x-press/x-onlinepayments.aspx?juris=9B249198-9704-44B1-993F-8328AFD14FAA",
+          "sourceText": "Online Payments"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://cityofbakerla.com/ova_dep/fire-department/",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://cityofbakerla.com/ova_dep/police-department/",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://cityofbakerla.com/ova_dep/recreation-administration/",
+          "sourceText": "Recreation Administration"
+        }
+      ]
     },
     "deridder": {
       "officialSite": "https://www.cityofderidder.org/",
@@ -130,7 +600,39 @@
         "alt": "DeRidder logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofderidder.org/228/Water-Office",
+          "sourceText": "Water Billing"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofderidder.org/296/City-Council",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.cityofderidder.org/FormCenter/Public-Works-Utility-Code-Enforcement-7/Report-a-Concern-71",
+          "sourceText": "Report A Concern"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofderidder.org/DocumentCenter/View/1588/2022-09-26-DeRidder-Zoning-20044-E35",
+          "sourceText": "City Zoning Map"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofderidder.org/374/Upcoming-Annual-Events",
+          "sourceText": "Events Calendar"
+        }
+      ]
     },
     "donaldsonville": {
       "officialSite": "https://www.donaldsonville-la.gov/",
@@ -139,7 +641,45 @@
         "alt": "Donaldsonville logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.donaldsonville-la.gov/boards",
+          "sourceText": "Boards & Commissions"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.donaldsonville-la.gov/FinancialReports",
+          "sourceText": "Financial Reports"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.donaldsonville-la.gov/events",
+          "sourceText": "Events"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://donaldsonvillela.municipalonlinepayments.com/donaldsonvillela/utilities",
+          "sourceText": "Make a Payment"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.donaldsonville-la.gov/permitforms",
+          "sourceText": "Permit Forms"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.donaldsonville-la.gov/gassewerdisconnect",
+          "sourceText": "Utilities Request"
+        }
+      ]
     },
     "eunice": {
       "officialSite": "https://www.cityofeunice.org/",
@@ -148,13 +688,127 @@
         "alt": "Eunice logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofeunice.org/AgendaCenter/ViewFile/Agenda/_04072026-344",
+          "sourceText": "&nbsp;link"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofeunice.org/#tab42cdf325-0934-4df4-90d9-f0fb7aa6023a_1",
+          "sourceText": "Police Facebook"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.xpressbillpay.com/",
+          "sourceText": "Xpress Bill Pay"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofeunice.org/136/Recreation",
+          "sourceText": "Parks & Recreation"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofeunice.org/140/Water-Sewer",
+          "sourceText": "Water & Sewer"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://library.municode.com/HTML/14371/level3/COOR_CH14BUBURE_ARTXMOBU.html#COOR_CH14BUBURE_ARTXMOBU_S14-255PEREFE",
+          "sourceText": "Permit Required Fee"
+        }
+      ]
     },
     "franklin": {
       "officialSite": "https://www.franklin-la.com/",
       "brand": {
         "src": "/org-logos/municipal/franklin-2bbb54b28d.png",
         "alt": "Franklin logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.franklin-la.com/egov/apps/services/index.egov?view=item&id=12",
+          "sourceText": "Meetings & Agendas"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.franklin-la.com/egov/apps/events/calendar.egov?view=cal;timeframe=2;",
+          "sourceText": "April 2026"
+        }
+      ]
+    },
+    "gonzales": {
+      "officialSite": "https://gonzalesla.com/",
+      "brand": {
+        "src": "/org-logos/municipal/gonzales-2de7d24486.png",
+        "alt": "Gonzales logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://gonzalesla.com/department/flood/",
+          "sourceText": "Floodplain and Stormwater Information"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.municipalonlinepayments.com/gonzalesla",
+          "sourceText": "Pay Bills"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://gonzalesla.com/department/permits-and-licensing/",
+          "sourceText": "Permits and Licensing"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://gonzalesla.com/publics-records-request/",
+          "sourceText": "Public Record Request"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://gonzalesla.com/about/city-council/",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://gonzalesla.com/department/recreation/",
+          "sourceText": "Community Services"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://gonzalesla.com/department/1080/",
+          "sourceText": "Police"
+        }
+      ]
+    },
+    "hammond": {
+      "officialSite": "https://hammond.org/",
+      "brand": {
+        "src": "/org-logos/municipal/hammond-89f62cbfeb.png",
+        "alt": "Hammond logo",
         "variant": "wide",
         "frame": "white"
       }
@@ -166,25 +820,68 @@
         "alt": "Crowley logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.crowley.com/logistics/quote/",
+          "sourceText": "Quote Request"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.crowley.com/online-bill-pay/",
+          "sourceText": "Online Bill Pay"
+        }
+      ]
     },
-    "hammond": {
-      "officialSite": "https://hammond.org/",
+    "jeanerette": {
+      "officialSite": "https://jeanerette.com/",
       "brand": {
-        "src": "/org-logos/municipal/hammond-89f62cbfeb.png",
-        "alt": "Hammond logo",
+        "src": "/org-logos/municipal/jeanerette-11ca2c258f.png",
+        "alt": "Jeanerette logo",
         "variant": "wide",
         "frame": "white"
-      }
-    },
-    "gonzales": {
-      "officialSite": "https://gonzalesla.com/",
-      "brand": {
-        "src": "/org-logos/municipal/gonzales-2de7d24486.png",
-        "alt": "Gonzales logo",
-        "variant": "wide",
-        "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.jeanerette.com/phpBB3/viewforum.php?f=2",
+          "sourceText": "AGENDAS"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://jeanerette.com/permits/",
+          "sourceText": "PERMITS"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://jeanerette.com/parks-recreation/",
+          "sourceText": "PARKS & RECREATION"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://jeanerette.dfistatements.com/default.aspx",
+          "sourceText": "VIEW BILL"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.jeanerette.com/pdfs/Water%20Complaint%20Information%20fillable.pdf",
+          "sourceText": "Water Complaint Form"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.jeanerette.com/pdfs/LA1045004%20CCR%20for%2023%20in%2024.pdf",
+          "sourceText": "Consumer Confidence Report"
+        }
+      ]
     },
     "gretna": {
       "officialSite": "https://www.gretnala.com/",
@@ -193,7 +890,51 @@
         "alt": "Gretna logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.gretnala.com/government/public-meetings/",
+          "sourceText": "Public Meetings"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.gretnala.com/departments/building/",
+          "sourceText": "Building Department"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.gretnala.com/wp-content/uploads/2025/08/Gretna-SMP-Report-Web.pdf",
+          "sourceText": "Stormwater Master Plan"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.gretnala.com/departments/public-works/",
+          "sourceText": "Parks and Parkways"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.gretnapolice.com/",
+          "sourceText": "Police"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.gretnala.com/residents/make-a-payment/",
+          "sourceText": "Make A Payment"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.gretnala.com/seeclickfix/",
+          "sourceText": "Submit a Service Request"
+        }
+      ]
     },
     "jennings": {
       "officialSite": "https://www.cityofjennings.org/",
@@ -202,13 +943,45 @@
         "alt": "Jennings logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://public.mygov.us/jennings_mo",
+          "sourceText": "Public Request Portal"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofjennings.org/229/Community-Crime-Lead-Tip-Portal",
+          "sourceText": "Crime Prevention Line"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofjennings.org/233/St-Louis-County-Police-Dept",
+          "sourceText": "Police Department Learn more"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofjennings.org/CivicAlerts.aspx?AID=47",
+          "sourceText": "City Hall closed at 12:15PM due to inclement weather, City Co..."
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofjennings.org/165/Building-Department",
+          "sourceText": "Building Department"
+        }
+      ]
     },
-    "jeanerette": {
-      "officialSite": "https://jeanerette.com/",
+    "kaplan": {
+      "officialSite": "https://cityofkaplan.com/",
       "brand": {
-        "src": "/org-logos/municipal/jeanerette-11ca2c258f.png",
-        "alt": "Jeanerette logo",
+        "src": "/org-logos/municipal/kaplan-33a6e493fb.jpg",
+        "alt": "Kaplan logo",
         "variant": "wide",
         "frame": "white"
       }
@@ -220,16 +993,45 @@
         "alt": "Kenner logo",
         "variant": "wide",
         "frame": "white"
-      }
-    },
-    "kaplan": {
-      "officialSite": "https://cityofkaplan.com/",
-      "brand": {
-        "src": "/org-logos/municipal/kaplan-33a6e493fb.jpg",
-        "alt": "Kaplan logo",
-        "variant": "wide",
-        "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.kenner.la.us/AgendaCenter",
+          "sourceText": "Agendas & Minutes Agendas y Acta de Junta"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.kenner.la.us/101/Services",
+          "sourceText": "Services/Payments Servicios / Pagos"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.kenner.la.us/219/Parks-Recreation-Department",
+          "sourceText": "Parks & Recreation Parques y Recreación"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.kenner.la.us/254/Garbage-Recycling",
+          "sourceText": "Garbage & Recycling Basura y Reciclaje"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.kenner.la.us/262/QAlert-Citizen-Service-Request-System",
+          "sourceText": "Report a Problem"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.kenner.la.us/249/Permits-Licensing",
+          "sourceText": "Licenses and Permits"
+        }
+      ]
     },
     "lafayette": {
       "officialSite": "https://www.lafayettela.gov/",
@@ -238,7 +1040,57 @@
         "alt": "Lafayette logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.lafayettela.gov/living-here/drainage/",
+          "sourceText": "Drainage"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.lafayettela.gov/your-government/boards-and-commissions/",
+          "sourceText": "Get Involved"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.lafayettela.gov/living-here/parking/",
+          "sourceText": "Parking"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.lafayettela.gov/emergencies-public-safety/fire-department/",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.lafayettela.gov/emergencies-public-safety/police-department/",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.lafayettela.gov/business-development/business-permits-and-licenses/",
+          "sourceText": "Business Permits and Licenses"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.lafayettela.gov/your-government/public-records-request/",
+          "sourceText": "Public Records Request"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://dss-lus.opower.com/dss/login",
+          "sourceText": "Pay Your Utility Bill"
+        }
+      ]
     },
     "lakecharles": {
       "officialSite": "https://www.cityoflakecharles.com/",
@@ -247,7 +1099,98 @@
         "alt": "Lake Charles logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityoflakecharles.com/egov/apps/payment/center.egov",
+          "sourceText": "Online Bill Payment"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityoflakecharles.com/egov/apps/document/center.egov?view=item&id=8580",
+          "sourceText": "Off to the Races: City of Lake Charles and Region 5 STEM Cent..."
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityoflakecharles.com/egov/apps/document/center.egov?view=item&id=8575",
+          "sourceText": "City Council Agenda 04/15/26"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityoflakecharles.com/egov/apps/document/center.egov?view=item&id=8574",
+          "sourceText": "City of Lake Charles&#160;Breaks Ground on Transformational,..."
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityoflakecharles.com/egov/apps/events/calendar.egov?view=detail;id=3504",
+          "sourceText": "Lake Charles Planning & Zoning Commission"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityoflakecharles.com/department/index.php?structureid=18",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.cityoflakecharles.com/department/index.php?structureid=13",
+          "sourceText": "Fire Department"
+        }
+      ]
+    },
+    "leesville": {
+      "officialSite": "https://www.leesvillela.net/",
+      "brand": {
+        "src": "/org-logos/municipal/leesville-4c801d6340.jpg",
+        "alt": "Leesville logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.leesvillela.net/index.asp?Type=B_BASIC&SEC={E76489C9-0475-4D41-BA98-9F7A04A74074}",
+          "sourceText": "Boards and Commissions >"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.leesvillela.net/index.asp?Type=B_BASIC&SEC={74085320-8580-4BF5-9A23-6BAB8DF2E0EE}",
+          "sourceText": "Leesville Planning and Zoning Commission"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.leesvillela.net/index.asp?Type=B_BASIC&SEC={B4D67C33-2413-4CC4-93F4-B6EA818CEE61}",
+          "sourceText": "Public Works"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.leesvillela.net/index.asp?Type=B_BASIC&SEC={48C50E4F-B5C6-4A6A-B16B-79F32A4393A0}",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.leesvillela.net/index.asp?Type=B_BASIC&SEC={C4E66F70-4F2C-44DC-A6F7-EB4A45498C72}",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.leesvillela.net/index.asp?Type=B_BASIC&SEC={82D5FF1D-25EA-41A3-A96D-7FDACA43B607}",
+          "sourceText": "Leesville Municipal Golf Course & City Park"
+        }
+      ]
     },
     "mandeville": {
       "officialSite": "https://www.cityofmandeville.com/",
@@ -256,7 +1199,62 @@
         "alt": "Mandeville logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofmandeville.com/finance/page/water-sewer-residential-bill-estimator",
+          "sourceText": "Water & Sewer Residential Bill Estimator"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofmandeville.com/planning/page/flood-protection",
+          "sourceText": "Flood Protection"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofmandeville.com/meetings",
+          "sourceText": "Agendas and Minutes"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.cityofmandeville.com/documents",
+          "sourceText": "Documents and Reports"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofmandeville.com/experiencemandeville/page/events",
+          "sourceText": "Calendar of Experience Mandeville Events"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofmandeville.com/police",
+          "sourceText": "Police"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofmandeville.com/publicworks",
+          "sourceText": "Public Works"
+        }
+      ]
+    },
+    "lakeprovidence": {
+      "officialSite": "https://www.lakeprovidence.com/",
+      "quickLinks": [
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.lakeprovidence.com/category/parks/",
+          "sourceText": "Parks"
+        }
+      ]
     },
     "mansfield": {
       "officialSite": "https://www.cityofmansfield.net/",
@@ -265,34 +1263,104 @@
         "alt": "Mansfield logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofmansfield.net/page/city-council",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.cityofmansfield.net/page/fire-department",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofmansfield.net/page/police-department",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofmansfield.net/page/code-enforcement",
+          "sourceText": "Code Enforcement"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.cityofmansfield.net/page/weekly-arrest-reports",
+          "sourceText": "Weekly Arrest Reports"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofmansfield.net/page/public-works",
+          "sourceText": "Public Works"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofmansfield.net/page/billing-services",
+          "sourceText": "Billing Services"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofmansfield.net/page/city-parks",
+          "sourceText": "City Parks"
+        }
+      ]
     },
-    "marksville": {
-      "officialSite": "https://www.cityofmarksville.com/",
-      "brand": {
-        "src": "/org-logos/municipal/marksville-1b27bce5cb.png",
-        "alt": "Marksville logo",
-        "variant": "wide",
-        "frame": "white"
-      }
-    },
-    "monroe": {
-      "officialSite": "https://monroela.us/",
-      "brand": {
-        "src": "/org-logos/municipal/monroe-9bfa1ba88e.png",
-        "alt": "Monroe logo",
-        "variant": "wide",
-        "frame": "white"
-      }
-    },
-    "leesville": {
-      "officialSite": "https://www.leesvillela.gov/",
-      "brand": {
-        "src": "/org-logos/municipal/leesville-3bb5ac0641.jpg",
-        "alt": "Leesville logo",
-        "variant": "wide",
-        "frame": "white"
-      }
+    "harahan": {
+      "officialSite": "https://www.harahanla.gov/",
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.harahanla.gov/city-council",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.harahanla.gov/police-department",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.harahanla.gov/fire-department",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.harahanla.gov/recreation-department",
+          "sourceText": "Recreation Department"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "http://tickets.cityofharahan.com/Pay/Account/Login?returnUrl=/pay",
+          "sourceText": "Pay Traffic Ticket"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.harahanla.gov/regulatory-department",
+          "sourceText": "Building Permits"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.harahanla.gov/maintenance-department",
+          "sourceText": "Maintenance Request"
+        }
+      ]
     },
     "minden": {
       "officialSite": "https://mindenla.org/",
@@ -301,16 +1369,133 @@
         "alt": "Minden logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://mindenla.org/building-official/",
+          "sourceText": "Building Official"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://mindenla.org/fire-department/",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://mindenla.org/police-department/",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://mindenla.org/public-works/",
+          "sourceText": "Public Works"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://mindenla.org/utility-billing/",
+          "sourceText": "Utility Billing"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://mindenla.org/all-agendas/",
+          "sourceText": "Agendas &#038; Minutes"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://mindenla.org/community-events/",
+          "sourceText": "Community Events"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://mindenla.org/street-closure-request/",
+          "sourceText": "Street Closure Request"
+        }
+      ]
     },
-    "natchitoches": {
-      "officialSite": "https://www.natchitochesla.gov/",
+    "marksville": {
+      "officialSite": "https://www.cityofmarksville.com/",
       "brand": {
-        "src": "/org-logos/municipal/natchitoches-706fbb4455.png",
-        "alt": "Natchitoches logo",
+        "src": "/org-logos/municipal/marksville-1b27bce5cb.png",
+        "alt": "Marksville logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofmarksville.com/services",
+          "sourceText": "Forms / Minutes / HDC"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofmarksville.com/about-3-1",
+          "sourceText": "Payments"
+        }
+      ]
+    },
+    "monroe": {
+      "officialSite": "https://monroela.us/",
+      "brand": {
+        "src": "/org-logos/municipal/monroe-9bfa1ba88e.png",
+        "alt": "Monroe logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://monroela.us/departments/administration/utility-billing/",
+          "sourceText": "UTILITY BILLING"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://monroela.us/government/city-council/",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://monroela.us/government/monroe-city-marshal/",
+          "sourceText": "Monroe City Marshal"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://monroela.us/departments/engineering/inspections-permitting/",
+          "sourceText": "Inspections &#038; Permitting"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://monroela.us/departments/community-affairs#parks",
+          "sourceText": "Parks"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://monroela.us/departments/fire-department/",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://monroela.us/departments/public-works/",
+          "sourceText": "Public Works"
+        }
+      ]
     },
     "newiberia": {
       "officialSite": "https://www.cityofnewiberia.com/",
@@ -319,7 +1504,51 @@
         "alt": "New Iberia logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofnewiberia.com/council-minutes",
+          "sourceText": "COUNCIL MINUTES"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.cityofnewiberia.com/fire-department",
+          "sourceText": "FIRE DEPARTMENT"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofnewiberia.com/inspection-permits",
+          "sourceText": "INSPECTION"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofnewiberia.com/new-police-dept",
+          "sourceText": "NIPD"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofnewiberia.com/parks-rec",
+          "sourceText": "PARKS & REC."
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofnewiberia.com/public-works",
+          "sourceText": "PUBLIC WORKS"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://snstaxpayments.com/newiberia?terms=yes",
+          "sourceText": "HERE&nbsp;"
+        }
+      ]
     },
     "neworleans": {
       "officialSite": "https://nola.gov/",
@@ -328,7 +1557,110 @@
         "alt": "New Orleans logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://nola.gov/next/services/code-enforcement-blight/fighting-blight-and-reporting-violations#browse",
+          "sourceText": "Fighting Blight and Reporting Violations"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://nola.gov/next/services/ordinances-regulations/sanitation#browse",
+          "sourceText": "Sanitation"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://nola.gov/next/services/parking/parking-tickets-violations#browse",
+          "sourceText": "Parking Tickets & Violations"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://nola.gov/next/services/parks-nature/parks-green-spaces#browse",
+          "sourceText": "Permits and Rentals"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://nola.gov/next/services/public-safety/city-protection#browse",
+          "sourceText": "Police"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://council.nola.gov/",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://nola.gov/NEXT/NOFD",
+          "sourceText": "Fire Department, New Orleans (NOFD)"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://nola.gov/pay-sales-tax/",
+          "sourceText": "Sales/Use/Parking Tax"
+        }
+      ]
+    },
+    "natchitoches": {
+      "officialSite": "https://www.natchitochesla.gov/",
+      "brand": {
+        "src": "/org-logos/municipal/natchitoches-706fbb4455.png",
+        "alt": "Natchitoches logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.natchitochesla.gov/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjU0MzAiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D",
+          "sourceText": "Report A Problem"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.natchitochesla.gov/government/emergency-preparedness/emergency-water-supply/",
+          "sourceText": "Emergency Water Supply"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.natchitochesla.gov/government/city-council/",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.natchitochesla.gov/government/city-departments/planning-zoning/",
+          "sourceText": "Planning & Zoning"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.natchitochesla.gov/government/city-departments/police-protection/",
+          "sourceText": "Police Protection"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.natchitochesla.gov/government/city-departments/recreation-parks/",
+          "sourceText": "Recreation &#038; Parks"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://click2gov.natchitochesla.gov/Click2GovCX/index.html",
+          "sourceText": "Pay Utility Bill"
+        }
+      ]
     },
     "opelousas": {
       "officialSite": "https://www.cityofopelousas.com/",
@@ -337,34 +1669,74 @@
         "alt": "Opelousas logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://snstaxpayments.com/opelousas",
+          "sourceText": "Pay Property Tax"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofopelousas.com/government/mayor-city-council/",
+          "sourceText": "Mayor &#038; City Council"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.cityofopelousas.com/government/public-records-reports/",
+          "sourceText": "Public Records Reports"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "http://www.opelousaspd.com/",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofopelousas.com/boards-commissions/planning-zoning-commission/",
+          "sourceText": "Planning &#038; Zoning Commission"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofopelousas.com/business/public-works/",
+          "sourceText": "Public Works"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofopelousas.com/resident/parks-recreation/",
+          "sourceText": "Parks &#038; Recreation"
+        }
+      ]
     },
-    "morgancity": {
-      "officialSite": "https://morgan-city.com/",
-      "brand": {
-        "src": "/org-logos/municipal/morgancity-3973127398.webp",
-        "alt": "Morgan City logo",
-        "variant": "wide",
-        "frame": "white"
-      }
-    },
-    "plaquemine": {
-      "officialSite": "https://www.plaquemine.org/",
-      "brand": {
-        "src": "/org-logos/municipal/plaquemine-dd2f1d4d18.png",
-        "alt": "Plaquemine logo",
-        "variant": "wide",
-        "frame": "white"
-      }
-    },
-    "ponchatoula": {
-      "officialSite": "https://cityofponchatoula.com/",
-      "brand": {
-        "src": "/org-logos/municipal/ponchatoula-184ed2a409.svg",
-        "alt": "Ponchatoula logo",
-        "variant": "wide",
-        "frame": "white"
-      }
+    "oakdale": {
+      "officialSite": "https://www.cityofoakdalela.org/",
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofoakdalela.org/pay-utility-bill",
+          "sourceText": "PAY UTILITY BILL"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofoakdalela.org/upcoming-events",
+          "sourceText": "UPCOMING EVENTS"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofoakdalela.org/minutes",
+          "sourceText": "MINUTES"
+        }
+      ]
     },
     "pineville": {
       "officialSite": "https://www.pineville.net/",
@@ -373,16 +1745,127 @@
         "alt": "Pineville logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.pineville.net/egov/apps/services/index.egov?view=detail;id=55",
+          "sourceText": "Online Payments"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.pineville.net/egov/apps/services/index.egov?view=item&id=9",
+          "sourceText": "Agendas & Minutes"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.pineville.net/egov/apps/services/index.egov?view=item&id=10",
+          "sourceText": "Events Calendar"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.pineville.net/egov/apps/action/center.egov",
+          "sourceText": "Report a Concern"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.pineville.net/topic/index.php?topicid=108&structureid=100",
+          "sourceText": "Road Closures"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://ring.com/neighbors",
+          "sourceText": "Join Pineville Police Department on the Neighbors App"
+        }
+      ]
     },
-    "ruston": {
-      "officialSite": "https://www.ruston.org/",
+    "ponchatoula": {
+      "officialSite": "https://cityofponchatoula.com/",
       "brand": {
-        "src": "/org-logos/municipal/ruston-f80effff2d.svg",
-        "alt": "Ruston logo",
+        "src": "/org-logos/municipal/ponchatoula-184ed2a409.svg",
+        "alt": "Ponchatoula logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://cityofponchatoula.com/city-department/building-permits",
+          "sourceText": "Building Permits"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://cityofponchatoula.com/consolidated-board",
+          "sourceText": "Consolidated Board"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://cityofponchatoula.com/#upcoming-events",
+          "sourceText": "Calendar"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://secure.cpteller.com/terminal/portal/?op=NshSsYWQOT6E",
+          "sourceText": "Pay Online"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://cdn.eversite.com/media/9bee54a87dcb69064c363966fbfdb2b40658fa2e/47062/2024+CCR+Notification.pdf",
+          "sourceText": "2024 Water Quality Report"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://seventhwardmarshal.com/",
+          "sourceText": "7th Ward Marshall's Office"
+        }
+      ]
+    },
+    "plaquemine": {
+      "officialSite": "https://www.plaquemine.org/",
+      "brand": {
+        "src": "/org-logos/municipal/plaquemine-dd2f1d4d18.png",
+        "alt": "Plaquemine logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.municipalonlinepayments.com/plaqueminela",
+          "sourceText": "Pay My Utility Bill"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.plaquemine.org/requesttracker.aspx",
+          "sourceText": "Submit a Request"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.plaquemine.org/agendacenter",
+          "sourceText": "Agendas & Minutes"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.plaquemine.org/#tab9248bb7e-045d-440f-bd58-2c4cc80761b1_0",
+          "sourceText": "Calendar of Events"
+        }
+      ]
     },
     "portallen": {
       "officialSite": "https://www.portallen.org/",
@@ -391,7 +1874,163 @@
         "alt": "Port Allen logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.portallen.org/city-council/",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.portallen.org/request-a-work-order/",
+          "sourceText": "Work Order"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.portallen.org/oline-payments/",
+          "sourceText": "Online Payments"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://portallen.wpenginepowered.com/wp-content/uploads/2025/05/The-Water-We-Drink-2024.pdf",
+          "sourceText": "The Water We Drink 2024"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.portallen.org/planning-and-zoning-commission/",
+          "sourceText": "Planning and Zoning Commission"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://portallen.wpenginepowered.com/wp-content/uploads/2019/08/PAPD-EMPLOYMENT-APPLICATION.pdf",
+          "sourceText": "Police Department Application"
+        }
+      ]
+    },
+    "ruston": {
+      "officialSite": "https://www.ruston.org/",
+      "brand": {
+        "src": "/org-logos/municipal/ruston-f80effff2d.svg",
+        "alt": "Ruston logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.ruston.org/bill-pay",
+          "sourceText": "Online Bill Pay"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.ruston.org/city-marshal",
+          "sourceText": "City Marshal"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.ruston.org/fire-department",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.ruston.org/rpar",
+          "sourceText": "Parks & Recreation"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.ruston.org/permits-inspections",
+          "sourceText": "Permits & Inspections"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.ruston.org/water-sewer",
+          "sourceText": "Water & Sewer"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.ruston.org/report-problem",
+          "sourceText": "Report a Problem"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.ruston.org/agendas",
+          "sourceText": "Agendas"
+        }
+      ]
+    },
+    "rayne": {
+      "officialSite": "https://www.rayne.org/",
+      "brand": {
+        "src": "/org-logos/municipal/rayne-d8b50c509e.jpg",
+        "alt": "Rayne logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.rayne.org/general-clean",
+          "sourceText": "Rayne Historic Preservation Commission"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.rayne.org/upcoming-events",
+          "sourceText": "Upcoming Events"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.rayne.org/copy-of-fire-department",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.rayne.org/copy-of-government-1",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.rayne.org/copy-of-utilities",
+          "sourceText": "Water & Sewer Department"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.rayne.org/copy-of-fire-department-3",
+          "sourceText": "Permit Department"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.rayne.org/copy-of-news-events",
+          "sourceText": "Special Reports"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "http://raynelapay.com/",
+          "sourceText": "PAY BILL"
+        }
+      ]
     },
     "scott": {
       "officialSite": "https://www.cityofscott.org/",
@@ -400,16 +2039,45 @@
         "alt": "Scott logo",
         "variant": "wide",
         "frame": "white"
-      }
-    },
-    "slidell": {
-      "officialSite": "https://myslidell.com/",
-      "brand": {
-        "src": "/org-logos/municipal/slidell-96022a4965.png",
-        "alt": "Slidell logo",
-        "variant": "seal",
-        "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofscott.org/stormwater",
+          "sourceText": "Stormwater"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofscott.org/scott-events-center-rental",
+          "sourceText": "Scott Events Center Rental"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofscott.org/scott-planning-commission-agenda-min",
+          "sourceText": "Scott Planning & Commission Agenda & Min"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofscott.org/council-meeting-agendas-minutes",
+          "sourceText": "Council Meeting Agendas & Minutes"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://pay.xpress-pay.com/org/C129BF02F85F4D0",
+          "sourceText": "PAY UTILITY BILL"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.cityofscott.org/_files/ugd/66f8d9_cd701cbc036848df849bc7ed460af96c.pdf",
+          "sourceText": "COS Gas Public Awareness Report"
+        }
+      ]
     },
     "shreveport": {
       "officialSite": "https://www.shreveportla.gov/",
@@ -418,13 +2086,110 @@
         "alt": "Shreveport logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.shreveportla.gov/1828/Online-Payments",
+          "sourceText": "Online Bill Pay"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.shreveportla.gov/2786/Report-A-Concern",
+          "sourceText": "Report a Concern"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://utility.shreveportla.gov/",
+          "sourceText": "MY WATER ACCOUNT"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.shreveportla.gov/368/Parks-Recreation",
+          "sourceText": "PARKS and RECREATION"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.shreveportla.gov/422/Police",
+          "sourceText": "PUBLIC SAFETY"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.shreveportla.gov/3028/Upcoming-Meetings",
+          "sourceText": "Agendas & Minutes"
+        }
+      ]
     },
-    "rayne": {
-      "officialSite": "https://www.rayne.org/",
+    "slidell": {
+      "officialSite": "https://myslidell.com/",
       "brand": {
-        "src": "/org-logos/municipal/rayne-d8b50c509e.jpg",
-        "alt": "Rayne logo",
+        "src": "/org-logos/municipal/slidell-96022a4965.png",
+        "alt": "Slidell logo",
+        "variant": "seal",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "http://myslidell.com/event/",
+          "sourceText": "Events"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://slidellfire.org/",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.slidellpdpio.com/",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "http://myslidell.com/departments/public-operations/utility-services/pay-water-bill-online/",
+          "sourceText": "Pay Water Bill"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://ces-ms.com/",
+          "sourceText": "Trash Collection &#038; Recycling"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://myslidell.com/planning/hazard-mitigation/",
+          "sourceText": "Flood Safety"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://myslidell.govqa.us/WEBAPP/_rs/(S(oablqcd4ponr4eza43q3ylj1))/supporthome.aspx",
+          "sourceText": "Public Records Request"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://myslidell.com/government/slidell-city-council/",
+          "sourceText": "Slidell City Council"
+        }
+      ]
+    },
+    "morgancity": {
+      "officialSite": "https://morgan-city.com/",
+      "brand": {
+        "src": "/org-logos/municipal/morgancity-3973127398.webp",
+        "alt": "Morgan City logo",
         "variant": "wide",
         "frame": "white"
       }
@@ -436,16 +2201,15 @@
         "alt": "St. George logo",
         "variant": "wide",
         "frame": "white"
-      }
-    },
-    "stgabriel": {
-      "officialSite": "https://cityofstgabriel.us/",
-      "brand": {
-        "src": "/org-logos/municipal/stgabriel-253bf3faa4.png",
-        "alt": "St. Gabriel logo",
-        "variant": "wide",
-        "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofstgeorge.org/singapore-confirms-work-permit-reform/",
+          "sourceText": "News Singapore Confirms Major 2025 Work Permit Reform: Extend..."
+        }
+      ]
     },
     "springhill": {
       "officialSite": "https://www.springhillla.com/",
@@ -454,7 +2218,62 @@
         "alt": "Springhill logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.springhillla.com/events",
+          "sourceText": "EVENTS"
+        }
+      ]
+    },
+    "stgabriel": {
+      "officialSite": "https://cityofstgabriel.us/",
+      "brand": {
+        "src": "/org-logos/municipal/stgabriel-253bf3faa4.png",
+        "alt": "St. Gabriel logo",
+        "variant": "wide",
+        "frame": "white"
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://cityofstgabriel.us/citycouncil",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://cityofstgabriel.us/pz",
+          "sourceText": "Planning and Zoning Commission"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://cityofstgabriel.us/contact",
+          "sourceText": "Make a Request"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://cityofstgabriel.us/police",
+          "sourceText": "POLICE DEPARTMENT"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://cityofstgabriel.us/community/page/amanda-grace-park",
+          "sourceText": "Amanda Grace Park"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://1.municipal.cc/STGABRIEL/Webportal/",
+          "sourceText": "Utility Billing"
+        }
+      ]
     },
     "stmartinville": {
       "officialSite": "https://stmartinville.gov/",
@@ -463,7 +2282,51 @@
         "alt": "St. Martinville logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://stmartinville.gov/city-council/",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://stmartinvillepolice.org/",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://stmartinville.gov/wp-content/uploads/2025/09/2025PublicRecordsRequest.pdf",
+          "sourceText": "Public Records Request Policy"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://stmartinville.gov/occupational-license/",
+          "sourceText": "Occupational License"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://stmartinville.gov/recreation/",
+          "sourceText": "Recreation"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "http://quickcourt.biz/?id=37",
+          "sourceText": "Pay Traffic Ticket"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://stmartinville.gov/2026/04/21/1865/",
+          "sourceText": "Boil Water Advisory Rescinded"
+        }
+      ]
     },
     "thibodaux": {
       "officialSite": "https://ci.thibodaux.la.us/",
@@ -472,7 +2335,51 @@
         "alt": "Thibodaux logo",
         "variant": "seal",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://ci.thibodaux.la.us/Meetings",
+          "sourceText": "Meetings"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://ci.thibodaux.la.us/Departments/PR",
+          "sourceText": "Parks and Recreation"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://ci.thibodaux.la.us/Departments/TPD",
+          "sourceText": "Thibodaux Police Department"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://cityprotect.com/map/list/incidents?toDate=2023-03-29T23:59:59.999Z&fromDate=2023-03-26T00:00:00.000Z&pageSize=2000&parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&zoomLevel=15&latitude=29.79052617605608&longitude=-90.81542891265892&days=1,2,3,4,5,6,7&startHour=0&endHour=24&timezone=%2B00:00&relativeDate=custom",
+          "sourceText": "Crime Reports - Citizen Protect"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://ci.thibodaux.la.us/Departments/PW",
+          "sourceText": "Department of Public Works"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://ci.thibodaux.la.us/Departments/PW/BP",
+          "sourceText": "Inspections & Permits"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.municipalonlinepayments.com/thibodauxla/utilities",
+          "sourceText": "Online Payment for Utilities"
+        }
+      ]
     },
     "villeplatte": {
       "officialSite": "https://www.cityofvilleplatte.com/",
@@ -481,7 +2388,33 @@
         "alt": "Ville Platte logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofvilleplatte.com/government",
+          "sourceText": "Agendas/Minutes"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofvilleplatte.com/community",
+          "sourceText": "Events"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.cityofvilleplatte.com/online-bill-services",
+          "sourceText": "Online Bill Services"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofvilleplatte.com/business",
+          "sourceText": "View Permits/Licenses for my Business"
+        }
+      ]
     },
     "westmonroe": {
       "officialSite": "https://www.cityofwestmonroe.com/",
@@ -490,7 +2423,39 @@
         "alt": "West Monroe logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofwestmonroe.com/AlertCenter.aspx?AID=Kiroli-Park-is-indefinitely-closed-due-t-117",
+          "sourceText": "Kiroli Park is indefinitely closed due to damage from Winter..."
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://vmpayments.westmonroe.la.gov/Click2GovCX/index.html",
+          "sourceText": "Online Utility Payment"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofwestmonroe.com/175/Building-Development",
+          "sourceText": "Permits"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofwestmonroe.com/237/Board-of-Aldermen",
+          "sourceText": "Board of Aldermen"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofwestmonroe.com/166/Roadside-Trash-Pickup-Policy",
+          "sourceText": "Roadside Trash Pickup Policy"
+        }
+      ]
     },
     "westlake": {
       "officialSite": "https://www.cityofwestlake.org/",
@@ -499,7 +2464,57 @@
         "alt": "Westlake logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofwestlake.org/page/planning-department",
+          "sourceText": "Planning Department"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.cityofwestlake.org/page/fire-department",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofwestlake.org/o/pd",
+          "sourceText": "Police"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofwestlake.org/o/rcwl",
+          "sourceText": "Recreation"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofwestlake.org/page/agenda-center",
+          "sourceText": "Agenda & Minutes"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofwestlake.org/page/public-works-services",
+          "sourceText": "Public Works Services"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://5il.co/385en",
+          "sourceText": "Public Record Request"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://5il.co/385ep",
+          "sourceText": "Automatic Sewer Payments (PDF)"
+        }
+      ]
     },
     "sulphur": {
       "officialSite": "https://www.sulphur.org/",
@@ -508,7 +2523,57 @@
         "alt": "Sulphur logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.sulphur.org/egov/documents/1746798313_02754.pdf",
+          "sourceText": "2024 CCR Annual Water Quality Report"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://policereports.lexisnexis.com/",
+          "sourceText": "Accident Reports Online"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.sulphur.org/egov/apps/document/center.egov?eGov_searchType=60;eGov_searchSubmit=Search",
+          "sourceText": "Agendas & Minutes"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.sulphur.org/egov/apps/events/calendar.egov",
+          "sourceText": "Events Calendar"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.sulphur.org/department/index.php?structureid=8",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.sulphur.org/department/index.php?structureid=10",
+          "sourceText": "Inspections & Permits"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.sulphur.org/egov/apps/document/center.egov?view=item&id=3494",
+          "sourceText": "New Utility Billing System Coming Soon!"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "http://www.cppj.net/index.aspx?page=221",
+          "sourceText": "Police Jury"
+        }
+      ]
     },
     "westwego": {
       "officialSite": "https://www.westwego.org/",
@@ -517,7 +2582,21 @@
         "alt": "Westwego logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.westwego.org/westwego-police-department",
+          "sourceText": "Westwego Police Department"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.westwego.org/bayou-segnette-state-park",
+          "sourceText": "Bayou Segnette State Park"
+        }
+      ]
     },
     "winnfield": {
       "officialSite": "https://cityofwinnfield.com/",
@@ -526,7 +2605,45 @@
         "alt": "Winnfield logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://urldefense.proofpoint.com/v2/url?u=https-3A__wipp.edmundsgovtech.cloud_home-3FwippId-3DWINN&#038;d=DwMFAw&#038;c=euGZstcaTDllvimEN8b7jXrwqOf-v5A_CdpgnVfiiMM&#038;r=6kcBo7CEvTDQqt5zIZWU1ZZ4UhlQUpZuI5IW6dAY2Jg&#038;m=YY_Vj3hMC-I9ixyvsjsGBs6ijOO0TQzNEmei7OWYDmAysKvsURMzhUnToSbfwCmS&#038;s=mY25GDZzu2G71-xKa9Yj4QWwEnfrFKET1MaDMJ4gtP4&#038;e=",
+          "sourceText": "Pay Utility Bill"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://cityofwinnfield.com/government/city-council/",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://cityofwinnfield.com/business/licenses-permits/",
+          "sourceText": "Licenses &#038; Permits"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://cityofwinnfield.com/public-request-form/",
+          "sourceText": "Public Request Form"
+        },
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://cityofwinnfield.com/calendar/submit-an-event/",
+          "sourceText": "Submit an Event"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://cityofwinnfield.com/safe-water-drinking-notification-2025-2-18-2026/",
+          "sourceText": "READ MORE"
+        }
+      ]
     },
     "winnsboro": {
       "officialSite": "https://www.cityofwinnsboro.org/",
@@ -535,7 +2652,39 @@
         "alt": "Winnsboro logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://www.fastgovpay.com:8090/winnsboro",
+          "sourceText": "Payments"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofwinnsboro.org/183/Permits",
+          "sourceText": "Permits"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://tx-winnsboro.civicplus.com/129/Agendas-Minutes",
+          "sourceText": "Meetings, Agendas & Minutes"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofwinnsboro.org/182/Facility-Rentals-Parades-and-Road-Closur",
+          "sourceText": "Facility Rentals"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://www.cityofwinnsboro.org/DocumentCenter/View/1083/PIA---Open-Records-Request_2026",
+          "sourceText": "Submit an Open Records Request"
+        }
+      ]
     },
     "zachary": {
       "officialSite": "https://www.cityofzachary.org/",
@@ -544,7 +2693,57 @@
         "alt": "Zachary logo",
         "variant": "wide",
         "frame": "white"
-      }
+      },
+      "quickLinks": [
+        {
+          "category": "parks",
+          "label": "Parks and recreation",
+          "href": "https://www.cityofzachary.org/city-services/parks-recreation",
+          "sourceText": "Parks & Recreation"
+        },
+        {
+          "category": "pay",
+          "label": "Pay bills",
+          "href": "https://secure.paystar.io/pay/POSUT",
+          "sourceText": "Bill Payment"
+        },
+        {
+          "category": "publicWorks",
+          "label": "Public works",
+          "href": "https://www.cityofzachary.org/city-services/trash-recycling-pick-up",
+          "sourceText": "Trash/Recycling Pickup"
+        },
+        {
+          "category": "meetings",
+          "label": "Meetings and agendas",
+          "href": "https://www.cityofzachary.org/city-hall/city-council",
+          "sourceText": "City Council"
+        },
+        {
+          "category": "fire",
+          "label": "Fire department",
+          "href": "https://www.cityofzachary.org/city-services/fire-department",
+          "sourceText": "Fire Department"
+        },
+        {
+          "category": "police",
+          "label": "Police department",
+          "href": "https://www.cityofzachary.org/city-services/police-department",
+          "sourceText": "Police Department"
+        },
+        {
+          "category": "permits",
+          "label": "Permits and code",
+          "href": "https://www.cityofzachary.org/city-services/inspections",
+          "sourceText": "Inspections"
+        },
+        {
+          "category": "report",
+          "label": "Report a problem",
+          "href": "https://cdn.prod.website-files.com/673242a65bef03b72633e54b/6787f81581ff899f6538b440_Public_Records_Request_2024.pdf",
+          "sourceText": "Public Records Request Form"
+        }
+      ]
     }
   }
 }

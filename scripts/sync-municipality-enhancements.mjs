@@ -33,8 +33,10 @@ const MANUAL_OFFICIAL_SITES = {
   kenner: 'https://www.kenner.la.us/',
   lafayette: 'https://www.lafayettela.gov/',
   lakecharles: 'https://www.cityoflakecharles.com/',
+  leesville: 'https://www.leesvillela.net/',
   mandeville: 'https://www.cityofmandeville.com/',
   mansfield: 'https://www.cityofmansfield.net/',
+  minden: 'https://mindenla.org/',
   monroe: 'https://monroela.us/',
   neworleans: 'https://nola.gov/',
   pineville: 'https://www.pineville.net/',
@@ -56,6 +58,116 @@ const MANUAL_LOGO_URLS = {
   hammond:
     'https://hammond.org/wp-content/themes/city-of-hammond/assets/images/coh-logo-red-border.png',
 };
+
+const CITY_LINK_CATEGORIES = [
+  {
+    category: 'pay',
+    label: 'Pay bills',
+    patterns: [
+      /\bpay\b/i,
+      /\bbill/i,
+      /utility\s+payment/i,
+      /online\s+payment/i,
+      /payments?/i,
+    ],
+    reject: [/disbursement/i, /budget/i, /audit/i],
+  },
+  {
+    category: 'permits',
+    label: 'Permits and code',
+    patterns: [
+      /permit/i,
+      /building\s+(permit|official|department|code|inspection)/i,
+      /code\s+enforcement/i,
+      /planning/i,
+      /zoning/i,
+      /inspection/i,
+      /occupational\s+license/i,
+    ],
+    reject: [/historic\s+building/i, /history/i, /tourism/i],
+  },
+  {
+    category: 'publicWorks',
+    label: 'Public works',
+    patterns: [
+      /public\s+works/i,
+      /garbage/i,
+      /trash/i,
+      /recycling/i,
+      /drainage/i,
+      /water/i,
+      /sewer/i,
+      /roads?/i,
+      /stormwater/i,
+      /sanitation/i,
+    ],
+    reject: [/main\s+street/i],
+  },
+  {
+    category: 'report',
+    label: 'Report a problem',
+    patterns: [
+      /report/i,
+      /request/i,
+      /work\s+order/i,
+      /service\s+request/i,
+      /citizen\s+request/i,
+      /311/i,
+    ],
+    reject: [
+      /report\s+fraud/i,
+      /fraud/i,
+      /request\s+for\s+proposal/i,
+      /\brfp\b/i,
+      /bids?/i,
+      /^news$/i,
+      /press\s+release/i,
+    ],
+  },
+  {
+    category: 'meetings',
+    label: 'Meetings and agendas',
+    patterns: [
+      /agenda/i,
+      /meeting/i,
+      /minutes/i,
+      /city\s+council/i,
+      /mayor\s+(and|&)\s+city\s+council/i,
+      /board/i,
+      /commission/i,
+    ],
+    reject: [/council\s+on\s+aging/i],
+  },
+  {
+    category: 'police',
+    label: 'Police department',
+    patterns: [/police/i, /marshal/i, /law\s+enforcement/i],
+  },
+  {
+    category: 'fire',
+    label: 'Fire department',
+    patterns: [/fire\s+(department|dept|chief|station|prevention|marshal)/i],
+    reject: [/grant/i, /news/i, /blog/i],
+  },
+  {
+    category: 'parks',
+    label: 'Parks and recreation',
+    patterns: [/parks?/i, /recreation/i, /events?/i],
+  },
+];
+
+const BLOCKED_LINK_PATTERNS = [
+  /facebook\.com/i,
+  /instagram\.com/i,
+  /twitter\.com/i,
+  /x\.com/i,
+  /youtube\.com/i,
+  /linkedin\.com/i,
+  /linktr\.ee/i,
+  /mailto:/i,
+  /tel:/i,
+  /javascript:/i,
+];
 
 const BLOCKED_HOST_PATTERNS = [
   /facebook\.com$/i,
@@ -99,7 +211,7 @@ const cities = serviceDirectory.municipalities
 
 await mapWithConcurrency(cities, 3, async (city, index) => {
   const cityKey = normalizeName(city.normalizedName ?? city.name);
-  console.log(`Finding city logo ${index + 1}/${cities.length}: ${city.name}`);
+  console.log(`Finding city info ${index + 1}/${cities.length}: ${city.name}`);
 
   const officialSite = MANUAL_OFFICIAL_SITES[cityKey] ?? await findOfficialSite(city.name);
   if (!officialSite) {
@@ -114,22 +226,31 @@ await mapWithConcurrency(cities, 3, async (city, index) => {
     ...siteInfo.candidates,
   ];
   const brand = await downloadBestBrand(candidates, cityKey, city.name);
+  const quickLinks = siteInfo.quickLinks;
 
-  if (!brand) {
+  if (!brand && !quickLinks.length) {
     console.log(`  No logo found at ${officialSite}`);
     return;
   }
 
-  manifest.municipalities[cityKey] = {
+  manifest.municipalities[cityKey] = removeEmpty({
     officialSite,
     brand,
-  };
+    quickLinks,
+  });
 });
 
 await fs.writeFile(outputFile, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
 
+const logoCount = Object.values(manifest.municipalities).filter(
+  (entry) => entry.brand,
+).length;
+const quickLinkCount = Object.values(manifest.municipalities).filter(
+  (entry) => entry.quickLinks?.length,
+).length;
+
 console.log(
-  `Saved municipality logos for ${Object.keys(manifest.municipalities).length} cities to ${outputFile}`,
+  `Saved municipality info for ${Object.keys(manifest.municipalities).length} cities (${logoCount} logos, ${quickLinkCount} quick-link sets) to ${outputFile}`,
 );
 
 async function findOfficialSite(cityName) {
@@ -282,14 +403,17 @@ async function scrapeSiteInfo(url) {
   } catch (error) {
     return {
       candidates: [],
+      quickLinks: [],
       error: error.message,
     };
   }
 
   const candidates = collectBrandCandidates(html, url);
+  const quickLinks = collectQuickLinks(html, url);
 
   return {
     candidates,
+    quickLinks,
   };
 }
 
@@ -357,6 +481,70 @@ function collectBrandCandidates(html, baseUrl) {
   }
 
   return candidates.sort((left, right) => right.score - left.score);
+}
+
+function collectQuickLinks(html, baseUrl) {
+  const links = [];
+  const seenCategories = new Set();
+  const seenUrls = new Set();
+
+  for (const match of html.matchAll(/<a\b([^>]*?)>([\s\S]*?)<\/a>/gi)) {
+    const tag = match[0];
+    const href = extractAttribute(tag, 'href');
+    const text = normalizeWhitespace(stripTags(match[2]));
+    const title = normalizeWhitespace(extractAttribute(tag, 'title'));
+    const ariaLabel = normalizeWhitespace(extractAttribute(tag, 'aria-label'));
+    const searchable = `${text} ${title} ${ariaLabel} ${href}`;
+    const url = sanitizeUrl(href, baseUrl);
+
+    if (!url || !text && !title && !ariaLabel) {
+      continue;
+    }
+
+    if (BLOCKED_LINK_PATTERNS.some((pattern) => pattern.test(url))) {
+      continue;
+    }
+
+    const category = matchQuickLinkCategory(searchable);
+
+    if (!category || seenCategories.has(category.category) || seenUrls.has(url)) {
+      continue;
+    }
+
+    if (
+      category.category === 'report' &&
+      !/(report|request|work\s+order|311|concern|issue)/i.test(
+        `${text} ${title} ${ariaLabel}`,
+      )
+    ) {
+      continue;
+    }
+
+    seenCategories.add(category.category);
+    seenUrls.add(url);
+    links.push({
+      category: category.category,
+      label: category.label,
+      href: url,
+      sourceText: shortenLinkText(text || title || ariaLabel || category.label),
+    });
+
+    if (links.length >= 8) {
+      break;
+    }
+  }
+
+  return links;
+}
+
+function matchQuickLinkCategory(searchable) {
+  return CITY_LINK_CATEGORIES.find((candidate) => {
+    if (candidate.reject?.some((pattern) => pattern.test(searchable))) {
+      return false;
+    }
+
+    return candidate.patterns.some((pattern) => pattern.test(searchable));
+  });
 }
 
 function scoreCandidate(text, url) {
@@ -462,6 +650,35 @@ function sanitizeUrl(value, baseUrl = undefined) {
   } catch (error) {
     return '';
   }
+}
+
+function removeEmpty(value) {
+  return Object.fromEntries(
+    Object.entries(value).filter(([, entry]) => {
+      if (Array.isArray(entry)) {
+        return entry.length > 0;
+      }
+
+      return Boolean(entry);
+    }),
+  );
+}
+
+function stripTags(value) {
+  return decodeHtml(String(value ?? '').replace(/<[^>]+>/g, ' '));
+}
+
+function normalizeWhitespace(value) {
+  return String(value ?? '').replace(/\s+/g, ' ').trim();
+}
+
+function shortenLinkText(value) {
+  const text = normalizeWhitespace(value);
+  if (text.length <= 64) {
+    return text;
+  }
+
+  return `${text.slice(0, 61).trim()}...`;
 }
 
 function extractAttribute(tag, name) {

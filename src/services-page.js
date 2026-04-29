@@ -583,6 +583,11 @@ function renderSummary({
   const parishHierarchy = buildParishHierarchy(parishRecord);
   const parishPageLink = buildParishPageLink(parishRecord);
   const municipalityBrand = getMunicipalityBrand(municipalityRecord, municipalityName);
+  const municipalityQuickLinks = getMunicipalityQuickLinks(
+    municipalityRecord,
+    municipalityName,
+    ['pay', 'permits', 'publicWorks', 'report', 'meetings', 'police', 'fire', 'parks'],
+  );
   const parishBrand = getParishOfficeBrand(parishRecord, 'parish');
   const cityActionHref = municipalityRecord?.sourceUrl ?? null;
   const sheriffActionHref =
@@ -659,6 +664,7 @@ function renderSummary({
           detail: topMunicipalContact?.title ?? getMunicipalSpotlightDetail(municipalityRecord),
           phone: topMunicipalContact?.phone ?? municipalityRecord?.phone,
           address: topMunicipalContact?.address ?? municipalityRecord?.address,
+          quickLinks: municipalityQuickLinks.slice(0, 6),
           actions: compactLinks([
             cityActionHref && {
               label: municipalityRecord ? 'Open city directory' : 'Open local directory',
@@ -787,10 +793,12 @@ function renderSpotlightCard({
   phone,
   address,
   actions = [],
+  quickLinks = [],
   emptyMessage,
 }) {
   const addressLines = renderAddressLines(address);
-  const hasContent = detail || phone || addressLines.length || actions.length;
+  const hasContent =
+    detail || phone || addressLines.length || quickLinks.length || actions.length;
 
   return `
     <article class="lookup-spotlight">
@@ -819,6 +827,13 @@ function renderSpotlightCard({
                     ${addressLines
                       .map((line) => `<span>${escapeHtml(line)}</span>`)
                       .join('')}
+                  </div>`
+                : ''
+            }
+            ${
+              quickLinks.length
+                ? `<div class="city-quick-links">
+                    ${quickLinks.map(renderCityQuickLink).join('')}
                   </div>`
                 : ''
             }
@@ -881,6 +896,23 @@ function renderServiceCards({
     municipalityMatch?.feature.properties.__districtLabel ??
     parishMatch?.feature.properties.__districtLabel ??
     'this area';
+  const utilityLinks = getMunicipalityQuickLinks(municipalityRecord, localEntityName, [
+    'pay',
+    'publicWorks',
+  ]).filter((link) => link.category !== 'pay' || isUtilityPaymentLink(link));
+  const publicWorksLinks = getMunicipalityQuickLinks(municipalityRecord, localEntityName, [
+    'publicWorks',
+    'report',
+  ]);
+  const permitLinks = getMunicipalityQuickLinks(municipalityRecord, localEntityName, [
+    'permits',
+    'meetings',
+  ]);
+  const safetyLinks = getMunicipalityQuickLinks(municipalityRecord, localEntityName, [
+    'police',
+    'fire',
+    'report',
+  ]);
 
   const cards = [
     {
@@ -897,6 +929,7 @@ function renderServiceCards({
         [],
       ),
       links: compactLinks([
+        ...utilityLinks,
         ...(isShreveport
           ? [
               {
@@ -947,6 +980,7 @@ function renderServiceCards({
         ['clerk'],
       ),
       links: compactLinks([
+        ...publicWorksLinks,
         municipalityRecord && {
           label: `${municipalityRecord.name} municipal profile`,
           href: municipalityRecord.sourceUrl,
@@ -975,6 +1009,7 @@ function renderServiceCards({
         ['publicWorks'],
       ),
       links: compactLinks([
+        ...permitLinks,
         municipalityRecord && {
           label: `${municipalityRecord.name} municipal profile`,
           href: municipalityRecord.sourceUrl,
@@ -999,6 +1034,7 @@ function renderServiceCards({
         [],
       ),
       links: compactLinks([
+        ...utilityLinks,
         ...(isShreveport
           ? [
               {
@@ -1051,6 +1087,7 @@ function renderServiceCards({
         [],
       ),
       links: compactLinks([
+        ...safetyLinks,
         {
           label: parishRecord ? "Open parish sheriff page" : "Sheriff's directory",
           href: parishRecord?.linkMap.sheriff ?? state.context.serviceDirectory.statewideLinks.sheriffDirectory,
@@ -1434,7 +1471,34 @@ function dedupeContacts(contacts, limit = 4, comparator = compareContactPriority
 }
 
 function compactLinks(links) {
-  return links.filter((link) => link?.label && link?.href);
+  const seen = new Set();
+
+  return links.filter((link) => {
+    if (!link?.label || !link?.href) {
+      return false;
+    }
+
+    const key = `${link.label}|${link.href}`;
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
+}
+
+function renderCityQuickLink(link) {
+  return `
+    <a class="city-quick-link" href="${escapeAttribute(link.href)}" target="_blank" rel="noreferrer">
+      <span>${escapeHtml(link.label)}</span>
+      ${
+        link.sourceText && link.sourceText !== link.label
+          ? `<small>${escapeHtml(link.sourceText)}</small>`
+          : ''
+      }
+    </a>
+  `;
 }
 
 function renderServiceCard(card) {
@@ -1839,9 +1903,7 @@ function getMunicipalityBrand(record, fallbackName) {
     return null;
   }
 
-  const municipalityKey = normalizeParishKey(record?.normalizedName ?? name);
-  const generatedEnhancement =
-    state.context?.municipalityEnhancements?.municipalities?.[municipalityKey] ?? null;
+  const generatedEnhancement = getMunicipalityEnhancement(record, name);
 
   if (generatedEnhancement?.brand) {
     return normalizeBrand(generatedEnhancement.brand);
@@ -1851,6 +1913,38 @@ function getMunicipalityBrand(record, fallbackName) {
     initials: getInitials(name),
     alt: `${name} municipal mark`,
   };
+}
+
+function getMunicipalityQuickLinks(record, fallbackName, categories = []) {
+  const enhancement = getMunicipalityEnhancement(record, fallbackName);
+  const allowedCategories = new Set(categories);
+
+  return (enhancement?.quickLinks ?? [])
+    .filter((link) => !allowedCategories.size || allowedCategories.has(link.category))
+    .map((link) => ({
+      label: sanitizeText(link.label),
+      href: sanitizeText(link.href),
+      sourceText: sanitizeText(link.sourceText),
+      category: sanitizeText(link.category),
+    }))
+    .filter((link) => link.label && link.href)
+    .slice(0, 8);
+}
+
+function isUtilityPaymentLink(link) {
+  return /bill|utility|water|sewer/i.test(
+    `${link.label} ${link.sourceText} ${link.href}`,
+  );
+}
+
+function getMunicipalityEnhancement(record, fallbackName) {
+  const name = sanitizeText(record?.normalizedName ?? record?.name, fallbackName);
+  if (!name || name === 'Outside a city or town') {
+    return null;
+  }
+
+  const municipalityKey = normalizeParishKey(name);
+  return state.context?.municipalityEnhancements?.municipalities?.[municipalityKey] ?? null;
 }
 
 function getParishOfficeBrand(record, officeKey) {
