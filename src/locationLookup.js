@@ -58,12 +58,16 @@ export async function loadLookupContext() {
     serviceDirectory,
     parishEnhancements,
     municipalityEnhancements,
+    representativePhotos,
     ...collections
   ] = await Promise.all([
     fetchJson('/data/service-directory.json'),
     fetchJsonOrDefault('/data/parish-enhancements.json', { parishes: {} }),
     fetchJsonOrDefault('/data/municipality-enhancements.json', {
       municipalities: {},
+    }),
+    fetchJsonOrDefault('/data/representative-photos.json', {
+      photos: {},
     }),
     ...lookupDefinitions.map((definition) => fetchJson(definition.file)),
   ]);
@@ -81,6 +85,7 @@ export async function loadLookupContext() {
     serviceDirectory,
     parishEnhancements,
     municipalityEnhancements,
+    representativePhotos,
     layers,
   };
 }

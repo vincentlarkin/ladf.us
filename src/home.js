@@ -56,6 +56,7 @@ document.querySelector('#app').innerHTML = `
           { href: '#overview', label: 'Overview' },
           { href: '#directory', label: 'Parish Directory' },
           { href: '#services', label: 'Services by ZIP' },
+          { href: '#representation', label: 'Representation' },
           { href: '#disclaimer', label: 'Quick Note' },
         ],
       })}
@@ -76,6 +77,7 @@ document.querySelector('#app').innerHTML = `
                 </p>
                 <div class="cta-row">
                   <a class="button" href="/services.html">Search by ZIP or city</a>
+                  <a class="button button--secondary" href="/represent.html">Find representatives</a>
                   <a class="button button--secondary" href="/map.html">Browse parish map</a>
                 </div>
               </div>
@@ -157,6 +159,28 @@ document.querySelector('#app').innerHTML = `
                 <p>
                   The parish map opens pages and local place links without making you
                   remember every jurisdiction boundary.
+                </p>
+              </a>
+            </div>
+          </section>
+
+          <section class="section" id="representation">
+            <h2>Who Represents Me</h2>
+            <div class="home-action-grid home-action-grid--two">
+              <a class="home-action-card home-action-card--accent" href="/represent.html">
+                <div class="result-type">Address lookup</div>
+                <h4>See your federal, state, parish, and city representation</h4>
+                <p>
+                  Enter a Louisiana address and get matched districts, statewide officials,
+                  mayoral context, and official source links in one cleaner result.
+                </p>
+              </a>
+              <a class="home-action-card" href="/represent.html?lookup=505%20Travis%20Street%2C%20Shreveport%2C%20LA#results">
+                <div class="result-type">Example</div>
+                <h4>Try a city hall address first</h4>
+                <p>
+                  Use an exact address to see the difference between district-level matches
+                  and broader city or parish directory contacts.
                 </p>
               </a>
             </div>

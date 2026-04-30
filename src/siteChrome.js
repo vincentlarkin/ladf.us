@@ -2,6 +2,7 @@ const PAGE_LINKS = [
   { key: 'home', label: 'Home', href: '/index.html' },
   { key: 'map', label: 'Parish Map', href: '/map.html' },
   { key: 'services', label: 'Services by ZIP', href: '/services.html' },
+  { key: 'represent', label: 'Who Represents Me', href: '/represent.html' },
 ];
 
 export function renderSiteHeader({ activePage = null } = {}) {
@@ -154,6 +155,7 @@ export function renderSiteFooter() {
         <span class="site-footer__sep" aria-hidden="true">&middot;</span>
         <span><a href="/map.html">Parish Map</a></span>
         <span><a href="/services.html">Services by ZIP</a></span>
+        <span><a href="/represent.html">Who Represents Me</a></span>
       </div>
     </footer>
   `;
