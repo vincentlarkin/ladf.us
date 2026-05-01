@@ -1,3 +1,5 @@
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 import './style.css';
 import {
   bindSiteChrome,
@@ -31,6 +33,48 @@ const SHREVEPORT_WATER_BILL_URL = 'https://www.shreveportla.gov/2474/16127/Pay-Y
 const SWEPCO_URL = 'https://www.swepco.com/';
 const DELTA_UTILITIES_URL = 'https://deltautilities.com/';
 const SHREVEPORT_CITY_LOGO_URL = '/org-logos/shreveport-city-logo.png';
+const SHREVEPORT_DISTRICT_LAYER_IDS = [
+  'shreveport-council',
+  'caddo-commission',
+  'caddo-school-board',
+];
+const SHREVEPORT_DISTRICT_LAYERS = [
+  {
+    id: 'shreveport-council',
+    title: 'Council',
+    label: 'City council',
+    description: 'City ordinances, zoning, city budget, and neighborhood service priorities.',
+  },
+  {
+    id: 'caddo-commission',
+    title: 'Commission',
+    label: 'Parish commission',
+    description: 'Parish roads, jail oversight, parish services, and parishwide administration.',
+  },
+  {
+    id: 'caddo-school-board',
+    title: 'Schools',
+    label: 'School board',
+    description: 'Caddo public school board representation and education-tax decisions.',
+  },
+];
+const SHREVEPORT_DISTRICT_STYLES = {
+  'shreveport-council': {
+    color: '#0055aa',
+    fillColor: '#73b3e7',
+    label: 'City council',
+  },
+  'caddo-commission': {
+    color: '#bf7b30',
+    fillColor: '#f8c97a',
+    label: 'Parish commission',
+  },
+  'caddo-school-board': {
+    color: '#4d7f37',
+    fillColor: '#9ccf7b',
+    label: 'School board',
+  },
+};
 
 const LOUISIANA_STATE_BRAND = {
   src: '/org-logos/louisiana-state-seal.png',
@@ -428,6 +472,7 @@ bindSiteChrome();
 
 const state = {
   context: null,
+  cityDistrictMap: null,
 };
 
 const form = document.querySelector('#service-lookup-form');
@@ -548,10 +593,17 @@ async function renderLookupResult(result) {
 
   renderSummary({
     result,
+    matches,
     municipalityMatch,
     parishMatch,
     municipalityRecord,
     parishRecord,
+  });
+  renderCityDistrictMap({
+    result,
+    matches,
+    municipalityMatch,
+    municipalityRecord,
   });
 
   renderServiceCards({
@@ -569,6 +621,7 @@ async function renderLookupResult(result) {
 
 function renderSummary({
   result,
+  matches,
   municipalityMatch,
   parishMatch,
   municipalityRecord,
@@ -709,6 +762,13 @@ function renderSummary({
         })}
       </div>
 
+      ${renderCityDistrictMapPanel({
+        result,
+        matches,
+        municipalityRecord,
+        municipalityName,
+      })}
+
       <div class="routing-ladder-grid">
         ${renderHierarchyPanel({
           kicker: 'City Hall',
@@ -739,6 +799,480 @@ function renderSummary({
       </div>
     </div>
   `;
+}
+
+function renderCityDistrictMapPanel({
+  result,
+  matches,
+  municipalityRecord,
+  municipalityName,
+}) {
+  if (!isShreveportRecord(municipalityRecord)) {
+    return '';
+  }
+
+  const districtMatches = getShreveportDistrictMatches(matches);
+  const initialLayerId = districtMatches[0]?.id ?? 'shreveport-council';
+  const matchedRows = districtMatches.length
+    ? districtMatches
+        .map((match) =>
+          renderCityMapDistrictRow(match, {
+            active: match.id === initialLayerId,
+          }),
+        )
+        .join('')
+    : `<div class="city-district-empty">Use a full Shreveport street address to pin exact local districts.</div>`;
+
+  return `
+    <section class="city-district-panel" aria-labelledby="city-district-map-title">
+      <div class="city-district-panel__header">
+        <div>
+          <div class="summary-kicker">City Map</div>
+          <h5 id="city-district-map-title">Shreveport local districts</h5>
+          <p>Switch between local district maps, click a shape, or use the matched rows to inspect the district that applies to this lookup.</p>
+        </div>
+        <a class="button button--secondary" href="/map.html">Open full map</a>
+      </div>
+
+      <div class="city-district-layout">
+        <div class="city-district-map-wrap">
+          <div class="city-district-controlbar" role="group" aria-label="Shreveport district layer">
+            ${SHREVEPORT_DISTRICT_LAYERS.map((layer) => `
+              <button
+                class="city-district-control${layer.id === initialLayerId ? ' is-active' : ''}"
+                type="button"
+                data-city-district-layer="${escapeAttribute(layer.id)}"
+                aria-pressed="${layer.id === initialLayerId ? 'true' : 'false'}"
+              >
+                <span>${escapeHtml(layer.title)}</span>
+                <small>${escapeHtml(layer.label)}</small>
+              </button>
+            `).join('')}
+          </div>
+          <div id="city-district-map" class="city-district-map" aria-label="Shreveport local district map">
+            <div class="map-loading" id="city-district-map-loading">
+              <span class="loader"></span>
+              Loading Shreveport districts...
+            </div>
+          </div>
+          <div class="city-district-map-status" id="city-district-map-status">
+            Click a district on the map to inspect its contacts.
+          </div>
+        </div>
+
+        <aside class="city-district-sidebar">
+          <div class="city-district-sidebar__summary">
+            <span>Matched place</span>
+            <strong>${escapeHtml(municipalityRecord?.name ?? municipalityName)}</strong>
+            <small>${escapeHtml(result.address ?? result.query)}</small>
+          </div>
+          <div class="city-district-match-list">
+            ${matchedRows}
+          </div>
+          <div id="city-district-detail" class="city-district-detail"></div>
+        </aside>
+      </div>
+    </section>
+  `;
+}
+
+function renderCityMapDistrictRow(match, { active = false } = {}) {
+  const properties = match.feature.properties ?? {};
+  const style = SHREVEPORT_DISTRICT_STYLES[match.id];
+  const representative = sanitizeText(properties.__representative);
+  const phone = sanitizeText(properties.__contactPhone);
+  const email = sanitizeText(properties.__contactEmail);
+  const website = sanitizeText(properties.__officialWebsite);
+
+  return `
+    <button
+      class="city-district-row${active ? ' is-active' : ''}"
+      type="button"
+      data-city-district-match="${escapeAttribute(match.id)}"
+      data-city-district-key="${escapeAttribute(properties.__districtKey ?? '')}"
+    >
+      <div class="city-district-row__heading">
+        <span class="city-district-row__swatch" style="--swatch:${style.color}"></span>
+        <div>
+          <span>${escapeHtml(match.label)}</span>
+          <strong>${escapeHtml(formatDistrictLabel(match))}</strong>
+        </div>
+      </div>
+      ${
+        representative
+          ? `<div class="city-district-row__meta">Representative: ${escapeHtml(representative)}</div>`
+          : ''
+      }
+      ${
+        phone || email
+          ? `<div class="city-district-row__links" aria-label="Matched district contact">
+              ${phone ? `<span>${escapeHtml(phone)}</span>` : ''}
+              ${email ? `<span>${escapeHtml(email)}</span>` : ''}
+            </div>`
+          : ''
+      }
+      ${
+        website
+          ? `<span class="city-district-row__source">Official page available</span>`
+          : ''
+      }
+    </button>
+  `;
+}
+
+function renderCityDistrictMap({
+  result,
+  matches,
+  municipalityMatch,
+  municipalityRecord,
+}) {
+  if (state.cityDistrictMap) {
+    state.cityDistrictMap.remove();
+    state.cityDistrictMap = null;
+  }
+
+  if (!isShreveportRecord(municipalityRecord)) {
+    return;
+  }
+
+  const mapNode = document.querySelector('#city-district-map');
+  if (!mapNode) {
+    return;
+  }
+
+  const map = L.map(mapNode, {
+    zoomControl: false,
+    attributionControl: true,
+    minZoom: 9,
+    maxZoom: 13,
+    scrollWheelZoom: false,
+  });
+  state.cityDistrictMap = map;
+
+  L.control.zoom({ position: 'topright' }).addTo(map);
+  L.tileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    {
+      attribution: 'Basemap Esri',
+    },
+  ).addTo(map);
+  map.setView([32.525, -93.75], 10);
+
+  const districtMatches = getShreveportDistrictMatches(matches);
+  let activeLayerId = districtMatches[0]?.id ?? 'shreveport-council';
+  let selectedMatch =
+    districtMatches.find((match) => match.id === activeLayerId) ?? null;
+  let activeDistrictLayer = null;
+
+  const boundaryFeature = municipalityMatch?.feature;
+  const boundaryLayer = boundaryFeature
+    ? L.geoJSON(boundaryFeature, {
+        interactive: false,
+        style: {
+          color: '#111111',
+          weight: 2,
+          fillOpacity: 0,
+        },
+      }).addTo(map)
+    : null;
+
+  const markerLatLng = [result.latitude, result.longitude];
+  const marker = L.circleMarker(markerLatLng, {
+    radius: 6,
+    color: '#111111',
+    weight: 2,
+    fillColor: '#d4ad42',
+    fillOpacity: 1,
+  }).addTo(map);
+
+  function showLayer(layerId, nextSelectedMatch = null) {
+    const layerRecord = getContextLayer(layerId);
+    if (!layerRecord?.featureCollection) {
+      return;
+    }
+
+    if (activeDistrictLayer) {
+      map.removeLayer(activeDistrictLayer);
+    }
+
+    activeLayerId = layerId;
+    selectedMatch =
+      nextSelectedMatch ??
+      districtMatches.find((match) => match.id === layerId) ??
+      null;
+
+    activeDistrictLayer = L.geoJSON(layerRecord.featureCollection, {
+      interactive: true,
+      style: (feature) =>
+        getCityDistrictFeatureStyle(layerId, isSelectedFeature(feature)),
+      onEachFeature(feature, layer) {
+        const match = buildShreveportMapMatch(layerId, feature);
+
+        layer.on('mouseover', () => {
+          if (isSelectedFeature(feature)) {
+            return;
+          }
+          layer.setStyle(getCityDistrictHoverStyle(layerId));
+        });
+
+        layer.on('mouseout', () => {
+          activeDistrictLayer.resetStyle(layer);
+        });
+
+        layer.on('click', () => {
+          selectedMatch = match;
+          activeDistrictLayer.setStyle((nextFeature) =>
+            getCityDistrictFeatureStyle(layerId, isSelectedFeature(nextFeature)),
+          );
+          renderCityDistrictDetail(selectedMatch);
+          renderCityDistrictStatus(selectedMatch);
+          syncCityDistrictControls();
+          syncCityDistrictRows();
+        });
+      },
+    }).addTo(map);
+
+    if (boundaryLayer?.getBounds?.().isValid()) {
+      map.fitBounds(boundaryLayer.getBounds().pad(0.08), { maxZoom: 11 });
+    } else {
+      map.setView(markerLatLng, 11);
+    }
+
+    marker.bringToFront();
+    renderCityDistrictDetail(selectedMatch);
+    renderCityDistrictStatus(selectedMatch);
+    syncCityDistrictControls();
+    syncCityDistrictRows();
+  }
+
+  function isSelectedFeature(feature) {
+    if (!selectedMatch) {
+      return false;
+    }
+
+    return (
+      getFeatureDistrictKey(feature) ===
+      getFeatureDistrictKey(selectedMatch.feature)
+    );
+  }
+
+  function syncCityDistrictControls() {
+    document.querySelectorAll('[data-city-district-layer]').forEach((button) => {
+      const isActive =
+        button.getAttribute('data-city-district-layer') === activeLayerId;
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+  }
+
+  function syncCityDistrictRows() {
+    document
+      .querySelectorAll('[data-city-district-match]')
+      .forEach((button) => {
+        const isActive =
+          button.getAttribute('data-city-district-match') === activeLayerId;
+        button.classList.toggle('is-active', isActive);
+      });
+  }
+
+  document.querySelectorAll('[data-city-district-layer]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const layerId = button.getAttribute('data-city-district-layer');
+      if (!layerId || layerId === activeLayerId) {
+        return;
+      }
+
+      showLayer(layerId);
+    });
+  });
+
+  document.querySelectorAll('[data-city-district-match]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const layerId = button.getAttribute('data-city-district-match');
+      const key = button.getAttribute('data-city-district-key');
+      const match = districtMatches.find(
+        (candidate) =>
+          candidate.id === layerId &&
+          getFeatureDistrictKey(candidate.feature) === key,
+      );
+      if (!layerId || !match) {
+        return;
+      }
+
+      showLayer(layerId, match);
+    });
+  });
+
+  showLayer(activeLayerId, selectedMatch);
+
+  document
+    .querySelector('#city-district-map-loading')
+    ?.classList.add('is-hidden');
+}
+
+function buildShreveportMapMatch(layerId, feature) {
+  const layer = SHREVEPORT_DISTRICT_LAYERS.find((item) => item.id === layerId);
+  return {
+    id: layerId,
+    label: layer?.label ?? 'District',
+    sortOrder: SHREVEPORT_DISTRICT_LAYER_IDS.indexOf(layerId),
+    feature,
+  };
+}
+
+function getCityDistrictFeatureStyle(layerId, selected = false) {
+  const style = SHREVEPORT_DISTRICT_STYLES[layerId];
+
+  return {
+    color: selected ? '#111111' : style.color,
+    weight: selected ? 3.1 : 1.4,
+    fillColor: selected ? '#d4ad42' : style.fillColor,
+    fillOpacity: selected ? 0.36 : 0.13,
+  };
+}
+
+function getCityDistrictHoverStyle(layerId) {
+  const style = SHREVEPORT_DISTRICT_STYLES[layerId];
+
+  return {
+    color: '#111111',
+    weight: 2.4,
+    fillColor: style.fillColor,
+    fillOpacity: 0.24,
+  };
+}
+
+function renderCityDistrictDetail(match) {
+  const detailNode = document.querySelector('#city-district-detail');
+  if (!detailNode) {
+    return;
+  }
+
+  if (!match) {
+    detailNode.innerHTML = `
+      <div class="city-district-detail__empty">
+        Pick a district layer above, then click a shape on the map.
+      </div>
+    `;
+    return;
+  }
+
+  const properties = match.feature.properties ?? {};
+  const layer = SHREVEPORT_DISTRICT_LAYERS.find((item) => item.id === match.id);
+  const style = SHREVEPORT_DISTRICT_STYLES[match.id];
+  const rows = [
+    ['Representative', properties.__representative],
+    ['Phone', properties.__contactPhone],
+    ['Email', properties.__contactEmail],
+    ['Office', properties.__officeAddress ?? properties.__contactAddress],
+    ['Office phone', properties.__officePhone],
+  ]
+    .filter(([, value]) => Boolean(sanitizeText(value)))
+    .map(
+      ([label, value]) => `
+        <div class="contact-field">
+          <span class="contact-label">${escapeHtml(label)}</span>
+          <span class="contact-value">${renderContactValueForDistrict(label, value)}</span>
+        </div>
+      `,
+    )
+    .join('');
+  const links = compactLinks([
+    properties.__officialWebsite && {
+      label: 'Official page',
+      href: properties.__officialWebsite,
+    },
+    properties.__officeDirectoryUrl && {
+      label: 'Directory',
+      href: properties.__officeDirectoryUrl,
+    },
+    properties.Pic_URL && {
+      label: 'District sheet',
+      href: properties.Pic_URL,
+    },
+  ]);
+
+  detailNode.innerHTML = `
+    <article class="city-district-detail-card">
+      <div class="city-district-detail-card__top">
+        <span class="city-district-row__swatch" style="--swatch:${style.color}"></span>
+        <div>
+          <div class="result-type">${escapeHtml(layer?.label ?? match.label)}</div>
+          <h6>${escapeHtml(formatDistrictLabel(match))}</h6>
+        </div>
+      </div>
+      ${layer?.description ? `<p>${escapeHtml(layer.description)}</p>` : ''}
+      ${rows ? `<div class="contact-field-list">${rows}</div>` : ''}
+      ${
+        links.length
+          ? `<div class="contact-links">
+              ${links
+                .map(
+                  (link) => `
+                    <a href="${escapeAttribute(link.href)}" target="_blank" rel="noreferrer">
+                      ${escapeHtml(link.label)}
+                    </a>
+                  `,
+                )
+                .join('')}
+            </div>`
+          : ''
+      }
+    </article>
+  `;
+}
+
+function renderCityDistrictStatus(match) {
+  const statusNode = document.querySelector('#city-district-map-status');
+  if (!statusNode) {
+    return;
+  }
+
+  statusNode.textContent = match
+    ? `${SHREVEPORT_DISTRICT_STYLES[match.id].label}: ${formatDistrictLabel(match)}`
+    : 'Click a district on the map to inspect its contacts.';
+}
+
+function renderContactValueForDistrict(label, value) {
+  const text = sanitizeText(value);
+  if (!text) {
+    return '';
+  }
+
+  if (/email/i.test(label) && text.includes('@')) {
+    return renderLinkValue(`mailto:${text}`, text);
+  }
+
+  if (/phone/i.test(label)) {
+    return renderLinkValue(`tel:${sanitizePhone(text)}`, text);
+  }
+
+  return escapeHtml(text).replace(/\n/g, '<br>');
+}
+
+function getFeatureDistrictKey(feature) {
+  const properties = feature?.properties ?? {};
+  return String(
+    properties.__districtKey ??
+      properties.DISTRICT ??
+      properties.DISTRICT_I ??
+      properties.OBJECTID ??
+      '',
+  );
+}
+
+function getContextLayer(layerId) {
+  return state.context?.layers.find((layer) => layer.definition.id === layerId) ?? null;
+}
+
+function getShreveportDistrictMatches(matches) {
+  return SHREVEPORT_DISTRICT_LAYER_IDS.map((layerId) =>
+    matches.find((match) => match.id === layerId),
+  ).filter(Boolean);
+}
+
+function isShreveportRecord(record) {
+  return record ? getMunicipalityKey(record) === 'shreveport' : false;
 }
 
 function getLookupLead({
