@@ -1288,6 +1288,48 @@ p {
   min-height: clamp(560px, 66vh, 740px);
 }
 
+.parish-map-stage {
+  min-width: 0;
+}
+
+.map-mode-bar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.map-mode-button {
+  min-height: 38px;
+  padding: 8px 13px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.map-mode-button:hover,
+.map-mode-button:focus-visible {
+  background: var(--base-lightest);
+  color: var(--primary-dark);
+}
+
+.map-mode-button.is-active {
+  background: var(--primary-darker);
+  border-color: var(--primary-darker);
+  color: var(--white);
+}
+
 .parish-list-panel {
   margin-top: 0;
   max-height: clamp(560px, 66vh, 740px);
@@ -1339,6 +1381,18 @@ p {
 }
 
 /* ── Map visuals ───────────────────────────────────────────── */
+
+.parish-button--district {
+  display: grid;
+  gap: 3px;
+}
+
+.parish-button__meta {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
 
 .map-stage,
 .map-sidebar {
